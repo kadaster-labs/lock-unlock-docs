@@ -1,12 +1,18 @@
 # Lock Unlock project Onthologies
 
-This repo contains the onthologies used for the Lock-Unlock project: 'lock the data, unlock the potential'.
+This repo contains the onthologies used for the Lock-Unlock project: 'lock the data, unlock the
+potential'.
 
 Check out our research implementations of secured SPARQL endpoints and our testdata:
 
+- (this repo) [Lock-Unlock Onthologies](https://github.com/kadaster-labs/lock-unlock-onthologies)
+  - Authorization Onthology (in research)
+  - Logging Onthology (in research)
 - [Lock-Unlock Testdata](https://github.com/kadaster-labs/lock-unlock-testdata)
-- [Secured SPARQL Endpoint based on Jena & SpringBoot](https://github.com/kadaster-labs/secured-sparql-endpoint)
-- [Secured SPARQL Endpoint based on Fuseki](#)
+- [Secured SPARQL Endpoint Sub Graph](https://github.com/kadaster-labs/secured-sparql-endpoint)
+  (based on Apache Jena & SpringBoot)
+- [Secured SPARQL Endpoint Rewrite (SPARQL
+  Query)](https://github.com/kadaster-labs/secured-sparql-endpoint-rewrite) (based on Fuseki)
 
 ## License
 
