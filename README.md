@@ -1,11 +1,11 @@
-# Lock Unlock project Onthologies
+# Lock Unlock Docs
 
-This repo contains the onthologies used for the [Lock-Unlock Project](https://labs.kadaster.nl/cases/lockunlock): 'lock the data, unlock the
-potential'.
+This repo contains the documentation of the [Lock-Unlock
+Project](https://labs.kadaster.nl/cases/lockunlock): 'lock the data, unlock the potential'.
 
 Check out our research implementations of secured SPARQL endpoints and our testdata:
 
-- (this repo) [Lock-Unlock Onthologies](https://github.com/kadaster-labs/lock-unlock-onthologies)
+- (this repo) [Lock-Unlock Docs](https://github.com/kadaster-labs/lock-unlock-docs)
   - Authorization Onthology (in research)
   - Logging Onthology (in research)
 - [Lock-Unlock Testdata](https://github.com/kadaster-labs/lock-unlock-testdata)
