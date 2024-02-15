@@ -1,0 +1,20 @@
+site_name: Lock-Unlock Documentation
+docs_dir: docs
+site_dir: site
+site_url: http://localhost:8000
+repo_url: https://github.com/kadaster-labs/lock-unlock-docs
+edit_uri: edit/main/docs/
+theme:
+  name: material
+  features:
+    - navigation.instant  
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+  icon:
+    logo: material/antenna
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+    
