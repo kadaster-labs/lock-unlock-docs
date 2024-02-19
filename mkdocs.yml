@@ -8,7 +8,7 @@ nav:
   - Samenvatting: index.md
   - Federatieve bevraging: 
      - federatieve-bevraging/index.md
-     - API's: federatieve-bevraging/apis.md
+     - API First (REST vs GraphQL vs SPARQL): federatieve-bevraging/apis.md
      - Linked Data onderbouwing: federatieve-bevraging/linkeddata.md
      - Informatie model: federatieve-bevraging/informatiemodel.md
      - Testdata: federatieve-bevraging/testdata.md
@@ -38,8 +38,8 @@ theme:
     primary: custom
   language: nl
   features:
-    - navigation.instant  
     - navigation.indexes
+    - navigation.instant  
     - navigation.top
     - navigation.tracking
     - toc.follow
