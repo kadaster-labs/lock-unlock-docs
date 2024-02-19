@@ -16,11 +16,13 @@ nav:
   - Afscherming: 
     - afscherming/index.md
     - Desk research: afscherming/deskresearch.md
+    - Verantwoording: afscherming/verantwoording.md
     - Requirements: afscherming/requirements.md
     - Opties: afscherming/opties.md
     - Onderzoek: afscherming/onderzoek.md
-  - Autorisatie als linkeddata:
+  - Autorisatie als Linked Data:
     - autorisatie-als-linkeddata/index.md
+    - Concept: autorisatie-als-linkeddata/concept.md
     - Authorization Onthology: autorisatie-als-linkeddata/authorization-onthology.md
     - Implementaties: autorisatie-als-linkeddata/implementaties.md
     - Conclusies: autorisatie-als-linkeddata/conclusies.md
@@ -28,13 +30,16 @@ nav:
   - Algemene conclusies & aanbevelingen: 
     - conclusies/index.md
   - Verdiepende details: verdiepende-details/index.md
+extra_css:
+  - css/lock-unlock.css
 theme:
   name: material
+  palette:
+    primary: custom
   language: nl
   features:
     - navigation.instant  
     - navigation.indexes
-    - navigation.sections
     - navigation.top
     - navigation.tracking
     - toc.follow
