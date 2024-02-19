@@ -1,5 +1,5 @@
 ---
-title: Autorisatie als Linked Data
+title: Autorisatie als Linked Data ('unlock')
 ---
 // TODO Autorisatie als Linked Data beschrijven
 
