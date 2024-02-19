@@ -13,5 +13,7 @@ Lock-Unlock richt zich op Linked Data, voortbouwend op de [Integrale Gebruiksopl
 gestandaardiseerde mogelijkheden voor autorisatie van data in het Linked Data domein. Dit project is
 uitgevoerd om de (on)mogelijkheden te onderzoeken en te testen.
 
+![Infographic](images/infographic.png)
+
 ### Data Stories
 ...
