@@ -1,7 +1,6 @@
 ---
 title: Autorisatie als Linked Data ('unlock')
 ---
-// TODO Autorisatie als Linked Data beschrijven
 
 - Concept toelichten
 - Beschrijving autorisatie (&authenticatie) ontologie
