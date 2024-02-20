@@ -3,15 +3,14 @@ title: Linked Data
 ---
 In de technologische en digitale evolutie is data steeds belangrijker geworden. Waar de eerste
 automatisering gericht was op het automatiseren van processen en dus software, is in latere evolutie
-de data tot een eigen aandachtsgebied geworden, naast de software. Met de groei voor aandacht voor
-data, los van de software / applicatie, is er ook meer aandacht en nadruk gekomen voor semantiek en
-betekenis van de data.
+de data tot een eigen aandachtsgebied geworden, naast de software. Daardoor is er meer aandacht en
+nadruk gekomen voor semantiek en betekenis van de data.
 
-Al vanaf het begin van het ontwerp van het web bestaat het besef van resources met een uniek adres,
-een <a href="https://nl.wikipedia.org/wiki/Uniform_resource_identifier" target="_blank">URI (Uniform
+Al vanaf het eerste ontwerp van het web bestaat het besef van resources met een uniek adres, een <a
+href="https://nl.wikipedia.org/wiki/Uniform_resource_identifier" target="_blank">URI (Uniform
 Resource Identifier)</a>. In de behoefte aan semantiek en betekenis van data is het <a
 href="https://nl.wikipedia.org/wiki/Resource_Description_Framework" target="_blank">Resource
-Description Framework (RDF)</a>, ontstaan, waarmee resources beschreven en i.c.m. URI's gekoppeld
+Description Framework (RDF)</a> ontstaan, waarmee resources beschreven en i.c.m. URI's gekoppeld
 (gelinked) kunnen worden.  Dit als geheel wordt <a href="https://nl.wikipedia.org/wiki/Linked_data"
 target="_blank">Linked Data</a> genoemd. Hierbij is een sterke voorkeur voor open data oftewel <a
 href="https://nl.wikipedia.org/wiki/Linked_data#Linked_open_data" target="_blank">Linked Open
@@ -32,6 +31,6 @@ href="https://labs.kadaster.nl/thema/Knowledge_graph" target="_blank">Kadaster K
 (KKG)</a> ontwikkeld.
 
 Het Lock-Unlock project bouwt voort op de IGO en Linked Data en onderzoekt hoe 'gesloten data' of
-'niet-open data' toch ontsloten kan worden. Dat betekent dat er voorwaarden gesteld moeten kunnen
-worden aan de bevraging en dat toegang expliciet afgedwongen en gecontroleerd moet kunnen worden.
-Dit is precies de kern van het Lock-Unlock onderzoeksproject.
+'niet-open data' toch ontsloten kan worden. Dat betekent het stellen van voorwaarden aan de
+bevraging en het expliciet afdwingen en controleren van de toegang. Dit is precies de kern van het
+Lock-Unlock onderzoeksproject: _Lock de data, unlock het potentieel!_
