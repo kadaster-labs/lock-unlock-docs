@@ -38,6 +38,7 @@ theme:
     primary: custom
   language: nl
   features:
+    - navigation.footer
     - navigation.indexes
     - navigation.instant  
     - navigation.top

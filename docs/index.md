@@ -7,9 +7,10 @@ programmaonderdeel van [Realisatie IBDS](https://realisatieibds.pleio.nl/). Binn
 Datastelsel is het kunnen delen van data uiteraard de kern, maar dit moet ook op een verantwoorde
 manier gebeuren, waarbij bescherming van data en autorisatie belangrijk zijn.
 
-Lock-Unlock richt zich op Linked Data, voortbouwend op de [Integrale Gebruiksoplossing
-(IGO)](https://labs.kadaster.nl/cases/integraleutilizationsolution) en de [Kadaster Knowledge Graph
-(KKG)](https://labs.kadaster.nl/thema/Kennis_grafiek) ontwikkeld door het Kadaster. Er zijn weinig
+Lock-Unlock richt zich op [Linked Data](./federatieve-bevraging/linkeddata.md), voortbouwend op de
+<a href="https://labs.kadaster.nl/cases/integralegebruiksoplossing" target="_blank">Integrale
+Gebruiksoplossing (IGO)</a> en de <a href="https://labs.kadaster.nl/thema/Knowledge_graph"
+target="_blank">Kadaster Knowledge Graph (KKG)</a> ontwikkeld door het Kadaster. Er zijn weinig
 gestandaardiseerde mogelijkheden voor autorisatie van data in het Linked Data domein. Dit project is
 uitgevoerd om de (on)mogelijkheden te onderzoeken en te testen.
 
