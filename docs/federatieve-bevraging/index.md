@@ -36,14 +36,16 @@ gegenereerd. We sluiten af met conclusies rondom federatieve bevraging.
 
 - [API's | REST vs GraphQL vs SPARQL](./apis.md)
 - [Waarom Linked Data?](./linkeddata.md)
+- [Testopstelling](./testopstelling.md)
 - [Informatiemodel](./informatiemodel.md)
     - Relatie met IMX-Geo
     - Koppelsleutels: 2 opties (owl:SameAs vs directe uri’s)
     - Governance op informatiemodel, koppelsleutels, linksets
     - Informatiekundige kern
 - [Testdata](./testdata.md)
-    - Hoe gecreëerd 
-    - Hoe en waar ontsloten
+    - Synthetische testdata genereren
+    - Deployments & infrastructuur
+- [Demonstrator](./demonstrator)
     - Mogelijkheden tot integraal bevragen data -> hier wil je dus autorisatie op toepassen
 - [Conclusies](./conclusies.md)
     - (oa) Wat ervoor nodig om dit in de praktijk te krijgen?
