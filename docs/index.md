@@ -23,5 +23,3 @@ verlenen aan geautoriseerde vragers: [autorisatie als Linked Data](./autorisatie
 daarmee de 'unlock' :unlock: van de data.
 
 ![Infographic](images/infographic.png)
-
-Test: Janneke maakt alles stuk
