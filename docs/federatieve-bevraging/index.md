@@ -41,10 +41,16 @@ beperkt hebben tot de scope van Linked Data.Vervolgens beschrijven we hoe het in
     - Governance op informatiemodel, koppelsleutels, linksets
     - Informatiekundige kern
 - [Testdata](./testdata.md)
+    - Governance op informatiemodel, koppelsleutels, linksets
+    - Informatiekundige kern
+- [Testdata](./testdata.md)
     - Hoe gecreëerd 
     - Hoe en waar ontsloten
     - Mogelijkheden tot integraal bevragen data -> hier wil je dus autorisatie op toepassen
 - [Conclusies](./conclusies.md)
+- [Conclusies](./conclusies.md)
     - (oa) Wat ervoor nodig om dit in de praktijk te krijgen?
+
+![Federatieve bevraging](images/infographic-federatieve-bevraging.png)
 
 ![Federatieve bevraging](images/infographic-federatieve-bevraging.png)

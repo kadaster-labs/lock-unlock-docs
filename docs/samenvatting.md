@@ -62,14 +62,3 @@ De volgende aanbevelingen kunnen gemaakt worden:
 * Binnen het project zijn we er niet aan toegekomen om het afschermen van de richting te onderzoeken. De richtings-patronen kunnen nog worden uitgewerkt en evt. worden geïmplementeerd
 * de relaties tussen de verschillende registers moeten gestandardiseerd worden opdat je hierop kunt bouwen en vertrouwen. In de Linked Data wereld zou je een 'upper' ontologie kunnen definiëren om de relaties tussen de registers te formaliseren. Daarna zouden (gelijke) functionele zaken gestandardiseerd kunnen worden. Denk aan "ID"'s, versiebeheer en meta-data van registers in Linked Data.
 * Samenwerking met andere bronhouders is nodig om de adoptie van Linked Data en bijbehorende autorisatie te bespoedigen
-
-
-
-
-
-
-
-
-
-
-
