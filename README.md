@@ -1,5 +1,8 @@
 # Lock Unlock Docs
 
+[![Publish docs via GitHub Pages](https://github.com/kadaster-labs/lock-unlock-docs/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/kadaster-labs/lock-unlock-docs/actions/workflows/gh-pages.yml)
+[![pages-build-deployment](https://github.com/kadaster-labs/lock-unlock-docs/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/kadaster-labs/lock-unlock-docs/actions/workflows/pages/pages-build-deployment)
+
 This repo contains the documentation of the [Lock-Unlock
 Project](https://labs.kadaster.nl/cases/lockunlock): 'lock the data, unlock the potential'.
 
