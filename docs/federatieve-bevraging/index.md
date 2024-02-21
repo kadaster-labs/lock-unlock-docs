@@ -47,3 +47,5 @@ gegenereerd. We sluiten af met conclusies rondom federatieve bevraging.
     - Mogelijkheden tot integraal bevragen data -> hier wil je dus autorisatie op toepassen
 - [Conclusies](./conclusies.md)
     - (oa) Wat ervoor nodig om dit in de praktijk te krijgen?
+
+![Federatieve bevraging](images/infographic-federatieve-bevraging.png)

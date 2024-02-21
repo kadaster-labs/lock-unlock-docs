@@ -41,3 +41,5 @@ functionaliteiten als REST API’s maar met meer mogelijkheden. Waar SPARQL voll
 [Linked Data](./linkeddata.md), voldoet GraphQL slechts ten dele aan (de) Linked Data (principes).
 Bijvoorbeeld kunnen in een SPARQL endpoint / API meerdere schema’s gecombineerd worden, terwijl bij
 GraphQL slecht één expliciet schema van toepassing is.
+
+![Achtergrond: REST vs GraphQL vs SPARQL](images/achtergrond-rest-graphql-sparql.png)

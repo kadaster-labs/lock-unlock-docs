@@ -34,3 +34,25 @@ Het Lock-Unlock project bouwt voort op de IGO en Linked Data en onderzoekt hoe '
 'niet-open data' toch ontsloten kan worden. Dat betekent het stellen van voorwaarden aan de
 bevraging en het expliciet afdwingen en controleren van de toegang. Dit is precies de kern van het
 Lock-Unlock onderzoeksproject: _Lock de data, unlock het potentieel!_
+
+## Achtergronden
+
+- Internationale set van Linked Data standaarden van het W3C (https://www.w3.org/)
+- Van een web van gelinkte documenten naar een web van (gelinkte) data
+- Een Resource is een URI waarover meer informatie vast gelegd kan worden
+- Basis principes
+    - URI's voor globale webgebaseerde ID's
+    - RDF taal om URI's /Resources te beschrijven (meer informatie vastleggen)
+    - Resources kunnen verwijzen naar andere resources (linked)
+    - SPARQL voor bevragingen
+    -  Formele logica om informatie af te leiden
+    - Nieuwe basis voor data-gedreven applicaties
+- Meer informatie via
+    - <a href="https://www.w3.org/wiki/LinkedData" target="_blank">W3C Linked Data</a>
+    - <a href="https://www.w3.org/TR/rdf11-concepts/" target="_blank">W3C RDF 1.1 Concepts</a>
+    - <a href="https://www.w3.org/TR/sparql11-query/" target="_blank">W3C SPARQL</a>
+
+
+
+
+
