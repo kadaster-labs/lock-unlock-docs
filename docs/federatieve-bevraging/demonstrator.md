@@ -11,4 +11,4 @@ schematisch als volgt uit:
 
 ![Schematische SPARQL Query demo](images/testopstelling-federatieve-bevraging.png)
 
-// TODO live demo toevoegen
+// TODO live demo toevoegen of linken naar data story?
