@@ -29,10 +29,9 @@ Data](linkeddata.md)**. Dit is een concept en technologie waarmee data 'gelinkt'
 waarmee je kunt 'navigeren' over de data, over de 'nodes' in de data. De bijbehorende query taal
 (bevragingstaal) is **SPARQL**. Daarmee is federatief bevragen inherent mogelijk!
 
-In dit hoofdstuk wordt eerst beschreven hoe de verschillende API's zich verhouden en waarom we ons
-beperkt hebben tot de scope van Linked Data. Om vervolgens een goede testcasus en testopstelling te
-hebben, zullen we beschrijven hoe het informatiemodel in elkaar zit en hoe de testdata is
-gegenereerd. We sluiten af met conclusies rondom federatieve bevraging.
+In dit hoofdstuk wordt eerst beschreven hoe de verschillende API's zich tot elkaar verhouden en waarom we ons
+beperkt hebben tot de scope van Linked Data.Vervolgens beschrijven we hoe het informatiemodel in elkaar zit en wat de relatie is tot de informatiekundige kern. Ook wordt toegelicht hoe de testdata is gegenereerd. Zowel het informatiemodel als de testdata is randvoorwaardelijk voor een goede testcasus en testopstelling.
+ We sluiten af met conclusies rondom federatieve bevraging.
 
 - [API's | REST vs GraphQL vs SPARQL](./apis.md)
 - [Waarom Linked Data?](./linkeddata.md)
@@ -42,10 +41,16 @@ gegenereerd. We sluiten af met conclusies rondom federatieve bevraging.
     - Governance op informatiemodel, koppelsleutels, linksets
     - Informatiekundige kern
 - [Testdata](./testdata.md)
+    - Governance op informatiemodel, koppelsleutels, linksets
+    - Informatiekundige kern
+- [Testdata](./testdata.md)
     - Hoe gecreëerd 
     - Hoe en waar ontsloten
     - Mogelijkheden tot integraal bevragen data -> hier wil je dus autorisatie op toepassen
 - [Conclusies](./conclusies.md)
+- [Conclusies](./conclusies.md)
     - (oa) Wat ervoor nodig om dit in de praktijk te krijgen?
+
+![Federatieve bevraging](images/infographic-federatieve-bevraging.png)
 
 ![Federatieve bevraging](images/infographic-federatieve-bevraging.png)
