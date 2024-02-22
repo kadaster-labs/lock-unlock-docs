@@ -11,8 +11,7 @@ target="_blank">Kadaster Knowledge Graph (KKG)</a>. Vervolgens is het eigendom v
 echte mensen, welke geregistreerd zijn in de Basisregistratie Personen, afgekort met de **BRP**.
 Bedrijven zijn juridisch `Niet Natuurlijke Personen` en deze zijn geregistreerd in het Nationaal
 Handelsregister, afgekort met **NHR**. Om de casus nog wat breder te maken hebben we ook nog het
-**ANBI** register toegevoegd; het register van de Belastingdienst van goede doelen aangemerkt als
-Algemeen Nut Beogende Instellingen.
+**ANBI** register toegevoegd; het register van de Belastingdienst waarin goede doelen staan die aangemerkt zijn als Algemeen Nut Beogende Instellingen.
 
 ## Vereenvoudigd informatiemodel
 
@@ -21,15 +20,12 @@ Het vereenvoudigd informatiemodel ziet er als volgt uit:
 ![Vereenvoudigd informatiemodel](images/vereenvoudigd-informatiemodel.png)
 
 Het vereenvoudigd informatiemodel van bovenstaande tabel gebaseerde visualisatie is verder
-uitgewerkt in een Linked Data [informatiemodel](./informatiemodel.md) (zie ook [Linked
-Data](./linkeddata.md)).
+uitgewerkt in een Linked Data [informatiemodel](./informatiemodel.md).
 
 ## Silo's
 
-Deze registraties bestaan in eigen silo's. Dit is geheel naar werkelijkheid ... alleen met een
-vereenvoudigd informatiemodel. De complexiteit van volledige informatiemodellen is niet relevant
-voor dit onderzoek, maar de silo's wel. Het eerste doel is het federatief kunnen bevragen over de
-silo's heen!
+Deze registraties bestaan in eigen silo's. Dit is geheel naar werkelijkheid ... alleen werken we voor de testopstelling met een vereenvoudigd informatiemodel. De complexiteit van volledige informatiemodellen is niet relevant
+voor dit onderzoek, maar de silo's wel. Het eerste doel is het federatief kunnen bevragen over de silo's heen (zie ook [Demonstrator](./demonstrator.md))
 
 ![Federatieve bevraging over silo's heen](images/testopstelling-silos.png)
 
@@ -42,7 +38,7 @@ target="_blank">Kubernetes</a> / <a href="https://docs.openshift.com/" target="_
 Shift</a> en <a href="https://www.redhat.com/en/topics/devops/what-is-gitops"
 target="_blank">GitOps</a> gebaseerd platform.
 
-Voor de silo's die in het beheer van Kadaster zijn, te weten BRP, NHR en ANBI, zouden we die liever
+Voor de silo's die niet in het beheer van Kadaster zijn, te weten BRP, NHR en ANBI, zouden we die liever
 willen hosten op een andere cloud omgeving. Hiervoor maken we dankbaar gebruik van de mogelijkheden
 van de innovatiewerkplaats van de overheid, <a href="https://digilab.overheid.nl/"
 target="_blank">Digilab</a>.

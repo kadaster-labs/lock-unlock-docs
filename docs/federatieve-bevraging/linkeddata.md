@@ -40,7 +40,7 @@ Lock-Unlock onderzoeksproject: _Lock de data, unlock het potentieel!_
 - Internationale set van Linked Data standaarden van het W3C (https://www.w3.org/)
 - Van een web van gelinkte documenten naar een web van (gelinkte) data
 - Een Resource is een URI waarover meer informatie vast gelegd kan worden
-- Basis principes
+- Basis principes -> linken naar [5 star Linked Data](https://www.w3.org/2011/gld/wiki/5_Star_Linked_Data)?
     - URI's voor globale webgebaseerde ID's
     - RDF taal om URI's /Resources te beschrijven (meer informatie vastleggen)
     - Resources kunnen verwijzen naar andere resources (linked)
