@@ -11,8 +11,10 @@ nav:
      - federatieve-bevraging/index.md
      - federatieve-bevraging/apis.md
      - federatieve-bevraging/linkeddata.md
+     - federatieve-bevraging/testopstelling.md
      - federatieve-bevraging/informatiemodel.md
      - federatieve-bevraging/testdata.md
+     - federatieve-bevraging/demonstrator.md
      - federatieve-bevraging/conclusies.md
   - Afscherming: 
     - afscherming/index.md
@@ -45,7 +47,7 @@ theme:
     - navigation.tracking
     - toc.follow
   icon:
-    logo: material/antenna
+    logo: material/lock
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
