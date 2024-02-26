@@ -21,7 +21,21 @@ De autorisatie ontologie importeert de authenticatie ontologie datasets zodat ge
 ![authenticatie](images/auth2.png)
 
 
+### Users and Rules
+![Users](images/AutO1V2.png)
 
+
+### Rule types
+![Ruletypes](images/AutO2V2.png)
+
+### graph rules
+![Ruletypes](images/AutO3V2.png)
+
+### predicate rules
+![Ruletypes](images/AutO4V2.png)
+
+### horizontal subset rules
+![Ruletypes](images/AutO5.png)
 
 
 
