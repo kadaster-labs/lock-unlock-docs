@@ -2,7 +2,9 @@
 title: Autorisatie Ontologie
 ---
 
-# Ontologieen
+# Autorisatie Ontologieen
+
+## Ondersteunende ontologieen
 
 ### Autenticatie ontologie
 
@@ -12,7 +14,8 @@ De autorisatie ontologie maakt gebruik van de authenticatie ontologie. Dit kan d
 ### Logging ontologie
 Een hele simpele logging ontologie is opgezet voor het loggen van Sparql queries inclusief datum stempels en natuurlijk een koppeling naar de gebruiker. Dit had als doel om te demonstreren dat we queries en de afhandeling ervan goed kunnen loggen. Verdere implicaties van deze logging is buiten scope van dit project.
 
-### Autorisatie ontologie
+## Autorisatie ontologie
+### Overzicht
 De autorisatie ontologie importeert de authenticatie ontologie datasets zodat gebruikers(users) aanwezig zijn als readonly data. Vervolgens kunnen deze gebruikers gerelateerd worden aan Rollen die gekoppeld zijn aan SecurityGroup. Een gebruiker kan verbonden zijn met meerdere rollen. Rollen kunnen verbonden zijn met meerdere security groeps. Elke security groep kan meerdere (autorisatie) rules bevatten. 
 
 ![authenticatie](images/auth2.png)

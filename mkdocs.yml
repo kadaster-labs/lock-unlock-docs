@@ -28,8 +28,8 @@ nav:
     - autorisatie-als-linkeddata/concept.md
     - autorisatie-als-linkeddata/authorization-ontology.md
     - autorisatie-als-linkeddata/implementaties.md
-    - autorisatie-als-linkeddata/conclusies.md
-    - autorisatie-als-linkeddata/vervolgonderzoek.md
+    - autorisatie-als-linkeddata/demonstrators.md
+    - autorisatie-als-linkeddata/conclusies.md   
   - conclusies/index.md
   - verdiepende-details/index.md
 extra_css:

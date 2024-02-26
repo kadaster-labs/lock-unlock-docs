@@ -4,7 +4,13 @@ title: Concept
 
 
 #Concept authorisatie als Linked Data
-Binnen dit project wordt een configureerbare autorisatie component voorgesteld die een beveiligde Sparql endpoint opricht. Alle Sparql queries kunnen gesteld worden maar alleen op basis van de autorisatie worden resultaten terug gegeven. Een dergelijke oplossing zou als een extra component toegevoegd kunnen worden aan bestaande triplestores zonder extra eisen aan deze triplestore te  stellen. Door de instandhouding van een sparql endpoint voldoet een dergelijke implementatie ook aan de Linked Data architectuur. Applicaties die werken met een Sparql endpoint zouden gewoon moeten werken. 
+Binnen dit project wordt een configureerbare autorisatie component voorgesteld die een beveiligde Sparql endpoint opricht. Alle Sparql queries kunnen gesteld worden maar alleen op basis van de autorisatie worden resultaten terug gegeven. Op deze manier kan er een netwerk van triplestores gemaakt worden die eigen autorisatie gegevens bevat.
+
+![concept](images/concept1.png). 
+
+Applicaties kunnen 'gewoon' de sparql endpoints gebruiken en dus ook meerdere sparql endpoints via de federatieve mogelijkheden die sparql biedt. 
+
+Een dergelijke oplossing zou als een extra component toegevoegd kunnen worden aan bestaande triplestores zonder extra eisen aan deze triplestore te  stellen. Door de instandhouding van een sparql endpoint voldoet een dergelijke implementatie ook aan de Linked Data architectuur. Applicaties die werken met een Sparql endpoint zouden gewoon moeten werken. 
 
 
 ![concept](images/concept.png)
