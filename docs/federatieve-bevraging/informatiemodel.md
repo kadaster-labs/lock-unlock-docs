@@ -1,13 +1,13 @@
 ---
 title: FDS op basis van Linked Data
 ---
-To do: 
+# FDS op basis van Linked Data
+TO DO: 
 - Informatiemodel voor dit project nog concreet toelichten: in dit hoofdstuk of als los subhoofdstukje?
 - In het stukje informatie ingaan op: Hoe leggen we nu daadwerkelijk die koppeling tussen de verschillende silo's? Gebruiken we hiervoor BSN of naam? En staat zo'n BSN dan in de URI? 
 - En wat is de rol van linksets? Dit is weer net anders dan een upper ontologie en directe relaties volgens mij? Waarvoor gebruik je die?
 - Kunnen we de plaatjes wat kleiner maken?
 
-# FDS op basis van Linked Data
 Binnen dit project wordt uitgegaan van een Federatief Datastelsel op basis van Linked Data. Dit hoofdstuk beschrijft wat ervoor nodig is om de verschillende registers met elkaar te koppelen. 
 
 ### Onafhankelijke registers
