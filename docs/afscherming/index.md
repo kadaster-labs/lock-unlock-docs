@@ -1,12 +1,12 @@
 ---
 title: Afscherming ('lock')
 ---
-// TODO federatieve bevraging beschrijven
+In het voorgaande hoofdstuk is ingegaan op het federatief kunnen bevragen van verschillende registers en de kracht daarvan. Wanneer je verschillende datasets integraal kunt bevragen ontstaat natuurlijk ook de vraag of dit altijd wenselijk is? Wie heeft toegang tot welke data? 
 
-- Verwijzing naar desk research
-- Verantwoording voor / op toegang dmv autorisaties … én logging
-    - Loggen van queries
-    - Relatie met Verwerkingenlogging standaard 
-- Onze requirements: horizontale & verticale subset, richting, vrije query’en
-- Samenvatting slide verschillende opties (Rest API vs GraphQL vs Linked Data moeten hier weer aan bod komen – kort)
-- Keuze die we hebben gemaakt: deze opties zijn we gaan verkennen
+In dit hoofdstuk wordt hier verder op ingegaan. We vertellen wat meer over de desk research die we hebben uitgevoerd en de rol van logging. Vervolgens bespreken we de requirements voor de oplossingen. We eindigen met de opties die we hebben bestudeerd en in hoeverre deze opties aan de requirements voldoen. Op basis hiervan hebben we bepaald welke opties we technisch verder zijn gaan onderzoeken.
+
+- [Desk research rondom autorisatie](./deskresearch.md)
+- [De rol van logging](./verantwoording.md)
+- [Requirements voor autorisatie oplossingen](./requirements.md)
+- [De verschillende autorisatie oplossingen](opties.md)
+

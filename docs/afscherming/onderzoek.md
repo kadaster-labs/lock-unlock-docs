@@ -1,4 +1,4 @@
 ---
 title: Onderzoek
 ---
-Lorem ipsum ... enz.
+Janneke: deze kan denk ik weg? Of wat willen we hier nog benoemen?
