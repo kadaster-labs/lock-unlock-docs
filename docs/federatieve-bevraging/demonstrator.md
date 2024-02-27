@@ -12,3 +12,5 @@ schematisch als volgt uit:
 ![Schematische SPARQL Query demo](images/testopstelling-federatieve-bevraging.png)
 
 // TODO live demo toevoegen of linken naar data story?
+
+Belangrijk om in te gaan op het integraal bevragen van de data én het navigeren door de datasets heen: hoe kan je nu bijv. vanuit een perceel (BRK) naar een stichting (ANBI)? 
