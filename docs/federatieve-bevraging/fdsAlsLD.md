@@ -1,5 +1,5 @@
 ---
-title: FDS op basis van Linked Data
+title: Federatief Data Stelsel op basis van Linked Data
 ---
 # FDS op basis van Linked Data
 TO DO: 
