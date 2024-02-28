@@ -74,8 +74,6 @@ De Anbi dataset kan direct gekoppeld worden aan NHR Inschrijvingen (Zie Diagram 
 ### Netwerk van register ontologieën
 Door de 'owl:same-as' relatie (en bijbehorende inferentie) ontstaat er een netwerk van samenhangende schema's. Dit kan natuurlijk als 1 schema gepresenteerd worden. 
 
-
-
 Hieronder een screenshot van de visualisatie direct uit de data van de schema's. Deze visualisatie is ook live te bekijken via [deze link](https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema)
 
 ![linked registers](images/InformatieModel.png)
@@ -84,7 +82,7 @@ In dit samengesteld model zijn verschillende kleuren gebruikt om de individuele 
 
 ### Stroomlijnen van de samenhang: Informatiekundige kern in Linked Data?
 De relaties tussen de registers zijn impliciet al vaak aanwezig maar wellicht houden de registers een eigen versie bij om zo onafhankelijk te kunnen functioneren. Kadaster houdt persoonsgegevens bij mbt eigendom van percelen. De NHR (Ubo) bevat persoonsgegevens, ANBI refereert aan KVK nummers. 
-Extra afspraken over de relaties kan voor vertrouwen en voor een infrastructuur zorgen waarop de registers durven bouwen. Dit zou grofweg een upper-ontologie kunnen zijn met extra afspraken over infrastructuur. Koppelvelden en hoe om te gaan met deze velden plus wellicht zaken zoals versiemanagement zouden hieren afgesproken kunnen worden.
+Extra afspraken over de relaties kan voor vertrouwen en voor een infrastructuur zorgen waarop de registers durven bouwen. O.a. zou dit een upper-ontologie kunnen zijn. Koppelvelden en hoe om te gaan met deze velden plus wellicht zaken zoals versiemanagement zouden hieren afgesproken kunnen worden.
 
 
 # Synthetische test data 
@@ -96,5 +94,7 @@ href="https://github.com/kadaster-labs/lock-unlock-testdata" target="_blank">tes
 toegevoegd. Deze wordt automatisch geladen bij het opstarten van de containers van de
 [demonstrator](./demonstrator.md) (zie ook
 [testopstelling#deployment](./testopstelling.md#deployment)).
+
+
 
 // TODO testdata generator code in [testdata repo](https://github.com/kadaster-labs/lock-unlock-testdata) zetten? :thinking_face:
