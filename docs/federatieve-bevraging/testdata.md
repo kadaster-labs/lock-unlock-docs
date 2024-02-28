@@ -40,34 +40,41 @@ Hieronder is een diagram van het ANBI schema te vinden.
 ![linked registers](images/schema-anbi.png)
 
 
-## Netwerk van samenhangende ontologieen
-De ontologieen en de data van de ontologieen zijn als Silo's opgezet. Elk register publiceert zijn data en de bijbehorende context (schema's) op een eigen triplestore.  Door middel van owl:sameAs relaties kunnen individuals in LD gelijk verklaard worden. Oftewel een linked data resource (element) dat leeft in 1 register wordt gelijk verklaard aan een andere resource dat zich bevindt in een ander register (Zie figuur).
+## Netwerk van samenhangende ontologieën
+De ontologieën en de data van de ontologieën zijn als Silo's opgezet. Elk register publiceert zijn data en de bijbehorende context (schema's) op een eigen triplestore.  Door middel van owl:sameAs relaties kunnen individuals in LD gelijk verklaard worden. Oftewel een linked data resource (element) dat leeft in 1 register wordt gelijk verklaard aan een andere resource dat zich bevindt in een ander register (Zie figuur).
 
 ![linked registers](images/relatiesV1.png)
 
 
  De bijbehorende inference is dat alle gegevens van de 2 gelijk gestelde resources gekopieerd mag worden. Stel individual 'A' is gelijk (owl:sameAs) aan individual 'B' dan kunnen alle relaties en kenmerken gekopieerd worden van 'A' naar 'B' en andersom. 
 Hierdoor ontstaan netwerken van linked data over de registers heen en kan er daadwerkelijk "doorgebrowsed" worden van het ene register naar het andere. Ook Sparql queries kunnen hier makkelijk gebruik van maken om zoekopdrachten over meerdere registers te uit te voeren. 
-Ook in onze test opstelling maken we gebruik van owl:sameAs om relaties te leggen naar andere registers zonder volledig afhankelijk te worden van deze registers. 
+Ook in onze test opstelling maken we gebruik van owl:sameAs om relaties te leggen naar andere registers zonder volledig afhankelijk te worden van deze registers. Dit is natuurlijk een manier om de relaties te leggen. Er zijn meerdere manieren op registerdata te koppelen via LD.
 
 
 ### BRK naar BRP en NHR
-'Personen' uit de BRK kunnen gelijk verklaard worden met 'geregistreerde personen' uit de BRK of 'Inschrijvingen' uit de NHR.  
+'Personen' uit de BRK kunnen gelijk verklaard worden met 'geregistreerde personen' uit de BRK of 'Inschrijvingen' uit de NHR (Zie diagram hieronder).
 
 ![linked registers](images/schema-brk.png)
 
+Een 'owl:same-as' relatie kan gelegd worden wanneer je weet dat deze 2 individuals ook daadwerkelijk gelijk zijn (refereert naar dezelfde persoon in de werkelijkheid). Vanuit Kadaster zal er waarschijnlijk akte informatie gebruikt worden zoals voornamen, achternaam, geboortedatum, geboortestad, etc om de juiste persoon in de BRP te vinden. De eigen adminstratie (BRK:Persoon) wordt dan gelijk verklaard met de gevonden BRP:(GeregistreerdPersoon). Ook voor relaties met de NHR werkt dit ongeveer hetzelfde. Akte informatie zal gebruikt worden om de juiste Inschrijving te vinden in de NHR om vervolgens weer de owl:sameAs relatie te leggen.
+
+
 ### NHR naar BRP
+Net zoals de BRK linkt naar personen in de BRP kan ook de NHR direct verbonden worden met BRP (Geregistreerde)Personen (zie diagram hieronder).
 
 ![linked registers](images/schema-nhr-brp.png)
 
-### AMBI naar NHR
+### ANBI naar NHR
+De Anbi dataset kan direct gekoppeld worden aan NHR Inschrijvingen (Zie Diagram hieronder)
 
 ![linked registers](images/schema-nhr-anbi.png)
 
 
-### Samenwerkende ontologieen
-### Netwerk van register ontologieen
-Door de 'owl:same-as' relatie (en bijbehorende inferentie) ontstaat er een netwerk van samenhangede schema's. Dit kan natuurlijk als 1 schema gepresenteerd worden.
+### Samenwerkende ontologieën
+### Netwerk van register ontologieën
+Door de 'owl:same-as' relatie (en bijbehorende inferentie) ontstaat er een netwerk van samenhangende schema's. Dit kan natuurlijk als 1 schema gepresenteerd worden. 
+
+
 
 Hieronder een screenshot van de visualisatie direct uit de data van de schema's. Deze visualisatie is ook live te bekijken via [deze link](https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema)
 
@@ -80,7 +87,7 @@ De relaties tussen de registers zijn impliciet al vaak aanwezig maar wellicht ho
 Extra afspraken over de relaties kan voor vertrouwen en voor een infrastructuur zorgen waarop de registers durven bouwen. Dit zou grofweg een upper-ontologie kunnen zijn met extra afspraken over infrastructuur. Koppelvelden en hoe om te gaan met deze velden plus wellicht zaken zoals versiemanagement zouden hieren afgesproken kunnen worden.
 
 
-# Synthestische test data 
+# Synthetische test data 
 
 Voor de verschillende silo's is synthetische testdata gegenereerd. Deze is echter wél in samenhang
 gegenereerd, zodat relaties op key / index velden mogelijk is. De resultaten van de gegenereerde
