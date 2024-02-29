@@ -29,10 +29,23 @@ voor dit onderzoek, maar de silo's wel. Het eerste doel is het federatief kunnen
 
 ![Federatieve bevraging over silo's heen](images/testopstelling-silos.png)
 
+## Testdata
+
+Voor de verschillende silo's is synthetische testdata gegenereerd. Deze is echter wél in samenhang
+gegenereerd, zodat relaties op key / index velden mogelijk is. De resultaten van de gegenereerde
+testdata is vervolgens opgesplitst naar de verschillende silo's en ook als zodanig in de <a
+href="https://github.com/kadaster-labs/lock-unlock-testdata" target="_blank">testdata repo</a>
+toegevoegd. Deze wordt automatisch geladen bij het opstarten van de containers van de
+[demonstrator](./demonstrator.md) (zie ook
+[testopstelling#deployment](./testopstelling.md#deployment)).
+
+// TODO testdata generator code in [testdata
+repo](https://github.com/kadaster-labs/lock-unlock-testdata) zetten? :thinking_face:
+
 ## Deployment
 
 Als Kadaster hebben wij de BRK data zelf in huis (uiteraard). Ook de synthetische
-[testdata](./testdata.md) van de BRK hosten we op onze infrastructuur. Hiervoor maken we gebruik van
+[testdata](#testdata) van de BRK hosten we op onze infrastructuur. Hiervoor maken we gebruik van
 ons interne Managed Application Platform, een <a href="https://kubernetes.io/"
 target="_blank">Kubernetes</a> / <a href="https://docs.openshift.com/" target="_blank">Open
 Shift</a> en <a href="https://www.redhat.com/en/topics/devops/what-is-gitops"

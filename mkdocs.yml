@@ -11,9 +11,9 @@ nav:
      - federatieve-bevraging/index.md
      - federatieve-bevraging/apis.md
      - federatieve-bevraging/linkeddata.md
-     - federatieve-bevraging/fdsAlsLD.md
-     - federatieve-bevraging/testdata.md
+     - federatieve-bevraging/informatiekundigekern.md
      - federatieve-bevraging/testopstelling.md
+     - federatieve-bevraging/informatiemodel.md
      - federatieve-bevraging/demonstrator.md
      - federatieve-bevraging/conclusies.md
   - Afscherming: 
@@ -27,10 +27,16 @@ nav:
     - autorisatie-als-linkeddata/index.md
     - autorisatie-als-linkeddata/concept.md
     - autorisatie-als-linkeddata/authorization-ontology.md
-    - autorisatie-als-linkeddata/implementaties.md
-    - autorisatie-als-linkeddata/demonstrators.md
-    - autorisatie-als-linkeddata/conclusies.md   
-  - conclusies/index.md
+    - Implementaties:
+      - autorisatie-als-linkeddata/implementaties/index.md
+      - autorisatie-als-linkeddata/implementaties/rewrite.md
+      - autorisatie-als-linkeddata/implementaties/subgraph.md
+    - Demonstrators:
+      - autorisatie-als-linkeddata/demonstrators/index.md
+      - autorisatie-als-linkeddata/demonstrators/rewrite.md
+      - autorisatie-als-linkeddata/demonstrators/subgraph.md
+    - autorisatie-als-linkeddata/evaluatie.md   
+  - conclusies.md
   - verdiepende-details/index.md
 extra_css:
   - css/lock-unlock.css
