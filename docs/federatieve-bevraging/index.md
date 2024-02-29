@@ -27,16 +27,15 @@ beperkt hebben tot de scope van Linked Data.Vervolgens beschrijven we hoe het in
 
 - [API's | REST vs GraphQL vs SPARQL](./apis.md)
 - [Waarom Linked Data?](./linkeddata.md)
+- [Informatiekundigekern](./informatiekundigekern.md)
+    - Governance op informatiemodel, koppelsleutels, linksets
 - [Testopstelling](./testopstelling.md)
+    - Synthetische testdata genereren
+    - Deployments & infrastructuur
 - [Informatiemodel](./informatiemodel.md)
     - Relatie met IMX-Geo
     - Koppelsleutels: 2 opties (owl:SameAs vs directe uri’s)
-    - Governance op informatiemodel, koppelsleutels, linksets
-    - Informatiekundige kern
-- [Testdata](./testdata.md)
-    - Synthetische testdata genereren
-    - Deployments & infrastructuur
-- [Demonstrator](./demonstrator)
+- [Demonstrator](./demonstrator.md)
     - Mogelijkheden tot integraal bevragen data -> hier wil je dus autorisatie op toepassen
 - [Conclusies](./conclusies.md)
     - (oa) Wat ervoor nodig om dit in de praktijk te krijgen?
