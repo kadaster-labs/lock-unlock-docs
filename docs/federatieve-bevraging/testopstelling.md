@@ -62,6 +62,10 @@ Uiteindelijk ziet de deployment op basis van containers en GitOps er dan als vol
 
 Links naar deployments:
 
+> TO DO
+>
+> - Linkjes fixen -> deel moet van Digilab zijn
+
 - BRK -> <a href="https://brk.dst.test.cloud.kadaster.nl/"
   target="_blank">https://brk.dst.test.cloud.kadaster.nl/</a>
 - ANBI -> <a href="https://anbi.dst.test.cloud.kadaster.nl/"
