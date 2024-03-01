@@ -3,29 +3,11 @@ title: Informatiekundige kern
 ---
 > TO DO:
 > 
-> - Informatiemodel voor dit project nog concreet toelichten: in dit hoofdstuk of als los
->  subhoofdstukje?
-> - In het stukje informatie ingaan op: Hoe leggen we nu daadwerkelijk die koppeling tussen de
->   verschillende silo's? Gebruiken we hiervoor BSN of naam? En staat zo'n BSN dan in de URI? 
-> - En wat is de rol van linksets? Dit is weer net anders dan een upper ontologie en directe
->   relaties volgens mij? Waarvoor gebruik je die?
+> - En wat is de rol van linksets? Dit is weer net anders dan een upper ontologie en directe relaties volgens mij? Waarvoor gebruik je die?
 > - Kunnen we de plaatjes wat kleiner maken?
 
-Binnen dit project wordt uitgegaan van een Federatief Datastelsel op basis van Linked Data. Dit
-hoofdstuk beschrijft wat ervoor nodig is om de verschillende registers met elkaar te koppelen. 
-
-### Stroomlijnen van de samenhang: Informatiekundige kern in Linked Data?
-
-// TODO waar hoort dit kopje?
-
-De relaties tussen de registers zijn impliciet al vaak aanwezig maar wellicht houden de registers
-een eigen versie bij om zo onafhankelijk te kunnen functioneren. Kadaster houdt persoonsgegevens bij
-mbt eigendom van percelen. De NHR (Ubo) bevat persoonsgegevens, ANBI refereert aan KVK nummers.
-Extra afspraken over de relaties kan voor vertrouwen en voor een infrastructuur zorgen waarop de
-registers durven bouwen. O.a. zou dit een upper-ontologie kunnen zijn. Koppelvelden en hoe om te
-gaan met deze velden plus wellicht zaken zoals versiemanagement zouden hieren afgesproken kunnen
-worden.
-
+Binnen dit project wordt uitgegaan van een federatief datastelsel op basis van Linked Data. Dit
+hoofdstuk beschrijft wat ervoor nodig is om  verschillende registers met elkaar te koppelen. 
 
 ### Onafhankelijke registers
 
@@ -92,7 +74,17 @@ onbekend bij Kadaster vanuit de NHR, Of vanuit de BRK, welke BRP personen zijn (
 BRP. Het schrijven van een dergelijke query is zeer eenvoudig. De uitvoering ervan zal natuurlijk
 qua performance wel het nodige vereisen.
 
+### Stroomlijnen van de samenhang: 
 
+// TODO waar hoort dit kopje?
+
+De relaties tussen de registers zijn impliciet al vaak aanwezig maar wellicht houden de registers
+een eigen versie bij om zo onafhankelijk te kunnen functioneren. Kadaster houdt persoonsgegevens bij
+mbt eigendom van percelen. De NHR (Ubo) bevat persoonsgegevens, ANBI refereert aan KVK nummers.
+Extra afspraken over de relaties kan voor vertrouwen en voor een infrastructuur zorgen waarop de
+registers durven bouwen. O.a. zou dit een upper-ontologie kunnen zijn. Koppelvelden en hoe om te
+gaan met deze velden plus wellicht zaken zoals versiemanagement zouden hieren afgesproken kunnen
+worden.
 
 
 

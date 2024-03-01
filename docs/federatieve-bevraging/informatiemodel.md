@@ -1,6 +1,13 @@
 ---
 title: Informatiemodel
 ---
+> TO DO:
+> 
+> - Informatiemodel voor dit project nog concreet toelichten: in dit hoofdstuk of als los >  subhoofdstukje?
+> - In het stukje informatie ingaan op: Hoe leggen we nu daadwerkelijk die koppeling tussen de
+>   verschillende silo's? Gebruiken we hiervoor BSN of naam? En staat zo'n BSN dan in de URI? 
+
+
 Versimpelde testdata van een federatief data stelsel is ontwikkeld op basis van Linked Data en de
 Linked Data gedachte. Hiermee is het mogelijk om een realistische situatie na te kunnen bootsen
 waarin informatie afgeschermd dient te worden. Deze dataset is gebruikt binnen dit project voor R&D

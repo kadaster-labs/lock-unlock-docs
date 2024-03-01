@@ -11,53 +11,58 @@ schematisch als volgt uit:
 
 ![Schematische SPARQL Query demo](images/testopstelling-federatieve-bevraging.png)
 
+Voordat we een voorbeeld zullen geven van een federatieve bevragingen duiken we eerst in de losse silo's. 
+
 ## BRP Silo
 
-Fictieve data is gemaakt voor BRP gegevens. Meer dan 100K Personen zijn aangemaakt met kenmerken
-zoals naam, achternaam, gender, geboorteplaats, gehuwd met etc. Hieronder is een dashboard te zien
-waarin alle personen opgevraagd worden en in een tabel gezet zijn en waarbij ook de dataset is
-bevraagd op hoeveelheden zoals aantal M/V of aantal gehuwden. Al deze vragen zijn gewone Sparql
-queries op het BRP Sparl-endnpoint.
+Fictieve data is gemaakt voor BRP gegevens. Meer dan 100.000 personen zijn aangemaakt met kenmerken
+zoals naam, achternaam, geslacht & geboorteplaats. Hieronder is een dashboard te zien
+waarin alle personen opgevraagd worden en waarbij ook een aantal doorsnedes worden getoond. Al deze vragen zijn gewone SPARQL
+queries op het BRP SPARQL-endpoint.
 
 ![linked data in context](images/BRP-Data.png)
 
 ## NHR Silo
 
-Fictieve data is gemaakt voor NHR gegevens. Meer dan 25K inschrijvingen zijn gegenereerd met een KVK
+Fictieve data is gemaakt voor NHR gegevens. Meer dan 25.000 inschrijvingen zijn gegenereerd met een KvK
 nummer, rechtsvorm, naam, stichtingsjaar, etc. Hieronder is een dashboard te zien waarin alle
-inschrijvingen in een tabel gezet inclusief enkele grafieken met statistiche gegevens over deze
+inschrijvingen in een tabel worden getoond en ook enkele grafieken met statistiche gegevens over deze
 fictieve dataset.
 
 ![linked data in context](images/NHR-Data.png)
 
 ## ANBI Silo
 
-Fictieve data is gemaakt voor ANBI gegevens. Meer dan 4K stichtingen zijn aangemaakt met basale
-informatie. Hieronder een screenshot met daarin een set van ANBI gegevens in tabelvorm en 2
+Fictieve data is gemaakt voor ANBI gegevens. Meer dan 4.000 stichtingen zijn aangemaakt met basale
+informatie zoals een fiscaal nummer en een vestigingsplaats. Hieronder een screenshot met daarin een set van ANBI gegevens in tabelvorm en twee
 grafieken.
 
 ![linked data in context](images/ANBI-Data.png)
 
 ## BRK Silo
 
-BRK data bestaat uit een open gedeelte waarin perceel informatie aanwezig is inclusief geometrie van
-het perceel. In dit project zijn percelen in Almere en Zeewolde in scope. Hieronder een screenshot
+> Vraag: zit in de losse BRK silo ook de perceelsinformatie of gebruiken we daarvoor het IMX Geo/KKG endpoint? 
+
+De BRK data bestaat uit een open en een gesloten gedeelte. In het open gedeelte staat informatie over de percelen zoals de geometrie. Voor dit project worden de percelen in Almere en Zeewolde gebruikt. Hieronder een screenshot
 met daarin de percelen op de kaart. Deze informatie is afkomstig van IMX-Geo.
 
 ![linked data in context](images/BRK-Data.png)
 
-Daarnaast is er eigendom-informatie aanwezig en koopsommen van elk perceel.
+In het gesloten (fictieve) gedeelte van de BRK staat de eigendomsinformatie. Hierin staat wie de eigenaar/eigenaren is/zijn van een perceel. Ook staan hierin de koopsommen van de percelen.
+
 
 ## Federatieve bevraging
 
-Door deze data te combineren kan er data opgehaald worden zoals laatste koopsommen van een perceel,
-eigendom van percelen met extra informatie uit de BRP (persoonsnamen) en of NHR gegevevens.
+> // TODO dit nog iets verder uitwerken?
+> Belangrijk om in te gaan op het integraal bevragen van de data én het navigeren door de datasets
+heen: hoe kan je nu bijv. vanuit een perceel (BRK) naar een stichting (ANBI)? 
+
+Door deze silo's te combineren en integraal te bevragen kunnen er vragen beantwoord worden als: wat is de geboorteplaats van de eigenaar van perceel X of is het perceel in eigendom van een ANBI. 
+kan er data opgehaald worden zoals laatste koopsommen van een perceel,
+
 Hieronder is een voorbeeld waarbij alle koopsommen zichtbaar zijn van percelen uit de BRK en waarbij
 eigendoms informatie aanwezig is van een geselecteerd perceel.
 
 ![linked data in context](images/FDS-Data.png)
 
-// TODO live demo toevoegen of linken naar data story?
 
-Belangrijk om in te gaan op het integraal bevragen van de data én het navigeren door de datasets
-heen: hoe kan je nu bijv. vanuit een perceel (BRK) naar een stichting (ANBI)? 
