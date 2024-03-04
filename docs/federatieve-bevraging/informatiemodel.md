@@ -1,12 +1,6 @@
 ---
 title: Informatiemodel
 ---
-> TO DO:
-> 
-> - Informatiemodel voor dit project nog concreet toelichten: in dit hoofdstuk of als los >  subhoofdstukje?
-> - In het stukje informatie ingaan op: Hoe leggen we nu daadwerkelijk die koppeling tussen de
->   verschillende silo's? Gebruiken we hiervoor BSN of naam? En staat zo'n BSN dan in de URI? 
-
 
 Versimpelde testdata van een federatief data stelsel is ontwikkeld op basis van Linked Data en de
 Linked Data gedachte. Hiermee is het mogelijk om een realistische situatie na te kunnen bootsen
@@ -15,23 +9,22 @@ en voor demonstratie doeleinden. Aangezien het heel handig is om data in een con
 (denk aan data schema's) is er binnen dit project een set van schema's ontwikkeld die de registers
 nabootsen (versimpeld en fictief) en natuurlijk een bijbehorende dataset. Beiden zijn fictief en
 versimpeld behalve het zogenaamde IMX-Geo model dat Kadaster in LD publiceert en dat openbaar is. Om
-de ontologieen te modelleren is er gebruik gemaakt van de RDF/RDFS/OWL en Shacl standaard. 
+de ontologieën te modelleren is er gebruik gemaakt van de RDF/RDFS/OWL en Shacl standaard. 
 
 ## Losstaande schema's
 
 Voor elke silo is een ontologie gemaakt. Het betreft hier een (over) versimpelde ontologie dat
 grofweg de kern van de register bevat met als doel R&D voor de dit project te ondersteunen en tevens
-voor demonstratie mogelijkheden. De ontologieen voor elke silo heeft een eigen namespace en is
+voor demonstratie mogelijkheden. De ontologieën voor elke silo heeft een eigen namespace en is
 relatief onafhankelijk gemodelleerd. Zo is voor Kadaster de NEN3610 een belangrijke
 'Upper-Ontologie' terwijl dit wellicht voor de BRP niet zo hoeft te zijn. Op deze manier onstaat er
-een situatie dat elk register een eigen ontologie heeft op basis van eigen "upper-ontologieen".
+een situatie dat elk register een eigen ontologie heeft op basis van eigen "upper-ontologieën".
 
 
 ### IMX-Geo
 
-Een openbare basis dataset is IMX-Geo. Deze is aanwezig als Linked Data en bevat versimpelde data
-van gebouwen en percelen liggende in registratieve ruimtes. Bijna alle gegevens zijn openbaar,
-'laatste koopsom' is wellicht een uitzondering. 
+Een openbare basis dataset is IMX-Geo. Deze is aanwezig als Linked Data en bevat data
+van gebouwen en percelen liggende in registratieve ruimtes. Bijna alle gegevens zijn openbaar. De 'laatste koopsom' is wellicht een uitzondering hierop. 
 
 ![linked registers](images/schema-imx.png)
 
