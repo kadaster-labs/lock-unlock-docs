@@ -2,17 +2,20 @@
 title: Autorisatie als Linked Data ('unlock')
 ---
 
-Dit hoofdstuk beschrijft het concept om op basis van Linked Data autorisatie-regels vast te leggen en wel op zo'n manier dat een implementatie daar direct gebruik van kan maken om Sparql queries te verwerken zodat er geen afgeschermde gegevens geraadpleegd kunnen worden.
+Dit hoofdstuk beschrijft het concept om op basis van Linked Data autorisatieregels vast te leggen en wel op zo'n manier dat een implementatie daar direct gebruik van kan maken om SPARQL queries te verwerken zodat er geen afgeschermde gegevens geraadpleegd kunnen worden.
 
 Dit concept wordt verder uitgewerkt inclusief een beschrijving van de autorisatie ontologie zoals die ontwikkeld is in dit project. Het betreft hier een Proof-of-Concept (PoC). 
 
-Om dit concept te implementeren zijn er meerdere strategieen mogelijk. Een paar implementatie strategieen zijn geidentificeerd en worden kort uitgelegd. 2 PoC implementaties zijn gemaakt om de werking van het geheel te kunnen onderzoeken en te kunnen demonstreren.
+Om dit concept te implementeren zijn er meerdere strategieën mogelijk. Een paar implementatie strategieën worden kort toegelicht en er zijn twee PoC implementaties gemaakt om de werking van het geheel te kunnen onderzoeken en te kunnen demonstreren.
 
-Dit hoofdstuk sluit af met conclusies en aanbevelingen.
-
-
+Dit hoofdstuk sluit af met een evaluatie van de twee implementatie strategieën.
 
 
+
+> TO DO: 
+
+> - straks checken of onderstaande in dit hoofdstuk terugkomt
+> - daarna inhoudsopgave opschonen en linkjes toevoegen
 
 
 - Concept toelichten
