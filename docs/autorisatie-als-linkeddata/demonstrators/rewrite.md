@@ -12,7 +12,7 @@ gedistribureerde infrastructuur te hebben als basis voor de demo's. ![concept](.
 Elke triplestore is voorzien van eigen data en een afschermings kennisgraaf bestaande uit de
 autorisatie ontologie aangevuld met een specifieke configuratie.
 
-Daarmee zijn de volgende sparql endpoints aawenzig:
+Daarmee zijn de volgende Sparql endpoints aanwezig:
 
 - BRP:
   [https://brp-lock-unlock.apps.digilab.network/](https://brp-lock-unlock.apps.digilab.network/)
@@ -29,9 +29,9 @@ Daarmee zijn de volgende sparql endpoints aawenzig:
 
 # Triplestore per register
 
-In deze omgevingen is het mogelijk om sparql queries te schrijven en te executeren op de
-triplestore. Wel worden deze queries herschreven en is afgeschermde data niet toegankelijk. Query
-resultaten kunnen daardoor leeg zijn.  Door de URL parameter "Persona" kan er makkelijk veranderd
+In deze omgevingen is het mogelijk om Sparql queries te schrijven en te executeren op de
+triplestore. Zonder 'login' worden deze queries herschreven en is daarmee afgeschermde data niet toegankelijk. Query
+resultaten kunnen daardoor leeg zijn. Door de URL parameter "Persona" kan er makkelijk veranderd
 worden van Persona's met verschillende rechten. Hiermee wordt het demonstreren en onderzoeken van de
 werking van het geheel vergemakkelijkt. Het moge natuurlijk duidelijk zijn dat een echt (centraal)
 authenticatie systeem nodig is om dit goed af te handelen.
@@ -44,20 +44,20 @@ data.
 
 ![fuseki](../images/fuseki1.png). 
 
-# Federatief bevragen met autorisatie
+# Federatief bevragen met authorisatie
 
 De persona's zijn aanwezig in alle triplestores. Daarmee kan een federatieve query geschreven worden
 die op basis van 1 persona resultaten teruggeeft op basis van de resultaten die elke triplestore
-voor deze persona beschikbaar stelt. Hiervoor kan gebruik gemaakt worden van het Service keyword
-binnen sparql die een ander sparql endpoint aanspreekt. Hieronder is screenshot te zien van een
-sparql query in de kadaster BRK triplestore werkend op de kadaster infrastructuur die een vraag
+voor deze persona beschikbaar stelt. Hiervoor kan gebruik gemaakt worden van het 'Service' keyword
+binnen Sparql die een ander Sparql endpoint aanspreekt. Hieronder is screenshot te zien van een
+Sparql query in de kadaster BRK triplestore werkend op de Kadaster infrastructuur die een vraag
 stelt aan de (Fictieve) NHR dataset op de DIGI-Lab omgeving.
 
 
 ![fuski2](../images/fuseki2.png). 
 
-# Demonstrator:  applicaties bovenop sparql endpoints
-Nu dat de infrastructuur staat kan er een user-interface gebruik maken van de sparql endpoints.
+# Demonstrator:  applicaties bovenop Sparql endpoints
+Nu dat de infrastructuur staat kan er een user-interface gebruik maken van de Sparql endpoints.
 Links bovenin de demo omgeving kan er snel gewisseld worden van persona. In het eerste screenshot
 zijn weinig resultaten te zien. Hier wordt op basis van de persona "anonymous" BRP gegevens
 opgevraagd via een sparql query. De query vraagt een set van (random) personen op.  Dit levert geen
@@ -77,7 +77,7 @@ Deze info kan verder aangevuld worden met grafische perceel informatie dat openb
 
 ![demonstrator3](../images/demoauth2.png). 
 
-Boven in het screenshot wordt via een sparql query percelen gevraagd met koopsommen. De query vraagt
+Boven in het screenshot wordt via een Sparql query percelen gevraagd met koopsommen. De query vraagt
 om alle percelen in het hele land en vraagt via de BRK triplestore de laatste koopsommen op. Voor
 persona Almere worden alleen koopsommen van Almere gevonden aangezien deze persona daartoe toegang
 heeft. Dit levert een percelen kaart op van Almere. 
@@ -85,10 +85,15 @@ heeft. Dit levert een percelen kaart op van Almere.
 
 # Logging
 Elke triplestore logt elke query die binnenkomt. Hierbij wordt de persona ook gelogd waardoor je
-percies weet wanneer welke persona welke query heeft verstuurd. Naast de originele query wordt ook
-de herschreven query bewaard. Hieronder een screenshot van de log informatie.  
+percies weet wanneer welke persona welke query heeft verstuurd. Zo je bijvoorbeeld makkelijk zien wie wanneer queries heeft afgevuurd op de triplestors. Hieronder een screenshot met het aantal queries per maand per persona. Ook de individuele queries zijn zichtbaar met daarbij een tijdstempel. 
 
-![demonstrator3](../images/demoauth5.png). 
+![logstats](../images/demoauth5b.png). 
+
+
+ Naast de originele query wordt ook
+de herschreven query bewaard. Hieronder een screenshot van de log informatie waarbij zowel de originele als de herschreven query op te vragen is. In het screenshot is een deel van de originele en herschreven query te zien.
+
+![logrewrite](../images/demoauth5.png). 
 
 De demonstrator staat live en is te vinden via: [Lock-Unlock
 Demonstrator](https://labs.kadaster.nl/demonstrators/unlocked/demonstrator)
