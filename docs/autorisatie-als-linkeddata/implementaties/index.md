@@ -16,7 +16,7 @@ service.
 Een implementatie op basis van broncode van een triplestore wordt al heel snel triplestore
 specifiek en is bijna onmogelijk voor closed source/ commerciële triplestores. In dit project is dan ook gekozen voor een aparte service die voor de data afscherming zorgt. 
 
-In deze context zijn er 2 implementatie strategieën geïdentificeerd en verder beproefd op basis van een snelle PoC (Proof-of-Concept) implementatie: 
+Binnen dit project zijn er 2 implementatie strategieën geïdentificeerd en verder beproefd op basis van een snelle PoC (Proof-of-Concept) implementatie: 
 
 - SPARQL Rewrite: bij deze strategie worden inkomende SPARQL queries herschreven zodat
 alle data afschermingen toegevoegd worden aan de query. 
