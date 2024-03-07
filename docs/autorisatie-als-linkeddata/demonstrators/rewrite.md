@@ -1,5 +1,5 @@
 ---
-title: Rewrite demonstrator
+title: Rewrite
 ---
 
 > TO DO: bovenste gedeelte valt ook deels samen met kopje Testopstelling denk ik? Wellicht daar nog naar verwijzen? 

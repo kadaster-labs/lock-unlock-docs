@@ -1,5 +1,5 @@
 ---
-title: Subgraph demonstrator
+title: Subgraph
 ---
 > TO DO: 
 > - bij de implementatie pagina of hier iets meer vertellen over de werking en architectuur hiervan. Hoe is de demonstrator technisch opgezet? Wat gebeurt er nu precies wanneer er een query binnenkomt?
