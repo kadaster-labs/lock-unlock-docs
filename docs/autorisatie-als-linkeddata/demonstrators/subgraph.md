@@ -1,19 +1,22 @@
 ---
-title: Subgraph
+title: Subgraph demonstrator
 ---
+> TO DO: 
+> - bij de implementatie pagina of hier iets meer vertellen over de werking en architectuur hiervan. Hoe is de demonstrator technisch opgezet? Wat gebeurt er nu precies wanneer er een query binnenkomt?
+> - gebruikers kunnen dit nu nog niet (volgens mij) testen omdat de demo niet live staat. Is het een idee om dan ook output te laten zien in de screenshots?
 
-# Demonstrator
-
-Voor het Lock-Unlock project is een simpele demonstrator ontwikkeld welke aantoont dat een autorisatie-beleid afgedwongen kan worden op een SPARQL-endpoint zonder dat queries hier uitzonderlijk traag van worden.
+Voor het Lock-Unlock project is ook een simpele demonstrator ontwikkeld voor de Subgraph implementatie. Deze toont aan dat een autorisatie-beleid afgedwongen kan worden op een SPARQL-endpoint zonder dat queries hier uitzonderlijk traag van worden.
 De ervaringen die hiermee zijn opgedaan zijn deels verder geïntegreerd in de demonstrator.
 Verdere conclusies en aanbevelingen worden besproken in het [hoofdstuk Evaluatie](../../evaluatie/).
+
+Hieronder worden een aantal voorbeelden gegeven van queries die wel/niet zijn toegestaan voor specifieke gebruikers. 
 
 ## Algemene Bedrijfsgegevens
 
 De algemene bedrijfsgegevens uit het NHR zijn openbaar beschikbaar, dus ook niet-geautoriseerde gebruikers kunnen deze opvragen.
 Deze query zal dus resultaten geven ongeacht welke gebruiker deze uitvoert.
 Echter is toegang tot de UBO-gegevens beperkt zodat deze enkel toegankelijk zijn in de context van een politieonderzoek.
-De kolom `?ubo` zal dus leeg blijven tenzij de query wordt uitgevoerd door _Ferdinand van As_.
+De kolom `?ubo` zal dus leeg blijven tenzij de query wordt uitgevoerd door _Ferdinand van As (een politiemedewerker)_.
 
 ```sparql
 PREFIX nhr: <https://data.federatief.datastelsel.nl/lock-unlock/nhr/def/>
@@ -58,8 +61,8 @@ Echter vraagt deze query ook wat de namen van de inwoners zijn, er is dus een ze
 In de demonstrator zijn er twee scenario's waarin de naam van een gebruiker mag worden opgehaald.
 Dit mag gebeuren in de context van een politieonderzoek, via onze fictieve gebruiker _Ferdinand van As_.
 Ook is het mogelijk voor ambtenaren om de inwoners van hun gemeente te bekijken.
-Alleen _Marjolein van Groen_ mag dit dus doen.
-Wanneer _Jeroen Peerenboom_ dit zou proberen, krijgt hij geen resultaten.
+Alleen _Marjolein van Groen (medewerker Gemeente Zeewolde)_ mag dit dus doen.
+Wanneer _Jeroen Peerenboom (medewerker Gemeente Almere)_ dit zou proberen, krijgt hij geen resultaten.
 Zou de gemeente-URI worden aangepast naar `brk-gem:25`, dan krijgt _Jeroen Peerenboom_ juist resultaten en heeft _Marjolein van Groen_ geen toegang.
 
 ```sparql
@@ -113,7 +116,7 @@ SELECT (GROUP_CONCAT(?name; SEPARATOR=", ") AS ?personas) ?rule ?subject ?condit
 
 ## Logging
 
-Om achteraf te inzage te hebben in wat gebruikers hebben opgevraagd, worden alle queries gelogt in de triplestore.
+Om achteraf te inzage te hebben in wat gebruikers hebben opgevraagd, worden alle queries gelogd in de triplestore.
 Deze data kan ook weer als linked data worden bevraagd.
 De onderstaande query geeft een kleine inzage in de gelogde gegevens.
 In de demonstrator zijn deze gegevens openbaar toegankelijk, maar in een productie-versie is het waarschijnlijk wenselijk om ook een autorisatie-beleid af te dwingen op deze data.
