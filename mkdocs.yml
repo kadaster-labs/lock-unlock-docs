@@ -31,6 +31,7 @@ nav:
       - autorisatie-als-linkeddata/implementaties/index.md
       - autorisatie-als-linkeddata/implementaties/rewrite.md
       - autorisatie-als-linkeddata/implementaties/subgraph.md
+      - autorisatie-als-linkeddata/implementaties/comparison.md
     - Demonstrators:
       - autorisatie-als-linkeddata/demonstrators/index.md
       - autorisatie-als-linkeddata/demonstrators/rewrite.md
@@ -46,6 +47,7 @@ theme:
     primary: custom
   language: nl
   features:
+    - content.code.copy
     - navigation.footer
     - navigation.indexes
     - navigation.instant  
@@ -59,3 +61,4 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences

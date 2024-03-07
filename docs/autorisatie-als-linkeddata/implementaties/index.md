@@ -28,3 +28,5 @@ Deze twee concepten worden nog verder toegelicht in de volgende subhoofdstukken:
 
 - [SPARQL Rewrite methode](./rewrite.md)
 - [Subgraph methode](./subgraph.md)
+
+Een samenvatting van de sterke en zwakke punten van beide concepten staat in [de vergelijking](./comparison.md).
