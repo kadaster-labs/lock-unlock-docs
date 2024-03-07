@@ -1,5 +1,5 @@
 ---
-title: Opties
+title: Oplossingsrichtingen
 ---
 Lorem ipsum ... enz.
 

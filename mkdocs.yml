@@ -18,10 +18,11 @@ nav:
      - federatieve-bevraging/conclusies.md
   - Afscherming: 
     - afscherming/index.md
-    - afscherming/deskresearch.md
+    - afscherming/autorisatie.md
+    - afscherming/afschermingspatronen.md
+    - afscherming/oplossingsrichtingen.md
     - afscherming/verantwoording.md
     - afscherming/requirements.md
-    - afscherming/opties.md
     - afscherming/onderzoek.md
   - Autorisatie als Linked Data:
     - autorisatie-als-linkeddata/index.md
@@ -37,7 +38,11 @@ nav:
       - autorisatie-als-linkeddata/demonstrators/subgraph.md
     - autorisatie-als-linkeddata/evaluatie.md   
   - conclusies.md
-  - verdiepende-details/index.md
+  - Achtergrond:
+    - achtergrond/index.md
+    - achtergrond/glossary.md
+    - achtergrond/verwerkingenlogging.md
+    - achtergrond/xacml.md
 extra_css:
   - css/lock-unlock.css
 theme:
