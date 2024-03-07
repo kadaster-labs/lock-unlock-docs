@@ -7,7 +7,7 @@ title: Subgraph demonstrator
 
 Voor het Lock-Unlock project is ook een simpele demonstrator ontwikkeld voor de Subgraph implementatie. Deze toont aan dat een autorisatie-beleid afgedwongen kan worden op een SPARQL-endpoint zonder dat queries hier uitzonderlijk traag van worden.
 De ervaringen die hiermee zijn opgedaan zijn deels verder geïntegreerd in de demonstrator.
-Verdere conclusies en aanbevelingen worden besproken in het [hoofdstuk Evaluatie](../../evaluatie/).
+Verdere conclusies en aanbevelingen worden besproken in het [hoofdstuk Evaluatie](../evaluatie.md).
 
 Hieronder worden een aantal voorbeelden gegeven van queries die wel/niet zijn toegestaan voor specifieke gebruikers. 
 

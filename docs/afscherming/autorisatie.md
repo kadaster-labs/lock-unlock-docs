@@ -68,7 +68,16 @@ mogelijk, maar wel bijsturing en eventueel opvolging.
 
 ## Auditing
 
-Zoals hierboven al gesteld, is het onmogelijk om van tevoren of bij de evaluatie om toegang te gaan verlenen te bepalen of dat rechtmatig is. Dat is vooral in het geval als het een koppeling tussen twee (of meer) organisaties betreft. De medewerker van de bevragende organisatie zal een juridische grondslag moeten hebben om de bevraging te kunnen doen. Het is echter niet mogelijk voor de leverende organisatie om te bepalen of die grondslag juist is en passend voor de situatie. Sterker nog, het is onrechtmatig als de leverende organisatie precies weet voor welke casus de bevraging wordt gedaan. Dat betekent dat er van tevoren afspraken gemaakt kunnen worden of de mogelijkheid dat (medewerkers van) een organisatie de API van een andere organisatie gaan aanroepen en dát kan gecontroleerd worden ten tijde van de bevraging. Dit is wat we autorisatie noemen. Voor de controle op juiste grondslag per bevraging zijn we aangewezen op auditing.
+Zoals hierboven al gesteld, is het onmogelijk om van tevoren of bij de evaluatie om toegang te gaan
+verlenen te bepalen of dat rechtmatig is. Dat is vooral in het geval als het een koppeling tussen
+twee (of meer) organisaties betreft. De medewerker van de bevragende organisatie zal een juridische
+grondslag moeten hebben om de bevraging te kunnen doen. Het is echter niet mogelijk voor de
+leverende organisatie om te bepalen of die grondslag juist is en passend voor de situatie. Sterker
+nog, het is onrechtmatig als de leverende organisatie precies weet voor welke casus de bevraging
+wordt gedaan. Dat betekent dat er van tevoren afspraken gemaakt kunnen worden of de mogelijkheid dat
+(medewerkers van) een organisatie de API van een andere organisatie gaan aanroepen en dát kan
+gecontroleerd worden ten tijde van de bevraging. Dit is wat we autorisatie noemen. Voor de controle
+op juiste grondslag per bevraging zijn we aangewezen op auditing.
 
 Voor de auditing zijn beide partijen nodig en verantwoordelijk. De partij / organisatie van waaruit
 de bevraging wordt gedaan, is verantwoordelijk voor het vastleggen van de relatie naar de specifieke
@@ -84,7 +93,9 @@ Er bestaat een standaard in wording voor dit patroon en toepassing:
 
 ## Resource
 
-Over de 'Resource' valt veel te zeggen ... en deze bepaalt ook veel van een oplossingsrichting en/of complexiteit. In de [desk research](../#desk-research) besteden we uitgebreid aandacht aan diverse variaties. In deze samenvatting beperken we ons tot het benoemen dat een resource kan zijn:
+Over de 'Resource' valt veel te zeggen ... en deze bepaalt ook veel van een oplossingsrichting en/of
+complexiteit. In de [desk research](../index.md#desk-research) besteden we uitgebreid aandacht aan
+diverse variaties. In deze samenvatting beperken we ons tot het benoemen dat een resource kan zijn:
 
 - een tabel
 - een dataset

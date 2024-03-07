@@ -1,5 +1,5 @@
 ---
-title: Onderzoeksvraag
+title: Onderzoeksvoorstel
 ---
 De vraagstelling is het kunnen afschermen (:lock:) van Linked Data waarbij diverse requirements van
 [afschermingspatronen](./afschermingspatronen.md) worden gesteld. Er zijn diverse

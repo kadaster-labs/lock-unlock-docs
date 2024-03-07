@@ -1,11 +1,11 @@
 ---
 title: Oplossingsrichtingen
 ---
-Gegeven de behoefte aan [autorisatie](./autorisatie.md) in een [federatieve bevraging](../) én de
+Gegeven de behoefte aan [autorisatie](./autorisatie.md) in een [federatieve bevraging](../index.md) én de
 requirements van [afschermingspatronen](./afschermingspatronen.md) zijn er verschillende
 technologische oplossingsrichtingen te bedenken.
 
-In het hoofdstuk [federatieve bevraging](../) wordt al het onderscheid en verschillen beschreven
+In het hoofdstuk [federatieve bevraging](../index.md) wordt al het onderscheid en verschillen beschreven
 tussen de verschillende soorten [API's | REST vs GraphQL vs
 SPARQL](../federatieve-bevraging/apis.md). Tbv afscherming en autorisatie bestaan er voor [REST
 API's](#rest-api) en [GraphQL API's](#graphql-api) al gestandaardiseerde uitwerkingen. Rondom Linked
