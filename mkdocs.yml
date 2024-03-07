@@ -30,7 +30,6 @@ nav:
       - autorisatie-als-linkeddata/implementaties/index.md
       - autorisatie-als-linkeddata/implementaties/rewrite.md
       - autorisatie-als-linkeddata/implementaties/subgraph.md
-      - autorisatie-als-linkeddata/implementaties/comparison.md
     - Demonstrators:
       - autorisatie-als-linkeddata/demonstrators/index.md
       - autorisatie-als-linkeddata/demonstrators/rewrite.md
