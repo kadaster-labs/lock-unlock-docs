@@ -21,9 +21,7 @@ nav:
     - afscherming/autorisatie.md
     - afscherming/afschermingspatronen.md
     - afscherming/oplossingsrichtingen.md
-    - afscherming/verantwoording.md
-    - afscherming/requirements.md
-    - afscherming/onderzoek.md
+    - afscherming/onderzoeksvraag.md
   - Autorisatie als Linked Data:
     - autorisatie-als-linkeddata/index.md
     - autorisatie-als-linkeddata/concept.md
