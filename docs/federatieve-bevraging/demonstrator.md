@@ -41,27 +41,17 @@ grafieken.
 
 ## BRK Silo
 
-> Vraag: zit in de losse BRK silo ook de perceelsinformatie of gebruiken we daarvoor het IMX Geo/KKG endpoint? 
-
-De BRK data bestaat uit een open en een gesloten gedeelte. In het open gedeelte staat informatie over de percelen zoals de geometrie. Voor dit project worden de percelen in Almere en Zeewolde gebruikt. Hieronder een screenshot
+De BRK data bestaat uit een open en een gesloten gedeelte. In het open gedeelte staat informatie over de percelen zoals de geometrie. Deze is voor deze demo aanwezig op de BRK silo. Tzt kan voor deze data ook het (echte) IMX-Geo sparql endpoint gebruikt worden. Voor dit project worden de percelen in Almere en Zeewolde gebruikt. Hieronder een screenshot
 met daarin de percelen op de kaart. Deze informatie is afkomstig van IMX-Geo.
 
 ![linked data in context](images/BRK-Data.png)
 
-In het gesloten (fictieve) gedeelte van de BRK staat de eigendomsinformatie. Hierin staat wie de eigenaar/eigenaren is/zijn van een perceel. Ook staan hierin de koopsommen van de percelen.
+In het gesloten gedeelte van de BRK staat de fictieve eigendomsinformatie. Hierin staat wie de eigenaar/eigenaren is/zijn van een perceel. Ook staan hierin de koopsommen van de percelen.
 
 
 ## Federatieve bevraging
 
-> // TODO dit nog iets verder uitwerken?
-> Belangrijk om in te gaan op het integraal bevragen van de data én het navigeren door de datasets
-heen: hoe kan je nu bijv. vanuit een perceel (BRK) naar een stichting (ANBI)? 
-
-Door deze silo's te combineren en integraal te bevragen kunnen er vragen beantwoord worden als: wat is de geboorteplaats van de eigenaar van perceel X of is het perceel in eigendom van een ANBI. 
-kan er data opgehaald worden zoals laatste koopsommen van een perceel,
-
-Hieronder is een voorbeeld waarbij alle koopsommen zichtbaar zijn van percelen uit de BRK en waarbij
-eigendoms informatie aanwezig is van een geselecteerd perceel.
+Door deze silo's te combineren en integraal te bevragen kunnen er vragen beantwoord worden zoals: wat is de geboorteplaats van de eigenaar van perceel X of is het perceel in eigendom van een ANBI. Hieronder is een voorbeeld waarbij alle koopsommen zichtbaar zijn van percelen uit de BRK en waarbij eigendoms informatie aanwezig is van een geselecteerd perceel. In elke widget (tabel of grafiek) staat bij welke bronnen geraadpleegd zijn. Zo wordt er NHR informatie opgezocht in de NHR zoals stichtingsjaar en RSIN nummer voor NHR inschrijvingen die eigenaar zijn van het geselecteerde perceel. Ook de BRP wordt geraadpleegd om extra persoons informatie op te halen van een Perceels eigenaar. 
 
 ![linked data in context](images/FDS-Data.png)
 

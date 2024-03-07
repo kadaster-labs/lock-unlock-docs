@@ -2,21 +2,36 @@
 title: Autorisatie Ontologie
 ---
 
-# Autorisatie Ontologieen
+# Autorisatie Ontologieën
 
-## Ondersteunende ontologieen
+> TO DO:
+> - Binnen dit hoofdstuk gebruiken we Engels en Nederlands door elkaar heen. Kunnen we het zoveel mogelijk Nederlandse termen gebruiken? Of wat heeft jullie voorkeur? 
+
+Binnen het Autorisatie als Linked Data concept speelt de Autorisatie Ontologie een belangrijke rol. Deze ontologie wordt op deze pagina verder toegelicht maar eerst wordt ingegaan op de ondersteunende ontologieën.
+
+## Ondersteunende ontologieën
 
 ### Autenticatie ontologie
+> TO DO: kunnen we een linkje en/of plaatje toevoegen naar/van deze ontologie? 
 
 Hoewel we authenticatie als out-of-scope hebben gesteld in dit project hebben we natuurlijk behoefte om gebruikers vast te leggen die vervolgens gekoppeld kunnen worden aan autorisatie regels. Een standaard gebruiker is alvast aanwezig in deze autorisatie ontologie en dat is de gebruiker "anonymous" oftewel een gebruiker die niet ingelogd is. Om gebruikers te definieren kan er een nieuwe dataset gemaakt worden op basis van de authenticitie ontologie en daarmee kunnen nieuwe "Users" aangemaakt worden.
 De autorisatie ontologie maakt gebruik van de authenticatie ontologie. Dit kan door middel van een owl:import statement te maken waarbij de authenticatie ontologie geimporteerd wordt.  
 
 ### Logging ontologie
-Een hele simpele logging ontologie is opgezet voor het loggen van Sparql queries inclusief datum stempels en natuurlijk een koppeling naar de gebruiker. Dit had als doel om te demonstreren dat we queries en de afhandeling ervan goed kunnen loggen. Verdere implicaties van deze logging is buiten scope van dit project.
+> TO DO: 
+> - kunnen we een linkje en/of plaatje toevoegen naar/van deze ontologie?
+> - willen we hier ook een linkje leggen met de Verwerkingenlogging of doen we dat binnen het kopje "Afscherming"?
+
+Een hele simpele logging ontologie is opgezet voor het loggen van SPARQL queries inclusief datumstempels en natuurlijk een koppeling naar de gebruiker. Dit heeft als doel om aan te kunnen tonen dat we queries en de afhandeling ervan goed kunnen loggen. Verdere implicaties van deze logging is buiten scope van dit project.
 
 ## Autorisatie ontologie
+> TO DO: 
+
+> - kunnen we een linkje toevoegen naar deze ontologie zodat je hem beter kunt lezen?  
+> - iets zeggen over de relatie met standaarden zoals XACML? (Marc, of doe jij dit in het kopje Äfscherming?)
+
 ### Overzicht
-De autorisatie ontologie importeert de authenticatie ontologie datasets zodat gebruikers(users) aanwezig zijn als readonly data. Vervolgens kunnen deze gebruikers gerelateerd worden aan verschillende rules die elk specifieke informatie nodig hebben. Hieronder een overzicht van de Autorisatie ontologie. 
+De autorisatie ontologie importeert de authenticatie ontologie datasets zodat gebruikers(users) aanwezig zijn als read-only data. Vervolgens kunnen deze gebruikers gerelateerd worden aan verschillende rules die elk specifieke informatie nodig hebben. Hieronder een overzicht van de Autorisatie ontologie. 
 
 ![authenticatie](images/AutOV2.png)
 
@@ -32,11 +47,14 @@ Er zijn meerdere rule types die elk of een andere functionaliteit bieden om auto
 
 ![Ruletypes](images/AutO2V2.png)
 
-Zo is er een rule  (InAccessableService) die zogenaamde 'service' gebruik binnen Sparql aan banden kan leggen. Andere voorbeelden van Rule(types) is bijvoorbeeld de ruletype die toegang tot graphs kan reguleren, Ruleype voor het filteren op predicaten (in bepaalde graphs) en de horizontale subset ruletype. Enkele van deze ruletypes zijn ge-implementeerd. Ook is het heel goed mogelijk om nieuwe ruletypes toe te voegen. 
+> TO DO: welke rulte types zijn niet geïmplementeerd? 
+
+Zo is er een rule  (InAccessableService) die zogenaamde 'service' gebruik binnen SPARQL aan banden kan leggen. Andere voorbeelden van Rule(types) is bijvoorbeeld de ruletype die toegang tot graphs kan reguleren, Ruleype voor het filteren op predicaten (in bepaalde graphs) en de horizontale subset ruletype. Enkele van deze ruletypes zijn geïmplementeerd. Ook is het heel goed mogelijk om nieuwe ruletypes toe te voegen. 
 
 ### Graph rules
 Met de "AccessibleDataset" ruletype kun je gebruikers toegang geven tot "Datasets". Een Dataset bestaat uit 0 of meer graphs. Oftewel hiermee kun je instellen welke gebruiker toegang heeft tot welke graphs in de triplestore. 
 ![Ruletypes](images/AutO3V2.png)
+
 Via SecurityGroeps kunnen 'instanties' van deze rule ('AccessibleDataset') gekoppeld worden aan Rollen en Gebruikers. Door de relatie naar een 'Dataset' is bekend welke dataset deze gebruiker toegang heeft. "Graphs" in de triplestore zijn verbonden met "Datasets" waardoor een implementatie dus precies weet of een gebruiker toegang heeft tot een graph of niet.
 
 ### Predicate rules
@@ -53,7 +71,7 @@ Met horizontale rules kunnen we niet op schema nivo maar op dataset nivo zaken a
 
 ![Ruletypes](images/AutO5V2.png)
 
-Het model laat zien dat er een predicaat nodig dat gevuld is met een waarde. Deze restrictie moet altijd waar zijn indien de resource van een gespecificeerde klasse is. Hiermee kunnen horizontale subsets gedefineerd worden.
+Het model laat zien dat er een predicaat nodig is dat gevuld is met een waarde. Deze restrictie moet altijd waar zijn indien de resource van een gespecificeerde klasse is. Hiermee kunnen horizontale subsets gedefinieerd worden.
 
 
 
