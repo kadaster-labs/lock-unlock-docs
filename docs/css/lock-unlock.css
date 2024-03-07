@@ -1,5 +1,11 @@
 :root {
-    --md-primary-fg-color:        #70ad47;
-    --md-primary-fg-color--light: #ECB7B7;
-    --md-primary-fg-color--dark:  #90030C;
-  }
+  --md-primary-fg-color: #70ad47;
+  --md-primary-fg-color--light: #ECB7B7;
+  --md-primary-fg-color--dark: #90030C;
+}
+
+.highlight {
+  border: 1px solid orange;
+  padding: 0.8em;
+  background-color: rgb(252, 252, 211);
+}

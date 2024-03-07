@@ -1,7 +1,7 @@
 ---
 title: De rol van logging
 ---
-Lorem ipsum ... enz.
+> // TODO verplaatsen naar ergens anders
 
 ### Loggen van queries
 - Om te kunnen verantwoorden dat (met name persoons)gegevens op een juiste manier verwerkt worden, is het nodig om de verwerking te bewaren. Dat gebeurt door de queries te loggen.
