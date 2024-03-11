@@ -46,13 +46,21 @@ met daarin de percelen op de kaart. Deze informatie is afkomstig van IMX-Geo.
 
 ![linked data in context](images/BRK-Data.png)
 
-In het gesloten gedeelte van de BRK staat de fictieve eigendomsinformatie. Hierin staat wie de eigenaar/eigenaren is/zijn van een perceel. Ook staan hierin de koopsommen van de percelen.
+In het gesloten gedeelte van de BRK staat de fictieve eigendomsinformatie. Hierin staat wie de eigenaar/eigenaren is/zijn van een perceel. Voor de percelen van Zeewolde en Almere is hiervoor dan ook data gegenereerd. Dit resulteert in een dataset met meer dan 100k personen (prive en rechtspersonen). Ook staan hierin de koopsommen van de percelen. Hieronder een screenshot van de eigendom gegevens.
+
+![BRK data](images/BRK-DataV2.png)
 
 
 ## Federatieve bevraging
 
-Door deze silo's te combineren en integraal te bevragen kunnen er vragen beantwoord worden zoals: wat is de geboorteplaats van de eigenaar van perceel X of is het perceel in eigendom van een ANBI. Hieronder is een voorbeeld waarbij alle koopsommen zichtbaar zijn van percelen uit de BRK en waarbij eigendoms informatie aanwezig is van een geselecteerd perceel. In elke widget (tabel of grafiek) staat bij welke bronnen geraadpleegd zijn. Zo wordt er NHR informatie opgezocht in de NHR zoals stichtingsjaar en RSIN nummer voor NHR inschrijvingen die eigenaar zijn van het geselecteerde perceel. Ook de BRP wordt geraadpleegd om extra persoons informatie op te halen van een Perceels eigenaar. 
+Door deze silo's te combineren en integraal te bevragen kunnen er vragen beantwoord worden zoals: wat is de geboorteplaats van de eigenaar van perceel X of is het perceel in eigendom van een ANBI. Hieronder is een voorbeeld waarbij alle koopsommen zichtbaar zijn van percelen uit de BRK en waarbij eigendoms informatie aanwezig is van een geselecteerd perceel. 
 
-![linked data in context](images/FDS-Data.png)
+![FDS](images/FDS-DataV2.png) 
+
+In elke widget (tabel of grafiek) staat bij welke bronnen geraadpleegd zijn. Zo wordt er NHR informatie opgezocht in de NHR zoals stichtingsjaar en RSIN nummer voor NHR inschrijvingen die eigenaar zijn van het geselecteerde perceel. Ook de BRP wordt geraadpleegd om extra persoons informatie op te halen van een Perceels eigenaar. 
+
+![FDS](images/FDS-Data.png)
+
+Deze demonstrator is [hier](https://labs.kadaster.nl/demonstrators/unlocked/demonstrator) te vinden. 
 
 
