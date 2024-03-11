@@ -84,6 +84,10 @@ om alle percelen in het hele land en vraagt via de BRK triplestore de laatste ko
 persona Almere worden alleen koopsommen van Almere gevonden aangezien deze persona daartoe toegang
 heeft. Dit levert een percelen kaart op van Almere. 
 
+Hieronder is een video gemaakt die bovenstaande zaken demonstreert.
+
+[Demostrator in action](../video/demo.mp4). 
+
 
 ## Logging
 
