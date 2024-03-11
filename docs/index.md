@@ -27,8 +27,8 @@ daarmee de 'unlock' :unlock: van de data.
 Zie ook onze open source projecten:
 
 - [Lock-Unlock Docs](https://github.com/kadaster-labs/lock-unlock-docs)
-    - Authorization Onthology (in research)
-    - Logging Onthology (in research)
+    - Authorization Ontology (in research)
+    - Logging Ontology (in research)
 - [Lock-Unlock Testdata](https://github.com/kadaster-labs/lock-unlock-testdata)
 - [Secured SPARQL Endpoint Sub Graph](https://github.com/kadaster-labs/secured-sparql-endpoint-subgraph)
   (based on Apache Jena & SpringBoot)

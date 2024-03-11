@@ -9,8 +9,8 @@ Project](https://labs.kadaster.nl/cases/lockunlock): 'lock the data, unlock the 
 Check out our research implementations of secured SPARQL endpoints and our testdata:
 
 - (this repo) [Lock-Unlock Docs](https://github.com/kadaster-labs/lock-unlock-docs)
-  - Authorization Onthology (in research)
-  - Logging Onthology (in research)
+  - Authorization Ontology (in research)
+  - Logging Ontology (in research)
 - [Lock-Unlock Testdata](https://github.com/kadaster-labs/lock-unlock-testdata)
 - [Secured SPARQL Endpoint Sub Graph](https://github.com/kadaster-labs/secured-sparql-endpoint-subgraph)
   (based on Apache Jena & SpringBoot)
