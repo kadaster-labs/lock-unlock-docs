@@ -51,22 +51,3 @@ Hiervoor is een testomgeving opgezet met de volgende eigenschappen:
 
 * Beide implementaties loggen elke query om bijvoorbeeld audits achteraf mogelijk te maken.
 
-## Conclusies
-Op basis van dit project kunnen de volgende conclusies worden getrokken:
-
-* het is mogelijk om authorisatie regels declaratief te formaliseren op basis van een authorisatie ontologie. De implementatie is onafhankelijk van de autorisatie ontologie
-* De geïdentificeerde afschermingspatronen zijn generiek en bieden veel mogelijkheden tot afscherming via configuratie van deze patronen
-* De PoC implementaties laten zien dat veel authorisatie patronen makkelijk implementeerbaar en haalbaar zijn. 
-* Deze implementaties zijn nog niet bruikbaar voor productie en eventuele problemen mbt veiligheid en schaalbaarheid zijn niet onderzocht.
-* Het federatief bevragen van meerdere datasets werkt op basis van standaard Linked Data technieken. Schaalbaarheid en performance hiervan zijn niet onderzocht.
-* Het creëren van fictieve datasets die te koppelen zijn in Linked Data is makkelijk te realiseren. 
-
-## Aanbevelingen
-De volgende aanbevelingen kunnen gemaakt worden:
-
-* De authorisatie ontologie moet verder uitgewerkt worden in overleg met andere organisaties. Hierbij moet ook gekeken worden naar de verschillende standaarden zoals XACML en OPA.
-* De waterdichtheid van de beveiliging moet aantoonbaar gemaakt kunnen worden.
-* Meer inzicht krijgen in de performance van het federatief bevragen van data, ook in combinatie met  autorisatie
-* Binnen het project zijn we er niet aan toegekomen om het afschermen van de richting te onderzoeken. De richtings-patronen kunnen nog worden uitgewerkt en evt. worden geïmplementeerd
-* de relaties tussen de verschillende registers moeten gestandardiseerd worden opdat je hierop kunt bouwen en vertrouwen. In de Linked Data wereld zou je een 'upper' ontologie kunnen definiëren om de relaties tussen de registers te formaliseren. Daarna zouden (gelijke) functionele zaken gestandardiseerd kunnen worden. Denk aan "ID"'s, versiebeheer en meta-data van registers in Linked Data.
-* Samenwerking met andere bronhouders is nodig om de adoptie van Linked Data en bijbehorende autorisatie te bespoedigen
