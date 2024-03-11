@@ -42,16 +42,16 @@ Linked data is manier om data te structureren en te verbinden over het web en ma
 stanfaarden zoals URI's, RDF en ontologieen gedefinieerd in [RDF](#rdf) zoals RDFS, [OWL](#owl) en
 [SHACL](#shacl). 
 
+### OWL
+
+OWL staat voor de Web Ontology Language en is een gestandardiseerde taal voor formaliseren van
+ontologieen op basis van Linked Data.
+
 ### RDF
 
 RDF staat voor Resource Description Framework. Het is een gestandardiseerd model voor het opslaan
 van verwerkbare gegevens en biedt een zeer veel flexibiliteit mbt het structureren en beschrijven
 van gegevens.
-
-### OWL
-
-OWL staat voor de Web Ontology Language en is een gestandardiseerde taal voor formaliseren van
-ontologieen op basis van Linked Data.
 
 ### SHACL
 

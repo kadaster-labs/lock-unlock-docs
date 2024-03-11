@@ -23,3 +23,15 @@ verlenen aan geautoriseerde vragers: [autorisatie als Linked Data](./autorisatie
 daarmee de 'unlock' :unlock: van de data.
 
 ![Infographic](images/infographic.png)
+
+Zie ook onze open source projecten:
+
+- [Lock-Unlock Docs](https://github.com/kadaster-labs/lock-unlock-docs)
+    - Authorization Onthology (in research)
+    - Logging Onthology (in research)
+- [Lock-Unlock Testdata](https://github.com/kadaster-labs/lock-unlock-testdata)
+- [Secured SPARQL Endpoint Sub Graph](https://github.com/kadaster-labs/secured-sparql-endpoint-subgraph)
+  (based on Apache Jena & SpringBoot)
+- [Secured SPARQL Endpoint Rewrite (SPARQL
+  Query)](https://github.com/kadaster-labs/secured-sparql-endpoint-rewrite) (based on Fuseki)
+- [Lock-Unlock Helm Charts](https://github.com/kadaster-labs/lock-unlock-helm-charts)
