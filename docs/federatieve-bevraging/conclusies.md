@@ -1,6 +1,9 @@
 ---
 title: Conclusies en aanbevelingen
 ---
+
+//TODO wat mij betreft (lexi) kan deze helemaal weg. ik vind het prettiger om deze in de hoofdstuk conclusie op te nemen. 
+
 ## Conclusies
 
 De volgende conclusies kunnen getrokken worden
