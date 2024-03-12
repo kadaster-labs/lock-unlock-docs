@@ -1,11 +1,7 @@
 ---
 title: Demonstrator
 ---
-Genoeg beschreven over federatieve bevragingen. Nu willen we dat wel eens zien! Daarvoor maken we
-gebruik van SPARQL (zie ook [API's](./apis.md) en [Linked Data](./linkeddata.md)). Deze query taal
-kent het begrip `service` om aan te geven dat informatie van een ander endpoint opgehaald dient te
-worden. Daarmee geeft de gebruiker het eerste endpoint, het endpoint dat direct bevraagd wordt, de
-opdracht om andere endpoints te betrekken bij de uitvoering van de query. Uitgaande van de
+Genoeg beschreven over federatieve bevragingen. Nu willen we dat wel eens zien! Daarvoor maken we gebruik van SPARQL (zie ook [API's](./apis.md) en [Linked Data](./linkeddata.md)). Deze query taal kent het begrip `service` om aan te geven dat informatie van een ander endpoint opgehaald dient te worden. Daarmee geeft de gebruiker het eerste endpoint, het endpoint dat direct bevraagd wordt, de opdracht om andere endpoints te betrekken bij de uitvoering van de query. Uitgaande van de
 [testopstelling#deployment](./testopstelling.md#deployment) ziet een federatieve bevraging er dan
 schematisch als volgt uit:
 
@@ -15,27 +11,19 @@ Voordat we een voorbeeld zullen geven van een federatieve bevragingen duiken we 
 
 ## BRP Silo
 
-Fictieve data is gemaakt voor BRP gegevens. Meer dan 100.000 personen zijn aangemaakt met kenmerken
-zoals naam, achternaam, geslacht & geboorteplaats. Hieronder is een dashboard te zien
-waarin alle personen opgevraagd worden en waarbij ook een aantal doorsnedes worden getoond. Al deze vragen zijn gewone SPARQL
-queries op het BRP SPARQL-endpoint.
+Fictieve data is gemaakt voor BRP gegevens. Meer dan 100.000 personen zijn aangemaakt met kenmerken zoals naam, achternaam, geslacht & geboorteplaats. Hieronder is een dashboard te zien waarin alle personen opgevraagd worden en waarbij ook een aantal doorsnedes worden getoond. Al deze vragen zijn gewone SPARQL queries op het BRP SPARQL-endpoint.
 
 ![linked data in context](images/BRP-Data.png)
 
 ## NHR Silo
 
-Fictieve data is gemaakt voor NHR gegevens. Meer dan 25.000 inschrijvingen zijn gegenereerd met een KvK
-nummer, rechtsvorm, naam, stichtingsjaar, etc. Hieronder is een dashboard te zien waarin alle
-inschrijvingen in een tabel worden getoond en ook enkele grafieken met statistiche gegevens over deze
-fictieve dataset.
+Fictieve data is gemaakt voor NHR gegevens. Meer dan 25.000 inschrijvingen zijn gegenereerd met een KvK nummer, rechtsvorm, naam, stichtingsjaar, etc. Hieronder is een dashboard te zien waarin alle inschrijvingen in een tabel worden getoond en ook enkele grafieken met statistiche gegevens over deze fictieve dataset.
 
 ![linked data in context](images/NHR-Data.png)
 
 ## ANBI Silo
 
-Fictieve data is gemaakt voor ANBI gegevens. Meer dan 4.000 stichtingen zijn aangemaakt met basale
-informatie zoals een fiscaal nummer en een vestigingsplaats. Hieronder een screenshot met daarin een set van ANBI gegevens in tabelvorm en twee
-grafieken.
+Fictieve data is gemaakt voor ANBI gegevens. Meer dan 4.000 stichtingen zijn aangemaakt met basale informatie zoals een fiscaal nummer en een vestigingsplaats. Hieronder een screenshot met daarin een set van ANBI gegevens in tabelvorm en twee grafieken.
 
 ![linked data in context](images/ANBI-Data.png)
 
