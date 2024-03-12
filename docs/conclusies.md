@@ -35,9 +35,7 @@ voor benodigd om uit te werken wat de snelste manier is om de vraag (query) te b
 analyse en uitwerking naar snelle uitvoering van federatieve vragen, is niet gestandaardiseerd in
 SPARQL of Linked Data. In de verschillende implementaties zijn hier grote verschillen!
 
-Er zijn wel ontwikkelingen rondom federatieve bevraging in het Linked Data domein.
-
-// TODO Aanbeveling rondom HDT? Sven kijkt naar HDT optimalisering???
+Er zijn wel ontwikkelingen rondom federatieve bevraging in het Linked Data domein. Zie ook [aanbeveling: Meer onderzoek naar performance federatieve bevragingen](#meer-onderzoek-naar-performance-federatieve-bevragingen)
 
 #### Koppelen van silo's vraagt expliciet ontwerp
 
@@ -96,11 +94,37 @@ schema-elementen van deze register ontologieën.
 Deze vorm biedt inzicht in wie waar toegang toe heeft of juist niet. Daarmee biedt het mogelijkheden
 tot verificatie van de autorisaties (eventueel aan andere partijen, zoals een toezichtshouder).
 
+### Conclusies van beproevingen
+
+- het is mogelijk om gebruik te maken van de data om autorisatie regels op te stellen. Zo kan er
+  bijvoorbeeld toegangsregels opgesteld worden voor een bepaalde gemeente. De daadwerkelijke
+  gemeente wordt uit de dataset opgehaald.
+
+- De ge-identificeerde afschermings patronen zijn generiek en bieden veel mogelijkheden tot
+  afscherming via configuratie van deze patronen
+
+- De PoC implementaties laten zien dat veel autorisatie patronen makkelijk implementeerbaar en
+  haalbaar zijn. Deze implementaties zijn niet bruikbaar voor productie en evt problemen mbt
+  veiligheid en schaalbaarheid zijn niet onderzocht.
+
+- federatief bevragen van meerdere registers werkt op basis van standaard Linked Data techniek.
+  Schaalbaarheid en performance hiervan zijn nog onduidelijk.
+
+- Fictieve data van gekoppelde register in Linked Data is makkelijk te realiseren. 
+
 ## Aanbevelingen
+
+### Autorisatie ontologie verder uitwerken
+
+De [Authorization Ontology](#TODO) waar in dit project in eerste opzet van is gedaan, dient verder te worden uitgewerkt. Het mooiste zou zijn als deze tot een standaard wordt verheven natuurlijk. Dat betekent ook dat vendors van triple stores deze standaard kunnen implementeren zodat het écht gaat werken. Federatief!
+
+
 
 ### Meer onderzoek naar performance federatieve bevragingen
 
 // TODO hdt? zo ja of waarom niet?
+
+// TODO Sven kijkt naar HDT optimalisering???
 
 ---
 
@@ -108,17 +132,6 @@ tot verificatie van de autorisaties (eventueel aan andere partijen, zoals een to
 
 ### Conclusies
 
--  het is mogelijk om gebruik te maken van de data om autorisatie regels op te stellen. Zo kan er
-  bijvoorbeeld toegangsregels opgesteld worden voor een bepaalde gemeente. De daadwerkelijke
-  gemeente wordt uit de dataset opgehaald.
--  De ge-identificeerde afschermings patronen zijn generiek en bieden veel mogelijkheden tot
-  afscherming via configuratie van deze patronen
--  De PoC implementaties laten zien dat veel autorisatie patronen makkelijk implementeerbaar en
-  haalbaar zijn. Deze implementaties zijn niet bruikbaar voor productie en evt problemen mbt
-  veiligheid en schaalbaarheid zijn niet onderzocht.
--  federatief bevragen van meerdere registers werkt op basis van standaard Linked Data techniek.
-  Schaalbaarheid en performance hiervan zijn nog onduidelijk.
--  Fictieve data van gekoppelde register in Linked Data is makkelijk te realiseren. 
 
 ### Aanbevelingen
 
