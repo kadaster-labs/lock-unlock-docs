@@ -75,3 +75,7 @@ een W3C standaard.
 Een triplestore is een database voor het opslaan en bevragen van [Linked Data](#linked-data) op
 basis van de [RDF](#rdf) standaard. Vaak biedt een triplestore een [SPARQL
 endpoint](#sparql-endpoint) aan.
+
+### Uniform Resource Identifier 
+
+Een reeks tekens die wordt gebruikt om een bron op een computernetwerk te identificeren, waarvan het bekendste type het webadres of een URL is.

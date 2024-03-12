@@ -38,5 +38,7 @@ Hieronder worden de verschillen tussen de verschillende interfaces gevisualiseer
 GraphQL is een mix tussen REST API’s en SPARQL. Het biedt vergelijkbare functionaliteiten als REST API’s maar met meer mogelijkheden. Waar SPARQL volledig is gebaseerd op
 [Linked Data](./linkeddata.md), voldoet GraphQL slechts ten dele aan (de) Linked Data (principes). Bijvoorbeeld, in een SPARQL endpoint/API kunnen meerdere schema’s gecombineerd worden, terwijl bij GraphQL slecht één expliciet schema van toepassing is.
 
-![REST vs GraphQL vs SPARQL](images/rest-graphql-sparql.png)
+| ![REST vs GraphQL vs SPARQL](images/rest-graphql-sparql.png) |
+| :--: |
+|*Vergelijking van vraagkracht van APIs voor federatief bevraging*|
 
