@@ -14,7 +14,9 @@ Ontology](#authorization-ontology) zijn.
 
 Dit is een nieuwe ontology die in dit Lock-Unlock project tot stand is gekomen in eerste vorm. Deze
 is gebaseerd op de terminologie van [XACML](./xacml.md). Dit is een vrij oude en nog steeds actuele
-standaard voor toegang.
+standaard voor toegang. Het doel is om policies ook als _data_ te beschouwen, te kunnen gebruiken,
+bevragen en mét de data te publiceren. Data en hun policies zijn daarmee geen losstaande zaken meer,
+maar twee bij elkaar horende onderdelen.
 
 Zoals in de [conclusies en aanbevelingen](../conclusies.md) al is aangegeven, zou het mooiste
 resultaat een heuse wereld standaard ontologie zijn ... maar zijn nog wel 'een paar' stappen voor
@@ -22,9 +24,10 @@ nodig.
 
 ## ODRL
 
-> link: 
+> link: [ODRL Information Model 2.2](https://www.w3.org/TR/odrl-model/) | [ODRL Vocabulary &
+> Expression 2.2](https://www.w3.org/TR/odrl-vocab/)
 > 
-> status: _v2.2 (15 February 2018)_
+> status: _Recommendation v2.2 (15 February 2018)_
 
 > The Open Digital Rights Language (ODRL) is a policy expression language that provides a flexible
 > and interoperable information model, vocabulary, and encoding mechanisms for representing
@@ -48,4 +51,23 @@ precies wordt toegepast en welke vendors deze ondersteunen.
 > 
 > status: _v0.62.1 with multiple implementations_
 
-De Open Policy Agent is een standaardisatie voor policies welke gericht is op REST API's. Het is duidelijk terug te vinden, maar het lijkt erop dat ook deze standaard gebruik heeft gemaakt van terminologie van [XACML](../achtergrond/xacml.md). Daarnaast is er ook inspiratie opgedaan vanuit _Role Based Access Control_ (RBAC) en andere toegangsmechanismen.
+De [Open Policy Agent](https://www.openpolicyagent.org/) is een standaardisatie voor policies welke
+gericht is op REST API's. Het is niet duidelijk terug te vinden, maar het lijkt erop dat ook deze
+standaard gebruik heeft gemaakt van terminologie van [XACML](../achtergrond/xacml.md). Daarnaast is
+er ook inspiratie opgedaan vanuit _Role Based Access Control_ (RBAC) en andere toegangsmechanismen.
+
+De filosofie is dat policies ontkoppeld worden van de software (engines) die deze policies afdwingen
+/ toepassen. Deze policies dienen ook door mensen gelezen, geschreven en geananlyseerd te kunnen
+worden. De policies worden naast de (API) service beheerd en dus ook los van de data.
+
+## Vergelijking
+
+[ODRL](#odrl) is een vergelijkbare oplossingsrichting als de [Authorization
+Ontology](#authorization-ontology) van het Lock-Unlock project. Het is echter veel breder ingestoken
+dan alleen toegang. Het is zelfs de vraag of toegang wel voldoende uit te drukken is in ODRL.
+Daarnaast lijkt de ontwikkeling en toepassing van deze standaard stil te liggen.
+
+De [Open Policy Agent](#open-policy-agent) steekt in op de huidige standaard API's: REST API's. De
+strekking is juist om _naast_ de beveiligde data policies te kunnen beschrijven en beheren. Dat is
+een tegengestelde oplossing dan Lock-Unlock tracht te bereiken met de [Authorization
+Ontology](#authorization-ontology).
