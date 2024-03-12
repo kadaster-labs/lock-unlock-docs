@@ -2,8 +2,18 @@
 title: Informatiemodel
 ---
 
-Versimpelde testdata van een federatief data stelsel is ontwikkeld op basis van Linked Data en de Linked Data gedachte. Hiermee is het mogelijk om een realistische situatie na te kunnen bootsen waarin informatie afgeschermd dient te worden. Deze dataset is gebruikt binnen dit project voor R&D en voor demonstratie doeleinden. Aangezien het heel handig is om data in een context te plaatsen (denk aan data schema's) is er binnen dit project een set van schema's ontwikkeld die de registers
-nabootsen (versimpeld en fictief) en natuurlijk een bijbehorende dataset. Beiden zijn fictief en versimpeld behalve het zogenaamde IMX-Geo model dat Kadaster in LD publiceert en dat openbaar is. Om de ontologieën te modelleren is er gebruik gemaakt van de RDF/RDFS/OWL en SHACL standaard. 
+Versimpelde testdata van een federatief data stelsel is ontwikkeld op basis van Linked Data en de Linked Data gedachte. Hiermee is het mogelijk om een realistische situatie na te kunnen bootsen waarin informatie afgeschermd dient te worden. Aangezien het heel handig is om data in een context te plaatsen (denk aan data schema's) is er binnen dit project een set van schema's ontwikkeld die de registers nabootsen (versimpeld en fictief) en natuurlijk een bijbehorende dataset. Deze pagina beschrijft het maken van de schema's die relevant zijn voor dit project en de [volgende sectie](./testopstelling.md) beschrijft het maken van gerelateerde dataset. 
+
+### Vereenvoudigd conceptueel model 
+Om een federatieve bevraging te kunnen laten zien en om daarmee te kunnen onderzoeken, is een testopstelling nodig. De eerste stap in deze testopstelling is het maken van een conceptueel model om de benodigde gegevens voor ons doel te modelleren. Om een logische begin te maken, hebben we daarvoor gekozen voor een situatie 'dicht bij huis'. Bij het Kadaster: De Basisregistratie Kadaster, afgekort de **BRK**. 
+
+Dit begint met het opnemen van percelen als object binnen een conceptueel model en vervolgens is het eigendom vastgesteld via `Tenaamstellingen` aan objecten personen. et personen worden `Rechtspersonen` bedoeld, wat een echt of 'natuurlijk' persoon kan zijn, maar ook een bedrijf. De juridische term is `Natuurlijk Persoon` voor echte mensen, welke geregistreerd zijn in de Basisregistratie Personen, afgekort met de **BRP**. Bedrijven zijn juridisch `Niet Natuurlijke Personen` en deze zijn geregistreerd in het Nationaal Handelsregister, afgekort met **NHR**. Om de casus nog wat breder te maken hebben we ook nog het **ANBI** register toegevoegd; het register van de Belastingdienst waarin goede doelen staan die aangemerkt zijn als Algemeen Nut Beogende Instellingen.
+
+|![Vereenvoudigd concetpueel model](images/vereenvoudigd-informatiemodel.png)|
+| :--: |
+|*Informatie Model IMXGeo als LD*|
+
+Het vereenvoudigd conceptueel model van bovenstaande tabel gebaseerde visualisatie is verder uitgewerkt in een Linked Data als een ontologie voor Lock-Unlock  [informatiemodel](./informatiemodel.md). Om de schemas en ontologie te modelleren is er gebruik gemaakt van de RDF/RDFS/OWL en SHACL standaard. 
 
 ### Losstaande schema's
 

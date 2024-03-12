@@ -1,60 +1,30 @@
 ---
 title: Testopstelling
 ---
-Om een federatieve bevraging te kunnen laten zien en om daarmee te kunnen onderzoeken, is een
-testopstelling nodig. Daarvoor hebben we gekozen voor een situatie 'dicht bij huis' ... van het
-Kadaster: De Basisregistratie Kadaster, afgekort de **BRK**. Dat start met percelen waarvan de open
-data onderdelen al beschikbaar zijn in de <a href="https://labs.kadaster.nl/thema/Knowledge_graph"
-target="_blank">Kadaster Knowledge Graph (KKG)</a>. Vervolgens is het eigendom vastgelegd via
-`Tenaamstellingen` aan personen. Met personen worden `Rechtspersonen` bedoeld, wat een echt of
-'natuurlijk' persoon kan zijn, maar ook een bedrijf. De juridische term is `Natuurlijk Persoon` voor
-echte mensen, welke geregistreerd zijn in de Basisregistratie Personen, afgekort met de **BRP**.
-Bedrijven zijn juridisch `Niet Natuurlijke Personen` en deze zijn geregistreerd in het Nationaal
-Handelsregister, afgekort met **NHR**. Om de casus nog wat breder te maken hebben we ook nog het
-**ANBI** register toegevoegd; het register van de Belastingdienst waarin goede doelen staan die aangemerkt zijn als Algemeen Nut Beogende Instellingen.
+Om een federatieve bevraging te kunnen laten zien en om daarmee te kunnen onderzoeken, is een testopstelling nodig. De eerste stap in deze testopstelling was het creëren van het informatiemodel (zie vorige [sectie](./informatiemodel.md)) en de tweede stap is het creëren van testgegevens die aansluiten bij dit model. Deze datasets zijn gebruikt binnen dit project voor R&D en voor demonstratie doeleinden. 
 
-## Vereenvoudigd informatiemodel
+Het gedefinieerde informatiemodel is een losjes uitgelijnde reeks schema's, aan elkaar gerelateerd door een upperontologie en gematerialiseerde relaties (zie [informatiekundige kern](./informatiekundigekern.md)). Voor elk van deze schema's worden testgegevens gemaakt die als een silo zijn gepubliceerd.
 
-Het vereenvoudigd informatiemodel ziet er als volgt uit:
+## Testdata genereren in silo's 
 
-![Vereenvoudigd informatiemodel](images/vereenvoudigd-informatiemodel.png)
+Test data voor alle registraties bestaan in eigen silo's. Dit is geheel naar werkelijkheid en zo hebben we ook onze testgegevens ontworpen. 
 
-Het vereenvoudigd informatiemodel van bovenstaande tabel gebaseerde visualisatie is verder
-uitgewerkt in een Linked Data [informatiemodel](./informatiemodel.md).
-
-## Silo's
-
-Deze registraties bestaan in eigen silo's. Dit is geheel naar werkelijkheid ... alleen werken we voor de testopstelling met een vereenvoudigd informatiemodel. De complexiteit van volledige informatiemodellen is niet relevant
-voor dit onderzoek, maar de silo's wel. Het eerste doel is het federatief kunnen bevragen over de silo's heen (zie ook [Demonstrator](./demonstrator.md))
-
-![Federatieve bevraging over silo's heen](images/testopstelling-silos.png)
-
-## Testdata
-
-Voor de verschillende silo's is synthetische testdata gegenereerd. Deze is echter wél in samenhang
-gegenereerd, zodat relaties op key / index velden mogelijk is. De resultaten van de gegenereerde
-testdata is vervolgens opgesplitst naar de verschillende silo's en ook als zodanig in de <a
-href="https://github.com/kadaster-labs/lock-unlock-testdata" target="_blank">testdata repo</a>
-toegevoegd. Deze wordt automatisch geladen bij het opstarten van de containers van de
-[demonstrator](./demonstrator.md) (zie ook
-[testopstelling#deployment](./testopstelling.md#deployment)).
+Voor de verschillende silo's is synthetische testdata gegenereerd. Hoewel de testgegevens zo worden gegenereerd dat deze in individuele silo's worden gepubliceerd, zijn relevante koppelsleutels al in de silo's opgenomen om ervoor te zorgen dat deze silo's op een federatieve manier kunnen worden bevraagd. Met deze opname hebben we ook het eerste doel van ons project bereikt (zie ook [Demonstrator](./demonstrator.md)).
 
 // TODO testdata generator code in [testdata
 repo](https://github.com/kadaster-labs/lock-unlock-testdata) zetten? :thinking_face:
 
+|![Federatieve bevraging over silo's heen](images/testopstelling-silos.png)|
+| :--: |
+|*Federatieve bevraging over silo's heen*|
+
+De gegenereerde testgegevens worden in de <a href="https://github.com/kadaster-labs/lock-unlock-testdata" target="_blank">testdata repo</a> beschikbaar gesteld. Deze wordt automatisch geladen bij het opstarten van de containers van de [demonstrator](./demonstrator.md) (zie ook [testopstelling#deployment](./testopstelling.md#deployment)).
+
 ## Deployment
 
-Als Kadaster hebben wij de BRK data zelf in huis (uiteraard). Ook de synthetische
-[testdata](#testdata) van de BRK hosten we op onze infrastructuur. Hiervoor maken we gebruik van
-ons interne Managed Application Platform, een <a href="https://kubernetes.io/"
-target="_blank">Kubernetes</a> / <a href="https://docs.openshift.com/" target="_blank">Open
-Shift</a> en <a href="https://www.redhat.com/en/topics/devops/what-is-gitops"
-target="_blank">GitOps</a> gebaseerd platform.
+Als Kadaster hebben wij de BRK data zelf (uiteraard) en IMXGeo in huis. Ook de synthetische [testdata](#testdata) van de BRK hosten we op onze infrastructuur. Hiervoor maken we gebruik van ons interne Managed Application Platform, een <a href="https://kubernetes.io/"target="_blank">Kubernetes</a> / <a href="https://docs.openshift.com/" target="_blank">Open Shift</a> en <a href="https://www.redhat.com/en/topics/devops/what-is-gitops" target="_blank">GitOps</a> gebaseerd platform.
 
-Voor de silo's die niet in het beheer van Kadaster zijn, te weten BRP, NHR en ANBI, zouden we die liever
-willen hosten op een andere cloud omgeving. Hiervoor maken we dankbaar gebruik van de mogelijkheden
-van de innovatiewerkplaats van de overheid, <a href="https://digilab.overheid.nl/"
-target="_blank">Digilab</a>.
+Voor de silo's die niet in het beheer van Kadaster zijn, te weten BRP, NHR en ANBI, zouden we die liever willen hosten op een andere cloud omgeving. Hiervoor maken we dankbaar gebruik van de mogelijkheden van de innovatiewerkplaats van de overheid, <a href="https://digilab.overheid.nl/" target="_blank">Digilab</a>.
 
 Uiteindelijk ziet de deployment op basis van containers en GitOps er dan als volgt uit:
 
