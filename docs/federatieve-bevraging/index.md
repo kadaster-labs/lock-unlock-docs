@@ -17,17 +17,16 @@ Het bestaan en de verschillen zijn relevant voor dit onderzoek en worden daarom 
 
 Hoewel in de huidige perceptie van 'een API' een REST API wordt bedoeld, is het _federatief_ bevragen met behulp van REST API's nog niet zo eenvoudig. Daarom is in (de opdracht voor) het Lock-Unlock project gekozen om uit te gaan van **[Linked Data](linkeddata.md)**. Dit is een technologie die het koppelen van gegevens tussen gedistribueerde bronnen ondersteunt om een betere navigatie door de gegevens heen, tussen de nodes in de gegevens, te ondersteunen. De bijbehorende query taal is **SPARQL**. Daarmee is federatief bevragen inherent mogelijk!
 
-### Hoofdstuk Inhoud
+### Leeswijzer
 In dit hoofdstuk wordt eerst beschreven hoe de verschillende API's zich tot elkaar verhouden en waarom we ons beperkt hebben tot de scope van Linked Data. Vervolgens beschrijven we hoe het informatiemodel in elkaar zit en wat de relatie is tot de informatiekundige kern. Ook wordt toegelicht hoe de testdata is gegenereerd. Zowel het informatiemodel als de testdata is randvoorwaardelijk voor een goede testcasus en testopstelling. We sluiten af met conclusies rondom federatieve bevraging.
 
 - [REST vs GraphQL vs SPARQL](./apis.md)
 - [Waarom Linked Data?](./linkeddata.md)
 - [Informatiekundigekern](./informatiekundigekern.md)
     - Governance op informatiemodel
-    - Koppelsleutels en linksets
 - [Informatiemodel](./informatiemodel.md)
     - Relatie met IMX-Geo
-    - Koppelsleutels: 2 opties (owl:SameAs vs directe uri’s)
+    - Koppelsleutels voor Lock-Unlock: 2 opties (owl:SameAs vs directe uri’s)
 - [Testopstelling](./testopstelling.md)
     - Synthetische testdata genereren
     - Deployments & infrastructuur
