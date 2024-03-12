@@ -102,11 +102,11 @@ tot verificatie van de autorisaties (eventueel aan andere partijen, zoals een to
 
 // TODO hdt? zo ja of waarom niet?
 
-### 
+---
 
-# Oorspronkelijk
+## Oorspronkelijk
 
-## Conclusies
+### Conclusies
 
 -  het is mogelijk om gebruik te maken van de data om autorisatie regels op te stellen. Zo kan er
   bijvoorbeeld toegangsregels opgesteld worden voor een bepaalde gemeente. De daadwerkelijke
@@ -120,7 +120,7 @@ tot verificatie van de autorisaties (eventueel aan andere partijen, zoals een to
   Schaalbaarheid en performance hiervan zijn nog onduidelijk.
 -  Fictieve data van gekoppelde register in Linked Data is makkelijk te realiseren. 
 
-## Aanbevelingen
+### Aanbevelingen
 
 De volgende aanbevelingen kunnen gemaakt worden:
 
@@ -136,9 +136,9 @@ De volgende aanbevelingen kunnen gemaakt worden:
 -  Samenwerking met andere registerhouders om de adoptie van LD en bijbehorende beveiligingen te
   bespoedigen
 
-# Evaluatie
+## Evaluatie
 
-### Conclusies
+#### Conclusies
 
 De volgende conclusies worden getrokken:
 
@@ -162,7 +162,7 @@ De volgende conclusies worden getrokken:
   opgesteld.
 
 
-### Aanbevelingen
+#### Aanbevelingen
 
 De volgende aanbevelingen zijn mogelijk: 
 
@@ -176,9 +176,9 @@ De volgende aanbevelingen zijn mogelijk:
 - Doorontwikkeling implementatie:  Algehele doorontwikkleing van de implementatie inclusief
   resulaten van bovenstaande onderzoeken verwerken. 
 
-# Samenvatting
+## Samenvatting
 
-## Conclusies
+### Conclusies
 
 Op basis van dit project kunnen de volgende conclusies worden getrokken:
 
@@ -192,7 +192,7 @@ Op basis van dit project kunnen de volgende conclusies worden getrokken:
   Schaalbaarheid en performance hiervan zijn niet onderzocht.
 - Het creëren van fictieve datasets die te koppelen zijn in Linked Data is makkelijk te realiseren. 
 
-## Aanbevelingen
+### Aanbevelingen
 
 De volgende aanbevelingen kunnen gemaakt worden:
 
