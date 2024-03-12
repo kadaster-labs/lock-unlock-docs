@@ -1,5 +1,5 @@
 ---
-title: API's | REST vs GraphQL vs SPARQL
+title: REST vs GraphQL vs SPARQL
 ---
 In de huidige stand van de techniek wordt met API meestal een **REST API** bedoeld, hoewel er vele
 varianten van API's bestaan. Een REST API staat voor een API die gebruik maakt van internet
@@ -44,3 +44,5 @@ Bijvoorbeeld, in een SPARQL endpoint / API kunnen meerdere schema’s gecombinee
 GraphQL slecht één expliciet schema van toepassing is.
 
 ![Achtergrond: REST vs GraphQL vs SPARQL](images/achtergrond-rest-graphql-sparql.png)
+
+![Federatieve bevraging](images/infographic-federatieve-bevraging.png)
