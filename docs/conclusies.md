@@ -1,72 +1,100 @@
 ---
 title: Conclusies en aanbevelingen
 ---
-## Inleiding
-
-Dit project heeft een verkennend karakter en heeft aangenomen dat er een FDS omgeving ontstaat op
-basis van Linked data. Hierbij heeft elk register een eigen linked dataset die wordt gedissemineerd
-via een sparql endpoint. Het beheer wordt door de register-houder zelf gedaan. Hiermee onstaan
-meerdere sparql endpoints die federatief bevraagd kunnen worden door 'out-of-the-box' Sparql
-functionaliteit. Deze situatie vraagt om afscherming van gegevens.
+Lock-Unlock richt zich op [Linked Data](./federatieve-bevraging/linkeddata.md), voortbouwend op de
+<a href="https://labs.kadaster.nl/cases/integralegebruiksoplossing" target="_blank">Integrale
+Gebruiksoplossing (IGO)</a> en de <a href="https://labs.kadaster.nl/thema/Knowledge_graph"
+target="_blank">Kadaster Knowledge Graph (KKG)</a> ontwikkeld door het Kadaster. Er zijn weinig
+gestandaardiseerde mogelijkheden voor autorisatie van data in het Linked Data domein. Dit project is
+een verkenning om de (on)mogelijkheden te onderzoeken en te testen.
 
 ## Conclusies
 
-Op basis van dit project kunnen de volgende conclusies worden getrokken:
+Hoewel het doel van dit project vooral lag op [autorisatie als Linked
+Data](./autorisatie-als-linkeddata/index.md), is een deel van de aandacht ook gegaan naar
+[federatieve bevraging](./federatieve-bevraging/index.md). Dat schetst namelijk de context waarin
+[afscherming](./afscherming/index.md) zou moeten plaatsvinden. Uiteraard hebben we ook beproefd in
+hoeverre autorisatie als Linked Data mogelijk en haalbaar is. Hierover hebben we apart een
+[evaluatie](./autorisatie-als-linkeddata/evaluatie.md) geschreven. De conclusies volgen hier:
 
 ### Linked Data maakt federatieve bevraging gemakkelijk
 
-Een federatieve bevraging is op meerdere manier mogelijk, maar Linked Data heeft dit vanuit het
-ontwerp al beschikbaar. Een omgeving met REST API's biedt ook wel de mogelijkheid voor federatieve
-bevragingen, maar dit legt een grote beheerlast bij de 'vrager'. In SPARQL is deze functionaliteit
-gestandaardiseerd en standaard beschikbaar.
+Een federatieve bevraging is op meerdere manier mogelijk. Een omgeving met REST API's biedt ook wel
+de mogelijkheid voor federatieve bevragingen, maar dit legt een grote beheerlast bij de 'vrager'. Met GrapahQL zijn daar stappen in gemaakt, maar daarin is nog steeds behoefte aan gateway oplossingen.
+
+Linked Data is _ontworpen_ met federatie in de basis. Vanuit het ontwerp is federatieve bevraging
+daarom al beschikbaar. In de Linked Data Query Language, SPARQL, is dit gespecificeerd met de
+`service` clause.
 
 #### Performance van federatieve bevraging is moeilijk
 
-In concept is het al ingewikkeld om een generieke werkwijze te bedenken die een query snel uitvoert.
-Daar is vrijwel altijd een analyse van de query voor benodigd om uit te werken wat de snelste manier
-is om de vraag (query) te beantwoorden. In de verschillende implementaties zijn hier grote
-verschillen!
+Dat federatieve bevraging standaard in de Query Language zit en in de basis van Linked Data wil dat
+niet zeggen dat er geen 'problemen' zijn. In concept is het al ingewikkeld om een generieke
+werkwijze te bedenken die een query snel uitvoert. Daar is vrijwel altijd een analyse van de query
+voor benodigd om uit te werken wat de snelste manier is om de vraag (query) te beantwoorden. Deze
+analyse en uitwerking naar snelle uitvoering van federatieve vragen, is niet gestandaardiseerd in
+SPARQL of Linked Data. In de verschillende implementaties zijn hier grote verschillen!
 
-// TODO Sven kijkt naar hdt optimalisering???
+Er zijn wel ontwikkelingen rondom federatieve bevraging in het Linked Data domein.
+
+// TODO Aanbeveling rondom HDT? Sven kijkt naar HDT optimalisering???
 
 #### Koppelen van silo's vraagt expliciet ontwerp
 
 Om over silo's van data heen goed te kunnen navigeren en federatieve bevragingen te kunnen doen,
-dienen de schema's én de data goed gekoppeld te zijn. Hierin zou het kunnen helpen om een _upper
-ontology_ voor af te spreken. Zie ook [informatiekundige
-kern](./federatieve-bevraging/informatiekundigekern.md).
+dienen de schema's én de data goed gekoppeld te zijn. Ook voor Linked Data. Wel biedt Linked Data
+hier verschillende mogelijkheden voor. Zo is het mogelijk om een _upper ontology_ voor relaties af
+te spreken en deze toe te voegen aan bestaande ontologieën en informatiemodellen.
+
+Zie ook [informatiekundige kern](./federatieve-bevraging/informatiekundigekern.md).
 
 ### Afschermen van Linked Data is mogelijk
 
 Het is mogelijk om fijnmazig autorisatie regels declaratief te modelleren op basis van een
-autorisatie ontologie voor federatieve bevragingen op basis van Linked Data.
+autorisatie ontologie voor federatieve bevragingen op basis van Linked Data. We hebben dit aan
+kunnen tonen in onze demonstrators, waarin we een eerste toepassing van een door ons ontwikkelde
+autorisatie ontologie hebben uitgewerkt.
 
 #### Declaratieve autorisatie regels als Linked Data
 
 Met _autorisatie regels_ doelen we op toegangsregels die gelden voor een specifieke situatie. Voor
 een bepaalde gebruikersgroep wordt toegang verleend voor een specifiek data-schema, een specifieke
 ontologie. De regels die gelden kunnen zeer fijnmazig zijn en de verschillende
-[afschermingspatronen](./afscherming/afschermingspatronen.md) bevatten.
+[afschermingspatronen](./afscherming/afschermingspatronen.md) bevatten. We hebben in onze
+demonstrators aangetoond dat [verticale en horizontale
+subsets](./afscherming/afschermingspatronen.md#subset) mogelijk zijn. De
+[richting](./afscherming/afschermingspatronen.md#richting) is moeilijker en zijn we onvoldoende aan
+toegekomen om te kunnen zeggen dat dat echt werkt. Is het mogelijk? Wij denken van wel.
 
 De autorisatie regels zijn _declaratief_. Dat betekent dat de gewenste toegang of juist afscherming
 gespecificeerd kan worden. Onderliggende uitvoering en zelfs uitwerking wordt overgelaten een de
 'engine' die zorgdraagt voor de afscherming.
 
-Autorisatie regels is data en dus is de implementatie data gedreven. Dit betekent:
+Dit houdt ook in dat autorisatie regels data is `#data-gedreven`. Dit betekent:
 
 - dat de autorisatie regels kunnen worden bevraagd (wie heeft toegang tot wat en eventueel zelfs
-  waarom (niet) ... waarbij het mogelijk zou moeten zijn om zelfs t/m de wettelijke grondslag te
-  linken?)
-- dat dezelfde autorisatie regels gebruikt kunnen worden in dezelfde software (engine)
+  waarom (niet)). Wellicht is het mogelijk om te verwijzen t/m de wettelijke grondslag?
+- dat de autorisatie regels kunnen worden opgesteld en gedefinieerd onafhankelijk van de software
+  (engine) waarin de regels worden afgedwongen
 
 #### Autorisatie ontologie voor standaardisatie
 
 De autorisatie regels kunnen worden gestandaardiseerd in een _autorisatie ontologie_. Dat betekent
 dat een software implementatie van deze ontologie als engine gebruikt kan worden om de data van de
-autorisatie regels uit te voeren.
+autorisatie regels uit te voeren. Doordat een ontologie programeertaal onafhankelijk is, kunnen er
+meerdere implementaties gemaakt worden voor de autorisatie ontologie.
 
-Autorisatie ontologie is niet programeertaal afhankelijk en dus zijn er meerdere implementaties van
-verschillende programmeertalen mogelijk voor deze ontologie.
+#### Declaratieve autorisatie regels gekoppeld aan bestaande ontologieën
+
+Het is mogelijk om in de declaratie van de autorisatie regels volgens de autorisatie ontologie, een
+relatie te maken naar al bestaande ontologieën. Dat wil zeggen dat de toegang (of juist ontzegging
+daarvan) gedeclareerd kan worden volgens de autorisatie ontologie en daarbij kan gedeclareerd worden
+_over welke_ andere ontologie die regels gelden. In ons voorbeeld zijn dat de registratie
+ontologieën van de BRK, BRP en NHR. De autorisatie regels zijn daarmee direct gekoppeld aan de
+schema-elementen van deze register ontologieën.
+
+Deze vorm biedt inzicht in wie waar toegang toe heeft of juist niet. Daarmee biedt het mogelijkheden
+tot verificatie van de autorisaties (eventueel aan andere partijen, zoals een toezichtshouder).
 
 ## Aanbevelingen
 
@@ -80,15 +108,6 @@ verschillende programmeertalen mogelijk voor deze ontologie.
 
 ## Conclusies
 
-In deze omgeving is data afscherming noodzakelijk. Dit project heeft verkent en trekt de volgende
-conclusies:
-
--  het is mogelijk om (geavanceerde) autorisatie regels declaratief vast te leggen in LD op basis
-  van een Autorisatie ontologie.
--  het is mogelijk om gebruik te maken van een LD schema (T-Box) van de (register) dataset.
-  Autorisatie regels zijn daarmee direct gekoppeld aan schema-elementen. Hiermee kan o.a. inzicht
-  geboden worden wie waar toegang toe heeft en evt waar niet. Ook geeft deze aanpak mogelijkheden
-  tot verificatie van de autorisaties.                      
 -  het is mogelijk om gebruik te maken van de data om autorisatie regels op te stellen. Zo kan er
   bijvoorbeeld toegangsregels opgesteld worden voor een bepaalde gemeente. De daadwerkelijke
   gemeente wordt uit de dataset opgehaald.
