@@ -68,9 +68,9 @@ Links naar deployments:
 
 - BRK -> <a href="https://brk.dst.test.cloud.kadaster.nl/"
   target="_blank">https://brk.dst.test.cloud.kadaster.nl/</a>
-- ANBI -> <a href="https://anbi.dst.test.cloud.kadaster.nl/"
-  target="_blank">https://anbi.dst.test.cloud.kadaster.nl/</a>
-- BRP -> <a href="https://brp.dst.test.cloud.kadaster.nl/"
-  target="_blank">https://brp.dst.test.cloud.kadaster.nl/</a>
-- NHR -> <a href="https://nhr.dst.test.cloud.kadaster.nl/"
-  target="_blank">https://nhr.dst.test.cloud.kadaster.nl/</a>
+- ANBI -> <a href="https://anbi-lock-unlock.apps.digilab.network/"
+  target="_blank">https://anbi-lock-unlock.apps.digilab.network/</a>
+- BRP -> <a href="https://brp-lock-unlock.apps.digilab.network/"
+  target="_blank">https://brp-lock-unlock.apps.digilab.network/</a>
+- NHR -> <a href="https://nhr-lock-unlock.apps.digilab.network/"
+  target="_blank">https://nhr-lock-unlock.apps.digilab.network/</a>

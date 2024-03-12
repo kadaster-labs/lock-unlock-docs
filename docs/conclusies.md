@@ -114,6 +114,27 @@ tot verificatie van de autorisaties (eventueel aan andere partijen, zoals een to
 
 ## Aanbevelingen
 
+### Meer onderzoek naar performance federatieve bevragingen
+
+// TODO hdt? zo ja of waarom niet?
+
+// TODO Sven kijkt naar HDT optimalisering???
+
+### Informatiekundige kern
+
+Relaties tussen registers en silo's zijn geen eenvoudig probleem. Daar zijn oplossingen voor nodig.
+Een oplossing die Linked Data kan bieden is een _upper ontology_. Daarmee zouden relaties
+gestandaardiseerd en geformaliseerd kunnen worden. Daarna zouden (gelijke) functionele zaken
+gestandardiseerd kunnen worden. Denk aan "ID"'s en versie beheer en meta-data van registers in LD.
+
+### Linked Data adoptie vergroten
+
+Linked Data biedt veel mogelijkheden voor federatieve bevragingen, expliciete verplichting voor
+semantiek, informatiemodellen en begrippen. En met de autorisatie ontologie komt ook afscherming in
+de mogelijkheden van Linked Data. Het succes en toepassen van deze technieken staat of valt echter
+met de adoptiegraad van Linked Data in het algemeen. Het vergroten van deze adoptie is daarom van
+belang.
+
 ### Autorisatie ontologie verder uitwerken
 
 De [Authorization Ontology](./opleveringen.md#authorization-ontology) waar in dit project in eerste
@@ -128,34 +149,27 @@ aan een 'in depth' vergelijking.
 
 Voor de ontwikkeling zou een W3C Working Group uiteraar een mooi middel zijn!
 
-### Meer onderzoek naar performance federatieve bevragingen
+### Beperking van richting uitwerken
 
-// TODO hdt? zo ja of waarom niet?
+In dit project hebben we uitgewerkt en beproefd hoe [verticale en horizontale
+subsets](./afscherming/afschermingspatronen.md#subset) afgeschermd of juist onsloten kunnen worden.
+We hebben geen aandacht kunnen besteden aan het beperken van de
+[richting](./afscherming/afschermingspatronen.md#richting). Hier dient extra (vervolg)onderzoek op
+gedaan te worden.
 
-// TODO Sven kijkt naar HDT optimalisering???
+### Volledigheid en effectiviteit meetbaar maken
+
+In dit onderzoek is aangetoond dat het mogelijk is om mbv een autorisatie ontologie een 'secured
+SPARQL endpoint' te ontwikkelen (twee zelfs! :grin:). We hebben echter niet aangetoond dat dit
+volledig waterdichte toegangscontrole biedt. Sterker nog, we zijn niet eens toegekomen aan de
+[richting](./afscherming/afschermingspatronen.md#richting) beperken.
+
+Om (later) aan te tonen dat de autorisatie ontologie volledig is en effectief wordt toegepast voor
+een 'secured SPARQL endpoint' is het noodzakelijk om een betrouwbare en herhaalbare meetmethode te
+hebben. Hierin zullen de verschillende [afschermingspatronen](./afscherming/afschermingspatronen.md)
+opgenomen moeten zijn en allerlei variaties en combinaties hierin.
 
 ---
-
-## Oorspronkelijk
-
-### Conclusies
-
-
-### Aanbevelingen
-
-De volgende aanbevelingen kunnen gemaakt worden:
-
--  Autorisatie ontologie moet verder uitgewerkt worden
--  Waterdichtheid van de beveiliging moet aantoonbaar gemaakt kunnen worden
--  een formele specificatie van de implementatie is handig om ontwikkelaars te ondersteunen
--  Meer grip op federatieve/locked-unlocked performance   
--  Richting's patroon kan worden uitgewerkt of worden geimplementeerd
--  Relaties tussen de registers moeten gestandardiseerd worden opdat je hierop kunt bouwen en
-  vertrouwen. In de linked data wereld zou je een 'upper' ontologie kunnen definieren om de relaties
-  tussen de registers te formaliseren. Daarna zouden (gelijke) functionele zaken gestandardiseerd
-  kunenn worden. Denk aan "ID"'s en versie beheer en meta-data van registers in LD.
--  Samenwerking met andere registerhouders om de adoptie van LD en bijbehorende beveiligingen te
-  bespoedigen
 
 ## Evaluatie
 
