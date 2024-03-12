@@ -24,14 +24,13 @@ daarmee de 'unlock' :unlock: van de data.
 
 ![Infographic](images/infographic.png)
 
-Zie ook onze open source projecten:
+## Leeswijzer
 
-- [Lock-Unlock Docs](https://github.com/kadaster-labs/lock-unlock-docs)
-    - Authorization Ontology (in research)
-    - Logging Ontology (in research)
-- [Lock-Unlock Testdata](https://github.com/kadaster-labs/lock-unlock-testdata)
-- [Secured SPARQL Endpoint Sub Graph](https://github.com/kadaster-labs/secured-sparql-endpoint-subgraph)
-  (based on Apache Jena & SpringBoot)
-- [Secured SPARQL Endpoint Rewrite (SPARQL
-  Query)](https://github.com/kadaster-labs/secured-sparql-endpoint-rewrite) (based on Fuseki)
-- [Lock-Unlock Helm Charts](https://github.com/kadaster-labs/lock-unlock-helm-charts)
+- (Management) [Samenvatting](./samenvatting.md)
+- Volledig rapport met
+    - [Federatieve bevraging](./federatieve-bevraging/index.md)
+    - [Afscherming](./afscherming/index.md)
+    - [Autorisatie als Linked Data](./autorisatie-als-linkeddata/index.md)
+- [Conclusies en aanbeveligingen](./conclusies.md)
+- [Opleveringen](./opleveringen.md)
+- [Achtergronden](./achtergrond/index.md)
