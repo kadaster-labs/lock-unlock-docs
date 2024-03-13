@@ -1,0 +1,88 @@
+# baseURI: https://data.federatief.datastelsel.nl/lock-unlock/authentication/model/def/
+
+@prefix : <https://data.federatief.datastelsel.nl/lock-unlock/authentication/model/def/> .
+@prefix Example: <https://metadata.kadaster.nl/kadaster/ontotbc/model/def/Example#> .
+@prefix afn: <http://jena.apache.org/ARQ/function#> .
+@prefix agg: <http://jena.apache.org/ARQ/function/aggregate#> .
+@prefix apf: <http://jena.apache.org/ARQ/property#> .
+@prefix array: <http://www.w3.org/2005/xpath-functions/array> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix def: <https://data.labs.kadaster.nl/kadaster/kkg-light/model/def/> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geoext: <http://rdf.useekm.com/ext#> .
+@prefix geof: <http://www.opengis.net/def/function/geosparql/> .
+@prefix gis: <http://www.opengis.net/ont/geosparql#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix graphdb: <http://www.ontotext.com/config/graphdb#> .
+@prefix list: <http://jena.apache.org/ARQ/list#> .
+@prefix map: <http://www.w3.org/2005/xpath-functions/map> .
+@prefix math: <http://www.w3.org/2005/xpath-functions/math> .
+@prefix ofn: <http://www.ontotext.com/sparql/functions/> .
+@prefix omgeo: <http://www.ontotext.com/owlim/geo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix path: <http://www.ontotext.com/path#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdf4j: <http://rdf4j.org/schema/rdf4j#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rep: <http://www.openrdf.org/config/repository#> .
+@prefix rulesV2: <http://www.buildingbits.nl/2021/rulesV2#> .
+@prefix sail: <http://www.openrdf.org/config/sail#> .
+@prefix schema: <http://schema.org/> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix sparnatural-config-core: <http://data.sparna.fr/ontologies/sparnatural-config-core#> .
+@prefix sparnatural-config-datasources: <http://data.sparna.fr/ontologies/sparnatural-config-datasources#> .
+@prefix sparnaturaldatasources: <https://data.labs.kadaster.nl/imx/sparnaturaldatasources#> .
+@prefix spif: <http://spinrdf.org/spif#> .
+@prefix sr: <http://www.openrdf.org/config/repository/sail#> .
+@prefix tbc: <https://metadata.kadaster.nl/kadaster/ontotbc/model/def/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix vocab: <https://data.labs.kadaster.nl/cbs/wbk/vocab#> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:
+  rdf:type owl:Ontology ;
+  owl:versionIRI <https://data.federatief.datastelsel.nl/lock-unlock/authentication/model/def/0.1.1> ;
+.
+:User
+  rdf:type owl:Class ;
+  rdfs:comment "A User is a natural person or autonomous system wishing to retrieve information from the dataset governed by the described authorisation policy." ;
+  rdfs:label "User" ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :account ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :password ;
+    ] ;
+.
+:account
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:domain :User ;
+  rdfs:label "account" ;
+  rdfs:range xsd:string ;
+.
+:anonymous
+  rdf:type :User ;
+  rdfs:comment "anonymous user defined in this ontology so that this user is always available" ;
+  rdfs:label "anonymous" ;
+.
+:password
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:domain :User ;
+  rdfs:label "password" ;
+  rdfs:range xsd:string ;
+.

@@ -1,0 +1,443 @@
+# baseURI: https://data.federatief.datastelsel.nl/lock-unlock/authorisation/model/def/
+# imports: https://data.federatief.datastelsel.nl/lock-unlock/authentication/model/def/
+
+@prefix : <https://data.federatief.datastelsel.nl/lock-unlock/authorisation/model/def/> .
+@prefix Example: <https://metadata.kadaster.nl/kadaster/ontotbc/model/def/Example#> .
+@prefix afn: <http://jena.apache.org/ARQ/function#> .
+@prefix agg: <http://jena.apache.org/ARQ/function/aggregate#> .
+@prefix apf: <http://jena.apache.org/ARQ/property#> .
+@prefix array: <http://www.w3.org/2005/xpath-functions/array> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix def: <https://data.labs.kadaster.nl/kadaster/kkg-light/model/def/> .
+@prefix def1: <https://data.federatief.datastelsel.nl/lock-unlock/authentication/model/def/> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geoext: <http://rdf.useekm.com/ext#> .
+@prefix geof: <http://www.opengis.net/def/function/geosparql/> .
+@prefix gis: <http://www.opengis.net/ont/geosparql#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix graphdb: <http://www.ontotext.com/config/graphdb#> .
+@prefix list: <http://jena.apache.org/ARQ/list#> .
+@prefix map: <http://www.w3.org/2005/xpath-functions/map> .
+@prefix math: <http://www.w3.org/2005/xpath-functions/math> .
+@prefix ofn: <http://www.ontotext.com/sparql/functions/> .
+@prefix omgeo: <http://www.ontotext.com/owlim/geo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix path: <http://www.ontotext.com/path#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdf4j: <http://rdf4j.org/schema/rdf4j#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rep: <http://www.openrdf.org/config/repository#> .
+@prefix rulesV2: <http://www.buildingbits.nl/2021/rulesV2#> .
+@prefix sail: <http://www.openrdf.org/config/sail#> .
+@prefix schema: <http://schema.org/> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix sparnatural-config-core: <http://data.sparna.fr/ontologies/sparnatural-config-core#> .
+@prefix sparnatural-config-datasources: <http://data.sparna.fr/ontologies/sparnatural-config-datasources#> .
+@prefix sparnaturaldatasources: <https://data.labs.kadaster.nl/imx/sparnaturaldatasources#> .
+@prefix spif: <http://spinrdf.org/spif#> .
+@prefix sr: <http://www.openrdf.org/config/repository/sail#> .
+@prefix tbc: <https://metadata.kadaster.nl/kadaster/ontotbc/model/def/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix vocab: <https://data.labs.kadaster.nl/cbs/wbk/vocab#> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:
+  rdf:type owl:Ontology ;
+  owl:imports def1: ;
+  owl:versionIRI <https://data.federatief.datastelsel.nl/lock-unlock/authorisation/model/def/0.1.1> ;
+.
+:AbstractAccessRule
+  rdf:type owl:Class ;
+  rdfs:label "AbstractAccessRule" ;
+  rdfs:subClassOf owl:Thing ;
+.
+:AccessRule
+  rdf:type owl:Class ;
+  rdfs:comment "An Access Rule defines a section of the graph that is accessible to Users in its Security Group" ;
+  rdfs:label "AccessRule" ;
+  rdfs:subClassOf :AbstractAccessRule ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :subject ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :condition ;
+    ] ;
+.
+:AccessibleDataset
+  rdf:type owl:Class ;
+  rdfs:label "AccessibleDataset" ;
+  rdfs:subClassOf :Alt ;
+.
+:AccessibleService
+  rdf:type owl:Class ;
+  rdfs:comment "services that are accessible as exceptions to the inaccessible services" ;
+  rdfs:label "Accessible service" ;
+  rdfs:subClassOf :Alt ;
+.
+:Aggregator
+  rdf:type owl:Class ;
+  rdfs:label "Aggregator" ;
+  rdfs:subClassOf :Alt ;
+.
+:Alt
+  rdf:type owl:Class ;
+  rdfs:label "Alt" ;
+  rdfs:subClassOf :AbstractAccessRule ;
+.
+:AuthenticationGraph
+  rdf:type owl:Class ;
+  rdfs:label "Authentication graph" ;
+  rdfs:subClassOf :Graph ;
+.
+:AuthorisationGraph
+  rdf:type owl:Class ;
+  rdfs:label "Authorisation graph" ;
+  rdfs:subClassOf :Graph ;
+.
+:BGP
+  rdf:type owl:Class ;
+  rdfs:label "BGP" ;
+  rdfs:subClassOf :Support ;
+.
+:Dataset
+  rdf:type owl:Class ;
+  rdfs:label "Dataset" ;
+.
+:DefaultUnionGraph
+  rdf:type owl:Class ;
+  rdfs:label "Default union graph" ;
+  rdfs:subClassOf :Graph ;
+.
+:Direction
+  rdf:type owl:Class ;
+  rdfs:label "Direction" ;
+  rdfs:subClassOf :Alt ;
+.
+:Endpoint
+  rdf:type owl:Class ;
+  rdfs:label "Endpoint" ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :enable_logging ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :hasDefaultUnionGraph ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty :exposes_dataset ;
+    ] ;
+.
+:Filter
+  rdf:type owl:Class ;
+  rdfs:label "Filter" ;
+  rdfs:subClassOf :Support ;
+.
+:Graph
+  rdf:type owl:Class ;
+  rdfs:comment "arguably a graph with the same name might be present in multiple endpoints. Consequently it might be handy to use a graph prediate for the actual graph instead of the uri of this resource" ;
+  rdfs:label "Graph" ;
+.
+:HorizontalSubset
+  rdf:type owl:Class ;
+  rdfs:label "Horizontal subset" ;
+  rdfs:subClassOf :Alt ;
+.
+:InAccessiblePredicateValue
+  rdf:type owl:Class ;
+  rdfs:label "InAccessiblePredicateValue" ;
+  rdfs:subClassOf :Alt ;
+.
+:InAccessibleService
+  rdf:type owl:Class ;
+  rdfs:label "InAccessibleService" ;
+  rdfs:subClassOf :Alt ;
+.
+:LoggingGraph
+  rdf:type owl:Class ;
+  rdfs:label "Logging graph" ;
+  rdfs:subClassOf :Graph ;
+.
+:Parameter
+  rdf:type owl:Class ;
+  rdfs:label "Parameter" ;
+  rdfs:subClassOf :Support ;
+.
+:Role
+  rdf:type owl:Class ;
+  rdfs:comment "In line with the paper by Jajodia et al. (2001) this has been renamed from Persona to Role." ;
+  rdfs:label "Role" ;
+.
+:SecurityGroup
+  rdf:type owl:Class ;
+  rdfs:comment "A Security Group acts as an intermediary between Roles and Rules to allow clustering of similar access patterns." ;
+  rdfs:label "SecurityGroup" ;
+.
+:SimpleHorizontalSubsetUsingClassAndObject
+  rdf:type owl:Class ;
+  rdfs:label "Horizontal subset using class and object" ;
+  rdfs:subClassOf :HorizontalSubset ;
+.
+:Sparql
+  rdf:type owl:Class ;
+  rdfs:label "Sparql" ;
+  rdfs:subClassOf :Support ;
+.
+:Support
+  rdf:type owl:Class ;
+  rdfs:label "Support" ;
+  rdfs:subClassOf owl:Thing ;
+.
+:applies_to_graph
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :AccessRule ;
+  rdfs:label "applies_to_graph" ;
+  rdfs:range :Graph ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+.
+:belongs_to_group
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Associates a role to a Security Group as an intermediary to the relevant Rules" ;
+  rdfs:domain :Role ;
+  rdfs:label "belongs_to_group" ;
+  rdfs:range :SecurityGroup ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+.
+:bgpSubject
+  rdf:type owl:FunctionalProperty ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :BGP ;
+  rdfs:label "bgp subject" ;
+  rdfs:range [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          :Parameter
+          rdfs:Resource
+        ) ;
+    ] ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+.
+:condition
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment """A graph pattern describing what subgraphs the associated Rule should allow access to. Should be one or more TriplesBlocks separated by a period character (.) See the SPARQL 1.1 standard for the definition of a TriplesBlock. Variable bindings should correspond to those in the subject of the Rule.
+
+For example \"?bedrag rdf:type brk:Bedrag. ?perceel brk:laatsteKoopsom ?bedrag.\".""" ;
+  rdfs:domain :AccessRule ;
+  rdfs:label "condition" ;
+  rdfs:range xsd:string ;
+  rdfs:seeAlso "https://www.w3.org/TR/sparql11-query/#rTriplesBlock" ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+:dataset
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          :AccessibleDataset
+          :InAccessiblePredicateValue
+        ) ;
+    ] ;
+  rdfs:label "dataset" ;
+  rdfs:range :Dataset ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+.
+:enable_logging
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Endpoint ;
+  rdfs:label "enable logging" ;
+  rdfs:range xsd:boolean ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+:except
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :InAccessiblePredicateValue ;
+  rdfs:label "except" ;
+.
+:exposes_dataset
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :Endpoint ;
+  rdfs:label "exposes_dataset" ;
+  rdfs:range :Dataset ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+.
+:graph
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:domain :Graph ;
+  rdfs:label "graph" ;
+  rdfs:range xsd:anyURI ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+:hasDefaultUnionGraph
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:domain :Endpoint ;
+  rdfs:label "has default union graph" ;
+  rdfs:range xsd:boolean ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+:has_authentication_graph
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "to protect and endpoint it needs authenticatin (and authorisation) info. this predicate points to the authentication graph" ;
+  rdfs:domain :Endpoint ;
+  rdfs:label "has authentication graph" ;
+  rdfs:range :AuthenticationGraph ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+.
+:has_authorisation_graph
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "to protect and endpoint it needs authenticatin (and authorisation) info. this predicate points to the authorisation graph" ;
+  rdfs:domain :Endpoint ;
+  rdfs:label "has authorisation graph" ;
+  rdfs:range :AuthorisationGraph ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+.
+:has_role
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Associates a user with one or more Roles, in accordance with section 2.1.4 of the paper by Jajodia et al. (2001)" ;
+  rdfs:domain def1:User ;
+  rdfs:label "has role" ;
+  rdfs:range :Role ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+.
+:has_rule
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :SecurityGroup ;
+  rdfs:label "has_rule" ;
+  rdfs:range :AbstractAccessRule ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+.
+:inGraph
+  rdf:type owl:FunctionalProperty ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :SimpleHorizontalSubsetUsingClassAndObject ;
+  rdfs:label "in graph" ;
+  rdfs:range :Graph ;
+.
+:logging_graph
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :Endpoint ;
+  rdfs:label "logging graph" ;
+  rdfs:range :LoggingGraph ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+.
+:objectValueShouldBe
+  rdf:type owl:FunctionalProperty ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :SimpleHorizontalSubsetUsingClassAndObject ;
+  rdfs:label "object value should be" ;
+.
+:ofClass
+  rdf:type owl:FunctionalProperty ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :SimpleHorizontalSubsetUsingClassAndObject ;
+  rdfs:label "of class" ;
+.
+:onlyWhen
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :InAccessiblePredicateValue ;
+  rdfs:label "only when" ;
+.
+:part_of_dataset
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :Graph ;
+  rdfs:label "part_of_dataset" ;
+  rdfs:range :Dataset ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+.
+:predicate
+  rdf:type owl:FunctionalProperty ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          :InAccessiblePredicateValue
+          :BGP
+          :SimpleHorizontalSubsetUsingClassAndObject
+        ) ;
+    ] ;
+  rdfs:label "predicate" ;
+  rdfs:range [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          rdf:Property
+          :Parameter
+        ) ;
+    ] ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+.
+:service
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment "service urls" ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          :AccessibleService
+          :InAccessibleService
+        ) ;
+    ] ;
+  rdfs:label "service" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+:sparqlqueryurl
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Endpoint ;
+  rdfs:label "sparql query url" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+:sparqlupdateurl
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Endpoint ;
+  rdfs:label "sparqlupdateurl" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+:startsWith
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment "boolean to use startsWith string comparison" ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          :AccessibleService
+          :InAccessibleService
+        ) ;
+    ] ;
+  rdfs:label "starts with" ;
+  rdfs:range xsd:boolean ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+:subject
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment """A graph pattern describing what data the associated Rule grants access to. Should be one or more TriplesBlocks separated by a period character (.) See the SPARQL 1.1 standard for the definition of a TriplesBlock. Variable bindings should correspond to those in the condition of the Rule.
+
+For example: \"?bedrag rdf:value ?amount.\".
+
+Was previously named 'precondition' in discussion, but this 'subject' less confusing.""" ;
+  rdfs:domain :AccessRule ;
+  rdfs:label "subject" ;
+  rdfs:range xsd:string ;
+  rdfs:seeAlso "https://www.w3.org/TR/sparql11-query/#rTriplesBlock" ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:subject "subject" ;
+.
