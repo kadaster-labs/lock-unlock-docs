@@ -29,7 +29,7 @@ Ten behoefte van de [Query Auditing](./afscherming/oplossingsrichtingen.md#query
 eerste begin gemaakt aan het vastleggen van een _(Query) Logging ontologie_.
 
 De Logging ontologie is te downloaden uit de GitHub repository:
-<br>[lock-unlock-docs/ontologies/Logging.ttl](https://github.com/kadaster-labs/lock-unlock-docs/blob/main/ontologies/Authorisation.ttl)
+<br>[lock-unlock-docs/ontologies/Logging.ttl](https://github.com/kadaster-labs/lock-unlock-docs/blob/main/ontologies/Logging.ttl)
 (`.ttl` formaat).
 
 ## Secured SPARQL Endpoints
