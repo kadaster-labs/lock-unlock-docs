@@ -1,5 +1,5 @@
 ---
-title: Federatieve bevraging
+title: Federatieve Bevraging
 ---
 In een federatief datastelsel wordt data beschikbaar gesteld vanuit diverse en gedistribueerde bronnen. De toegevoegde waarde volgt waneer deze bronnen in samenhang bevraagd kunnen worden. En, sterker nog, wanneer deze geïntegreerde bevraging een eenvoudigere combinatie van gegevens ondersteunt om voorheen moeilijke of ongrijpbare vragen te beantwoorden. Het opvragen van gegevens die zijn opgeslagen in gedistribueerde bronnen noemen we 'federatieve bevraging'. 
 
@@ -34,5 +34,3 @@ In dit hoofdstuk wordt eerst beschreven hoe de verschillende API's zich tot elka
     - Mogelijkheden tot integraal bevragen data -> hier wil je dus autorisatie op toepassen
 - [Conclusies](./conclusies.md)
     - (oa) Wat ervoor nodig om dit in de praktijk te krijgen?
-
-

@@ -16,7 +16,7 @@ Deze ontdekking van nieuwe dingen wordt ondersteund door de publicatie van infor
 
 |![triplestructuur](images/triple.png)|
 |:-:|
-| Triplestructuur|
+| Triplestructuur |
 
 Tevens zijn objecten in Linked Data uniek identificeerbaar op het web middels URIs. Een voorbeeld van zoon sort URI in het Kadaster context is: 
 

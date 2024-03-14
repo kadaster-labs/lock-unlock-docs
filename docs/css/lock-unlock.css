@@ -9,3 +9,8 @@
   padding: 0.8em;
   background-color: rgb(252, 252, 211);
 }
+
+div {
+  text-align: justify;
+  text-justify: inter-word;
+}
