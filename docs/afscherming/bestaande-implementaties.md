@@ -16,7 +16,7 @@ Hierbij komen de volgende implementaties aan bod:
 
 ## PoC Topsector Logistiek & iShare
 
-### Problem Context
+### Probleem Context
 In de logistieke sector bestaat er een keten van stakeholders die allemaal toegang nodig hebben tot informatie over een bepaald project. Deze informatie is vaak gevoelig, vooral in het kader van concurrentie. Daarnaast heeft de overheid verantwoordelijkheden waarvoor ook data nodig is, maar dat betekent  niet toegang tot de volledige dataset(s). Het is dus belangrijk om ervoor te zorgen dat verschillende belanghebbenden op verschillende tijdstippen toegang hebben tot verschillende subsets van informatie. Door de verschillende belangen zijn verschillende oplossingsrichtingen mogelijk en als Proof-of-Concept uitgewerkt.
 
 ### Oplossing
@@ -36,7 +36,7 @@ De andere aanpak werkt met _Predefined Queries_ die op de gehele dataset uitgevo
 
 ## Personal Health Train (PHT)
 
-### Problem Context
+### Probleem Context
 In het zorgdomein was een oplossing nodig voor het ontsluiten en uitvoeren van onderzoek naar gevoelige zorginformatie. Hier moesten de gegevens bij de bron blijven (bijvoorbeeld gegevens van een bepaald ziekenhuis) en mocht er geen persoonlijk identificeerbare informatie buiten deze bron worden gedeeld.
 
 ### Oplossing
@@ -56,7 +56,7 @@ De PHT is een federatieve oplossing waarbij een ‘technical bubble’ infrastru
 
 ## Nuts Bolt voor KIK-V
 
-### Problem Context
+### Probleem Context
 KIK-V, Keteninformatie Kwaliteit Verpleeghuiszorg, is een initiatief waarin instellingen voor verpleeghuiszorg (als aanbieder) en andere partijen met een publieke taak (als afnemer) samenwerken om de gegevensuitwisseling over kwaliteit en bedrijfsvoering te verbeteren. Het doel is het stroomlijnen van de uitwisseling van informatie, het beter afstemmen van nieuwe uitvragen en het meer hergebruiken van informatie.
 
 ### Oplossing
