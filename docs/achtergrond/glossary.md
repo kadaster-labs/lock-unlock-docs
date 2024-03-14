@@ -42,10 +42,32 @@ Linked data is manier om data te structureren en te verbinden over het web en ma
 stanfaarden zoals URI's, RDF en ontologieen gedefinieerd in [RDF](#rdf) zoals RDFS, [OWL](#owl) en
 [SHACL](#shacl). 
 
+### Open Policy Agent
+
+Open Policy Agent (OPA) is een open-source beleidsmotor voor toegangscontrole en beleidsautomatisering in softwaretoepassingen. Het maakt gebruik van de beleidstaal genaamd Rego om beleidsregels te definiëren en uit te voeren. Rego is ontworpen om leesbare en krachtige beleidsregels te maken. OPA integreert met verschillende services en applicaties en kan complexe beveiligings- en autorisatievereisten implementeren door Rego-beleidsregels te evalueren op basis van inputgegevens, waardoor wordt beslist of een actie al dan niet wordt toegestaan. Dit wordt vaak gebruikt in moderne IT-omgevingen voor flexibele en geautomatiseerde beleidsafdwinging.
+
+- Documentatie ([link](https://www.openpolicyagent.org/))
+- Policies in Rego lang ([link](https://www.openpolicyagent.org/docs/latest/policy-language/))
+
 ### OWL
 
 OWL staat voor de Web Ontology Language en is een gestandardiseerde taal voor formaliseren van
 ontologieen op basis van Linked Data.
+
+### Privacy Enhancing Technologies (PETs)
+
+PET is een verzamelnaam voor verschillende technieken die de afscherming van (persoons-)gegevens ondersteunen
+PETs faciliteren dat analyses kunnen worden uitgevoerd zonder de onderliggende data in te zien, zo worden toepassingen mogelijk die anders onmogelijk zouden zijn. PETs zien wij dan ook niet als technieken die autorisaties inregelen voor het bevragen van specifieke data maar faciliteren voornamelijk analyses waarbij toegang tot de onderliggende data niet toegestaan/gewenst is.
+
+| Voorbeelden: | |
+|----|----|
+|<ul><li>Zero knowledge proofs</li><li>Bloom filters</li><li>Differential Privacy</li><li>Synthetische data</li></ul> |<ul><li>Federated Learning</li><li>Multi Party Computation</li><li>Homomorphic Encryption</li></ul> |
+
+**Zie ook:**
+
+- [Wegzwijzer PETs van IBDS](https://realisatieibds.pleio.nl/groups/view/c23ab74c-adb4-424e-917d-773a37968efe/kenniscentrum-van-de-ibds/wiki/view/a2d325d4-0047-4967-8200-c4a29e392060/privacy-enhancing-technologies-pet)
+- [PETs in de praktijk - VKA](https://www.vka.nl/wp-content/uploads/2023/04/VKA_whitepaper-PETs-in-de-praktijk.pdf)
+- [TNO over PETs](https://www.tno.nl/en/digital/digital-innovations/data-sharing/privacy-enhancing-technologies/) 
 
 ### RDF
 
