@@ -23,4 +23,4 @@ Van het desk research is in deze documentatie site een kopie te vinden om zowel 
 - [Linked Data](/docs/federatieve-bevraging/linkeddata.md)
 - [Verwerkingenlogging](../achtergrond/verwerkingenlogging.md)
 - [XACML](../achtergrond/xacml.md)
-- [ODRL vs XACML vs Open Policy Agent]
+- [ODRL vs XACML vs Open Policy Agent](../achtergrond/odrl-xacml-opa.md)

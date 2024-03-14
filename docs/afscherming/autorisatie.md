@@ -1,9 +1,11 @@
 ---
-title: Inleiding autorisatie
+title: Inleiding Autorisatie
 ---
 In beginsel is autorisatie eenvoudig: iemand wil bij iets en de vraag is of dat mag.
 
-![Authorisation Simple Diagram](images/authorisation-simple.png)
+| ![Authorisation Simple Diagram](images/authorisation-simple.png) |
+| :--: |
+| Authorisatie op zijn basis |
 
 Was het maar zo gemakkelijk.
 
@@ -23,8 +25,12 @@ worden meegenomen in de afweging. Deze terminologie is formeel vastgelegd in
 
 ## Subject
 
-Een subject kan een gebruiker zijn en ook een machine (computer). Afhankelijk van het type bestaan
+Een **subject** kan een gebruiker zijn en ook een machine (computer). Afhankelijk van het type bestaan
 er verschillende soorten van identiteiten.
+
+| ![Authorisation Subject](images/authorisation-subject.png) |
+| :--: |
+| Subject |
 
 Gebruikers worden meestal beheerd in een ‘User Management System’, welke weer gevoed kan worden door
 een HR systeem. Daarin worden meestal ook functies en rollen bijgehouden en uitgegeven door de
@@ -50,12 +56,12 @@ autorisatie komt. Dit laatste is juist het onderwerp van onderzoek voor Lock-Unl
 
 </div>
 
-## Autorisatie
+## Authorisatie
 
-Autorisatie is de controle en het proces van toegang geven tot een Resource. Het doel van
+Autorisatie is de controle en het proces van toegang geven tot een Resource. Een subject krijgt vaak niet zomaar toegang tot een resource. Het doel van
 autorisatie is dat alleen vastgestelde toegang verleend wordt aan Subjecten. Dat is een proces van
 afscherming _vóóraf_. Dit is het onderwerp van onderzoek voor het Lock-Unlock project en komt nog
-uitgebreid aan bod. 
+uitgebreid aan bod.
 
 Het doel van autorisatie, zeker in de context van de overheid, is te garanderen dat deze toegang
 rechtmatig is. Dat wil zeggen dat er een **juridische grondslag** is voor de toegang en/of
@@ -65,6 +71,16 @@ verantwoordelijkheid van die toegang als dat een koppeling tussen twee organisat
 enige mogelijkheid om de grondslag juist te kunnen controleren, is _achteraf_. In dat geval is
 [auditing](#auditing) nodig op de toegang die gegeven is. Voorkomen is dan helaas niet meer
 mogelijk, maar wel bijsturing en eventueel opvolging.
+
+Bij het uitdelen van autorisaties wordt o.a. gekeken naar interne en externe beleidstukken en wet- en regelgeving. Een belangrijk aspect hierbij is de doelbinding, zeker als het om persoonsgegevens gaat: gegevens mogen alleen worden verwerkt en verzameld voor een specifiek en gerechtvaardigd doel.
+
+| ![Authorisation Subject](images/authorisation-doelbinding.png) |
+| :--: |
+| Doelbinding |
+
+Dit is niet gemakkelijk te controleren. Het punt is namelijk dat die doelbinding per casus gebonden zou moeten worden, maar informatie vaak over organisatiegrenzen heen gedeeld en gebruikt wordt. Het is voor de ene organisatie niet mogelijk om te beoordelen of de specifieke casus waar de betreffende gebruiker van de andere organisatie mee bezig is, passend is voor het doel dat beoogd is. Vooraf specifieke doelbinding controleren is daarom niet (volledig) mogelijk. Daar komt bij dat doelbinding op dit moment niet “machine readable” is en de relatie met het datamodel is niet formeel is vastgelegd. Hierdoor is het (ook) niet mogelijk om een koppeling te leggen tussen de doelbinding en de bijbehorende attributen en queries.
+
+In geval van toegang verlenen, oftewel autorisatie, wordt wel vaak een afgeleide gemaakt van de doelbinding op een hoger niveau dan specifieke casussen. Een hele organisatie heeft toegang tot de gehele dataset van een andere organisatie. Door gestandaardiseerd te loggen wat precies wordt opgevraagd door wie, is wel specifieke controle achteraf mogelijk. De [GEMMA Verwerkingenlogging](/docs/achtergrond/verwerkingenlogging.md) is hier de standaard (in ontwikkeling) voor.
 
 ## Auditing
 
@@ -93,19 +109,82 @@ Er bestaat een standaard in wording voor dit patroon en toepassing:
 
 ## Resource
 
-Over de 'Resource' valt veel te zeggen ... en deze bepaalt ook veel van een oplossingsrichting en/of
-complexiteit. In de [desk research](../index.md#desk-research) besteden we uitgebreid aandacht aan
-diverse variaties. In deze samenvatting beperken we ons tot het benoemen dat een resource kan zijn:
+Bij een **‘resource’** denken we in eerst instantie al snel aan een ‘tabel’. Een set aan gegevens van rijen en kolommen. 
 
-- een tabel
-- een dataset
-- een database
-- een API (zie ook [API's | REST vs GraphQL vs SPARQL](../federatieve-bevraging/apis.md))
-- een triple
-- een graph
-- een combinatie van bovenstaande
+| ![Authorisation Resource](images/authorisation-resource.png) |
+| :--: |
+| Resource |
 
-![Resource Layers](images/resource-layers.png)
+Was het maar zo eenvoudig... Meestal is een 'set of data’, een verzameling tabellen. In veel gevallen is er een volledige informatiemodel (IM) of datamodel ontworpen om alle relaties tussen deze tabellen nauwkeurig en volledig weer te geven. De verschillende objecten in het model hebben elk hun eigen tabel en worden in de tabel impliciet gedefinieerd door sleutelkolommen. Zo'n hele verzameling gerelateerde objecten en een set gegevens wordt een dataset genoemd. 
+Voorbeelden: de basisregistraties zoals BRK, BAG, BGT.
+
+_In deze context is een resource een database die een of meer tabellen bevat._
+
+### Resource: Tabel, Dataset, Database
+
+Een tabel of een dataset zit meestal in een database. 
+
+| ![Authorisation Database](images/authorisation-resource-database.png) |
+| :--: |
+| Resource - Database |
+
+Goed gebruik is om deze niet direct toegankelijk te maken voor gebruikers, maar te voorzien van een [Application Programming Interface (API)](/docs/federatieve-bevraging/apis.md). Een API is een technisch koppelvlak die mogelijkheden biedt voor het opvragen (en muteren) van data en daar ook controles en beperkingen aan kan stellen. Hoewel API een generiek concept is, wordt in de huidige staat van de technologie meestal een ‘REST API’ bedoeld.
+
+Een API kan bijvoorbeeld een beperkt deel van de data(base) beschikbaar maken. Hierin is een verschil tussen horizontale en verticale scheiding (segmentatie). Horizontale scheiding betekent dat niet alle rijen op te vragen zijn. In het kader van autorisatie zou dat bijvoorbeeld beperkt kunnen zijn tot een bepaalde regio, bijvoorbeeld gemeentelijke grenzen. 
+Een verticale scheiding betekent dat niet alle kolommen op te vragen zijn. Een voorbeeld hiervan is dat perceelinformatie als open data beschikbaar is, maar de persoonsgegevens (uiteraard) niet. Deze zijn alleen op te vragen met de juiste rechten, of eigenlijk: de juiste grondslag. In deze context is de resource de combinatie van database en (REST) API. 
+
+### Resource: Triples
+
+Een resource kan een ingewikkeld informatiemodel hebben en het wordt nog ingewikkelder als meerdere datasets gecombineerd moeten worden. Dat betekent dat er relaties tussen meerdere informatiemodellen moeten worden gelegd. 
+
+| ![Authorisation Triple](images/authorisation-resource-2-triples.png) |
+| :--: |
+| Database to triples |
+
+[**Linked Data**](/docs/federatieve-bevraging/linkeddata.md) is een concept en technologie die hier veel flexibiliteit en expliciete ondersteuning voor biedt. In plaats van tabellen wordt hierin de data ‘uit elkaar gehaald’ tot zogenaamde **‘triples’**. Elke data instantie is een ‘subject’ dat een relatie heeft (‘predicate’) tot een ‘object’. En dit kan oneindig! Zo kunnen relaties leiden tot een object die attributen beschrijft zoals in een meer traditioneel informatiemodel en een tabel in een database.
+
+In deze context wordt een triple als een resource beschouwd.
+
+| ![Authorisation Triple](images/authorisation-resource-triple.png) |
+| :--: |
+| Resource - Triple |
+
+> **Let Op:** een resource wordt in de terminologie van Linked Data anders gedefinieerd dan in de context van dit rapport. [Zie de Linked Data beschrijving voor meer informatie](/docs/federatieve-bevraging/linkeddata.md). In de context van deze documentatie wordt niet de definitie van resource zoals gedefinieerd in Linked Data gebruikt.
+
+Het _object_ in de ene triple kan het _subject_ worden in een ander, waarbij het predicate dit subject aan een ander object koppelt of een attribuut van dit subject beschrijft. Wanneer twee of meer triples met elkaar verbonden zijn, resulteert dit in een ‘graph’ (graaf). Op deze manier kunnen triples informatie/data met elkaar verbinden, ook wanneer deze oorspronkelijk in verschillende tabellen stonden. De graph die zo ontstaat, kan gebruikt worden om te ‘navigeren’ van _subject_ naar _object_ naar _subject_ naar _object_.
+
+### Resource: SPARQL Endpoint
+
+Een graph wordt opgeslagen in een specifieke database, namelijk een ‘triple store’. Ook deze wordt niet direct ontsloten voor gebruikers, maar beveiligd en afgeschermd door een API. Voor Linked Data is een ‘SPARQL API’ of ‘SPARQL endpoint’ een veelgebruikte API. SPARQL is een ‘query language’, een vraagtaal voor Linked Data obv internet technologie (oa HTTP).
+
+_In deze context is de resource de graph en het bijbehorende SPARQL API / endpoint._
+
+| ![Authorisation SPARQL Endpoint](images/authorisation-resource-sparql.png) |
+| :--: |
+| Resource - SPARQL Endpoint |
+
+Een bijzondere toegevoegde waarde van het publiceren van data als Linked Data is het federatief kunnen bevragen van data. Datasets zijn vrijwel altijd opgeslagen in silo’s.  Mbv Linked Data kunnen datasets gemakkelijk aan elkaar gerelateerd worden en op een federatieve manier in één keer bevraagd worden. De Kadaster Knowledge Graph is hier een voorbeeld van met de BRK, BGT, BRT en BAG gekoppelde datasets.
+
+De koppeling van elke graph (of resource) vereist de opname van een gedeeld identificerend sleutelveld of attribuut (zie [informatiekundige kern](/docs/federatieve-bevraging/informatiekundigekern.md)). In onderstaande figuur zijn deze attributen of sleutelvelden gedefinieerd als een BSN- of KvK-nummer waarmee drie verschillende graphs met elkaar in verband kunnen worden gebracht. Met behulp van deze velden kan één enkele query worden geschreven, verwijzend naar elke SPARQL API en het relevante sleutelveld, om zo de benodigde informatie uit drie bronnen op te halen.
+
+In deze context is de resource - elke triple, een hele dataset, de gekoppelde datasets, wellicht een selectie uit een dataset - de resource is hier niet eenduidig.
+
+| ![Authorisation Federatief](images/authorisation-resource-federate.png) |
+| :--: |
+| Resource - SPARQL Endpoints |
+
+Een resource is dus nog niet zo eenvoudig. Er is hier ook een gelaagdheid in te beschrijven. 
+Het meest elementaire onderdeel is een triple. Gerelateerde triples vormen een graph voor een subset van gerelateerde gegevens, traditioneel vaak een object of tabel genoemd. Alle triples en graphs binnen één context vormen een dataset. Zo’n dataset is ontsloten met een bijbehorende API, wat deze in een silo plaatst. Wanneer een dataset relaties naar andere datasets bevat, kunnen refereerde datasets via hun eigen API bevraagd worden. Een selectie uit één dataset wordt een subset genoemd. Gerelateerde selecties over meerdere datasets heen wordt ook subset genoemd en soms superset.
+
+In het kader van het afschermen van gegevens en het autoriseren van de juiste mensen (en machines) met de juiste rechten om deze afgeschermde gegevens juist wél op te vragen, is deze gelaagdheid van belang. Afscherming en autorisatie in de technologie van nu, voornamelijk REST API’s, is binair: je hebt toegang of je hebt het niet. En dat is dan voor de gehele API. Om toch onderscheid en variaties te kunnen doen, worden meerdere API’s gepubliceerd voor specifieke doeleinden of doelgroepen.
+
+| ![Authorisation Federatief](images/authorisation-resource-federate-2.png) |
+| :--: |
+| Resource - Samenvatting |
+
+Met SPARQL API’s is het mogelijk om vrije queries (vragen) te stellen per dataset/-silo of over datasets heen. Autorisaties en variaties in doelgroepen is hierin echter veel ingewikkelder. Dit is precies het onderwerp van dit project.
 
 > _Zie ook de [glossary](../achtergrond/glossary.md) voor de verschillen tussen dataset, subset, database, graph en subgraph_
+
+In de volgende sectie worden enkele van de bestaande implementaties van autorisatie voor federatieve eindpunten besproken. Deze zijn niet exhaustive, maar geven een indicatie van de huidige benaderingen.
 
