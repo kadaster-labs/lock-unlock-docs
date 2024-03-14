@@ -3,7 +3,7 @@ title: Testopstelling
 ---
 Om een federatieve bevraging te kunnen laten zien en om daarmee te kunnen onderzoeken, is een testopstelling nodig. De eerste stap in deze testopstelling was het creëren van het informatiemodel (zie vorige [sectie](./informatiemodel.md)) en de tweede stap is het creëren van testgegevens die aansluiten bij dit model. Deze datasets zijn gebruikt binnen dit project voor R&D en voor demonstratie doeleinden. 
 
-Het gedefinieerde informatiemodel is een losjes uitgelijnde reeks schema's, aan elkaar gerelateerd door een upperontologie en gematerialiseerde relaties (zie [informatiekundige kern](./informatiekundigekern.md)). Voor elk van deze schema's worden testgegevens gemaakt die als een silo zijn gepubliceerd.
+Het gedefinieerde informatiemodel is een losjes uitgelijnde reeks schema's, aan elkaar gerelateerd door een upperontologie en gematerialiseerde relaties (zie [informatiekundige kern](./informatiekundigekern.md) en [informatiemodel](./informatie.md)). Voor elk van deze schema's worden testgegevens gemaakt die als een silo zijn gepubliceerd.
 
 ## Testdata genereren in silo's 
 

@@ -14,7 +14,9 @@ Linked (Open) Data zijn gestructureerde gegevens, gemodelleerd als een graph en 
 
 Deze ontdekking van nieuwe dingen wordt ondersteund door de publicatie van informatie in triple formaat. Triples bestaan uit een _subject_, _predicate_ en een _object_. Bijvoorbeeld: 
 
-// to do: triple picture 
+|![triplestructuur](images/triple.png)|
+|:-:|
+| Triplestructuur|
 
 Tevens zijn objecten in Linked Data uniek identificeerbaar op het web middels URIs. Een voorbeeld van zoon sort URI in het Kadaster context is: 
 
@@ -32,7 +34,7 @@ Er zijn dus een aantal building blocks voor het publiceren van gegevens als Link
 
 De volgende figuren geven een concrete weergave van deze bouwstenen, de standaarden die de creatie en publicatie van linked data ondersteunen en de manier waarop deze de gebruikersinteractie met de resulterende data ondersteunen.
 
-| **Standaarden** | **Utility** |
+| **Standaarden** | **Utiliteit** |
 |:-:|:-:|
 |![building block linked data](images/theoretical-context-semantics.png)|![building block linked data](images/theoretical-context-semantics-2.png)|
 
