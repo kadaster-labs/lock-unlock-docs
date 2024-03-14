@@ -7,23 +7,30 @@ In het Lock-Unlock project zijn de volgende zaken ontwikkeld en opgeleverd.
 
 Om het concept te kunnen beproeven hebben we in het Lock-Unlock project een initiële versie van een
 _Autorisatie ontologie_ ontwikkeld. Deze is verre van definitief of geschikt voor een standaard ...
-en tegelijk wél beproeft! De Authorisatie ontologie is [hier](./documenten/Authorisation.ttl) te downloaden in turtle formaat.
-Voor verder onderzoek kan deze als uitgangspunt dienen:
+en tegelijk wél beproeft! Voor verder onderzoek kan deze als uitgangspunt dienen.
 
+De Authorisatie ontologie is te downloaden uit de GitHub repository:
+<br>[lock-unlock-docs/ontologies/Authorisation.ttl](https://github.com/kadaster-labs/lock-unlock-docs/blob/main/ontologies/Authorisation.ttl)
+(`.ttl` formaat).
 
 ## Authenticatie ontologie
 
 Hoewel authenticatie is uitgesloten van de scope van het Lock-Unlock project, is het wel een
 randvoorwaarde voor de [testopstelling](./afscherming/autorisatie.md#subject). Daarom hebben we een
-(minimale) _Authenticatie ontologie_ ontwikkeld. De Authenticatie ontologie is [hier](./documenten/Authenticatie.ttl) te downloaden in turtle formaat.
+(minimale) _Authenticatie ontologie_ ontwikkeld.
 
+De Authenticatie ontologie is te downloaden uit de GitHub repository:
+<br>[lock-unlock-docs/ontologies/Authentication.ttl](https://github.com/kadaster-labs/lock-unlock-docs/blob/main/ontologies/Authentication.ttl)
+(`.ttl` formaat).
 
 ## Logging ontologie
 
-Ten behoefte van de [Query Auditing](./afscherming/oplossingsrichtingen.md#query-auditing) is er
-een eerste begin gemaakt aan het vastleggen van een _(Query) Logging ontologie_
-De Logging ontologie is [hier](./documenten/Logging.ttl) te downloaden in turtle formaat.
+Ten behoefte van de [Query Auditing](./afscherming/oplossingsrichtingen.md#query-auditing) is er een
+eerste begin gemaakt aan het vastleggen van een _(Query) Logging ontologie_.
 
+De Logging ontologie is te downloaden uit de GitHub repository:
+<br>[lock-unlock-docs/ontologies/Logging.ttl](https://github.com/kadaster-labs/lock-unlock-docs/blob/main/ontologies/Authorisation.ttl)
+(`.ttl` formaat).
 
 ## Secured SPARQL Endpoints
 
