@@ -5,12 +5,11 @@ Gegeven de behoefte aan [autorisatie](./autorisatie.md) in een [federatieve bevr
 requirements van [afschermingspatronen](./afschermingspatronen.md) zijn er verschillende
 technologische oplossingsrichtingen te bedenken.
 
+Verschillende technologische oplossingen bieden verschillende kansen en uitdagingen om de doelen van Lock-Unlock te behalen. De technologische oplossingen zijn eindeloos en toch beperkt in het kader van een federatief datastelsel en Linked Data. In ons desk research zijn we diverse standaarden, voorbeelden en implementaties tegengekomen (zie vorige secties).
+
 In het hoofdstuk [federatieve bevraging](../index.md) wordt al het onderscheid en verschillen beschreven
-tussen de verschillende soorten [API's | REST vs GraphQL vs
-SPARQL](../federatieve-bevraging/apis.md). Tbv afscherming en autorisatie bestaan er voor [REST
-API's](#rest-api) en [GraphQL API's](#graphql-api) al gestandaardiseerde uitwerkingen. Rondom Linked
-Data zijn er wel ideeën en concepten maar bestaat [autorisatie als Linked
-Data](#autorisatie-als-linked-data) nog niet echt.
+tussen de verschillende soorten [REST vs GraphQL vs SPARQL](../federatieve-bevraging/apis.md). Tbv afscherming en autorisatie bestaan er voor [REST API's](#rest-api) en [GraphQL API's](#graphql-api) al gestandaardiseerde uitwerkingen. Rondom Linked Data zijn er wel ideeën en concepten maar bestaat [autorisatie als Linked
+Data](#autorisatie-als-linked-data) nog niet echt. Deze kunnen we grofweg verdelen en bundelen in de volgende selectie van technologische oplossing(srichtingen):
 
 ## Query Auditing
 
@@ -19,6 +18,14 @@ tot [auditing](./autorisatie.md#auditing), is het noodzakelijk om vast te leggen
 worden gesteld. Dit is vooral van belang in geval van Linked Data en minder in geval van [REST
 API's](#rest-api) en [GraphQL API's](#graphql-api), aangezien deze minder mogelijkheden bieden voor
 alle [afschermingspatronen](./afschermingspatronen.md).
+
+Deze technologische oplossing is geen oplossing voor autorisatie. Bij alleen query auditing kan de gebruiker namelijk alle data bevragen en worden slechts de queries met bijbehorende context (denk bijv. aan de gebruiker en meegegeven referentie naar doelbinding) opgeslagen. Vervolgens kan er achteraf handmatig of wellicht automatisch bepaald worden of er onrechtmatige vragen/queries zijn gesteld en of dat er onterecht toegang is verkregen tot gesloten gegevens. 
+
+Deze technologische oplossing wordt verder verkend in track 2 van het Lock-Unlock project. Hierbij willen we onder andere kijken naar de [GEMMA verwerkingenlogging](bestaande-implementaties.md#gemma-verwerkingenlogging).
+
+| ![Query Auditing](images/query-auditing.png) |
+| :--: |
+| Query Auditing | 
 
 **Kansen voor Lock-Unlock**
 
@@ -36,7 +43,7 @@ alle [afschermingspatronen](./afschermingspatronen.md).
       standaard.
     - Query logging is niet gestandaardiseerd en mogelijkheden in producten zijn nog onduidelijk.
 
-## REST API
+## Autorisatie in REST API
 
 Bij een REST API wordt data in JSON formaat (JavaScript Object Notation) geretourneerd over HTTP.
 Dit laatste onderdeel, namelijk HTTP, geeft direct de mogelijkheden van deze oplossingsrichting.
@@ -53,9 +60,24 @@ ontsluiting een nieuwe API ontwikkeld. Een samengestelde dataset of meerdere dat
 nieuwe API. Als een andere subset dan in de beschikbare API’s gewenst is, betekent dat de
 ontwikkeling van een nieuwe API.
 
-![Authorisation REST API](images/authorisation-rest-api.png)
+| ![Authorisation REST API](images/authorisation-rest-api.png) |
+| :--: |
+| Authorisation REST API |
 
-## GraphQL API
+**Kansen voor Lock-Unlock**
+Veel data is al dmv een API beschikbaar, waarbij dit al vaak REST API’s betreft. Soms nog voorlopers als SOAP. De techniek is gestandaardiseerd met HTTP (oa OAuth2) en in vele technologie stacks beschikbaar.
+
+**Uitdagingen voor Lock-Unlock**
+Afscherming van data is op het niveau van de REST API. Autorisaties geven toegang of niet. Het is aan of uit, ja of nee. Er zijn geen gradaties van autorisaties mogelijk. Er zijn geen mogelijkheden om andere datasets of subsets op te vragen dan dat er in de API’s (collectie) wordt aangeboden. Er is orkestratie noodzakelijk om meerdere datasets over meerdere API’s te bevragen. Navigeren en vrij bevragen is niet mogelijk.
+
+| Requirement        | Support                            |
+| ------------------ | ---------------------------------- |
+| Horizontale subset | ![wave-dash](images/wave-dash.png) |
+| Verticale subset   | ✅                                  |
+| Richting beperken  | ✅                                  |
+| Vrije query        | ❌ |
+
+## Autorisatie in GraphQL API
 
 GraphQL is gebaseerd op een voor-gedefinieerd schema (zie voorbeeld). Dit schema is een object georiënteerde benadering waarin objecten en de relaties beschreven zijn. Welke objecten beschikbaar zijn, welke relaties en in welke richting die relaties mogelijk zijn, staat gedefinieerd in het schema. Dit geeft mogelijkheden voor het afschermen van data. Er kunnen filters toegepast worden, zowel als gebruiker en in de API. Bijvoorbeeld: _geef alle KVKInschrijvingen met rechtsvorm "BV"_. Of in het voorbeeld hiernaast: _vanuit KVKInschrijving kan wel het adres opgevraagd worden maar niet andersom_.
 
@@ -66,6 +88,12 @@ Met een GraphQL Gateway is het mogelijk om meerdere samenhangende datasets tegel
 ![GraphQL API](images/graphql-api.png)
 
 Er zijn verschillende manieren om de objecten in het schema te beveiligen. Net zoals met REST API’s kan wel of geen toegang verleent worden tot de hele API. Met GraphQL is het ook mogelijk om in het schema te configureren welke rollen toegang krijgen tot objecten of attributen daarvan. Waar in REST API’s meerdere API’s beschikbaar gemaakt zouden worden, kan dat met GraphQL in één GraphQL API/Gateway, uiteraard beperkt tot het betreffende schema.
+
+**Kansen voor Lock-Unlock**
+Verfijnde autorisatie op schema niveau mogelijk. Binnen het schema zijn (vrije) queries mogelijk. Gateways ondersteunen federatieve queries.
+
+**Uitdagingen voor Lock-Unlock**
+GraphQL kan aangeboden worden op basis van een Linked Data architectuur, maar volgt niet volledig de Linked Data principes.
 
 | Requirement        | Support                            |
 | ------------------ | ---------------------------------- |
