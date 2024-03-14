@@ -12,8 +12,8 @@ We hebben hiervoor een [desk research](LockUnlock-DeskResearchAutorisatiev1.0-27
 Van het desk research is in deze documentatie site een kopie te vinden om zowel de bevindingen van dit desk research vast te leggen als onderdeel van de volledige documentatie van dit project, maar ook om verwijzingen naar dit desk research op te nemen in de bevindingen van het project dat volgde op dit desk research.
 
 - [Inleiding Autorisatie](./autorisatie.md)
-- [Bestaande Implementaties](./bestaande-implementaties.md)
 - [Afschermingspatronen](./afschermingspatronen.md) 
+- [Bestaande Implementaties](./bestaande-implementaties.md)
 - [Oplossingsrichtingen](./oplossingsrichtingen.md)
 - [Onderzoeksvoorstel](./onderzoeksvoorstel.md)
 

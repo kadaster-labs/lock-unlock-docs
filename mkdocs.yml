@@ -19,8 +19,8 @@ nav:
   - Afscherming: 
     - afscherming/index.md
     - afscherming/autorisatie.md
-    - afscherming/bestaande-implementaties.md
     - afscherming/afschermingspatronen.md
+    - afscherming/bestaande-implementaties.md
     - afscherming/oplossingsrichtingen.md
     - afscherming/onderzoeksvoorstel.md
   - Autorisatie als Linked Data:
