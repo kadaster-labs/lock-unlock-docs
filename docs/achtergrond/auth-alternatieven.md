@@ -6,7 +6,7 @@ Ontology](#authorisation-ontology) zijn.
 
 ## Authorisation Ontology
 
-> link: [oplevering#authorisatie-ontologie](../opleveringen.md#autorisatie-ontologie)
+> link: [oplevering#autorisatie-ontologie](../opleveringen.md#autorisatie-ontologie)
 > 
 > status: _inception_
 

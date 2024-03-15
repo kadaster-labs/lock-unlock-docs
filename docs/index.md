@@ -10,7 +10,7 @@ manier gebeuren, waarbij bescherming van data en autorisatie belangrijk zijn.
 Lock-Unlock richt zich op [Linked Data](./federatieve-bevraging/linkeddata.md), voortbouwend op de
 <a href="https://labs.kadaster.nl/cases/integralegebruiksoplossing" target="_blank">Integrale
 Gebruiksoplossing (IGO)</a> en de <a href="https://labs.kadaster.nl/thema/Knowledge_graph"
-target="_blank">Kadaster Knowledge Graph (KKG)</a> ontwikkeld door het Kadaster. Er zijn weinig
+target="_blank">Kadaster Knowledge Graph (KKG)</a> ontwikkelt door het Kadaster. Er zijn weinig
 gestandaardiseerde mogelijkheden voor autorisatie van data in het Linked Data domein. Dit project is
 uitgevoerd om de (on)mogelijkheden te onderzoeken en te testen.
 
@@ -22,7 +22,9 @@ het derde deel komen we bij het doel van het onderzoek, namelijk of het mogelijk
 verlenen aan geautoriseerde vragers: [autorisatie als Linked Data](./autorisatie-als-linkeddata/index.md) en
 daarmee de 'unlock' :unlock: van de data.
 
-![Infographic](images/infographic.png)
+| ![Infographic](images/infographic.png) |
+| :--: |
+| Infographic |
 
 ## Leeswijzer
 

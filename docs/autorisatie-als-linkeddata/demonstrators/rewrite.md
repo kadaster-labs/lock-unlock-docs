@@ -44,7 +44,7 @@ data.)
 
 ![fuseki](../images/fuseki1.png). 
 
-## Federatief bevragen met authorisatie
+## Federatief bevragen met autorisatie
 
 De persona's zijn aanwezig in alle triplestores. Daarmee kan een federatieve query geschreven worden
 die op basis van één persona resultaten teruggeeft op basis van de resultaten die elke triplestore

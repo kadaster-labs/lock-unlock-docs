@@ -27,7 +27,7 @@ en helaas slechts weinig echt ondersteund worden.
 
 | Pros | Cons | 
 |------|------|
-| <ul><li>Zeer gangbaar</li><li>Binare authorisatie is gestandardiseerd</li></ul> | <ul><li>Silo gedachte</li><li>API orkestratie nodig voor samenhang</li><li>Slechte schema definities onsluiting</li><li>Geen vrije (schema loze) query mogelijkheden</li></ul> |
+| <ul><li>Zeer gangbaar</li><li>Binare autorisatie is gestandardiseerd</li></ul> | <ul><li>Silo gedachte</li><li>API orkestratie nodig voor samenhang</li><li>Slechte schema definities onsluiting</li><li>Geen vrije (schema loze) query mogelijkheden</li></ul> |
 
 #### GraphQL
 
@@ -43,7 +43,7 @@ REST API’s en maakt het mogelijk om integraal informatie beschikbaar te stelle
 
 | Pros | Cons | 
 |------|------|
-| <ul><li>Minder silo gedachte</li><li>Mogelijkheden tot samenhang</li><li>Verfijnde authorisatie mogelijk</li><li>Gangbaarde/bekender dan SPARQL</li></ul> | <ul><li>Matige schema definities</li><li>Geen vrije (schema loze) query mogelijkheden</li><li>Minder gangbaar dan REST</li></ul> |
+| <ul><li>Minder silo gedachte</li><li>Mogelijkheden tot samenhang</li><li>Verfijnde autorisatie mogelijk</li><li>Gangbaarde/bekender dan SPARQL</li></ul> | <ul><li>Matige schema definities</li><li>Geen vrije (schema loze) query mogelijkheden</li><li>Minder gangbaar dan REST</li></ul> |
 
 #### SPARQL
 
