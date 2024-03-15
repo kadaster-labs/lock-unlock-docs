@@ -80,7 +80,7 @@ Bij het uitdelen van autorisaties wordt o.a. gekeken naar interne en externe bel
 
 Dit is niet gemakkelijk te controleren. Het punt is namelijk dat die doelbinding per casus gebonden zou moeten worden, maar informatie vaak over organisatiegrenzen heen gedeeld en gebruikt wordt. Het is voor de ene organisatie niet mogelijk om te beoordelen of de specifieke casus waar de betreffende gebruiker van de andere organisatie mee bezig is, passend is voor het doel dat beoogd is. Vooraf specifieke doelbinding controleren is daarom niet (volledig) mogelijk. Daar komt bij dat doelbinding op dit moment niet “machine readable” is en de relatie met het datamodel is niet formeel is vastgelegd. Hierdoor is het (ook) niet mogelijk om een koppeling te leggen tussen de doelbinding en de bijbehorende attributen en queries.
 
-In geval van toegang verlenen, oftewel autorisatie, wordt wel vaak een afgeleide gemaakt van de doelbinding op een hoger niveau dan specifieke casussen. Een hele organisatie heeft toegang tot de gehele dataset van een andere organisatie. Door gestandaardiseerd te loggen wat precies wordt opgevraagd door wie, is wel specifieke controle achteraf mogelijk. De [GEMMA Verwerkingenlogging](/docs/achtergrond/verwerkingenlogging.md) is hier de standaard (in ontwikkeling) voor.
+In geval van toegang verlenen, oftewel autorisatie, wordt wel vaak een afgeleide gemaakt van de doelbinding op een hoger niveau dan specifieke casussen. Een hele organisatie heeft toegang tot de gehele dataset van een andere organisatie. Door gestandaardiseerd te loggen wat precies wordt opgevraagd door wie, is wel specifieke controle achteraf mogelijk. De [GEMMA Verwerkingenlogging](../achtergrond/verwerkingenlogging.md) is hier de standaard (in ontwikkeling) voor.
 
 ## Auditing
 
@@ -128,7 +128,7 @@ Een tabel of een dataset zit meestal in een database.
 | :--: |
 | Resource - Database |
 
-Goed gebruik is om deze niet direct toegankelijk te maken voor gebruikers, maar te voorzien van een [Application Programming Interface (API)](/docs/federatieve-bevraging/apis.md). Een API is een technisch koppelvlak die mogelijkheden biedt voor het opvragen (en muteren) van data en daar ook controles en beperkingen aan kan stellen. Hoewel API een generiek concept is, wordt in de huidige staat van de technologie meestal een ‘REST API’ bedoeld.
+Goed gebruik is om deze niet direct toegankelijk te maken voor gebruikers, maar te voorzien van een [Application Programming Interface (API)](../federatieve-bevraging/apis.md). Een API is een technisch koppelvlak die mogelijkheden biedt voor het opvragen (en muteren) van data en daar ook controles en beperkingen aan kan stellen. Hoewel API een generiek concept is, wordt in de huidige staat van de technologie meestal een ‘REST API’ bedoeld.
 
 Een API kan bijvoorbeeld een beperkt deel van de data(base) beschikbaar maken. Hierin is een verschil tussen horizontale en verticale scheiding (segmentatie). Horizontale scheiding betekent dat niet alle rijen op te vragen zijn. In het kader van autorisatie zou dat bijvoorbeeld beperkt kunnen zijn tot een bepaalde regio, bijvoorbeeld gemeentelijke grenzen. 
 Een verticale scheiding betekent dat niet alle kolommen op te vragen zijn. Een voorbeeld hiervan is dat perceelinformatie als open data beschikbaar is, maar de persoonsgegevens (uiteraard) niet. Deze zijn alleen op te vragen met de juiste rechten, of eigenlijk: de juiste grondslag. In deze context is de resource de combinatie van database en (REST) API. 
@@ -141,7 +141,7 @@ Een resource kan een ingewikkeld informatiemodel hebben en het wordt nog ingewik
 | :--: |
 | Database to triples |
 
-[**Linked Data**](/docs/federatieve-bevraging/linkeddata.md) is een concept en technologie die hier veel flexibiliteit en expliciete ondersteuning voor biedt. In plaats van tabellen wordt hierin de data ‘uit elkaar gehaald’ tot zogenaamde **‘triples’**. Elke data instantie is een ‘subject’ dat een relatie heeft (‘predicate’) tot een ‘object’. En dit kan oneindig! Zo kunnen relaties leiden tot een object die attributen beschrijft zoals in een meer traditioneel informatiemodel en een tabel in een database.
+[**Linked Data**](../federatieve-bevraging/linkeddata.md) is een concept en technologie die hier veel flexibiliteit en expliciete ondersteuning voor biedt. In plaats van tabellen wordt hierin de data ‘uit elkaar gehaald’ tot zogenaamde **‘triples’**. Elke data instantie is een ‘subject’ dat een relatie heeft (‘predicate’) tot een ‘object’. En dit kan oneindig! Zo kunnen relaties leiden tot een object die attributen beschrijft zoals in een meer traditioneel informatiemodel en een tabel in een database.
 
 In deze context wordt een triple als een resource beschouwd.
 
@@ -149,7 +149,7 @@ In deze context wordt een triple als een resource beschouwd.
 | :--: |
 | Resource - Triple |
 
-> **Let Op:** een resource wordt in de terminologie van Linked Data anders gedefinieerd dan in de context van dit rapport. [Zie de Linked Data beschrijving voor meer informatie](/docs/federatieve-bevraging/linkeddata.md). In de context van deze documentatie wordt niet de definitie van resource zoals gedefinieerd in Linked Data gebruikt.
+> **Let Op:** een resource wordt in de terminologie van Linked Data anders gedefinieerd dan in de context van dit rapport. [Zie de Linked Data beschrijving voor meer informatie](../federatieve-bevraging/linkeddata.md). In de context van deze documentatie wordt niet de definitie van resource zoals gedefinieerd in Linked Data gebruikt.
 
 Het _object_ in de ene triple kan het _subject_ worden in een ander, waarbij het predicate dit subject aan een ander object koppelt of een attribuut van dit subject beschrijft. Wanneer twee of meer triples met elkaar verbonden zijn, resulteert dit in een ‘graph’ (graaf). Op deze manier kunnen triples informatie/data met elkaar verbinden, ook wanneer deze oorspronkelijk in verschillende tabellen stonden. De graph die zo ontstaat, kan gebruikt worden om te ‘navigeren’ van _subject_ naar _object_ naar _subject_ naar _object_.
 
@@ -165,7 +165,7 @@ _In deze context is de resource de graph en het bijbehorende SPARQL API / endpoi
 
 Een bijzondere toegevoegde waarde van het publiceren van data als Linked Data is het federatief kunnen bevragen van data. Datasets zijn vrijwel altijd opgeslagen in silo’s.  Mbv Linked Data kunnen datasets gemakkelijk aan elkaar gerelateerd worden en op een federatieve manier in één keer bevraagd worden. De Kadaster Knowledge Graph is hier een voorbeeld van met de BRK, BGT, BRT en BAG gekoppelde datasets.
 
-De koppeling van elke graph (of resource) vereist de opname van een gedeeld identificerend sleutelveld of attribuut (zie [informatiekundige kern](/docs/federatieve-bevraging/informatiekundigekern.md)). In onderstaande figuur zijn deze attributen of sleutelvelden gedefinieerd als een BSN- of KvK-nummer waarmee drie verschillende graphs met elkaar in verband kunnen worden gebracht. Met behulp van deze velden kan één enkele query worden geschreven, verwijzend naar elke SPARQL API en het relevante sleutelveld, om zo de benodigde informatie uit drie bronnen op te halen.
+De koppeling van elke graph (of resource) vereist de opname van een gedeeld identificerend sleutelveld of attribuut (zie [informatiekundige kern](../federatieve-bevraging/informatiekundigekern.md)). In onderstaande figuur zijn deze attributen of sleutelvelden gedefinieerd als een BSN- of KvK-nummer waarmee drie verschillende graphs met elkaar in verband kunnen worden gebracht. Met behulp van deze velden kan één enkele query worden geschreven, verwijzend naar elke SPARQL API en het relevante sleutelveld, om zo de benodigde informatie uit drie bronnen op te halen.
 
 In deze context is de resource - elke triple, een hele dataset, de gekoppelde datasets, wellicht een selectie uit een dataset - de resource is hier niet eenduidig.
 

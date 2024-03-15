@@ -157,13 +157,13 @@ belang.
 
 **Autorisatie ontologie verder uitwerken**
 
-De [Authorization Ontology](./opleveringen.md#authorization-ontology) waar in dit project in eerste
+De [Authorisation Ontology](./opleveringen.md#authorisation-ontology) waar in dit project in eerste
 opzet van is gedaan, dient verder te worden uitgewerkt. Het mooiste zou zijn als deze tot een
 standaard wordt verheven natuurlijk. Dat betekent ook dat vendors van triple stores deze standaard
 kunnen implementeren zodat het écht gaat werken. Federatief!
 
 Het is daarin van belang dat ook
-[alternatieven](./achtergrond/autorisatie-ontologie-alternatieven.md) goed geanalyseerd en overwogen
+[alternatieven](./achtergrond/auth-alternatieven.md) goed geanalyseerd en overwogen
 worden. In dit onderzoek hebben we daar wel kennis van genomen, maar zijn we te weinig toegekomen
 aan een 'in depth' vergelijking.
 

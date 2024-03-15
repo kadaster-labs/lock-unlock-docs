@@ -10,7 +10,7 @@
   background-color: rgb(252, 252, 211);
 }
 
-div {
+.md-content {
   text-align: justify;
   text-justify: inter-word;
 }

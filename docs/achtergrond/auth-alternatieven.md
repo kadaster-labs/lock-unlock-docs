@@ -1,14 +1,12 @@
 ---
 title: Autorisatie ontologie alternatieven
 ---
-Er zijn andere initiatieven die een alternatief voor een nieuwe [Authorization
-Ontology](#authorization-ontology) zijn.
+Er zijn andere initiatieven die een alternatief voor een nieuwe [Authorisation
+Ontology](#authorisation-ontology) zijn.
 
-## Authorization Ontology
+## Authorisation Ontology
 
-// TODO authorization ontology toevoegen in repo !!
-
-> link: [GitHub.com/kadaster-labs/lock-unlock-docs/authorization-ontology.ttl](https://github.com/kadaster-labs/lock-unlock-docs/authorization-ontology.ttl)
+> link: [oplevering#authorisatie-ontologie](../opleveringen.md#autorisatie-ontologie)
 > 
 > status: _inception_
 
@@ -29,15 +27,15 @@ nodig.
 > 
 > status: _Recommendation v2.2 (15 February 2018)_
 
+ODRL staat voor de _Open Digital Rights Language_ en zou wellicht ook gebruikt kunnen worden als
+[Authorisation Ontology](#authorisation-ontology). Het is echter veel breder ingestoken om _digitale
+rechten_ te declareren. Toegang ... is daar onderdeel van of een afgeleiden van? Dit is niet zo
+eenvoudig te vergelijken.
+
 > The Open Digital Rights Language (ODRL) is a policy expression language that provides a flexible
 > and interoperable information model, vocabulary, and encoding mechanisms for representing
 > statements about the usage of content and services. The ODRL Vocabulary and Expression describes
 > the terms used in ODRL policies and how to encode them.
-
-ODRL staat voor de _Open Digital Rights Language_ en zou wellicht ook gebruikt kunnen worden als
-[Authorization Ontology](#authorization-ontology). Het is echter veel breder ingestoken om _digitale
-rechten_ te declareren. Toegang ... is daar onderdeel van of een afgeleiden van? Dit is niet zo
-eenvoudig te vergelijken.
 
 Het lijkt erop dat hier actief aan gewerkt is en dat er behoorlijke evolutie is geweest (zie
 [history](https://www.w3.org/standards/history/odrl-model/)), gezien het versienummer `2.2`.
@@ -62,12 +60,12 @@ worden. De policies worden naast de (API) service beheerd en dus ook los van de 
 
 ## Vergelijking
 
-[ODRL](#odrl) is een vergelijkbare oplossingsrichting als de [Authorization
-Ontology](#authorization-ontology) van het Lock-Unlock project. Het is echter veel breder ingestoken
+[ODRL](#odrl) is een vergelijkbare oplossingsrichting als de [Authorisation
+Ontology](#authorisation-ontology) van het Lock-Unlock project. Het is echter veel breder ingestoken
 dan alleen toegang. Het is zelfs de vraag of toegang wel voldoende uit te drukken is in ODRL.
 Daarnaast lijkt de ontwikkeling en toepassing van deze standaard stil te liggen.
 
 De [Open Policy Agent](#open-policy-agent) steekt in op de huidige standaard API's: REST API's. De
 strekking is juist om _naast_ de beveiligde data policies te kunnen beschrijven en beheren. Dat is
-een tegengestelde oplossing dan Lock-Unlock tracht te bereiken met de [Authorization
-Ontology](#authorization-ontology).
+een tegengestelde oplossing dan Lock-Unlock tracht te bereiken met de [Authorisation
+Ontology](#authorisation-ontology).

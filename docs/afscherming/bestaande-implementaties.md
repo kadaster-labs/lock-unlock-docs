@@ -32,7 +32,7 @@ De andere aanpak werkt met _Predefined Queries_ die op de gehele dataset uitgevo
 
 **Zie ook**
 
-- [Github reposity van de PoC](https://github.com/Topsector-Logistiek/DIAC-Linked-Data-Authorization)
+- [Github reposity van de PoC](https://github.com/Topsector-Logistiek/DIAC-Linked-Data-Authorisation)
 
 ## Personal Health Train (PHT)
 
@@ -42,7 +42,7 @@ In het zorgdomein was een oplossing nodig voor het ontsluiten en uitvoeren van o
 ### Oplossing
 In deze context wordt de analogie van een trein, een station en een spoor gebruikt, waarbij de trein een bepaalde vraag of onderzoeksvraag vertegenwoordigt, het station een bepaald ziekenhuis of een bepaalde gegevensbron en het spoor de infrastructuur waarop de vraag tussen stations wordt overgedragen. De query die naar elk station wordt verzonden, vraagt om dezelfde informatie uit elke gegevensbron.
 
-De PHT is een federatieve oplossing waarbij een ‘technical bubble’ infrastructuur wordt gecreëerd van verschillende 'stations' met een bepaalde samenwerkingsovereenkomst en onderzoekers in deze bubbel informatie van het station kunnen opvragen. In sommige gevallen kunnen stations ook worden gemaakt om zeer specifieke vragen te behandelen en daarom een subset van de informatie bevatten die beschikbaar is in de oorspronkelijke gegevensbron en/of voorbereid zijn om alleen gecertificeerde (vooraf gedefinieerde) vragen te behandelen. De methode ondersteunt ook dat de onderzoeker geen inzicht krijgt in de data op persoonsniveau maar wel de gewenste analyse kan uitvoeren. Hiervoor wordt federated learning toegepast (zie ook [PET’s](/docs/achtergrond/glossary.md#privacy-enhancing-technologies-pets)).
+De PHT is een federatieve oplossing waarbij een ‘technical bubble’ infrastructuur wordt gecreëerd van verschillende 'stations' met een bepaalde samenwerkingsovereenkomst en onderzoekers in deze bubbel informatie van het station kunnen opvragen. In sommige gevallen kunnen stations ook worden gemaakt om zeer specifieke vragen te behandelen en daarom een subset van de informatie bevatten die beschikbaar is in de oorspronkelijke gegevensbron en/of voorbereid zijn om alleen gecertificeerde (vooraf gedefinieerde) vragen te behandelen. De methode ondersteunt ook dat de onderzoeker geen inzicht krijgt in de data op persoonsniveau maar wel de gewenste analyse kan uitvoeren. Hiervoor wordt federated learning toegepast (zie ook [PET’s](../achtergrond/glossary.md#privacy-enhancing-technologies-pets)).
 
 | ![Personal Health Train](images/fairdatatrain.png) |
 | :--: |
@@ -60,7 +60,7 @@ De PHT is een federatieve oplossing waarbij een ‘technical bubble’ infrastru
 KIK-V, Keteninformatie Kwaliteit Verpleeghuiszorg, is een initiatief waarin instellingen voor verpleeghuiszorg (als aanbieder) en andere partijen met een publieke taak (als afnemer) samenwerken om de gegevensuitwisseling over kwaliteit en bedrijfsvoering te verbeteren. Het doel is het stroomlijnen van de uitwisseling van informatie, het beter afstemmen van nieuwe uitvragen en het meer hergebruiken van informatie.
 
 ### Oplossing
-Nuts is een samenwerkingsverband van partijen in de zorg om tot een breed gedragen, open, decentrale infrastructuur te komen ten behoeve van de uitwisseling van gegevens in de zorg en het medische domein. “Bolt” is de Nuts-term voor een concrete toepassing van de Nuts-standaarden om een tastbare use-case in de zorg mogelijk te maken. De Nuts standaarden focussen zich vooral op authenticatie en daarbij wordt o.a. gewerkt met Authorization Credentials die aangeven welke data een gebruiker mag inzien. Dit zorgt ervoor dat gebruikers dus niet alle data kunnen bevragen. Daarnaast is in de implemenatie voor KIK-V ook gewerkt met gevalideerde vragen (predefined queries). Indien de gebruiker een credential heeft voor die gevalideerde vraag dan kan die de query uitvoeren.
+Nuts is een samenwerkingsverband van partijen in de zorg om tot een breed gedragen, open, decentrale infrastructuur te komen ten behoeve van de uitwisseling van gegevens in de zorg en het medische domein. “Bolt” is de Nuts-term voor een concrete toepassing van de Nuts-standaarden om een tastbare use-case in de zorg mogelijk te maken. De Nuts standaarden focussen zich vooral op authenticatie en daarbij wordt o.a. gewerkt met Authorisation Credentials die aangeven welke data een gebruiker mag inzien. Dit zorgt ervoor dat gebruikers dus niet alle data kunnen bevragen. Daarnaast is in de implemenatie voor KIK-V ook gewerkt met gevalideerde vragen (predefined queries). Indien de gebruiker een credential heeft voor die gevalideerde vraag dan kan die de query uitvoeren.
 
 ### Inzichten voor Lock-Unlock
 - In de Nuts Bolt implementatie voor KIK-V wordt zowel gewerkt met autorisaties op data- als query niveau door middel van predefined sub-graphs en predefined queries. Dit biedt dus weinig flexibiliteit voor de gebruikers.

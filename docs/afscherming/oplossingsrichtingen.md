@@ -180,7 +180,7 @@ Deze twee delen samen vormen een autorisatiebeleid dat door machines te interpre
 is. Door dit autorisatiebeleid uit te drukken in Linked Data kunnen dezelfde technieken gebruikt
 worden als voor het bevragen van de Linked Data zelf.
 
-![Authorization Ontology](../autorisatie-als-linkeddata/images/concept.png)
+![Authorisation Ontology](../autorisatie-als-linkeddata/images/concept.png)
 
 **Kansen voor Lock-Unlock**
 

@@ -26,7 +26,7 @@ nav:
   - Autorisatie als Linked Data:
     - autorisatie-als-linkeddata/index.md
     - autorisatie-als-linkeddata/concept.md
-    - autorisatie-als-linkeddata/authorization-ontology.md
+    - autorisatie-als-linkeddata/authorisation-ontology.md
     - Implementaties:
       - autorisatie-als-linkeddata/implementaties/index.md
       - autorisatie-als-linkeddata/implementaties/rewrite.md
@@ -43,6 +43,7 @@ nav:
     - achtergrond/glossary.md
     - achtergrond/verwerkingenlogging.md
     - achtergrond/xacml.md
+    - achtergrond/auth-alternatieven.md
 extra_css:
   - css/lock-unlock.css
 theme:
