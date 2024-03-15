@@ -22,7 +22,7 @@ Wat er precies afgeschermd dient te worden kan geconfigureerd worden door o.a. g
 
 | ![conceptLD](images/autorisatieAlsLD.png) |
 | :--: | 
-| Autorisatie ontologie |
+| Autorisatie ontologie in samenhang met authenticatie en instantie data |
 
 ### Samenvatting 
 Samengevat zijn de hoofduitgangspunten voor het concept Autorisatie als Linked Data zijn: 
