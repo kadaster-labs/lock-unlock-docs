@@ -14,13 +14,13 @@ De basisregistraties (e.g. BRK, BAG, BRP en NHR) zijn relatief onafhankelijk van
 
 ### Registers als Linked Data
 
-De bron van alle registers is vooralsnog geen Linked Data. Een ontwikkeling naar Linked Data toe zou kunnen door de bestaande situatie uit te breiden met een publicatie van de gegevens in Linked Data. Er zijn steeds meer implementaties en standaarden aanwezig om Linked Data te genereren vanuit een andere type bron zoals bijvoorbeeld een SQL database. Denk hierbij bijvoorbeeld aan [RML](https://rml.io/) of [R2RML](https://www.w3.org/TR/r2rml/). Ook maakt [JSON-LD](https://www.w3.org/TR/json-ld11/) de stap naar LD wat makkelijker voor implementaties die werken met JSON denk bijvoorbeeld aan JSON api's. Het volgende diagram toont de creatie van LD 'silo's voor elk van de oorspronkelijke gegevensbronnen.
+De bron van alle registers is vooralsnog geen Linked Data. Een ontwikkeling naar Linked Data toe zou kunnen door de bestaande situatie uit te breiden met een publicatie van de gegevens in Linked Data. Er zijn steeds meer implementaties en standaarden aanwezig om Linked Data te genereren vanuit een andere type bron zoals bijvoorbeeld een SQL database. Denk hierbij bijvoorbeeld aan [RML](https://rml.io/) of [R2RML](https://www.w3.org/TR/r2rml/). Ook maakt [JSON-LD](https://www.w3.org/TR/json-ld11/) de stap naar Linked Data wat makkelijker voor implementaties die werken met JSON denk bijvoorbeeld aan JSON api's. Het volgende diagram toont de creatie van Linked Data 'silo's voor elk van de oorspronkelijke gegevensbronnen.
 
 |![linked data vanuit de registers](images/registersLD2.png)|
 | :--: |
 |*Registraties beschikbaar gemaakt als Linked Data*|
 
-> **4 Star Linked Data:** Omdat deze informatie nu als LD wordt gepubliceerd met behulp van de verschillende open LD-standaarden, kan deze informatie worden beoordeeld volgens het [5-sterrenmodel](./linkeddata.md#basis-principes). Op dit moment worden de individuele LD-silo's beoordeeld als 4-sterren LD. De volgende stappen in deze sectie verbeteren deze beoordeling.
+> **4 Star Linked Data:** Omdat deze informatie nu als Linked Data wordt gepubliceerd met behulp van de verschillende open Linked Data-standaarden, kan deze informatie worden beoordeeld volgens het [5-sterrenmodel](./linkeddata.md#basis-principes). Op dit moment worden de individuele Linked Data-silo's beoordeeld als 4-sterren Linked Data. De volgende stappen in deze sectie verbeteren deze beoordeling.
 
 Door middel van een SPARQL endpoint kan er nu een federatieve query gemaakt worden die gegevens uit meerder endpoints raadpleegt. Om dit te kunnen doen, moet de gebruiker echter begrijpen waar de overlappingen bestaan tussen verschillende datasets, d.w.z. hoe de informatie die zich in deze zich bevindt moet worden verbonden om de informatie over verschillende endpoints te kunnen opvragen.
 
@@ -32,7 +32,7 @@ Om precies te weten wat de data betekent en waar evt een overlap te vinden is di
 | :--: |
 |*Beschikbaar maken van een context*|
 
-De toevoeging van een dergelijke context verschijnt in de vorm van of een schema dat is gedefinieerd met behulp van LD-standaarden of in de vorm van een geformaliseerde ontologie. Dit laatste is alleen beschikbaar als de context formele logica omvat (bijvoorbeeld het gebruik van axioma's) die [inferencing](https://www.ontotext.com/knowledgehub/fundamentals/what-is-inference/) ondersteunt.
+De toevoeging van een dergelijke context verschijnt in de vorm van of een schema dat is gedefinieerd met behulp van Linked Data-standaarden of in de vorm van een geformaliseerde ontologie. Dit laatste is alleen beschikbaar als de context formele logica omvat (bijvoorbeeld het gebruik van axioma's) die [inferencing](https://www.ontotext.com/knowledgehub/fundamentals/what-is-inference/) ondersteunt.
 
 Met de toevoeging van een schema of ontologie aan de instantiegegevens kan de overlap tussen verschillende registers voor gebruikers gemakkelijker te identificeren zijn. Dit kan gebaseerd zijn op het gebruik van dezelfde klassen of attributen in meerdere registers (bijvoorbeeld de aanwezigheid van BSN-nummers in zowel de BRK als de BRP) of op de mogelijkheid om geospatiale overlap tussen objecten uit te voeren. Dit laatste is vaak nuttig bij het identificeren van de relatie tussen georuimtelijke registers zoals de BAG en de BRK, waar de overlap tussen gebouwen en percelen voor veel gebruikers nuttig is.
 
@@ -44,7 +44,7 @@ Idealiter zorg je voor formele koppelelementen die de registers adopteren en ond
 
 #### Optie 1: Upperontologie
 Een upperontologie, of
-wellicht in FDS termen een LD versie van een ['informatiekundige
+wellicht in FDS termen een Linked Data versie van een ['informatiekundige
 kern'](https://realisatieibds.pleio.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/wiki/view/d0d90aeb-c896-4925-9948-35c6615ee873/notitie-informatiekundige-kern), definieert klassen en/of attributen die worden gedeeld tussen verschillende registers. Een upperontologie zou bijvoorbeeld het attribuut BSN-nummer kunnen definiëren als het identificatienummer van een persoon en zowel de BRP als de BRK kunnen dit attribuut gebruiken bij het publiceren van identificatiegegevens gerelateerd aan personen. Deze gedeelde kenmerken kunnen worden aangeduid als sleutelvelden. 
 
 |![linked data in context](images/registersLD4.png)|

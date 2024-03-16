@@ -11,7 +11,7 @@ Dit begint met het opnemen van percelen als object binnen een conceptueel model 
 
 |![Vereenvoudigd concetpueel model](images/vereenvoudigd-informatiemodel.png)|
 | :--: |
-|*Informatie Model IMXGeo als LD*|
+|*Informatie Model IMXGeo als Linked Data*|
 
 Het vereenvoudigd conceptueel model van bovenstaande tabel gebaseerde visualisatie is verder uitgewerkt in een Linked Data als een (upper)ontologie voor Lock-Unlock Informatiemodel gebaseerd op losstande schemas. Om de schemas en (upper)ontologie te modelleren is er gebruik gemaakt van de RDF/RDFS/OWL en SHACL standaarden. 
 
@@ -24,30 +24,30 @@ Een openbare basis dataset is IMX-Geo. Deze is aanwezig als Linked Data en bevat
 
 |![linked registers](images/schema-imx.png)|
 | :--: |
-|*Informatie Model IMXGeo als LD*|
+|*Informatie Model IMXGeo als Linked Data*|
 
-IMX-Geo is vanuit Kadaster beschikbaargesteld in LD en is grofweg voor het 'Kadaster gedeelte' helemaal compleet aanwezig. Deze dataset is gebruikt in dit project.
+IMX-Geo is vanuit Kadaster beschikbaargesteld in Linked Data en is grofweg voor het 'Kadaster gedeelte' helemaal compleet aanwezig. Deze dataset is gebruikt in dit project.
 
 #### BRK (Gesloten Deel) Schema
 Een versimpeld model van de BRK is ontwikkeld in Linked data voor dit project. Hieronder is een screenshot van het model zichtbaar en is ook [hier te vinden](https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=https%3A%2F%2Fdata.labs.kadaster.nl%2Flock-unlock%2Fbrk%2Fdef%2F).
 
 |![linked registers BRK](images/schema-brk2.png)|
 | :--: |
-|*BRK Schema als LD*|
+|*BRK Schema als Linked Data*|
 
 #### NHR Schema
 Een versimpeld model van de NHR is gemaakt. Inschrijvingen bevatten wat basis gegevens en is gekoppeld aan de openbare Registratieve Ruimtes. Hieronder is een diagram van het NHR schema te zien en is [hier live te vinden](https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=https%3A%2F%2Fdata.federatief.datastelsel.nl%2Flock-unlock%2Fnhr%2Fdef%2F).
 
 |![linked registers NHR](images/schema-nhr2.png)|
 | :--: |
-|*NHR Schema als LD*|
+|*NHR Schema als Linked Data*|
 
 #### BRP Schema
 Een versimpelde versie van het BRP register is gemodelleerd. Hieronder is een diagram van het BRP schema te zien en is [hier live te vinden](https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=https%3A%2F%2Fdata.federatief.datastelsel.nl%2Flock-unlock%2Fbrp%2Fdef%2F). 
 
 |![linked registers](images/schema-brp.png)|
 | :--: |
-|*BRP Schema als LD*|
+|*BRP Schema als Linked Data*|
 
 #### ANBI Schema
 Hieronder is een diagram van het ANBI schema te zien. Dit sluit niet precies op de ANBI informatie model zelf en is alleen voor dit project gemodelleerd. Een live versie van de schema is ook [hier te vinden](https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=https%3A%2F%2Fdata.federatief.datastelsel.nl%2Flock-unlock%2Fanbi%2Fdef%2F).
@@ -55,7 +55,7 @@ Hieronder is een diagram van het ANBI schema te zien. Dit sluit niet precies op 
 
 |![linked registers](images/schema-anbi.png)|
 | :--: |
-|*BRP Schema als LD*|
+|*BRP Schema als Linked Data*|
 
 ### Samenhang Creëren
 
@@ -66,14 +66,14 @@ De schemas en de data van de schemas zijn als silo's opgezet. Elk register publi
 Om de verschillende schema's met elkaar te verbinden, wordt een upperontologie gedefinieerd die twee relaties omvat tussen klassen die in de schema's zijn gedefinieerd, `owl:sameAs` en een `ik:heeftUBO` relatie. In beide gevallen worden deze relaties gedefinieerd als onderdeel van een hogere ontologie en gematerialiseerd in de data zelf om instanties met elkaar te verbinden. 
 
 #### `owl:sameAs`
-Door middel van `owl:sameAs` relaties kunnen individuals in LD gelijk verklaard worden over verschillende siloes heen.
+Door middel van `owl:sameAs` relaties kunnen individuals in Linked Data gelijk verklaard worden over verschillende siloes heen.
 Oftewel een linked data resource (element) dat leeft in 1 register wordt gelijk verklaard aan een andere resource dat zich bevindt in een ander register (zie hieronder).
 
 |![linked registers](images/relatiesV1.png)|
 | :--: |
 |*Netwerk van schemas*|
 
-De bijbehorende inference is dat alle gegevens van de 2 gelijk gestelde resources gekopieerd mag worden. Stel individual 'A' is gelijk (owl:sameAs) aan individual 'B' dan kunnen alle relaties en kenmerken gekopieerd worden van 'A' naar 'B' en andersom. Hierdoor ontstaan netwerken van linked data over de registers heen en kan er daadwerkelijk "doorgebrowsed" worden van het ene register naar het andere. Ook Sparql queries kunnen hier makkelijk gebruik van maken om zoekopdrachten over meerdere registers te uit te voeren. Ook in onze test opstelling maken we gebruik van `owl:sameAs` om relaties te leggen naar andere registers zonder volledig afhankelijk te worden van deze registers. Dit is natuurlijk een manier om de relaties te leggen. Er zijn meerdere manieren op registerdata te koppelen via LD.
+De bijbehorende inference is dat alle gegevens van de 2 gelijk gestelde resources gekopieerd mag worden. Stel individual 'A' is gelijk (owl:sameAs) aan individual 'B' dan kunnen alle relaties en kenmerken gekopieerd worden van 'A' naar 'B' en andersom. Hierdoor ontstaan netwerken van linked data over de registers heen en kan er daadwerkelijk "doorgebrowsed" worden van het ene register naar het andere. Ook Sparql queries kunnen hier makkelijk gebruik van maken om zoekopdrachten over meerdere registers te uit te voeren. Ook in onze test opstelling maken we gebruik van `owl:sameAs` om relaties te leggen naar andere registers zonder volledig afhankelijk te worden van deze registers. Dit is natuurlijk een manier om de relaties te leggen. Er zijn meerdere manieren op registerdata te koppelen via Linked Data.
 
 **Voorbeeld: BRK naar BRP en NHR**
 

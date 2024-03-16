@@ -1,8 +1,8 @@
 ---
 title: Autorisatie ontologie alternatieven
 ---
-Er zijn andere initiatieven die een alternatief voor een nieuwe [Authorisation
-Ontology](#authorisation-ontology) zijn.
+Er zijn andere initiatieven die een alternatief voor een nieuwe [Autorisatie
+Ontologie](../autorisatie-als-linkeddata/authorisation-ontology.md) zijn.
 
 ## Authorisation Ontology
 
@@ -11,7 +11,7 @@ Ontology](#authorisation-ontology) zijn.
 > status: _inception_
 
 Dit is een nieuwe ontology die in dit Lock-Unlock project tot stand is gekomen in eerste vorm. Deze
-is gebaseerd op de terminologie van [XACML](./xacml.md). Dit is een vrij oude en nog steeds actuele
+is gebaseerd op de terminologie van [XACML](./auth-alternatieven.md#xacml). Dit is een vrij oude en nog steeds actuele
 standaard voor toegang. Het doel is om policies ook als _data_ te beschouwen, te kunnen gebruiken,
 bevragen en mét de data te publiceren. Data en hun policies zijn daarmee geen losstaande zaken meer,
 maar twee bij elkaar horende onderdelen.
@@ -51,12 +51,24 @@ precies wordt toegepast en welke vendors deze ondersteunen.
 
 De [Open Policy Agent](https://www.openpolicyagent.org/) is een standaardisatie voor policies welke
 gericht is op REST API's. Het is niet duidelijk terug te vinden, maar het lijkt erop dat ook deze
-standaard gebruik heeft gemaakt van terminologie van [XACML](../achtergrond/xacml.md). Daarnaast is
+standaard gebruik heeft gemaakt van terminologie van [XACML](../achtergrond/auth-alternatieven.md#xacml). Daarnaast is
 er ook inspiratie opgedaan vanuit _Role Based Access Control_ (RBAC) en andere toegangsmechanismen.
 
 De filosofie is dat policies ontkoppeld worden van de software (engines) die deze policies afdwingen
 / toepassen. Deze policies dienen ook door mensen gelezen, geschreven en geananlyseerd te kunnen
 worden. De policies worden naast de (API) service beheerd en dus ook los van de data.
+
+## XACML
+
+<a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=xacml" target="_blank">OASIS
+Committee XACML</a>, the eXtensible Access Control Markup Language; een taal voor het uitdrukken van
+regels voor toegangsverlening. Deze regels zijn technologie onafhankelijk en gescheiden van de
+gegevens waarop ze betrekking hebben. De taal ondersteunt Attribute Based Access Control (ABAC).
+
+![XACML Architectuur](images/xacml.png)
+
+Zie ook <a href="https://biplatform.nl/magazines/Aveq/118852.pdf" target="_blank">Artikel Java
+Magazine mei 2011</a>
 
 ## Vergelijking
 

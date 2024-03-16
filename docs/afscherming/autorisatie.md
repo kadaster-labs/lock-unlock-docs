@@ -21,7 +21,7 @@ gebruikt voor het _‘iets dat opgevraagd wordt’_. De autorisatie wordt bepaal
 voorwaarden, waaronder het subject toegang krijgt of niet. Deze gaan uit van een _‘context’_ waarin
 de _‘rollen’_ van het _‘subject’_ en extra informatie op basis van het _‘request’_, de vraag, kunnen
 worden meegenomen in de afweging. Deze terminologie is formeel vastgelegd in
-[XACML](../achtergrond/xacml.md). 
+[XACML](../achtergrond/auth-alternatieven.md#xacml). 
 
 ## Subject
 

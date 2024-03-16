@@ -57,14 +57,14 @@ Zie ook [informatiekundige kern](./federatieve-bevraging/informatiekundigekern.m
 
 **Afschermen van Linked Data is mogelijk**
 
-Het is mogelijk om fijnmazig autorisatie regels declaratief te modelleren op basis van een
+Het is mogelijk om fijnmazig autorisatieregels declaratief te modelleren op basis van een
 autorisatie ontologie voor federatieve bevragingen op basis van Linked Data. We hebben dit aan
 kunnen tonen in onze [demonstrators](./autorisatie-als-linkeddata/demonstrators/index.md), waarin we
 een eerste toepassing van een door ons ontwikkelde autorisatie ontologie hebben uitgewerkt.
 
-**Declaratieve autorisatie regels als Linked Data**
+**Declaratieve autorisatieregels als Linked Data**
 
-Met _autorisatie regels_ doelen we op toegangsregels die gelden voor een specifieke situatie. Voor
+Met _autorisatieregels_ doelen we op toegangsregels die gelden voor een specifieke situatie. Voor
 een bepaalde gebruikersgroep wordt toegang verleend voor een specifiek data-schema, een specifieke
 ontologie. De regels die gelden kunnen zeer fijnmazig zijn en de verschillende
 [afschermingspatronen](./afscherming/afschermingspatronen.md) bevatten. We hebben in onze
@@ -73,32 +73,32 @@ subsets](./afscherming/afschermingspatronen.md#subset) mogelijk zijn. De
 [richting](./afscherming/afschermingspatronen.md#richting) is moeilijker en zijn we onvoldoende aan
 toegekomen om te kunnen zeggen dat dat echt werkt. Is het mogelijk? Wij denken van wel.
 
-De autorisatie regels zijn _declaratief_. Dat betekent dat de gewenste toegang of juist afscherming
+De autorisatieregels zijn _declaratief_. Dat betekent dat de gewenste toegang of juist afscherming
 gespecificeerd kan worden. Onderliggende uitvoering en zelfs uitwerking wordt overgelaten een de
 'engine' die zorgdraagt voor de afscherming.
 
-Dit houdt ook in dat autorisatie regels data is `#data-gedreven`. Dit betekent:
+Dit houdt ook in dat autorisatieregels data is `#data-gedreven`. Dit betekent:
 
-- dat de autorisatie regels kunnen worden bevraagd (wie heeft toegang tot wat en eventueel zelfs
+- dat de autorisatieregels kunnen worden bevraagd (wie heeft toegang tot wat en eventueel zelfs
   waarom (niet)). Wellicht is het mogelijk om te verwijzen t/m de wettelijke grondslag?
-- dat de autorisatie regels kunnen worden opgesteld en gedefinieerd onafhankelijk van de software
+- dat de autorisatieregels kunnen worden opgesteld en gedefinieerd onafhankelijk van de software
   (engine) waarin de regels worden afgedwongen
-- dat de autorisatie regels als _knowledge graph_ toegankelijk zijn
+- dat de autorisatieregels als _knowledge graph_ toegankelijk zijn
 
 **Autorisatie ontologie voor standaardisatie**
 
-De autorisatie regels kunnen worden gestandaardiseerd in een _autorisatie ontologie_. Dat betekent
+De autorisatieregels kunnen worden gestandaardiseerd in een _autorisatie ontologie_. Dat betekent
 dat een software implementatie van deze ontologie als engine gebruikt kan worden om de data van de
-autorisatie regels uit te voeren. Doordat een ontologie programeertaal onafhankelijk is, kunnen er
+autorisatieregels uit te voeren. Doordat een ontologie programeertaal onafhankelijk is, kunnen er
 meerdere implementaties gemaakt worden voor de autorisatie ontologie.
 
-**Declaratieve autorisatie regels gekoppeld aan bestaande ontologieën**
+**Declaratieve autorisatieregels gekoppeld aan bestaande ontologieën**
 
-Het is mogelijk om in de declaratie van de autorisatie regels volgens de autorisatie ontologie, een
+Het is mogelijk om in de declaratie van de autorisatieregels volgens de autorisatie ontologie, een
 relatie te maken naar al bestaande ontologieën. Dat wil zeggen dat de toegang (of juist ontzegging
 daarvan) gedeclareerd kan worden volgens de autorisatie ontologie en daarbij kan gedeclareerd worden
 _over welke_ andere ontologie die regels gelden. In ons voorbeeld zijn dat de registratie
-ontologieën van de BRK, BRP en NHR. De autorisatie regels zijn daarmee direct gekoppeld aan de
+ontologieën van de BRK, BRP en NHR. De autorisatieregels zijn daarmee direct gekoppeld aan de
 schema-elementen van deze register ontologieën.
 
 Deze vorm biedt inzicht in wie waar toegang toe heeft of juist niet. Daarmee biedt het mogelijkheden
@@ -106,7 +106,7 @@ tot verificatie van de autorisaties (eventueel aan andere partijen, zoals een to
 
 ### Conclusies van beproevingen
 
-- het is mogelijk om gebruik te maken van de data om autorisatie regels op te stellen. Zo kan er
+- het is mogelijk om gebruik te maken van de data om autorisatieregels op te stellen. Zo kan er
   bijvoorbeeld toegangsregels opgesteld worden voor een bepaalde gemeente. De daadwerkelijke
   gemeente wordt uit de dataset opgehaald.
 
@@ -134,7 +134,15 @@ tot verificatie van de autorisaties (eventueel aan andere partijen, zoals een to
 
 ## Aanbevelingen
 
+> // TODO Hans, wat bedoel je hier precies mee?
+> 
+> - Disseminatie van de resultaten voor feedback maar ook voor community vorming om gezamelijk de
+>  volgende stap te zetten
+
 **Meer onderzoek naar performance federatieve bevragingen**
+
+Verdere R&D prestatie (verbeteringen) federatieve queries zoals technieken zoals FedX en verschil in
+verwerking door verschillende triplestores.
 
 // TODO hdt? zo ja of waarom niet?
 
@@ -145,7 +153,7 @@ tot verificatie van de autorisaties (eventueel aan andere partijen, zoals een to
 Relaties tussen registers en silo's zijn geen eenvoudig probleem. Daar zijn oplossingen voor nodig.
 Een oplossing die Linked Data kan bieden is een _upper ontology_. Daarmee zouden relaties
 gestandaardiseerd en geformaliseerd kunnen worden. Daarna zouden (gelijke) functionele zaken
-gestandardiseerd kunnen worden. Denk aan "ID"'s en versie beheer en meta-data van registers in LD.
+gestandardiseerd kunnen worden. Denk aan "ID"'s en versie beheer en meta-data van registers in Linked Data.
 
 **Linked Data adoptie vergroten**
 
@@ -189,42 +197,23 @@ een 'secured SPARQL endpoint' is het noodzakelijk om een betrouwbare en herhaalb
 hebben. Hierin zullen de verschillende [afschermingspatronen](./afscherming/afschermingspatronen.md)
 opgenomen moeten zijn en allerlei variaties en combinaties hierin.
 
----
+**Opvolging organiseren tbv volledigheid en effectiviteit**
 
-#### nog verwerken
+Verdere R&D bewijsvoering dat de implementatie waterdicht is. Eventueel in samenwerking met
+academici voor wetenschappelijk fundament.
 
-(uit Evaluatie)
+**Meer onderzoek naar performance van de afscherming**
 
-De volgende aanbevelingen zijn mogelijk: 
+Naast de performance van Linked Data oplossing in het geheel, stelt de afscherming nieuwe en extra
+complexiteit verhogende eisen en karakteristieken. Het verdient meer onderzoek naar de performance
+van specifiek dit onderdeel.
 
-- Disseminatie van de resultaten voor feedback maar ook voor community vorming om gezamelijk de
-  volgende stap te zetten
-- Verdere R&D bewijsvoering dat de implementatie waterdicht is. Eventueel in samenwerking met
-  academici voor wetenschappelijk fundament
-- Verdere R&D prestatie (verbeteringen) federatieve queries zoals technieken zoals FedX en verschil
-  in verwerking door verschillende triplestores
-- Doorontwikkeling van autorisatie ontologie:  formaliseren van een bruikbare autorisatie ontologie
-- Doorontwikkeling implementatie:  Algehele doorontwikkleing van de implementatie inclusief
-  resulaten van bovenstaande onderzoeken verwerken. 
+**Implementatie doorontwikkelen**
 
-(uit Samenvatting)
-
-De volgende aanbevelingen kunnen gemaakt worden:
-
-- De autorisatie ontologie moet verder uitgewerkt worden in overleg met andere organisaties. Hierbij
-  moet ook gekeken worden naar de verschillende standaarden zoals XACML en OPA.
-- De waterdichtheid van de beveiliging moet aantoonbaar gemaakt kunnen worden.
-- Meer inzicht krijgen in de performance van het federatief bevragen van data, ook in combinatie met
-  autorisatie
-- Binnen het project zijn we er niet aan toegekomen om het afschermen van de richting te
-  onderzoeken. De richtings-patronen kunnen nog worden uitgewerkt en evt. worden geïmplementeerd
-- de relaties tussen de verschillende registers moeten gestandardiseerd worden opdat je hierop kunt
-  bouwen en vertrouwen. In de Linked Data wereld zou je een 'upper' ontologie kunnen definiëren om
-  de relaties tussen de registers te formaliseren. Daarna zouden (gelijke) functionele zaken
-  gestandardiseerd kunnen worden. Denk aan "ID"'s, versiebeheer en meta-data van registers in Linked
-  Data.
-- Samenwerking met andere bronhouders is nodig om de adoptie van Linked Data en bijbehorende
-  autorisatie te bespoedigen
+Een eerste aanzet en prototyping rondom
+[implementaties](./autorisatie-als-linkeddata/implementaties/index.md) is gedaan, maar verdient meer
+opvolging. Hierbij kan gedacht worden aan vervolgonderzoeken in samenwerking met vendors van
+triplestores en/of academici.
 
 ## Disclaimer
 
@@ -243,13 +232,3 @@ productie ... ongeschikt! :warning:
 - :warning: De [implementaties](./autorisatie-als-linkeddata/implementaties/index.md) zijn nog niet
   bruikbaar voor productie en eventuele problemen mbt veiligheid en schaalbaarheid zijn niet
   onderzocht
-
-
-----
-
-- Vragen beantwoorden van Steven en André:
-    -  wat betekent dit in de praktijk?
-    -  Technische randvoorwaarden
-    -  Organisatorische randvoorwaarden?
-    -  Wie moet wat oppakken?
-

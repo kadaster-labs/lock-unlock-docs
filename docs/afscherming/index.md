@@ -22,5 +22,5 @@ Van het desk research is in deze documentatie site een kopie te vinden om zowel 
 - [REST vs. GraphQL vs. SPARQL](../federatieve-bevraging/apis.md)
 - [Linked Data](../federatieve-bevraging/linkeddata.md)
 - [Verwerkingenlogging](../achtergrond/verwerkingenlogging.md)
-- [XACML](../achtergrond/xacml.md)
+- [XACML](../achtergrond/auth-alternatieven.md#xacml)
 - [ODRL vs XACML vs Open Policy Agent](../achtergrond/auth-alternatieven.md)

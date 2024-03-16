@@ -7,5 +7,5 @@ achtergrond hoofdstuk gestopt. Ook hebben we daar een glossary opgenomen met vee
 mogelijk onbekende termen.
 
 - [Glossary](./glossary.md)
+- [Autorisatie ontologie alternatieven](./auth-alternatieven.md)
 - [Verwerkingenlogging](./verwerkingenlogging.md)
-- [XACML](./xacml.md)

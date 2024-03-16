@@ -55,7 +55,7 @@ Deze patronen zijn gemodelleerd in een [autorisatie
 ontologie](./opleveringen.md#autorisatie-ontologie). Mbv deze autorisatie ontologie kunnen deze
 concepten specifiek gemaakt worden voor elk register waardoor er een declaratief model ontstaat met
 daarin de beschreven rechten voor een specifieke rol of gebruiker. Dit model is direct gerelateerd
-aan het schema van de registers om zo autorisatie regels toe te wijzen aan (delen van) het schema of
+aan het schema van de registers om zo autorisatieregels toe te wijzen aan (delen van) het schema of
 delen van de daadwerkelijke data. Zo kunnen er bijvoorbeeld kenmerken afgeschermd worden voor
 bepaalde gebruikers. Oftewel deze gebruikers hebben geen toegang tot deze kenmerken. Ook kunnen er
 extra restricties gemodelleerd worden om bijvoorbeeld horizontale subsets te definiëren.
@@ -64,7 +64,7 @@ X.
 
 Theoretisch zijn hier al de volgende conclusies te trekken:
 
-- het is mogelijk om (geavanceerde) autorisatie regels vast te leggen in Linked Data op basis van
+- het is mogelijk om (geavanceerde) autorisatieregels vast te leggen in Linked Data op basis van
   een autorisatie ontologie.
 
 - het is mogelijk om gebruik te maken van een Linked Data schema van de dataset. Authorisatie regels
@@ -72,7 +72,7 @@ Theoretisch zijn hier al de volgende conclusies te trekken:
   waar toegang toe heeft en evt waar niet. Ook geeft deze aanpak mogelijkheden tot verificatie van
   de autorisaties.                      
 
-- het is mogelijk om gebruik te maken van de data om autorisatie regels op te stellen. Zo kan er
+- het is mogelijk om gebruik te maken van de data om autorisatieregels op te stellen. Zo kan er
   bijvoorbeeld toegangsregels opgesteld worden voor een bepaalde gemeente. De daadwerkelijke
   gemeente wordt uit de dataset opgehaald.
 

@@ -2,21 +2,29 @@
 title: Subgraph
 ---
 > TO DO: 
-> - bij de implementatie pagina of hier iets meer vertellen over de werking en architectuur hiervan. Hoe is de demonstrator technisch opgezet? Wat gebeurt er nu precies wanneer er een query binnenkomt?
-> - gebruikers kunnen dit nu nog niet (volgens mij) testen omdat de demo niet live staat. Is het een idee om dan ook output te laten zien in de screenshots?
+> 
+> - bij de implementatie pagina of hier iets meer vertellen over de werking en architectuur hiervan.
+>   Hoe is de demonstrator technisch opgezet? Wat gebeurt er nu precies wanneer er een query
+>   binnenkomt?
+> - gebruikers kunnen dit nu nog niet (volgens mij) testen omdat de demo niet live staat. Is het een
+>   idee om dan ook output te laten zien in de screenshots?
 
-Voor het Lock-Unlock project is ook een simpele demonstrator ontwikkeld voor de Subgraph implementatie. Deze toont aan dat een autorisatie-beleid afgedwongen kan worden op een SPARQL-endpoint zonder dat queries hier uitzonderlijk traag van worden.
-De ervaringen die hiermee zijn opgedaan zijn deels verder geïntegreerd in de demonstrator.
-Verdere conclusies en aanbevelingen worden besproken in het [hoofdstuk Evaluatie](../evaluatie.md).
+Voor het Lock-Unlock project is ook een simpele demonstrator ontwikkeld voor de Subgraph
+implementatie. Deze toont aan dat een autorisatie-beleid afgedwongen kan worden op een
+SPARQL-endpoint zonder dat queries hier uitzonderlijk traag van worden. De ervaringen die hiermee
+zijn opgedaan zijn deels verder geïntegreerd in de demonstrator. Verdere conclusies en aanbevelingen
+worden besproken in het hoofdstuk [evaluatie](../evaluatie.md).
 
-Hieronder worden een aantal voorbeelden gegeven van queries die wel/niet zijn toegestaan voor specifieke gebruikers. 
+Hieronder worden een aantal voorbeelden gegeven van queries die wel/niet zijn toegestaan voor
+specifieke gebruikers. 
 
 ## Algemene Bedrijfsgegevens
 
-De algemene bedrijfsgegevens uit het NHR zijn openbaar beschikbaar, dus ook niet-geautoriseerde gebruikers kunnen deze opvragen.
-Deze query zal dus resultaten geven ongeacht welke gebruiker deze uitvoert.
-Echter is toegang tot de UBO-gegevens beperkt zodat deze enkel toegankelijk zijn in de context van een politieonderzoek.
-De kolom `?ubo` zal dus leeg blijven tenzij de query wordt uitgevoerd door _Ferdinand van As (een politiemedewerker)_.
+De algemene bedrijfsgegevens uit het NHR zijn openbaar beschikbaar, dus ook niet-geautoriseerde
+gebruikers kunnen deze opvragen. Deze query zal dus resultaten geven ongeacht welke gebruiker deze
+uitvoert. Echter is toegang tot de UBO-gegevens beperkt zodat deze enkel toegankelijk zijn in de
+context van een politieonderzoek. De kolom `?ubo` zal dus leeg blijven tenzij de query wordt
+uitgevoerd door _Ferdinand van As (een politiemedewerker)_.
 
 ```sparql
 PREFIX nhr: <https://data.federatief.datastelsel.nl/lock-unlock/nhr/def/>
@@ -32,13 +40,15 @@ SELECT ?naam ?rechtsvorm ?kvkNr ?ubo WHERE {
 
 ## Inwonersaantallen per Gemeente
 
-Een van de doelen van Lock-Unlock is het ondersteunen van statistische queries waar de onderliggende data afgeschermd moet blijven.
-Denk hierbij bijvoorbeeld aan het inwonersaantal van een of meerdere gemeentes.
-Dit wordt met de onderstaande query gedemonstreerd.
-Om dit mogelijk te maken, zijn de verblijfplaatsen van personen openbaar toegankelijk.
-Dit lijkt in eerste instantie misschien op ongeautoriseerde datatoegang, maar gezien enkel de verblijfsplaats wordt ontsloten, is het niet mogelijk de ideniteit van een individueel persoon te achterhalen.
-Dit blijft natuurlijk wel een punt van aandacht wanneer een systeem als hier gedemonstreerd in productie wordt gebracht.
-Door overlappende beveiligingsregels kan het onbedoeld toch mogelijk worden om de identiteit van personen te achterhalen.
+Een van de doelen van Lock-Unlock is het ondersteunen van statistische queries waar de onderliggende
+data afgeschermd moet blijven. Denk hierbij bijvoorbeeld aan het inwonersaantal van een of meerdere
+gemeentes. Dit wordt met de onderstaande query gedemonstreerd. Om dit mogelijk te maken, zijn de
+verblijfplaatsen van personen openbaar toegankelijk. Dit lijkt in eerste instantie misschien op
+ongeautoriseerde datatoegang, maar gezien enkel de verblijfsplaats wordt ontsloten, is het niet
+mogelijk de ideniteit van een individueel persoon te achterhalen. Dit blijft natuurlijk wel een punt
+van aandacht wanneer een systeem als hier gedemonstreerd in productie wordt gebracht. Door
+overlappende beveiligingsregels kan het onbedoeld toch mogelijk worden om de identiteit van personen
+te achterhalen.
 
 ```sparql
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -56,14 +66,15 @@ SELECT ?naam ?inwonersAantal WHERE {
 
 ## Inwoners van Zeewolde
 
-Deze query lijkt heel erg op de vorige, en vraagt specifiek de inwoners van Zeewolde op.
-Echter vraagt deze query ook wat de namen van de inwoners zijn, er is dus een zekere mate van autorisatie nodig.
-In de demonstrator zijn er twee scenario's waarin de naam van een gebruiker mag worden opgehaald.
-Dit mag gebeuren in de context van een politieonderzoek, via onze fictieve gebruiker _Ferdinand van As_.
-Ook is het mogelijk voor ambtenaren om de inwoners van hun gemeente te bekijken.
-Alleen _Marjolein van Groen (medewerker Gemeente Zeewolde)_ mag dit dus doen.
-Wanneer _Jeroen Peerenboom (medewerker Gemeente Almere)_ dit zou proberen, krijgt hij geen resultaten.
-Zou de gemeente-URI worden aangepast naar `brk-gem:25`, dan krijgt _Jeroen Peerenboom_ juist resultaten en heeft _Marjolein van Groen_ geen toegang.
+Deze query lijkt heel erg op de vorige, en vraagt specifiek de inwoners van Zeewolde op. Echter
+vraagt deze query ook wat de namen van de inwoners zijn, er is dus een zekere mate van autorisatie
+nodig. In de demonstrator zijn er twee scenario's waarin de naam van een gebruiker mag worden
+opgehaald. Dit mag gebeuren in de context van een politieonderzoek, via onze fictieve gebruiker
+_Ferdinand van As_. Ook is het mogelijk voor ambtenaren om de inwoners van hun gemeente te bekijken.
+Alleen _Marjolein van Groen (medewerker Gemeente Zeewolde)_ mag dit dus doen. Wanneer _Jeroen
+Peerenboom (medewerker Gemeente Almere)_ dit zou proberen, krijgt hij geen resultaten. Zou de
+gemeente-URI worden aangepast naar `brk-gem:25`, dan krijgt _Jeroen Peerenboom_ juist resultaten en
+heeft _Marjolein van Groen_ geen toegang.
 
 ```sparql
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -78,9 +89,10 @@ SELECT * WHERE {
 
 ## UBOs van Bedrijven
 
-Een van de krachtigste mogelijkheden van SPARQL is het federatief bevragen van datasets.
-In de onderstaande query koppelen we het NHR en de BRP om de naam en geboortedatum van de UBO van een bedrijf te bepalen.
-Het gedeelte van de query wat uitgevoerd wordt aan de BRP-kant staat in het `SERVICE`-blok, waar het persoons-URI wordt gebruikt om de naam en geboortedatum te bepalen.
+Een van de krachtigste mogelijkheden van SPARQL is het federatief bevragen van datasets. In de
+onderstaande query koppelen we het NHR en de BRP om de naam en geboortedatum van de UBO van een
+bedrijf te bepalen. Het gedeelte van de query wat uitgevoerd wordt aan de BRP-kant staat in het
+`SERVICE`-blok, waar het persoons-URI wordt gebruikt om de naam en geboortedatum te bepalen.
 
 ```sparql
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -98,8 +110,9 @@ SELECT * WHERE {
 
 ## Autorisatie-beleid
 
-Gezien het autorisatie-beleid ook wordt uitgedrukt als Linked Data, is het mogelijk deze te bevragen via SPARQL.
-Met deze query worden alle beveiligingsregels getoond en voor welke gebruikers deze van toepassing zijn.
+Gezien het autorisatie-beleid ook wordt uitgedrukt als Linked Data, is het mogelijk deze te bevragen
+via SPARQL. Met deze query worden alle beveiligingsregels getoond en voor welke gebruikers deze van
+toepassing zijn.
 
 ```sparql
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -116,10 +129,11 @@ SELECT (GROUP_CONCAT(?name; SEPARATOR=", ") AS ?personas) ?rule ?subject ?condit
 
 ## Logging
 
-Om achteraf te inzage te hebben in wat gebruikers hebben opgevraagd, worden alle queries gelogd in de triplestore.
-Deze data kan ook weer als linked data worden bevraagd.
-De onderstaande query geeft een kleine inzage in de gelogde gegevens.
-In de demonstrator zijn deze gegevens openbaar toegankelijk, maar in een productie-versie is het waarschijnlijk wenselijk om ook een autorisatie-beleid af te dwingen op deze data.
+Om achteraf te inzage te hebben in wat gebruikers hebben opgevraagd, worden alle queries gelogd in
+de triplestore. Deze data kan ook weer als linked data worden bevraagd. De onderstaande query geeft
+een kleine inzage in de gelogde gegevens. In de demonstrator zijn deze gegevens openbaar
+toegankelijk, maar in een productie-versie is het waarschijnlijk wenselijk om ook een
+autorisatie-beleid af te dwingen op deze data.
 
 ```sparql
 PREFIX log: <https://data.federatief.datastelsel.nl/lock-unlock/logging/model/def/>

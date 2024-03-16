@@ -171,7 +171,7 @@ Daarvoor zijn twee onderdelen nodig:
    Gebruiker, Rol, Toegestaan, Autorisatie hiërarchie, etc. Zo’n vocabulaire zou gestandaardiseerd
    moeten zijn. Deze bestaat op dit moment nog niet, maar sluit goed aan bij de wereld van Linked
    Data.
-1. De autorisatie configuratie bevat de specifieke autorisatie regels voor een resource. In deze
+1. De autorisatie configuratie bevat de specifieke autorisatieregels voor een resource. In deze
    configuratie wordt autorisatie metadata toegevoegd (verrijkt) aan bestaande ontologie van de
    resource. Bijvoorbeeld Binnen de BRK is het anonieme Gebruikers niet toegestaan het
    LaatsteKoopsom Predicate op te vragen.

@@ -41,9 +41,8 @@ nav:
   - Achtergrond:
     - achtergrond/index.md
     - achtergrond/glossary.md
-    - achtergrond/verwerkingenlogging.md
-    - achtergrond/xacml.md
     - achtergrond/auth-alternatieven.md
+    - achtergrond/verwerkingenlogging.md
 extra_css:
   - css/lock-unlock.css
 theme:

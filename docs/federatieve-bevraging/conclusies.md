@@ -7,7 +7,7 @@ De volgende conclusies kunnen getrokken worden:
 
 - Het is goed mogelijk om een testopstelling te creëren met testdata in verschillende servers op
   basis van opensource Triplestores
-- Het is eenvoudig om testdata en versimpelde schema's in LD te maken voor elke silo/register
+- Het is eenvoudig om testdata en versimpelde schema's in Linked Data te maken voor elke silo/register
 - Met linked data kan data uit verschillende registers makkelijk direct gekoppeld worden
 - Via Sparql queries kun je data uit de sparql endpoints halen
 - Het is makkelijk om Sparql queries te schrijven die gecombineerd meerdere registers bevraagd

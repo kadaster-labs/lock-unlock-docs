@@ -46,8 +46,8 @@ stanfaarden zoals URI's, RDF en ontologieen gedefinieerd in [RDF](#rdf) zoals RD
 
 Open Policy Agent (OPA) is een open-source beleidsmotor voor toegangscontrole en beleidsautomatisering in softwaretoepassingen. Het maakt gebruik van de beleidstaal genaamd Rego om beleidsregels te definiëren en uit te voeren. Rego is ontworpen om leesbare en krachtige beleidsregels te maken. OPA integreert met verschillende services en applicaties en kan complexe beveiligings- en autorisatievereisten implementeren door Rego-beleidsregels te evalueren op basis van inputgegevens, waardoor wordt beslist of een actie al dan niet wordt toegestaan. Dit wordt vaak gebruikt in moderne IT-omgevingen voor flexibele en geautomatiseerde beleidsafdwinging.
 
-- Documentatie ([link](https://www.openpolicyagent.org/))
-- Policies in Rego lang ([link](https://www.openpolicyagent.org/docs/latest/policy-language/))
+- [Documentatie](https://www.openpolicyagent.org/)
+- Policies in [Rego lang](https://www.openpolicyagent.org/docs/latest/policy-language/)
 
 ### OWL
 
