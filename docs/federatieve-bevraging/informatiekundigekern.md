@@ -2,7 +2,7 @@
 title: Informatiekundige Kern
 ---
 
-Een kern principe bij de ontwikkeling van het federatief datastelsel is het concept van een informatiekundige kern. Deze informatiekundige kern ondersteunt het koppelen van eerder verspreide basisregistraties via een set vooraf gedefinieerde relaties (zie [Stelsel van Basisregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/stelsel-van-basisregistraties-toegankelijke-beschrijving/)). Dit hoofdstuk beschrijft wat ervoor nodig is om verschillende, onafhankelijke registers met elkaar te koppelen en en hoe dat binnen dit project concreet werd geïmplementeerd. Binnen dit project wordt uitgegaan van een federatief datastelsel op basis van Linked Data. 
+Een kernprincipe bij de ontwikkeling van het federatief datastelsel is het concept van een informatiekundige kern. Deze informatiekundige kern ondersteunt het koppelen van eerder verspreide basisregistraties via een set vooraf gedefinieerde relaties (zie [Stelsel van Basisregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/stelsel-van-basisregistraties-toegankelijke-beschrijving/)). Dit hoofdstuk beschrijft wat ervoor nodig is om verschillende, onafhankelijke registers met elkaar te koppelen en en hoe dat binnen dit project concreet werd geïmplementeerd. Binnen dit project wordt uitgegaan van een federatief datastelsel op basis van Linked Data. 
 
 ### Onafhankelijke Registers
  
@@ -10,7 +10,7 @@ De basisregistraties (e.g. BRK, BAG, BRP en NHR) zijn relatief onafhankelijk van
 
 |![registers als databases](images/registersLD1.png) |
 | :--: |
-|*Registraties als siloed databases*|
+|*Registraties als losstaande silo's*|
 
 ### Registers als Linked Data
 
@@ -26,7 +26,7 @@ Door middel van een SPARQL endpoint kan er nu een federatieve query gemaakt word
 
 ### Formele Verbinding van Registers
 
-Om precies te weten wat de data betekent en waar evt een overlap te vinden is die in meerdere registers aanwezig is, kan de data verrijkt worden met een context. Elk data element (of stuk instantie data) kan gekoppeld worden aan een linked data klasse (bv. een `owl:Class`) die o.a beschrijvingen, labels (in meedere talen), en overige informatie kan bevatten. Door deze extra context is de data beter te begrijpen en makkelijker te bevragen door de gebruikers. 
+Om precies te weten wat de data betekent en waar evt een overlap te vinden is die in meerdere registers aanwezig is, kan de data verrijkt worden met een context. Elk data element (of stuk instantie data) kan gekoppeld worden aan een linked data klasse (bv. een `owl:Class`) die o.a beschrijvingen, labels (in meerdere talen), en overige informatie kan bevatten. Door deze extra context is de data beter te begrijpen en makkelijker te bevragen door de gebruikers. 
 
 |![linked data in context](images/registersLD3.png)|
 | :--: |
@@ -51,13 +51,13 @@ kern'](https://realisatieibds.pleio.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f
 | :--: |
 |*Upperontologie beschikbaar gemaakt voor een bepaald set registers*|
 
-Een dergelijke upperontologie kan logisch worden gedefinieerd op basis geidentificeerde sleutelvelden maar om dit op een nuttige manier te kunnen implementeren voor gebruikers moeten de registers deze upperontology en de bijbehorende afspraken ook adopteren. Door in beide registers hetzelfde attribuut te gebruiken dat in de upperontologie is gedefinieerd, kunnen gebruikers van deze gegevens er zeker van zijn dat het BSN-nummer in beide registers op dezelfde manier wordt gebruikt en dat waar een identifier in het ene register overeenkomt met de identifier in een ander register waarnaar dit verwijst aan dezelfde persoon bij de BRP.
+Een dergelijke upperontologie kan logisch worden gedefinieerd op basis van geïdentificeerde sleutelvelden maar om dit op een nuttige manier te kunnen implementeren voor gebruikers moeten de registers deze upperontologie en de bijbehorende afspraken ook adopteren. Door in beide registers hetzelfde attribuut te gebruiken dat in de upperontologie is gedefinieerd, kunnen gebruikers van deze gegevens er zeker van zijn dat het BSN-nummer in beide registers op dezelfde manier wordt gebruikt. Wanneer een identifier in het ene register overeenkomt met een identifier in een ander register dan weet je zeker dat deze verwijst naar dezelfde persoon in de BRP.
 
 |![linked data in context](images/registersLD5.png)|
 | :--: |
 |*Linked data registers gecombineerd door het gebruik van een upperontologie*|
 
-Hiermee wordt het makkelijker om data uit 1 register te combineren met data uit een ander register. Bij het schrijven van een federatieve query kan dit BSN-nummer dus worden gebruikt om informatie over de percelen van een bepaalde persoon op te halen bij de BRK en de persoonsgegevens van deze persoon (bijvoorbeeld volledige naam, geboortedatum en huwelijksstatus) uit de BRP te halen. 
+Hiermee wordt het makkelijker om data uit één register te combineren met data uit een ander register. Bij het schrijven van een federatieve query kan dit BSN-nummer dus worden gebruikt om informatie over de percelen van een bepaalde persoon op te halen bij de BRK en de persoonsgegevens van deze persoon (bijvoorbeeld volledige naam, geboortedatum en huwelijksstatus) uit de BRP te halen. 
 
 #### Optie 2: Gematerialiseerde Relaties 
 Hoewel deze mogelijkheid er is door het uitvogelen van relaties tussen sleutelvelden uit de upperontologie zou het ook mogelijk zijn om extra relaties te kunnen afleiden en deze 'materialiseren'. Oftewel extra relaties kunnen (evt virtueel) toegevoegd worden. Deze materialisatie van relaties wordt niet gedefinieerd door de upperontologie maar tussen de instancegegevens in de registers zelf.
@@ -75,7 +75,7 @@ De aanwezigheid van directe relaties tussen de registers maakt het nog makkelijk
 ### Ontwerp van de Informatiekundige Kern
 Het ontwerp van de informatiekundige kern zou zowel de introductie van een upperontologie moeten omvatten als de introductie van gematerialiseerde relaties tussen basisregistraties waar logische relaties bestaan. Er moeten afspraken worden gemaakt tussen de beheerders van de basisregistraties bij het ontwerpen van een dergelijke hogere ontologie en bij het onderhouden van eventuele gematerialiseerde relaties tussen de basisregistraties. Door ervoor te zorgen dat deze afspraken worden nageleefd, kan de gebruikerstoegankelijkheid en herbruikbaarheid van de basisregistraties als datastelsel worden gewaarborgd.
  
-In de volgende secties worden de ingrediënten geïntroduceerd voor de testopstelling die is gedefinieerd binnen het Lock Unlock-project. Hierbij een kleiner, fictief systeem van basisregistraties wordt gecreëerd, een upperontologie wordt gedefinieerd en federatieve bevragingen worden ondersteund. In de volgende sectie worden de ontwerpkeuzes besproken die zijn gemaakt bij het definiëren van zoon upperontologie.
+In de volgende secties worden de ingrediënten geïntroduceerd voor de testopstelling die is gedefinieerd binnen het Lock Unlock-project. Hierbij wordt een kleiner, fictief systeem van basisregistraties  gecreëerd, een upperontologie wordt gedefinieerd en federatieve bevragingen worden ondersteund. In de volgende sectie worden de ontwerpkeuzes besproken die zijn gemaakt bij het definiëren van zo een upperontologie.
 
 
 

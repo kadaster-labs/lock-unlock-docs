@@ -22,9 +22,9 @@ grondlegger van het Semantic Web, definieert basisprincipes voor linked data:
 
 - Gebruik URI's als namen voor dingen. **'Things instead of strings'**.
 - Gebruik HTTP-URI's zodat mensen die namen kunnen opzoeken.
-- Wanneer iemand een URI opzoekt, geef dan nuttige informatie, gebruik makend van de standaarden
+- Wanneer iemand een URI opzoekt, geef dan nuttige informatie, gebruikmakend van de standaarden
   (RDF*, SPARQL).
-- Voeg links naar andere URI's toe, zodat ze meer dingen kunnen ontdekken.
+- Voeg links naar andere URI's toe, zodat gebruikers meer dingen kunnen ontdekken.
 
 Deze ontdekking van nieuwe dingen wordt ondersteund door de publicatie van informatie in triple
 formaat. Triples bestaan uit een _subject_, _predicate_ en een _object_. Bijvoorbeeld: 
@@ -34,7 +34,7 @@ formaat. Triples bestaan uit een _subject_, _predicate_ en een _object_. Bijvoor
 | Triplestructuur |
 
 Tevens zijn objecten in Linked Data uniek identificeerbaar op het web middels URIs. Een voorbeeld
-van zoon sort URI in het Kadaster context is: 
+van zo een soort URI in de Kadaster context is: 
 
 <a href="http://bag.basisregistraties.overheid.nl/bag/id/pand/0003100000117485"
 target="_blank">http://bag.basisregistraties.overheid.nl/bag/id/pand/0003100000117485</a> 
@@ -50,7 +50,7 @@ mogelijk op basis van relaties tussen objecten op het web.
 Er zijn dus een aantal building blocks voor het publiceren van gegevens als Linked Data:
 
 1. Defineer data objects (resources) als HTTP-URIs
-2. Gebruik de RDF framework om URIs te beschhrijven en meer informatie vastleggen
+2. Gebruik de RDF framework om URIs te beschrijven en meer informatie vast te leggen
 3. Definieer metadata (e.g. ontologien met formele logica) om de verbindingen tussen relaties vast
    te leggen
 4. SPARQL beschikbaar maken en gebruiken voor bevragingen
@@ -68,8 +68,8 @@ href="https://people.utwente.nl/l.o.boninodasilvasantos" target="_blank">Dr Luiz
 
 Voor het publiceren van volledig Linked Data (LOD) moet het <a
 href="https://www.w3.org/2011/gld/wiki/5_Star_Linked_Data" target="_blank">5-star model</a> van W3C
-gevolgd worden. Bij het publicatie van 5 star linked data vormt een basis voor data-gedreven
-applicaties. Onze toepassingen hierop zijn in de volgende sectie uitgelegd. 
+gevolgd worden. De publicatie van 5 star linked data vormt een basis voor data-gedreven
+applicaties. Onze toepassingen hierop worden in de volgende sectie uitgelegd. 
 
 #### Gerelateerde Informatie
 

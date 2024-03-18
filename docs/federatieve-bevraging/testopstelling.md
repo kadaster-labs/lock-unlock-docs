@@ -14,7 +14,7 @@ schema's worden testgegevens gemaakt die als een silo zijn gepubliceerd.
 
 ## Testdata genereren in silo's 
 
-Test data voor alle registraties bestaan in eigen silo's. Dit is geheel naar werkelijkheid en zo
+Testdata voor alle registraties bestaan in eigen silo's. Dit is geheel naar werkelijkheid en zo
 hebben we ook onze testgegevens ontworpen. 
 
 Voor de verschillende silo's is synthetische testdata gegenereerd. Hoewel de testgegevens zo worden
