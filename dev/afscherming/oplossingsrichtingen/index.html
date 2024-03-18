@@ -1331,7 +1331,7 @@ worden gesteld. Dit is vooral van belang in geval van Linked Data en minder in g
 API's</a> en <a href="#graphql-api">GraphQL API's</a>, aangezien deze minder mogelijkheden bieden voor
 alle <a href="../afschermingspatronen/">afschermingspatronen</a>.</p>
 <p>Deze technologische oplossing is geen oplossing voor autorisatie. Bij alleen query auditing kan de gebruiker namelijk alle data bevragen en worden slechts de queries met bijbehorende context (denk bijv. aan de gebruiker en meegegeven referentie naar doelbinding) opgeslagen. Vervolgens kan er achteraf handmatig of wellicht automatisch bepaald worden of er onrechtmatige vragen/queries zijn gesteld en of dat er onterecht toegang is verkregen tot gesloten gegevens. </p>
-<p>Deze technologische oplossing wordt verder verkend in track 2 van het Lock-Unlock project. Hierbij willen we onder andere kijken naar de <a href="../bestaande-implementaties/#gemma-verwerkingenlogging">GEMMA verwerkingenlogging</a>.</p>
+<p>Deze oplossing raakt ook de <a href="../bestaande-implementaties/#gemma-verwerkingenlogging">GEMMA verwerkingenlogging</a>.</p>
 <table>
 <thead>
 <tr>
@@ -1354,8 +1354,7 @@ alle <a href="../afschermingspatronen/">afschermingspatronen</a>.</p>
 <p><strong>Uitdagingen voor Lock-Unlock</strong></p>
 <ul>
 <li>Query Auditing is geen oplossing voor autorisatiecontroles.</li>
-<li>Uitdagingen rondom het kunnen toepassen van de GEMMA verwerkingenlogging gaan we in track 2
-  beproeven.<ul>
+<li>Uitdagingen rondom het kunnen toepassen van de GEMMA verwerkingenlogging:<ul>
 <li>De standaard wordt doorontwikkeld wat onzekerheid geeft rondom de stabiliteit van de
   standaard.</li>
 <li>Query logging is niet gestandaardiseerd en mogelijkheden in producten zijn nog onduidelijk.</li>
