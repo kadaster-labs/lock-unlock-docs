@@ -1,6 +1,6 @@
 # Lock Unlock Docs
 
-[![Publish docs via GitHub Pages](https://github.com/kadaster-labs/lock-unlock-docs/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/kadaster-labs/lock-unlock-docs/actions/workflows/gh-pages.yml)
+[![Publish [dev] docs via GitHub Pages](https://github.com/kadaster-labs/lock-unlock-docs/actions/workflows/publish-dev-docs.yml/badge.svg)](https://github.com/kadaster-labs/lock-unlock-docs/actions/workflows/publish-dev-docs.yml)
 [![pages-build-deployment](https://github.com/kadaster-labs/lock-unlock-docs/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/kadaster-labs/lock-unlock-docs/actions/workflows/pages/pages-build-deployment)
 
 This repo contains the documentation of the [Lock-Unlock
