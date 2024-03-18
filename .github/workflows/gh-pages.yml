@@ -8,6 +8,11 @@ jobs:
   build:
     name: Generate [version] docs
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [ 3.8 ]
+        ruby-version: [ 3.0 ]
+        node-version: [ 16.x ]
     steps:
       - name: Checkout main
         uses: actions/checkout@v2
@@ -19,6 +24,17 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+          architecture: x64      
+          cache: 'pip'          
+          cache-dependency-path: 'requirements.txt'
+            
+      - name: Install Python dependencies
+        run: python3 -m pip install -r ./requirements.txt
 
       - name: Extract branch name
         shell: bash
