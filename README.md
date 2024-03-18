@@ -1,6 +1,6 @@
 # Lock Unlock Docs
 
-[![Publish docs via GitHub Pages](https://github.com/kadaster-labs/lock-unlock-docs/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/kadaster-labs/lock-unlock-docs/actions/workflows/gh-pages.yml)
+[![Publish [dev] docs via GitHub Pages](https://github.com/kadaster-labs/lock-unlock-docs/actions/workflows/publish-dev-docs.yml/badge.svg)](https://github.com/kadaster-labs/lock-unlock-docs/actions/workflows/publish-dev-docs.yml)
 [![pages-build-deployment](https://github.com/kadaster-labs/lock-unlock-docs/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/kadaster-labs/lock-unlock-docs/actions/workflows/pages/pages-build-deployment)
 
 This repo contains the documentation of the [Lock-Unlock
@@ -28,6 +28,20 @@ Develop & serve on [localhost:8000](http://localhost:8000/):
 ```bash
 docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
 ```
+
+## Publish & Versioning
+
+The documentation of this repo is published on [GitHub Pages](https://pages.github.com/). It is set
+up to support multiple versions of the documentation seperately. It uses
+[mike](https://github.com/jimporter/mike) to do so, following the documetation of mkdocs: [Seting up
+versioning](https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/). This means:
+
+- the `main` branch is published under 'version' `dev`
+- every branch starting with `v` is published under the branch name; e.g. branch `v0.90` is
+  published as such
+- there is a workflow available to [set the default
+  version](https://github.com/kadaster-labs/lock-unlock-docs/actions/workflows/set-default.yml) to
+  show; this takes a manual input ( :warning: be sure to enter a matching name)
 
 ## License
 
