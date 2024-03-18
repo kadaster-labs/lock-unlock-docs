@@ -186,5 +186,5 @@ Met SPARQL API’s is het mogelijk om vrije queries (vragen) te stellen per data
 
 > _Zie ook de [glossary](../achtergrond/glossary.md) voor de verschillen tussen dataset, subset, database, graph en subgraph_
 
-In de volgende sectie worden enkele van de bestaande implementaties van autorisatie voor federatieve eindpunten besproken. Deze zijn niet exhaustive, maar geven een indicatie van de huidige benaderingen.
+In de volgende sectie worden enkele van de bestaande implementaties van autorisatie voor federatieve eindpunten besproken. Deze zijn niet uitputtend, maar geven een indicatie van de huidige benaderingen.
 

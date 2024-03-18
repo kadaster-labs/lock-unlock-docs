@@ -21,7 +21,7 @@ alle [afschermingspatronen](./afschermingspatronen.md).
 
 Deze technologische oplossing is geen oplossing voor autorisatie. Bij alleen query auditing kan de gebruiker namelijk alle data bevragen en worden slechts de queries met bijbehorende context (denk bijv. aan de gebruiker en meegegeven referentie naar doelbinding) opgeslagen. Vervolgens kan er achteraf handmatig of wellicht automatisch bepaald worden of er onrechtmatige vragen/queries zijn gesteld en of dat er onterecht toegang is verkregen tot gesloten gegevens. 
 
-Deze technologische oplossing wordt verder verkend in track 2 van het Lock-Unlock project. Hierbij willen we onder andere kijken naar de [GEMMA verwerkingenlogging](bestaande-implementaties.md#gemma-verwerkingenlogging).
+Deze oplossing raakt ook de [GEMMA verwerkingenlogging](bestaande-implementaties.md#gemma-verwerkingenlogging).
 
 | ![Query Auditing](images/query-auditing.png) |
 | :--: |
@@ -37,8 +37,7 @@ Deze technologische oplossing wordt verder verkend in track 2 van het Lock-Unloc
 **Uitdagingen voor Lock-Unlock**
 
 - Query Auditing is geen oplossing voor autorisatiecontroles.
-- Uitdagingen rondom het kunnen toepassen van de GEMMA verwerkingenlogging gaan we in track 2
-  beproeven.
+- Uitdagingen rondom het kunnen toepassen van de GEMMA verwerkingenlogging:
     - De standaard wordt doorontwikkeld wat onzekerheid geeft rondom de stabiliteit van de
       standaard.
     - Query logging is niet gestandaardiseerd en mogelijkheden in producten zijn nog onduidelijk.
