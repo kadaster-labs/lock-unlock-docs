@@ -6,17 +6,27 @@ on:
 
 jobs:
   build:
-    name: Deploy docs
+    name: Generate [version] docs
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          submodules: recursive
 
-      - name: Deploy docs
-        uses: mhausenblas/mkdocs-deploy-gh-pages@1.26
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # CUSTOM_DOMAIN: optionaldomain.com
-          # CONFIG_FILE: ./mkdocs.yml
-          EXTRA_PACKAGES: build-base
-          # GITHUB_DOMAIN: github.myenterprise.com
+      - name: Configure Git user
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+        
+      - name: Deploy with mike 🚀
+        run: |
+          cd mkdocs
+          # mike deploy --push ${{ steps.extract_branch.outputs.branch }}
+          mike delete --all
