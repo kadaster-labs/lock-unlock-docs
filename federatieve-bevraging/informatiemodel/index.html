@@ -1,0 +1,1742 @@
+
+<!doctype html>
+<html lang="nl" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kadaster-labs.github.io/lock-unlock-docs/federatieve-bevraging/informatiemodel/">
+      
+      
+        <link rel="prev" href="../informatiekundigekern/">
+      
+      
+        <link rel="next" href="../testopstelling/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
+    
+    
+      
+        <title>Informatiemodel - Lock-Unlock Documentatie</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.10ba22f1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/lock-unlock.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vereenvoudigd-conceptueel-model" class="md-skip">
+          Ga naar inhoud
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Lock-Unlock Documentatie" class="md-header__button md-logo" aria-label="Lock-Unlock Documentatie" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17a2 2 0 0 0 2-2 2 2 0 0 0-2-2 2 2 0 0 0-2 2 2 2 0 0 0 2 2m6-9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h1V6a5 5 0 0 1 5-5 5 5 0 0 1 5 5v2h1m-6-5a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lock-Unlock Documentatie
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Informatiemodel
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Zoeken" placeholder="Zoeken" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Zoeken">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Leegmaken" aria-label="Leegmaken" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Zoeken initialiseren
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/kadaster-labs/lock-unlock-docs" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigatie" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Lock-Unlock Documentatie" class="md-nav__button md-logo" aria-label="Lock-Unlock Documentatie" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17a2 2 0 0 0 2-2 2 2 0 0 0-2-2 2 2 0 0 0-2 2 2 2 0 0 0 2 2m6-9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h1V6a5 5 0 0 1 5-5 5 5 0 0 1 5 5v2h1m-6-5a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3Z"/></svg>
+
+    </a>
+    Lock-Unlock Documentatie
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/kadaster-labs/lock-unlock-docs" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inleiding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../samenvatting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Samenvatting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Federatieve Bevraging
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Federatieve Bevraging
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REST vs GraphQL vs SPARQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linkeddata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linked Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../informatiekundigekern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Informatiekundige Kern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Informatiemodel
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Informatiemodel
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vereenvoudigd-conceptueel-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vereenvoudigd Conceptueel Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#losstaande-schemas-per-silo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Losstaande Schema's per Silo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Losstaande Schema's per Silo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imx-geo-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      IMX-Geo Schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brk-gesloten-deel-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      BRK (Gesloten Deel) Schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nhr-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      NHR Schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brp-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      BRP Schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anbi-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      ANBI Schema
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samenhang-creeren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Samenhang Creëren
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Samenhang Creëren">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#owlsameas" class="md-nav__link">
+    <span class="md-ellipsis">
+      owl:sameAs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ikheeftubo" class="md-nav__link">
+    <span class="md-ellipsis">
+      ik:heeftUBO
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#het-informatiemodel-voor-lock-unlock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hét Informatiemodel voor Lock-Unlock
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testopstelling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testopstelling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../demonstrator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Demonstrator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conclusies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conclusies en aanbevelingen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../afscherming/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Afscherming
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Afscherming
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../afscherming/autorisatie/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inleiding Autorisatie
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../afscherming/afschermingspatronen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Afschermingspatronen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../afscherming/bestaande-implementaties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bestaande Implementaties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../afscherming/oplossingsrichtingen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Oplossingsrichtingen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../afscherming/onderzoeksvoorstel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Onderzoeksvoorstel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../autorisatie-als-linkeddata/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Autorisatie als Linked Data
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Autorisatie als Linked Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../autorisatie-als-linkeddata/concept/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../autorisatie-als-linkeddata/authorisation-ontology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autorisatie Ontologie
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../autorisatie-als-linkeddata/implementaties/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Implementaties
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Implementaties
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../autorisatie-als-linkeddata/implementaties/rewrite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rewrite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../autorisatie-als-linkeddata/implementaties/subgraph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Subgraph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../autorisatie-als-linkeddata/demonstrators/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Demonstrators
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Demonstrators
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../autorisatie-als-linkeddata/demonstrators/rewrite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rewrite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../autorisatie-als-linkeddata/demonstrators/subgraph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Subgraph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../autorisatie-als-linkeddata/evaluatie/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluatie
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conclusies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conclusies en aanbevelingen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opleveringen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Opleveringen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../achtergrond/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Achtergrond
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Achtergrond
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../achtergrond/glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../achtergrond/auth-alternatieven/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autorisatie ontologie alternatieven
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../achtergrond/verwerkingenlogging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Verwerkingenlogging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vereenvoudigd-conceptueel-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vereenvoudigd Conceptueel Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#losstaande-schemas-per-silo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Losstaande Schema's per Silo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Losstaande Schema's per Silo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imx-geo-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      IMX-Geo Schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brk-gesloten-deel-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      BRK (Gesloten Deel) Schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nhr-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      NHR Schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brp-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      BRP Schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anbi-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      ANBI Schema
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samenhang-creeren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Samenhang Creëren
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Samenhang Creëren">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#owlsameas" class="md-nav__link">
+    <span class="md-ellipsis">
+      owl:sameAs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ikheeftubo" class="md-nav__link">
+    <span class="md-ellipsis">
+      ik:heeftUBO
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#het-informatiemodel-voor-lock-unlock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hét Informatiemodel voor Lock-Unlock
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Informatiemodel</h1>
+
+<p>Versimpelde testdata van een federatief data stelsel is ontwikkeld op basis van Linked Data en de Linked Data gedachte. Hiermee is het mogelijk om een realistische situatie na te kunnen bootsen waarin informatie afgeschermd dient te worden. Aangezien het heel handig is om data in een context te plaatsen (denk aan data schema's) is er binnen dit project een set van schema's ontwikkeld die de registers nabootsen (versimpeld en fictief) en natuurlijk een bijbehorende dataset. Deze pagina beschrijft het maken van de schema's die relevant zijn voor dit project en de <a href="../testopstelling/">volgende sectie</a> beschrijft het maken van gerelateerde dataset. </p>
+<h3 id="vereenvoudigd-conceptueel-model">Vereenvoudigd Conceptueel Model</h3>
+<p>Om een federatieve bevraging te kunnen laten zien en om daarmee te kunnen onderzoeken, is een testopstelling nodig. De eerste stap in deze testopstelling is het maken van een conceptueel model om de benodigde gegevens voor ons doel te modelleren. Om een logische begin te maken, hebben we daarvoor gekozen voor een situatie 'dicht bij huis'. Bij het Kadaster: De Basisregistratie Kadaster, afgekort de <strong>BRK</strong>. </p>
+<p>Dit begint met het opnemen van percelen als object binnen een conceptueel model en vervolgens is het eigendom vastgesteld via <code>Tenaamstellingen</code> aan objecten personen. et personen worden <code>Rechtspersonen</code> bedoeld, wat een echt of 'natuurlijk' persoon kan zijn, maar ook een bedrijf. De juridische term is <code>Natuurlijk Persoon</code> voor echte mensen, welke geregistreerd zijn in de Basisregistratie Personen, afgekort met de <strong>BRP</strong>. Bedrijven zijn juridisch <code>Niet Natuurlijke Personen</code> en deze zijn geregistreerd in het Nationaal Handelsregister, afgekort met <strong>NHR</strong>. Om de casus nog wat breder te maken hebben we ook nog het <strong>ANBI</strong> register toegevoegd; het register van de Belastingdienst waarin goede doelen staan die aangemerkt zijn als Algemeen Nut Beogende Instellingen.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Vereenvoudigd concetpueel model" src="../images/vereenvoudigd-informatiemodel.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Informatie Model IMXGeo als Linked Data</em></td>
+</tr>
+</tbody>
+</table>
+<p>Het vereenvoudigd conceptueel model van bovenstaande tabel gebaseerde visualisatie is verder uitgewerkt in een Linked Data als een (upper)ontologie voor Lock-Unlock Informatiemodel gebaseerd op losstande schemas. Om de schemas en (upper)ontologie te modelleren is er gebruik gemaakt van de RDF/RDFS/OWL en SHACL standaarden. </p>
+<h3 id="losstaande-schemas-per-silo">Losstaande Schema's per Silo</h3>
+<p>Voor elke silo is een schema gemaakt. Het betreft hier een (over) versimpelde schema dat grofweg de kern van de register bevat met als doel R&amp;D voor de dit project te ondersteunen en tevens voor demonstratie mogelijkheden. De schema voor elke silo heeft een eigen namespace en is relatief onafhankelijk gemodelleerd. Zo is voor Kadaster de NEN3610 een belangrijke upperontologie terwijl dit wellicht voor de BRP niet zo hoeft te zijn. Op deze manier onstaat er een situatie dat elk register een eigen ontologie heeft op basis van eigen upperontologieën.</p>
+<h4 id="imx-geo-schema">IMX-Geo Schema</h4>
+<p>Een openbare basis dataset is IMX-Geo. Deze is aanwezig als Linked Data en bevat data van gebouwen en percelen liggende in registratieve ruimtes. Bijna alle gegevens zijn openbaar. De 'laatste koopsom' is wellicht een uitzondering hierop. Het deel van het informatiemodel dat nodig is voor Lock Unlock wordt gevisualiseerd in de volgende afbeelding en is <a href="https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=http%3A%2F%2Fmodellen.geostandaarden.nl%2Fdef%2Fimx-geo%23">hier</a> te vinden:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="linked registers" src="../images/schema-imx.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Informatie Model IMXGeo als Linked Data</em></td>
+</tr>
+</tbody>
+</table>
+<p>IMX-Geo is vanuit Kadaster beschikbaargesteld in Linked Data en is grofweg voor het 'Kadaster gedeelte' helemaal compleet aanwezig. Deze dataset is gebruikt in dit project.</p>
+<h4 id="brk-gesloten-deel-schema">BRK (Gesloten Deel) Schema</h4>
+<p>Een versimpeld model van de BRK is ontwikkeld in Linked data voor dit project. Hieronder is een screenshot van het model zichtbaar en is ook <a href="https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=https%3A%2F%2Fdata.labs.kadaster.nl%2Flock-unlock%2Fbrk%2Fdef%2F">hier te vinden</a>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="linked registers BRK" src="../images/schema-brk2.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>BRK Schema als Linked Data</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="nhr-schema">NHR Schema</h4>
+<p>Een versimpeld model van de NHR is gemaakt. Inschrijvingen bevatten wat basis gegevens en is gekoppeld aan de openbare Registratieve Ruimtes. Hieronder is een diagram van het NHR schema te zien en is <a href="https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=https%3A%2F%2Fdata.federatief.datastelsel.nl%2Flock-unlock%2Fnhr%2Fdef%2F">hier live te vinden</a>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="linked registers NHR" src="../images/schema-nhr2.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>NHR Schema als Linked Data</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="brp-schema">BRP Schema</h4>
+<p>Een versimpelde versie van het BRP register is gemodelleerd. Hieronder is een diagram van het BRP schema te zien en is <a href="https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=https%3A%2F%2Fdata.federatief.datastelsel.nl%2Flock-unlock%2Fbrp%2Fdef%2F">hier live te vinden</a>. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="linked registers" src="../images/schema-brp.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>BRP Schema als Linked Data</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="anbi-schema">ANBI Schema</h4>
+<p>Hieronder is een diagram van het ANBI schema te zien. Dit sluit niet precies op de ANBI informatie model zelf en is alleen voor dit project gemodelleerd. Een live versie van de schema is ook <a href="https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=https%3A%2F%2Fdata.federatief.datastelsel.nl%2Flock-unlock%2Fanbi%2Fdef%2F">hier te vinden</a>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="linked registers" src="../images/schema-anbi.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>BRP Schema als Linked Data</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="samenhang-creeren">Samenhang Creëren</h3>
+<p>De schemas en de data van de schemas zijn als silo's opgezet. Elk register publiceert zijn data en de bijbehorende context (schemas) op een eigen triplestore. </p>
+<blockquote>
+<p>NB: De bovenstaanden schemas wordt hier niet gedefinieerd als ontologieën omdat ze geen axioma's of geformaliseerde inferentie regels bevatten. Met de introductie van <code>owl:sameAs</code> vanaf nu, kunnen we nu inferentie doen en nu wordt het informatie model een ontologie. Dit komt omdat deze relatie aangeeft dat er enige conceptuele gelijkenis bestaat tussen individuen en dat informatie kan worden afgeleid op basis van de aanwezigheid van deze relaties. </p>
+</blockquote>
+<p>Om de verschillende schema's met elkaar te verbinden, wordt een upperontologie gedefinieerd die twee relaties omvat tussen klassen die in de schema's zijn gedefinieerd, <code>owl:sameAs</code> en een <code>ik:heeftUBO</code> relatie. In beide gevallen worden deze relaties gedefinieerd als onderdeel van een hogere ontologie en gematerialiseerd in de data zelf om instanties met elkaar te verbinden. </p>
+<h4 id="owlsameas"><code>owl:sameAs</code></h4>
+<p>Door middel van <code>owl:sameAs</code> relaties kunnen individuals in Linked Data gelijk verklaard worden over verschillende siloes heen.
+Oftewel een linked data resource (element) dat leeft in 1 register wordt gelijk verklaard aan een andere resource dat zich bevindt in een ander register (zie hieronder).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="linked registers" src="../images/relatiesV1.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Netwerk van schemas</em></td>
+</tr>
+</tbody>
+</table>
+<p>De bijbehorende inference is dat alle gegevens van de 2 gelijk gestelde resources gekopieerd mag worden. Stel individual 'A' is gelijk (owl:sameAs) aan individual 'B' dan kunnen alle relaties en kenmerken gekopieerd worden van 'A' naar 'B' en andersom. Hierdoor ontstaan netwerken van linked data over de registers heen en kan er daadwerkelijk "doorgebrowsed" worden van het ene register naar het andere. Ook Sparql queries kunnen hier makkelijk gebruik van maken om zoekopdrachten over meerdere registers te uit te voeren. Ook in onze test opstelling maken we gebruik van <code>owl:sameAs</code> om relaties te leggen naar andere registers zonder volledig afhankelijk te worden van deze registers. Dit is natuurlijk een manier om de relaties te leggen. Er zijn meerdere manieren op registerdata te koppelen via Linked Data.</p>
+<p><strong>Voorbeeld: BRK naar BRP en NHR</strong></p>
+<p>'Personen' uit de BRK kunnen gelijk verklaard worden met 'geregistreerde personen' uit de BRK of 'Inschrijvingen' uit de NHR (Zie diagram hieronder).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="linked registers" src="../images/schema-brk.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Relatie tussen BRK, BRP en NHR registers</em></td>
+</tr>
+</tbody>
+</table>
+<p>Een <code>owl:sameAs</code> relatie kan gelegd worden wanneer je weet dat deze 2 individuals ook daadwerkelijk gelijk zijn (refereert naar dezelfde persoon in de werkelijkheid). Vanuit Kadaster zal er waarschijnlijk akte informatie gebruikt worden zoals voornamen, achternaam, geboortedatum, geboortestad, etc om de juiste persoon in de BRP te vinden. De eigen adminstratie (BRK:Persoon) wordt dan gelijk verklaard met de gevonden (BRP:GeregistreerdPersoon). Ook voor relaties met de NHR werkt dit ongeveer hetzelfde. Akte informatie zal gebruikt worden om de juiste Inschrijving te vinden in de NHR om vervolgens weer de owl:sameAs relatie te leggen.</p>
+<p><strong>Voorbeeld: ANBI naar NHR</strong>
+De ANBI dataset kan direct gekoppeld worden aan NHR Inschrijvingen (zie diagram hieronder).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="linked registers" src="../images/schema-nhr-anbi.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Relatie tussen ANBI en NHR registers</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="ikheeftubo"><code>ik:heeftUBO</code></h4>
+<p>De <code>ik:heeftUBO</code> relatie is specifiek gedefinieerd om de relatie tussen individuen in de NHR en de BRP te ondersteunen. In dit geval was het niet voldoende om een <code>owl:sameAs</code> relatie in te voeren, omdat er geen gedeelde identifier (zoals een BSN-nummer) aanwezig was en er dus op basis van deze nieuwe relatie twee verschillende identificerende attributen aan elkaar gerelateerd moesten worden. In de context van dit project werden geen axioma's gedefinieerd, dus er is geen gevolgtrekking mogelijk op basis van de aanwezigheid van deze relatie, maar dit zou indien nodig in toekomstige iteraties van het model kunnen worden geïntroduceerd.</p>
+<p><strong>Voorbeeld: NHR naar BRP</strong></p>
+<p>Net zoals de BRK linkt naar personen in de BRP kan ook de NHR direct verbonden worden met BRP (Geregistreerde)Personen (zie diagram hieronder).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="linked registers" src="../images/schema-nhr-brp.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Relatie tussen NHR en BRP registers</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="het-informatiemodel-voor-lock-unlock">Hét Informatiemodel voor Lock-Unlock</h2>
+<p>Door de <code>owl:sameAs</code> relatie (en bijbehorende inferentie) en <code>ik:heeftUBO</code> relatie ontstaat er een netwerk van samenhangende schema's. Dit kan natuurlijk als 1 schema gepresenteerd worden. </p>
+<p>Hieronder een screenshot van de visualisatie direct uit de data van de schema's. Deze visualisatie is ook live te bekijken via <a href="https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema">deze link</a>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="linked registers" src="../images/InformatieModel.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Hèt Informatie Model voor Lock-Unlock</em></td>
+</tr>
+</tbody>
+</table>
+<p>In dit samengesteld model zijn verschillende kleuren gebruikt om de individuele silo's (weer) te onderscheiden.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Terug naar boven
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../informatiekundigekern/" class="md-footer__link md-footer__link--prev" aria-label="Vorige: Informatiekundige Kern">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Vorige
+              </span>
+              <div class="md-ellipsis">
+                Informatiekundige Kern
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../testopstelling/" class="md-footer__link md-footer__link--next" aria-label="Volgende: Testopstelling">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Volgende
+              </span>
+              <div class="md-ellipsis">
+                Testopstelling
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      
+    
+  </body>
+</html>
