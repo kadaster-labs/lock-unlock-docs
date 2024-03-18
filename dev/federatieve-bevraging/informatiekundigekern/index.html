@@ -1329,7 +1329,7 @@
 
   <h1>Informatiekundige Kern</h1>
 
-<p>Een kern principe bij de ontwikkeling van het federatief datastelsel is het concept van een informatiekundige kern. Deze informatiekundige kern ondersteunt het koppelen van eerder verspreide basisregistraties via een set vooraf gedefinieerde relaties (zie <a href="https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/stelsel-van-basisregistraties-toegankelijke-beschrijving/">Stelsel van Basisregistraties</a>). Dit hoofdstuk beschrijft wat ervoor nodig is om verschillende, onafhankelijke registers met elkaar te koppelen en en hoe dat binnen dit project concreet werd geïmplementeerd. Binnen dit project wordt uitgegaan van een federatief datastelsel op basis van Linked Data. </p>
+<p>Een kernprincipe bij de ontwikkeling van het federatief datastelsel is het concept van een informatiekundige kern. Deze informatiekundige kern ondersteunt het koppelen van eerder verspreide basisregistraties via een set vooraf gedefinieerde relaties (zie <a href="https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/stelsel-van-basisregistraties-toegankelijke-beschrijving/">Stelsel van Basisregistraties</a>). Dit hoofdstuk beschrijft wat ervoor nodig is om verschillende, onafhankelijke registers met elkaar te koppelen en en hoe dat binnen dit project concreet werd geïmplementeerd. Binnen dit project wordt uitgegaan van een federatief datastelsel op basis van Linked Data. </p>
 <h3 id="onafhankelijke-registers">Onafhankelijke Registers</h3>
 <p>De basisregistraties (e.g. BRK, BAG, BRP en NHR) zijn relatief onafhankelijk van elkaar ontwikkeld door verschillende organisaties, techniek en modellen. Zo beheert Kadaster bijvoorbeeld de BRK en de KvK het NHR. Ook de modellering en standardisatie van de gegevens kan verschillen. Zo zijn, bijvoorbeeld, de NEN3610 en Geonovum's IM-modellen de basis voor de datasets van Kadaster terwijl deze standaarden minder van belang zijn bij andere registers. Door de onafhankelijke ontwikkeling van registers ontstaan zogenaamde data silo’s. Abstract wordt deze situatie als volgt gevisualiseerd. </p>
 <table>
@@ -1340,7 +1340,7 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><em>Registraties als siloed databases</em></td>
+<td style="text-align: center;"><em>Registraties als losstaande silo's</em></td>
 </tr>
 </tbody>
 </table>
@@ -1363,7 +1363,7 @@
 </blockquote>
 <p>Door middel van een SPARQL endpoint kan er nu een federatieve query gemaakt worden die gegevens uit meerder endpoints raadpleegt. Om dit te kunnen doen, moet de gebruiker echter begrijpen waar de overlappingen bestaan tussen verschillende datasets, d.w.z. hoe de informatie die zich in deze zich bevindt moet worden verbonden om de informatie over verschillende endpoints te kunnen opvragen.</p>
 <h3 id="formele-verbinding-van-registers">Formele Verbinding van Registers</h3>
-<p>Om precies te weten wat de data betekent en waar evt een overlap te vinden is die in meerdere registers aanwezig is, kan de data verrijkt worden met een context. Elk data element (of stuk instantie data) kan gekoppeld worden aan een linked data klasse (bv. een <code>owl:Class</code>) die o.a beschrijvingen, labels (in meedere talen), en overige informatie kan bevatten. Door deze extra context is de data beter te begrijpen en makkelijker te bevragen door de gebruikers. </p>
+<p>Om precies te weten wat de data betekent en waar evt een overlap te vinden is die in meerdere registers aanwezig is, kan de data verrijkt worden met een context. Elk data element (of stuk instantie data) kan gekoppeld worden aan een linked data klasse (bv. een <code>owl:Class</code>) die o.a beschrijvingen, labels (in meerdere talen), en overige informatie kan bevatten. Door deze extra context is de data beter te begrijpen en makkelijker te bevragen door de gebruikers. </p>
 <table>
 <thead>
 <tr>
@@ -1399,7 +1399,7 @@ kern'</a>, definieert klassen en/of attributen die worden gedeeld tussen verschi
 </tr>
 </tbody>
 </table>
-<p>Een dergelijke upperontologie kan logisch worden gedefinieerd op basis geidentificeerde sleutelvelden maar om dit op een nuttige manier te kunnen implementeren voor gebruikers moeten de registers deze upperontology en de bijbehorende afspraken ook adopteren. Door in beide registers hetzelfde attribuut te gebruiken dat in de upperontologie is gedefinieerd, kunnen gebruikers van deze gegevens er zeker van zijn dat het BSN-nummer in beide registers op dezelfde manier wordt gebruikt en dat waar een identifier in het ene register overeenkomt met de identifier in een ander register waarnaar dit verwijst aan dezelfde persoon bij de BRP.</p>
+<p>Een dergelijke upperontologie kan logisch worden gedefinieerd op basis van geïdentificeerde sleutelvelden maar om dit op een nuttige manier te kunnen implementeren voor gebruikers moeten de registers deze upperontologie en de bijbehorende afspraken ook adopteren. Door in beide registers hetzelfde attribuut te gebruiken dat in de upperontologie is gedefinieerd, kunnen gebruikers van deze gegevens er zeker van zijn dat het BSN-nummer in beide registers op dezelfde manier wordt gebruikt. Wanneer een identifier in het ene register overeenkomt met een identifier in een ander register dan weet je zeker dat deze verwijst naar dezelfde persoon in de BRP.</p>
 <table>
 <thead>
 <tr>
@@ -1412,7 +1412,7 @@ kern'</a>, definieert klassen en/of attributen die worden gedeeld tussen verschi
 </tr>
 </tbody>
 </table>
-<p>Hiermee wordt het makkelijker om data uit 1 register te combineren met data uit een ander register. Bij het schrijven van een federatieve query kan dit BSN-nummer dus worden gebruikt om informatie over de percelen van een bepaalde persoon op te halen bij de BRK en de persoonsgegevens van deze persoon (bijvoorbeeld volledige naam, geboortedatum en huwelijksstatus) uit de BRP te halen. </p>
+<p>Hiermee wordt het makkelijker om data uit één register te combineren met data uit een ander register. Bij het schrijven van een federatieve query kan dit BSN-nummer dus worden gebruikt om informatie over de percelen van een bepaalde persoon op te halen bij de BRK en de persoonsgegevens van deze persoon (bijvoorbeeld volledige naam, geboortedatum en huwelijksstatus) uit de BRP te halen. </p>
 <h4 id="optie-2-gematerialiseerde-relaties">Optie 2: Gematerialiseerde Relaties</h4>
 <p>Hoewel deze mogelijkheid er is door het uitvogelen van relaties tussen sleutelvelden uit de upperontologie zou het ook mogelijk zijn om extra relaties te kunnen afleiden en deze 'materialiseren'. Oftewel extra relaties kunnen (evt virtueel) toegevoegd worden. Deze materialisatie van relaties wordt niet gedefinieerd door de upperontologie maar tussen de instancegegevens in de registers zelf.</p>
 <table>
@@ -1432,7 +1432,7 @@ kern'</a>, definieert klassen en/of attributen die worden gedeeld tussen verschi
 <p>De aanwezigheid van directe relaties tussen de registers maakt het nog makkelijker om federatieve bevragingen te doen.  Integrale bevragingen zijn hierbij mogelijk maar ook bevragingen mbt consistentie zijn hierbij zeer makkelijk. Denk bijvoorbeeld aan de vraag welke BAG-Panden zijn onbekend bij Kadaster vanuit de NHR, Of vanuit de BRK, welke BRP personen zijn (on)bekend bij de BRP. Het schrijven van een dergelijke query is zeer eenvoudig. De uitvoering ervan zal natuurlijk qua performance wel het nodige vereisen. Linked data technologieën maken de introductie van deze directe relaties tussen instantiegegevens eenvoudig en illustreren een duidelijk voordeel van het gebruik van deze technologie ter ondersteuning van federatieve bevragingen.</p>
 <h3 id="ontwerp-van-de-informatiekundige-kern">Ontwerp van de Informatiekundige Kern</h3>
 <p>Het ontwerp van de informatiekundige kern zou zowel de introductie van een upperontologie moeten omvatten als de introductie van gematerialiseerde relaties tussen basisregistraties waar logische relaties bestaan. Er moeten afspraken worden gemaakt tussen de beheerders van de basisregistraties bij het ontwerpen van een dergelijke hogere ontologie en bij het onderhouden van eventuele gematerialiseerde relaties tussen de basisregistraties. Door ervoor te zorgen dat deze afspraken worden nageleefd, kan de gebruikerstoegankelijkheid en herbruikbaarheid van de basisregistraties als datastelsel worden gewaarborgd.</p>
-<p>In de volgende secties worden de ingrediënten geïntroduceerd voor de testopstelling die is gedefinieerd binnen het Lock Unlock-project. Hierbij een kleiner, fictief systeem van basisregistraties wordt gecreëerd, een upperontologie wordt gedefinieerd en federatieve bevragingen worden ondersteund. In de volgende sectie worden de ontwerpkeuzes besproken die zijn gemaakt bij het definiëren van zoon upperontologie.</p>
+<p>In de volgende secties worden de ingrediënten geïntroduceerd voor de testopstelling die is gedefinieerd binnen het Lock Unlock-project. Hierbij wordt een kleiner, fictief systeem van basisregistraties  gecreëerd, een upperontologie wordt gedefinieerd en federatieve bevragingen worden ondersteund. In de volgende sectie worden de ontwerpkeuzes besproken die zijn gemaakt bij het definiëren van zo een upperontologie.</p>
 
 
 
