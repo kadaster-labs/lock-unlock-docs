@@ -27,6 +27,5 @@ jobs:
         
       - name: Deploy with mike 🚀
         run: |
-          cd mkdocs
           # mike deploy --push ${{ steps.extract_branch.outputs.branch }}
           mike delete --all
