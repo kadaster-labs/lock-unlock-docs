@@ -6,7 +6,6 @@ on:
       version:
         type: string
         description: Which version to set default?
-      message:
         required: true
 
 jobs:
