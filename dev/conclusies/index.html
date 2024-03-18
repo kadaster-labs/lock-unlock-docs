@@ -1,0 +1,1619 @@
+
+<!doctype html>
+<html lang="nl" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kadaster-labs.github.io/lock-unlock-docs/dev/conclusies/">
+      
+      
+        <link rel="prev" href="../autorisatie-als-linkeddata/evaluatie/">
+      
+      
+        <link rel="next" href="../opleveringen/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
+    
+    
+      
+        <title>Conclusies en aanbevelingen - Lock-Unlock Documentatie</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.10ba22f1.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/lock-unlock.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#conclusies" class="md-skip">
+          Ga naar inhoud
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Lock-Unlock Documentatie" class="md-header__button md-logo" aria-label="Lock-Unlock Documentatie" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17a2 2 0 0 0 2-2 2 2 0 0 0-2-2 2 2 0 0 0-2 2 2 2 0 0 0 2 2m6-9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h1V6a5 5 0 0 1 5-5 5 5 0 0 1 5 5v2h1m-6-5a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lock-Unlock Documentatie
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Conclusies en aanbevelingen
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/kadaster-labs/lock-unlock-docs" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigatie" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Lock-Unlock Documentatie" class="md-nav__button md-logo" aria-label="Lock-Unlock Documentatie" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17a2 2 0 0 0 2-2 2 2 0 0 0-2-2 2 2 0 0 0-2 2 2 2 0 0 0 2 2m6-9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h1V6a5 5 0 0 1 5-5 5 5 0 0 1 5 5v2h1m-6-5a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3Z"/></svg>
+
+    </a>
+    Lock-Unlock Documentatie
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/kadaster-labs/lock-unlock-docs" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inleiding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../samenvatting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Samenvatting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../federatieve-bevraging/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Federatieve Bevraging
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Federatieve Bevraging
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../federatieve-bevraging/apis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REST vs GraphQL vs SPARQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../federatieve-bevraging/linkeddata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linked Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../federatieve-bevraging/informatiekundigekern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Informatiekundige Kern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../federatieve-bevraging/informatiemodel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Informatiemodel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../federatieve-bevraging/testopstelling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testopstelling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../federatieve-bevraging/demonstrator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Demonstrator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../federatieve-bevraging/conclusies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conclusies en aanbevelingen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../afscherming/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Afscherming
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Afscherming
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../afscherming/autorisatie/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inleiding Autorisatie
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../afscherming/afschermingspatronen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Afschermingspatronen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../afscherming/bestaande-implementaties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bestaande Implementaties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../afscherming/oplossingsrichtingen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Oplossingsrichtingen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../afscherming/onderzoeksvoorstel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Onderzoeksvoorstel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../autorisatie-als-linkeddata/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Autorisatie als Linked Data
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Autorisatie als Linked Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autorisatie-als-linkeddata/concept/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autorisatie-als-linkeddata/authorisation-ontology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autorisatie Ontologie
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../autorisatie-als-linkeddata/implementaties/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Implementaties
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Implementaties
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autorisatie-als-linkeddata/implementaties/rewrite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rewrite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autorisatie-als-linkeddata/implementaties/subgraph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Subgraph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../autorisatie-als-linkeddata/demonstrators/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Demonstrators
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Demonstrators
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autorisatie-als-linkeddata/demonstrators/rewrite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rewrite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autorisatie-als-linkeddata/demonstrators/subgraph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Subgraph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autorisatie-als-linkeddata/evaluatie/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluatie
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Conclusies en aanbevelingen
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Conclusies en aanbevelingen
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conclusies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conclusies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#federatieve-bevraging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Federatieve bevraging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autorisatie-als-linked-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autorisatie als Linked Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusies-van-beproevingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusies van beproevingen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aanbevelingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aanbevelingen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disclaimer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disclaimer
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../opleveringen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Opleveringen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../achtergrond/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Achtergrond
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Achtergrond
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../achtergrond/glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../achtergrond/auth-alternatieven/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autorisatie ontologie alternatieven
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../achtergrond/verwerkingenlogging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Verwerkingenlogging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conclusies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conclusies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#federatieve-bevraging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Federatieve bevraging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autorisatie-als-linked-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autorisatie als Linked Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusies-van-beproevingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusies van beproevingen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aanbevelingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aanbevelingen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disclaimer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disclaimer
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Conclusies en aanbevelingen</h1>
+
+<blockquote>
+<p>// TODO anchors &amp; (hover) links toevoegen</p>
+</blockquote>
+<p>Lock-Unlock richt zich op <a href="../federatieve-bevraging/linkeddata/">Linked Data</a>, voortbouwend op de
+<a href="https://labs.kadaster.nl/cases/integralegebruiksoplossing" target="_blank">Integrale
+Gebruiksoplossing (IGO)</a> en de <a href="https://labs.kadaster.nl/thema/Knowledge_graph"
+target="_blank">Kadaster Knowledge Graph (KKG)</a> ontwikkeld door het Kadaster. Er zijn weinig
+gestandaardiseerde mogelijkheden voor autorisatie van data in het Linked Data domein. Dit project is
+een verkenning om de (on)mogelijkheden te onderzoeken en te testen.</p>
+<h2 id="conclusies">Conclusies</h2>
+<p>Hoewel het doel van dit project vooral lag op <a href="../autorisatie-als-linkeddata/">autorisatie als Linked
+Data</a>, is een deel van de aandacht ook gegaan naar
+<a href="../federatieve-bevraging/">federatieve bevraging</a>. Dat schetst namelijk de context waarin
+<a href="../afscherming/">afscherming</a> zou moeten plaatsvinden. Uiteraard hebben we ook beproefd in
+hoeverre autorisatie als Linked Data mogelijk en haalbaar is. Hierover hebben we apart een
+<a href="../autorisatie-als-linkeddata/evaluatie/">evaluatie</a> geschreven. De conclusies volgen hier:</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> Zie ook <a href="#disclaimer">disclaimer</a>.</p>
+<h3 id="federatieve-bevraging">Federatieve bevraging</h3>
+<p><strong>Linked Data maakt federatieve bevraging gemakkelijk</strong></p>
+<p>Een federatieve bevraging is op meerdere manier mogelijk. Een omgeving met REST API's biedt ook wel
+de mogelijkheid voor federatieve bevragingen, maar dit legt een grote beheerlast bij de 'vrager'. Met GraphQL zijn daar stappen in gemaakt, maar daarin is nog steeds behoefte aan gateway oplossingen.</p>
+<p>Linked Data is <em>ontworpen</em> met federatie in de basis. Vanuit het ontwerp is federatieve bevraging
+daarom al beschikbaar. In de Linked Data Query Language, SPARQL, is dit gespecificeerd met de
+<code>service</code> clause.</p>
+<p><strong>Performance van federatieve bevraging varieert</strong></p>
+<p>Dat federatieve bevraging standaard in de Query Language zit en in de basis van Linked Data wil dat
+niet zeggen dat er geen 'problemen' zijn. In concept is het al ingewikkeld om een generieke
+werkwijze te bedenken die een query snel uitvoert. Daar is vrijwel altijd een analyse van de query voor benodigd om uit te werken wat de snelste manier is om de vraag (query) te beantwoorden. Deze
+analyse en uitwerking naar snelle uitvoering van federatieve vragen, is niet gestandaardiseerd in
+SPARQL of Linked Data. In de verschillende implementaties van triplestores zijn hier grote verschillen. In dit project is er gebruik gemaakt van een open-source triplestore waarbij query performance achterloopt t.o.v. de commerciele toppers.</p>
+<p>Er zijn wel ontwikkelingen rondom federatieve bevraging in het Linked Data domein. Zie ook
+aanbeveling <a href="#aanbevelingen">Meer onderzoek naar performance federatieve bevragingen</a></p>
+<p><strong>Duurzame koppeling van silo's vraagt om een expliciet ontwerp</strong></p>
+<p>Om duurzaam over silo's van data heen goed te kunnen navigeren en federatieve bevragingen te kunnen doen,
+dienen de schema's én de data goed gekoppeld te zijn. Ook voor Linked Data. Wel biedt Linked Data
+hier verschillende mogelijkheden voor. Zo is het mogelijk om een <em>upper ontology</em> voor de registers af
+te spreken. Door adoptie van de upper ontologie kunnen relaties tussen de informatie modellen maar ook relaties tussen de datasets toe gevoegd worden. </p>
+<p>Zie ook <a href="../federatieve-bevraging/informatiekundigekern/">informatiekundige kern</a>.</p>
+<h3 id="autorisatie-als-linked-data">Autorisatie als Linked Data</h3>
+<p><strong>Afschermen van Linked Data is mogelijk</strong></p>
+<p>Het is mogelijk om fijnmazig autorisatieregels declaratief te modelleren op basis van een
+autorisatie ontologie voor federatieve bevragingen op basis van Linked Data. We hebben dit aan
+kunnen tonen in onze <a href="../autorisatie-als-linkeddata/demonstrators/">demonstrators</a>, waarin we
+een eerste toepassing van een door ons ontwikkelde autorisatie ontologie hebben uitgewerkt.</p>
+<p><strong>Declaratieve autorisatieregels als Linked Data</strong></p>
+<p>Met <em>autorisatieregels</em> doelen we op toegangsregels die gelden voor een specifieke situatie. Voor
+een bepaalde gebruikersgroep wordt toegang verleend voor een specifiek data-schema, een specifieke
+ontologie. De regels die gelden kunnen zeer fijnmazig zijn en de verschillende
+<a href="../afscherming/afschermingspatronen/">afschermingspatronen</a> bevatten. We hebben in onze
+demonstrators aangetoond dat <a href="../afscherming/afschermingspatronen/#subset">verticale en horizontale
+subsets</a> mogelijk zijn. De
+<a href="../afscherming/afschermingspatronen/#richting">richting</a> is moeilijker en zijn we onvoldoende aan
+toegekomen om te kunnen zeggen dat dat echt werkt. Is het mogelijk? Wij denken van wel.</p>
+<p>De autorisatieregels zijn <em>declaratief</em>. Dat betekent dat de gewenste toegang of juist afscherming
+gespecificeerd kan worden. Onderliggende uitvoering en zelfs uitwerking wordt overgelaten een de
+'engine' die zorgdraagt voor de afscherming.</p>
+<p>Dit houdt ook in dat autorisatieregels data is <code>#data-gedreven</code>. Dit betekent:</p>
+<ul>
+<li>dat de autorisatieregels kunnen worden bevraagd (wie heeft toegang tot wat en eventueel zelfs
+  waarom (niet)). Wellicht is het mogelijk om te verwijzen t/m de wettelijke grondslag?</li>
+<li>dat de autorisatieregels kunnen worden opgesteld en gedefinieerd onafhankelijk van de software
+  (engine) waarin de regels worden afgedwongen</li>
+<li>dat de autorisatieregels als <em>knowledge graph</em> toegankelijk zijn</li>
+</ul>
+<p><strong>Autorisatie ontologie voor standaardisatie</strong></p>
+<p>De autorisatieregels kunnen worden gestandaardiseerd in een <em>autorisatie ontologie</em>. Dat betekent
+dat een software implementatie van deze ontologie als engine gebruikt kan worden om de data van de
+autorisatieregels uit te voeren. Doordat een ontologie programeertaal onafhankelijk is, kunnen er
+meerdere implementaties gemaakt worden voor de autorisatie ontologie.</p>
+<p><strong>Declaratieve autorisatieregels gekoppeld aan bestaande ontologieën</strong></p>
+<p>Het is mogelijk om in de declaratie van de autorisatieregels volgens de autorisatie ontologie, een
+relatie te maken naar al bestaande ontologieën. Dat wil zeggen dat de toegang (of juist ontzegging
+daarvan) gedeclareerd kan worden volgens de autorisatie ontologie en daarbij kan gedeclareerd worden
+<em>over welke</em> andere ontologie die regels gelden. In ons voorbeeld zijn dat de registratie
+ontologieën van de BRK, BRP en NHR. De autorisatieregels zijn daarmee direct gekoppeld aan de
+schema-elementen van deze register ontologieën.</p>
+<p>Deze vorm biedt inzicht in wie waar toegang toe heeft of juist niet. Daarmee biedt het mogelijkheden
+tot verificatie van de autorisaties (eventueel aan andere partijen, zoals een toezichtshouder).</p>
+<h3 id="conclusies-van-beproevingen">Conclusies van beproevingen</h3>
+<ul>
+<li>
+<p>het is mogelijk om gebruik te maken van de data om autorisatieregels op te stellen. Zo kan er
+  bijvoorbeeld toegangsregels opgesteld worden voor een bepaalde gemeente. De daadwerkelijke
+  gemeente wordt uit de dataset opgehaald.</p>
+</li>
+<li>
+<p>De ge-identificeerde afschermings patronen zijn generiek en bieden veel mogelijkheden tot
+  afscherming via configuratie van deze patronen</p>
+</li>
+<li>
+<p>De PoC implementaties laten zien dat veel autorisatie patronen makkelijk implementeerbaar en
+  haalbaar zijn. Deze implementaties zijn niet bruikbaar voor productie en evt problemen mbt
+  veiligheid en schaalbaarheid zijn niet onderzocht. Zie ook <a href="#disclaimer">disclaimer</a>.</p>
+</li>
+<li>
+<p>Fictieve data van gekoppelde registers in Linked Data is makkelijk te realiseren. </p>
+</li>
+<li>
+<p>Rewritten queries uit de <a href="../autorisatie-als-linkeddata/implementaties/rewrite/">implementatie
+  rewrite</a> zijn complexer dan de orginele
+  queries. Dat geeft extra belasting bij de uitvoering van de query. Daarom zijn optimale
+  queryplannen noodzakelijk zijn om prestatie (performance) redenenen. Alleen triplestore met goede
+  optimalisatie van queryplannen kunnen deze queries performant uitvoeren.</p>
+</li>
+<li>
+<p>Het afschermen van gegevens zo dicht mogelijk bij de triplestore biedt grotere zekerheid dan
+  afscherming van gegevens door applicaties</p>
+</li>
+<li>
+<p>Bewijs dat de queries 'waterdicht' zijn is niet aanwezig in dit project noch was dit de
+  doelstelling van de PoC implementaties. Zie ook aanbeveling <a href="#volledigheid-en-effectiviteit-meetbaar-maken">Volledigheid en effectiviteit
+  meetbaar maken</a></p>
+</li>
+</ul>
+<h2 id="aanbevelingen">Aanbevelingen</h2>
+<p><strong>Meer onderzoek naar performance federatieve bevragingen</strong></p>
+<p>Verdere R&amp;D prestatie (verbeteringen) federatieve queries zoals technieken zoals FedX en HDT files en verschil in
+verwerking door verschillende triplestores.</p>
+<p><strong>Informatiekundige kern</strong></p>
+<p>Relaties tussen registers en silo's zijn geen eenvoudig probleem. Daar zijn oplossingen voor nodig.
+Een oplossing die Linked Data kan bieden is een <em>upper ontology</em>. Daarmee zouden relaties
+gestandaardiseerd en geformaliseerd kunnen worden. Daarna zouden (gelijke) functionele zaken
+gestandardiseerd kunnen worden. Denk aan "ID"'s en versie beheer en meta-data van registers in Linked Data.</p>
+<p><strong>Linked Data adoptie vergroten</strong></p>
+<p>Linked Data biedt veel mogelijkheden voor federatieve bevragingen, expliciete verplichting voor
+semantiek, informatiemodellen en begrippen. En met de autorisatie ontologie komt ook afscherming in
+de mogelijkheden van Linked Data. Het succes en toepassen van deze technieken staat of valt echter
+met de adoptiegraad van Linked Data in het algemeen. Het vergroten van deze adoptie is daarom van
+belang. Hierbij Kun je vragen stellen zoals wat is het minimum noodzakelijke voor een registerhouder om data als Linked data te publiceren. Wat is de minimale infrastructuur hiervoor en hoe kan er snel en robuust Linked Data gecreeerd worden. </p>
+<p><strong>Autorisatie ontologie verder uitwerken</strong></p>
+<p>De <a href="../opleveringen/#authorisation-ontology">Authorisation Ontology</a> waar in dit project in eerste
+opzet van is gedaan, dient verder te worden uitgewerkt. Het mooiste zou zijn als deze tot een
+standaard wordt verheven natuurlijk. Dat betekent ook dat vendors van triple stores deze standaard
+kunnen implementeren zodat het écht gaat werken. Federatief!</p>
+<p>Het is daarin van belang dat ook
+<a href="../achtergrond/auth-alternatieven/">alternatieven</a> goed geanalyseerd en overwogen
+worden. In dit onderzoek hebben we daar wel kennis van genomen, maar zijn we te weinig toegekomen
+aan een 'in depth' vergelijking.</p>
+<p>Voor de ontwikkeling zou een W3C Working Group uiteraard een mooi middel zijn!</p>
+<p><strong>Beperking van richting uitwerken</strong></p>
+<p>In dit project hebben we uitgewerkt en beproefd hoe <a href="../afscherming/afschermingspatronen/#subset">verticale en horizontale
+subsets</a> afgeschermd of juist onsloten kunnen worden.
+We hebben geen aandacht kunnen besteden aan het beperken van de
+<a href="../afscherming/afschermingspatronen/#richting">richting</a>. Hier dient extra (vervolg)onderzoek op
+gedaan te worden.</p>
+<p><strong>Volledigheid en effectiviteit meetbaar maken</strong></p>
+<p>In dit onderzoek is aangetoond dat het mogelijk is om mbv een autorisatie ontologie een 'secured
+SPARQL endpoint' te ontwikkelen (twee zelfs! <img alt="😁" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f601.svg" title=":grin:" />). We hebben echter niet aangetoond dat dit
+volledig waterdichte toegangscontrole biedt. Sterker nog, we zijn niet eens toegekomen aan de
+<a href="../afscherming/afschermingspatronen/#richting">richting</a> beperken.</p>
+<p>Om (later) aan te tonen dat de autorisatie ontologie volledig is en effectief wordt toegepast voor
+een 'secured SPARQL endpoint' is het noodzakelijk om een betrouwbare en herhaalbare meetmethode te
+hebben. Hierin zullen de verschillende <a href="../afscherming/afschermingspatronen/">afschermingspatronen</a>
+opgenomen moeten zijn en allerlei variaties en combinaties hierin.</p>
+<p><strong>Opvolging organiseren tbv volledigheid en effectiviteit</strong></p>
+<p>Verdere R&amp;D bewijsvoering dat de implementatie waterdicht is. Eventueel in samenwerking met
+academici voor wetenschappelijk fundament.</p>
+<p><strong>Meer onderzoek naar performance van de afscherming</strong></p>
+<p>Naast de performance van Linked Data oplossing in het geheel, stelt de afscherming nieuwe en extra
+complexiteit verhogende eisen en karakteristieken. Het verdient meer onderzoek naar de performance
+van specifiek dit onderdeel.</p>
+<p><strong>Implementatie doorontwikkelen</strong></p>
+<p>Een eerste aanzet en prototyping rondom
+<a href="../autorisatie-als-linkeddata/implementaties/">implementaties</a> is gedaan, maar verdient meer
+opvolging. Hierbij kan gedacht worden aan vervolgonderzoeken in samenwerking met vendors van
+triplestores en/of academici.</p>
+<h2 id="disclaimer">Disclaimer</h2>
+<p>Dit project is een onderzoeksproject. De <a href="../opleveringen/">opleveringen</a> die ontstaan zijn, zijn
+van het niveau Research &amp; Development. Goed ter inspiratie en vervolgonderzoek zeer geschikt. Voor
+productie ... ongeschikt! <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /></p>
+<ul>
+<li>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> <a href="../afscherming/autorisatie/#subject">Authenticatie</a> is uitgesloten van dit project en
+  als gegeven beschouwd. Hier is echter ook nog veel in te kiezen en te onderzoeken!</p>
+</li>
+<li>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> De <a href="../opleveringen/#autorisatie-ontologie">autorisatie ontologie</a> die opgeleverd is in
+  dit project, is slechts een eerste prototype en voorbeeld! Dit is uitsluitend voor Research &amp;
+  Development doeleinden. Zie ook aanbeveling <a href="#autorisatie-ontologie-verder-uitwerken">autorisatie ontologie verder
+  uitwerken</a></p>
+</li>
+<li>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> De <a href="../autorisatie-als-linkeddata/implementaties/">implementaties</a> zijn nog niet
+  bruikbaar voor productie en eventuele problemen mbt veiligheid en schaalbaarheid zijn niet
+  onderzocht</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Terug naar boven
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../autorisatie-als-linkeddata/evaluatie/" class="md-footer__link md-footer__link--prev" aria-label="Vorige: Evaluatie">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Vorige
+              </span>
+              <div class="md-ellipsis">
+                Evaluatie
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../opleveringen/" class="md-footer__link md-footer__link--next" aria-label="Volgende: Opleveringen">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Volgende
+              </span>
+              <div class="md-ellipsis">
+                Opleveringen
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.bd41221c.min.js"></script>
+      
+    
+  </body>
+</html>

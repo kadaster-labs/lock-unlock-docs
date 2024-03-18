@@ -1,0 +1,1645 @@
+
+<!doctype html>
+<html lang="nl" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kadaster-labs.github.io/lock-unlock-docs/dev/achtergrond/glossary/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../auth-alternatieven/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
+    
+    
+      
+        <title>Glossary - Lock-Unlock Documentatie</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.10ba22f1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/lock-unlock.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#authenticatie" class="md-skip">
+          Ga naar inhoud
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Lock-Unlock Documentatie" class="md-header__button md-logo" aria-label="Lock-Unlock Documentatie" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17a2 2 0 0 0 2-2 2 2 0 0 0-2-2 2 2 0 0 0-2 2 2 2 0 0 0 2 2m6-9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h1V6a5 5 0 0 1 5-5 5 5 0 0 1 5 5v2h1m-6-5a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lock-Unlock Documentatie
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Glossary
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/kadaster-labs/lock-unlock-docs" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigatie" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Lock-Unlock Documentatie" class="md-nav__button md-logo" aria-label="Lock-Unlock Documentatie" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17a2 2 0 0 0 2-2 2 2 0 0 0-2-2 2 2 0 0 0-2 2 2 2 0 0 0 2 2m6-9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h1V6a5 5 0 0 1 5-5 5 5 0 0 1 5 5v2h1m-6-5a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3Z"/></svg>
+
+    </a>
+    Lock-Unlock Documentatie
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/kadaster-labs/lock-unlock-docs" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inleiding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../samenvatting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Samenvatting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../federatieve-bevraging/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Federatieve Bevraging
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Federatieve Bevraging
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../federatieve-bevraging/apis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REST vs GraphQL vs SPARQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../federatieve-bevraging/linkeddata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linked Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../federatieve-bevraging/informatiekundigekern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Informatiekundige Kern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../federatieve-bevraging/informatiemodel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Informatiemodel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../federatieve-bevraging/testopstelling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testopstelling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../federatieve-bevraging/demonstrator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Demonstrator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../federatieve-bevraging/conclusies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conclusies en aanbevelingen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../afscherming/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Afscherming
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Afscherming
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../afscherming/autorisatie/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inleiding Autorisatie
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../afscherming/afschermingspatronen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Afschermingspatronen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../afscherming/bestaande-implementaties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bestaande Implementaties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../afscherming/oplossingsrichtingen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Oplossingsrichtingen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../afscherming/onderzoeksvoorstel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Onderzoeksvoorstel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../autorisatie-als-linkeddata/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Autorisatie als Linked Data
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Autorisatie als Linked Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../autorisatie-als-linkeddata/concept/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../autorisatie-als-linkeddata/authorisation-ontology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autorisatie Ontologie
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../autorisatie-als-linkeddata/implementaties/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Implementaties
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Implementaties
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../autorisatie-als-linkeddata/implementaties/rewrite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rewrite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../autorisatie-als-linkeddata/implementaties/subgraph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Subgraph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../autorisatie-als-linkeddata/demonstrators/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Demonstrators
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Demonstrators
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../autorisatie-als-linkeddata/demonstrators/rewrite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rewrite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../autorisatie-als-linkeddata/demonstrators/subgraph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Subgraph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../autorisatie-als-linkeddata/evaluatie/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluatie
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conclusies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conclusies en aanbevelingen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opleveringen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Opleveringen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Achtergrond
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Achtergrond
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authenticatie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authenticatie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autorisatie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autorisatie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dataset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linked Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-policy-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open Policy Agent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#owl" class="md-nav__link">
+    <span class="md-ellipsis">
+      OWL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privacy-enhancing-technologies-pets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privacy Enhancing Technologies (PETs)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDF
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shacl" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHACL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sparql" class="md-nav__link">
+    <span class="md-ellipsis">
+      SPARQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sparql-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      SPARQL Endpoint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triplestore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Triplestore
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uniform-resource-identifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uniform Resource Identifier
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auth-alternatieven/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autorisatie ontologie alternatieven
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verwerkingenlogging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Verwerkingenlogging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authenticatie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authenticatie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autorisatie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autorisatie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dataset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linked Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-policy-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open Policy Agent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#owl" class="md-nav__link">
+    <span class="md-ellipsis">
+      OWL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privacy-enhancing-technologies-pets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privacy Enhancing Technologies (PETs)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDF
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shacl" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHACL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sparql" class="md-nav__link">
+    <span class="md-ellipsis">
+      SPARQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sparql-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      SPARQL Endpoint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triplestore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Triplestore
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uniform-resource-identifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uniform Resource Identifier
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Glossary</h1>
+
+<h3 id="authenticatie">Authenticatie</h3>
+<p>Om de gebruiker te herkennen is een authenticatie proces nodig. In dit project is de gehele
+authenticatie overgeslagen en dus buiten scope. </p>
+<h3 id="autorisatie">Autorisatie</h3>
+<p>Autorisatie is het proces waarbij een gebruiker rechten (of privileges) verkrijgt. In dit project is
+er afgeschermde data. Per gebruiker of rol kan de afscherming verschillen. Oftewel per rol of
+gebruiker zijn de privileges tot data verschillend.</p>
+<h3 id="dataset">Dataset</h3>
+<p>Een collectie van bij elkaar horende gegevens. Dat kan bestaan uit een enkele tabel, maar ook uit
+een verzameling tabellen uit een database.</p>
+<p>Als een deel van een dataset geduid wordt, dan wordt vaak gesproken over een <strong>subset</strong>.</p>
+<p>Dit is vooral jargon wanneer over databases gesproken wordt. In geval van <a href="#linked-data">Linked
+Data</a> wordt er meer gesproken over een <a href="#graph">graph</a> of subgraph.</p>
+<h3 id="graph">Graph</h3>
+<p>In geval van <a href="#linked-data">Linked Data</a> wordt data gezien als nodes met relaties. Het totaal aan
+nodes en relaties vormen samen een graaf of graph (Engels). In de techniek wordt vooral de Engels
+notatie gebruikt.</p>
+<p>Je zou kunnen stellen dat een collectie van data voor een bepaalde context bij elkaar horend één
+graph vormen. Dit lijkt op zoals er over <a href="#dataset">dataset</a>s gesproken wordt. En vergelijkbaar met
+een deel van een dataset, kan ook een deel van een graph aangeduid worden met <strong>subgraph</strong>.</p>
+<p>Dit is vooral jargon wanneer de data <a href="#linked-data">Linked Data</a> betreft. In geval van meer
+traditionele vormen als REST API's en databases wordt over <a href="#dataset">dataset</a>s gesproken.</p>
+<h3 id="linked-data">Linked Data</h3>
+<p>Linked data is manier om data te structureren en te verbinden over het web en maakt gebruik van
+stanfaarden zoals URI's, RDF en ontologieen gedefinieerd in <a href="#rdf">RDF</a> zoals RDFS, <a href="#owl">OWL</a> en
+<a href="#shacl">SHACL</a>. </p>
+<h3 id="open-policy-agent">Open Policy Agent</h3>
+<p>Open Policy Agent (OPA) is een open-source beleidsmotor voor toegangscontrole en beleidsautomatisering in softwaretoepassingen. Het maakt gebruik van de beleidstaal genaamd Rego om beleidsregels te definiëren en uit te voeren. Rego is ontworpen om leesbare en krachtige beleidsregels te maken. OPA integreert met verschillende services en applicaties en kan complexe beveiligings- en autorisatievereisten implementeren door Rego-beleidsregels te evalueren op basis van inputgegevens, waardoor wordt beslist of een actie al dan niet wordt toegestaan. Dit wordt vaak gebruikt in moderne IT-omgevingen voor flexibele en geautomatiseerde beleidsafdwinging.</p>
+<ul>
+<li><a href="https://www.openpolicyagent.org/">Documentatie</a></li>
+<li>Policies in <a href="https://www.openpolicyagent.org/docs/latest/policy-language/">Rego lang</a></li>
+</ul>
+<h3 id="owl">OWL</h3>
+<p>OWL staat voor de Web Ontology Language en is een gestandardiseerde taal voor formaliseren van
+ontologieen op basis van Linked Data.</p>
+<h3 id="privacy-enhancing-technologies-pets">Privacy Enhancing Technologies (PETs)</h3>
+<p>PET is een verzamelnaam voor verschillende technieken die de afscherming van (persoons-)gegevens ondersteunen
+PETs faciliteren dat analyses kunnen worden uitgevoerd zonder de onderliggende data in te zien, zo worden toepassingen mogelijk die anders onmogelijk zouden zijn. PETs zien wij dan ook niet als technieken die autorisaties inregelen voor het bevragen van specifieke data maar faciliteren voornamelijk analyses waarbij toegang tot de onderliggende data niet toegestaan/gewenst is.</p>
+<table>
+<thead>
+<tr>
+<th>Voorbeelden:</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><ul><li>Zero knowledge proofs</li><li>Bloom filters</li><li>Differential Privacy</li><li>Synthetische data</li></ul></td>
+<td><ul><li>Federated Learning</li><li>Multi Party Computation</li><li>Homomorphic Encryption</li></ul></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Zie ook:</strong></p>
+<ul>
+<li><a href="https://realisatieibds.pleio.nl/groups/view/c23ab74c-adb4-424e-917d-773a37968efe/kenniscentrum-van-de-ibds/wiki/view/a2d325d4-0047-4967-8200-c4a29e392060/privacy-enhancing-technologies-pet">Wegzwijzer PETs van IBDS</a></li>
+<li><a href="https://www.vka.nl/wp-content/uploads/2023/04/VKA_whitepaper-PETs-in-de-praktijk.pdf">PETs in de praktijk - VKA</a></li>
+<li><a href="https://www.tno.nl/en/digital/digital-innovations/data-sharing/privacy-enhancing-technologies/">TNO over PETs</a> </li>
+</ul>
+<h3 id="rdf">RDF</h3>
+<p>RDF staat voor Resource Description Framework. Het is een gestandardiseerd model voor het opslaan
+van verwerkbare gegevens en biedt een zeer veel flexibiliteit mbt het structureren en beschrijven
+van gegevens.</p>
+<h3 id="shacl">SHACL</h3>
+<p>SHACL staat voor Shapes Constraint Language. Het is een W3C stdnaard voor het valideren van RDF data
+volgens een Shacl model. Via Shacl kun je zogenaamde Shapes definieren die structuren beschrijven
+van RDF data. Vervolgens kan RDF data getest worden of ze voldoen aan deze shapes. </p>
+<h3 id="sparql">SPARQL</h3>
+<p>Sparql is een querytaal voor het bevragen en manipuleren van <a href="#linked-data">Linked Data</a> op basis
+van de RDF standaard. Sparql biedt o.a. de mogelijkheid om complexe vragen te stellen aan Linked
+Data waarbij er op zoek gegaan wordt naar 'oplossingen' die voldoen aan de vraag.</p>
+<h3 id="sparql-endpoint">SPARQL Endpoint</h3>
+<p>Een SPARQL endpoint is een REST API die <a href="#sparql">SPARQL</a> queries kan uitvoeren. Het betreft hier
+een W3C standaard. </p>
+<h3 id="triplestore">Triplestore</h3>
+<p>Een triplestore is een database voor het opslaan en bevragen van <a href="#linked-data">Linked Data</a> op
+basis van de <a href="#rdf">RDF</a> standaard. Vaak biedt een triplestore een <a href="#sparql-endpoint">SPARQL
+endpoint</a> aan.</p>
+<h3 id="uniform-resource-identifier">Uniform Resource Identifier</h3>
+<p>Een reeks tekens die wordt gebruikt om een bron op een computernetwerk te identificeren, waarvan het bekendste type het webadres of een URL is.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Terug naar boven
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Vorige: Achtergronden">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Vorige
+              </span>
+              <div class="md-ellipsis">
+                Achtergronden
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../auth-alternatieven/" class="md-footer__link md-footer__link--next" aria-label="Volgende: Autorisatie ontologie alternatieven">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Volgende
+              </span>
+              <div class="md-ellipsis">
+                Autorisatie ontologie alternatieven
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      
+    
+  </body>
+</html>
