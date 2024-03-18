@@ -42,4 +42,4 @@ jobs:
 
       - name: Deploy with mike 🚀
         run: |
-          mike set-default --push ${{ github.event.inputs.version }} latest
+          mike set-default --push ${{ github.event.inputs.version }}
