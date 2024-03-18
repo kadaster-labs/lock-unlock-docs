@@ -1,4 +1,4 @@
-name: Publish docs via GitHub Pages
+name: Publish [dev] docs via GitHub Pages
 on:
   push:
     branches:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Generate [version] docs
+    name: Generate [dev] docs
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -36,12 +36,7 @@ jobs:
       - name: Install Python dependencies
         run: python3 -m pip install -r ./requirements.txt
 
-      - name: Extract branch name
-        shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-        id: extract_branch
-        
       - name: Deploy with mike 🚀
         run: |
-          # mike deploy --push ${{ steps.extract_branch.outputs.branch }}
+          # mike deploy --push "dev"
           mike delete --all
