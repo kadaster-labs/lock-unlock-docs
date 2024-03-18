@@ -26,30 +26,29 @@ hoeverre autorisatie als Linked Data mogelijk en haalbaar is. Hierover hebben we
 **Linked Data maakt federatieve bevraging gemakkelijk**
 
 Een federatieve bevraging is op meerdere manier mogelijk. Een omgeving met REST API's biedt ook wel
-de mogelijkheid voor federatieve bevragingen, maar dit legt een grote beheerlast bij de 'vrager'. Met GrapahQL zijn daar stappen in gemaakt, maar daarin is nog steeds behoefte aan gateway oplossingen.
+de mogelijkheid voor federatieve bevragingen, maar dit legt een grote beheerlast bij de 'vrager'. Met GraphQL zijn daar stappen in gemaakt, maar daarin is nog steeds behoefte aan gateway oplossingen.
 
 Linked Data is _ontworpen_ met federatie in de basis. Vanuit het ontwerp is federatieve bevraging
 daarom al beschikbaar. In de Linked Data Query Language, SPARQL, is dit gespecificeerd met de
 `service` clause.
 
-**Performance van federatieve bevraging is moeilijk**
+**Performance van federatieve bevraging varieert**
 
 Dat federatieve bevraging standaard in de Query Language zit en in de basis van Linked Data wil dat
 niet zeggen dat er geen 'problemen' zijn. In concept is het al ingewikkeld om een generieke
-werkwijze te bedenken die een query snel uitvoert. Daar is vrijwel altijd een analyse van de query
-voor benodigd om uit te werken wat de snelste manier is om de vraag (query) te beantwoorden. Deze
+werkwijze te bedenken die een query snel uitvoert. Daar is vrijwel altijd een analyse van de query voor benodigd om uit te werken wat de snelste manier is om de vraag (query) te beantwoorden. Deze
 analyse en uitwerking naar snelle uitvoering van federatieve vragen, is niet gestandaardiseerd in
-SPARQL of Linked Data. In de verschillende implementaties zijn hier grote verschillen!
+SPARQL of Linked Data. In de verschillende implementaties van triplestores zijn hier grote verschillen. In dit project is er gebruik gemaakt van een open-source triplestore waarbij query performance achterloopt t.o.v. de commerciele toppers.
 
 Er zijn wel ontwikkelingen rondom federatieve bevraging in het Linked Data domein. Zie ook
 aanbeveling [Meer onderzoek naar performance federatieve bevragingen](#aanbevelingen)
 
-**Koppelen van silo's vraagt expliciet ontwerp**
+**Duurzame koppeling van silo's vraagt om een expliciet ontwerp**
 
-Om over silo's van data heen goed te kunnen navigeren en federatieve bevragingen te kunnen doen,
+Om duurzaam over silo's van data heen goed te kunnen navigeren en federatieve bevragingen te kunnen doen,
 dienen de schema's én de data goed gekoppeld te zijn. Ook voor Linked Data. Wel biedt Linked Data
-hier verschillende mogelijkheden voor. Zo is het mogelijk om een _upper ontology_ voor relaties af
-te spreken en deze toe te voegen aan bestaande ontologieën en informatiemodellen.
+hier verschillende mogelijkheden voor. Zo is het mogelijk om een _upper ontology_ voor de registers af
+te spreken. Door adoptie van de upper ontologie kunnen relaties tussen de informatie modellen maar ook relaties tussen de datasets toe gevoegd worden. 
 
 Zie ook [informatiekundige kern](./federatieve-bevraging/informatiekundigekern.md).
 
@@ -134,19 +133,10 @@ tot verificatie van de autorisaties (eventueel aan andere partijen, zoals een to
 
 ## Aanbevelingen
 
-> // TODO Hans, wat bedoel je hier precies mee?
-> 
-> - Disseminatie van de resultaten voor feedback maar ook voor community vorming om gezamelijk de
->  volgende stap te zetten
-
 **Meer onderzoek naar performance federatieve bevragingen**
 
-Verdere R&D prestatie (verbeteringen) federatieve queries zoals technieken zoals FedX en verschil in
+Verdere R&D prestatie (verbeteringen) federatieve queries zoals technieken zoals FedX en HDT files en verschil in
 verwerking door verschillende triplestores.
-
-// TODO hdt? zo ja of waarom niet?
-
-// TODO Sven kijkt naar HDT optimalisering???
 
 **Informatiekundige kern**
 
@@ -161,7 +151,7 @@ Linked Data biedt veel mogelijkheden voor federatieve bevragingen, expliciete ve
 semantiek, informatiemodellen en begrippen. En met de autorisatie ontologie komt ook afscherming in
 de mogelijkheden van Linked Data. Het succes en toepassen van deze technieken staat of valt echter
 met de adoptiegraad van Linked Data in het algemeen. Het vergroten van deze adoptie is daarom van
-belang.
+belang. Hierbij Kun je vragen stellen zoals wat is het minimum noodzakelijke voor een registerhouder om data als Linked data te publiceren. Wat is de minimale infrastructuur hiervoor en hoe kan er snel en robuust Linked Data gecreeerd worden. 
 
 **Autorisatie ontologie verder uitwerken**
 
@@ -175,7 +165,7 @@ Het is daarin van belang dat ook
 worden. In dit onderzoek hebben we daar wel kennis van genomen, maar zijn we te weinig toegekomen
 aan een 'in depth' vergelijking.
 
-Voor de ontwikkeling zou een W3C Working Group uiteraar een mooi middel zijn!
+Voor de ontwikkeling zou een W3C Working Group uiteraard een mooi middel zijn!
 
 **Beperking van richting uitwerken**
 
