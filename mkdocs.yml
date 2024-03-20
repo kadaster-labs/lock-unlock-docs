@@ -70,6 +70,7 @@ extra:
   version:
     provider: mike
 plugins:
+  - search
   - mike:
       # These fields are all optional; the defaults are as below...
       alias_type: symlink

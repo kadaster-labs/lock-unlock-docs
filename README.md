@@ -21,13 +21,17 @@ Check out our research implementations of secured SPARQL endpoints and our testd
 ## Local development
 
 The publication of the documentation is based on [Squidfunk Mkdocs
-Material](https://squidfunk.github.io/mkdocs-material/)
+Material](https://squidfunk.github.io/mkdocs-material/) and extended with
+[mike](https://github.com/jimporter/mike). This supports versions in the published site. Versions is
+not available @ localhost, but the build structure is the same as the published site :muscle:
 
-Develop & serve on [localhost:8000](http://localhost:8000/):
+To develop & serve the docker image on [localhost:8000](http://localhost:8000/):
 
 ```bash
-docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
+docker-compose up --build
 ```
+
+(omit the `--build` if nothing has changed in the docker infrastructure)
 
 ## Publish & Versioning
 

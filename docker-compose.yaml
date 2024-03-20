@@ -1,0 +1,14 @@
+version: "3.3"
+
+services:
+
+  dev-site:
+    image: lock-unlock/mkdocs-material-with-mike
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    # command: server -p 8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/docs
