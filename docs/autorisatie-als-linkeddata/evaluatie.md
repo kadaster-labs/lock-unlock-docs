@@ -1,19 +1,6 @@
 ---
 title: Evaluatie
 ---
-
-// TODO conclusies en aanbevelingen naar de algemene conclusies en aanbevelingen verschuiven en deze pagina veranderen naar 'Evaluatie'
-
-// TODO Iets zeggen over:
-
-  - Kansen en uitdagingen (voor-/nadelen) van de twee implementaties
-  - Voor wat voor use cases wel/niet geschikt
-  - Een (kleine) vergelijk tussen de twee strategieën (kan ook gecombineerd worden met bovenstaande)
-  - Wat is er technisch nodig voor de implementaties?
-  - Wat is er organisatorisch nodig? En wie heeft welke rol? (bronhouder, softwareleverancier, FDS etc.)
-
-----
-
 ## Vergelijking implementaties
 
 Beide besproken methodes hebben natuurlijk sterke en zwakke punten. In dit hoofdstuk proberen we

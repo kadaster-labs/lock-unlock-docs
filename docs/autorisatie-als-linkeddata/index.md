@@ -11,14 +11,9 @@ Om dit concept te implementeren zijn er meerdere strategieën mogelijk. Een paar
 Dit hoofdstuk sluit af met een evaluatie van de twee implementatie strategieën.
 
 ## Leeswijzer
+
 - [Concept toelichten](./concept.md)
 - [Beschrijving autorisatie (& authenticatie) ontologie](./authorisation-ontology.md)
-    - Waarom zo’n ontologie? Wat is de kracht daarvan?
-    - Iets zeggen over relatie met XACML/OPA/ODRL
 - [Autorisatie als Linked Data implementaties](./implementaties/index.md)
-    - Kansen en uitdagingen
-    - Voor wat voor use cases wel/niet geschikt
-    - Wat is er technisch nodig voor de implementaties?
-    - Wat is er organisatorisch nodig? En wie heeft welke rol?
 - [Demonstrators van de twee implementaties](./demonstrators/index.md)
 - [Evaluatie en vergelijking van twee demonstrators](./evaluatie.md)
