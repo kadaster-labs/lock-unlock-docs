@@ -75,9 +75,10 @@ een bepaalde gebruikersgroep wordt toegang verleend voor een specifiek data-sche
 ontologie. De regels die gelden kunnen zeer fijnmazig zijn en de verschillende
 [afschermingspatronen](./afscherming/afschermingspatronen.md) bevatten. We hebben in onze
 demonstrators aangetoond dat [verticale en horizontale
-subsets](./afscherming/afschermingspatronen.md#subset) mogelijk zijn. De
-[richting](./afscherming/afschermingspatronen.md#richting) is moeilijker en zijn we onvoldoende aan
-toegekomen om te kunnen zeggen dat dat echt werkt. Is het mogelijk? Wij denken van wel.
+subsets](./afscherming/afschermingspatronen.md#toegang-tot-een-subset) mogelijk zijn. De
+[richting](./afscherming/afschermingspatronen.md#toegang-tot-data-in-een-bepaalde-richting) is
+moeilijker en zijn we onvoldoende aan toegekomen om te kunnen zeggen dat dat echt werkt. Is het
+mogelijk? Wij denken van wel.
 
 De autorisatieregels zijn _declaratief_. Dat betekent dat de gewenste toegang of juist afscherming
 gespecificeerd kan worden. Onderliggende uitvoering en zelfs uitwerking wordt overgelaten een de
@@ -185,9 +186,9 @@ Voor de ontwikkeling zou een W3C Working Group uiteraard een mooi middel zijn!
 richting uitwerken</a>**
 
 In dit project hebben we uitgewerkt en beproefd hoe [verticale en horizontale
-subsets](./afscherming/afschermingspatronen.md#subset) afgeschermd of juist onsloten kunnen worden.
+subsets](./afscherming/afschermingspatronen.md#toegang-tot-een-subset) afgeschermd of juist onsloten kunnen worden.
 We hebben geen aandacht kunnen besteden aan het beperken van de
-[richting](./afscherming/afschermingspatronen.md#richting). Hier dient extra (vervolg)onderzoek op
+[richting](./afscherming/afschermingspatronen.md#toegang-tot-data-in-een-bepaalde-richting). Hier dient extra (vervolg)onderzoek op
 gedaan te worden.
 
 **<a id="volledigheid-en-effectiviteit-meetbaar-maken"
