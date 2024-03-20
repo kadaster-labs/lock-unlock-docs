@@ -1,8 +1,6 @@
 ---
 title: Conclusies en aanbevelingen
 ---
-> // TODO anchors & (hover) links toevoegen
-
 Lock-Unlock richt zich op [Linked Data](./federatieve-bevraging/linkeddata.md), voortbouwend op de
 <a href="https://labs.kadaster.nl/cases/integralegebruiksoplossing" target="_blank">Integrale
 Gebruiksoplossing (IGO)</a> en de <a href="https://labs.kadaster.nl/thema/Knowledge_graph"
@@ -23,7 +21,9 @@ hoeverre autorisatie als Linked Data mogelijk en haalbaar is. Hierover hebben we
 
 ### Federatieve bevraging
 
-**Linked Data maakt federatieve bevraging gemakkelijk**
+**<a id="linked-data-maakt-federatieve-bevraging-gemakkelijk"
+href="#linked-data-maakt-federatieve-bevraging-gemakkelijk">Linked Data maakt federatieve bevraging
+gemakkelijk</a>**
 
 Een federatieve bevraging is op meerdere manier mogelijk. Een omgeving met REST API's biedt ook wel
 de mogelijkheid voor federatieve bevragingen, maar dit legt een grote beheerlast bij de 'vrager'. Met GraphQL zijn daar stappen in gemaakt, maar daarin is nog steeds behoefte aan gateway oplossingen.
@@ -32,7 +32,9 @@ Linked Data is _ontworpen_ met federatie in de basis. Vanuit het ontwerp is fede
 daarom al beschikbaar. In de Linked Data Query Language, SPARQL, is dit gespecificeerd met de
 `service` clause.
 
-**Performance van federatieve bevraging varieert**
+**<a id="performance-van-federatieve-bevraging-varieert"
+href="#performance-van-federatieve-bevraging-varieert">Performance van federatieve bevraging
+varieert</a>**
 
 Dat federatieve bevraging standaard in de Query Language zit en in de basis van Linked Data wil dat
 niet zeggen dat er geen 'problemen' zijn. In concept is het al ingewikkeld om een generieke
@@ -43,7 +45,9 @@ SPARQL of Linked Data. In de verschillende implementaties van triplestores zijn 
 Er zijn wel ontwikkelingen rondom federatieve bevraging in het Linked Data domein. Zie ook
 aanbeveling [Meer onderzoek naar performance federatieve bevragingen](#aanbevelingen)
 
-**Duurzame koppeling van silo's vraagt om een expliciet ontwerp**
+**<a id="duurzame-koppeling-van-silos-vraagt-om-expliciet-ontwerp"
+href="#duurzame-koppeling-van-silos-vraagt-om-expliciet-ontwerp">Duurzame koppeling van silo's
+vraagt om een expliciet ontwerp</a>**
 
 Om duurzaam over silo's van data heen goed te kunnen navigeren en federatieve bevragingen te kunnen doen,
 dienen de schema's én de data goed gekoppeld te zijn. Ook voor Linked Data. Wel biedt Linked Data
@@ -54,14 +58,17 @@ Zie ook [informatiekundige kern](./federatieve-bevraging/informatiekundigekern.m
 
 ### Autorisatie als Linked Data
 
-**Afschermen van Linked Data is mogelijk**
+**<a id="afscherming-van-linked-data-is-mogelijk"
+href="#afscherming-van-linked-data-is-mogelijk">Afschermen van Linked Data is mogelijk</a>**
 
 Het is mogelijk om fijnmazig autorisatieregels declaratief te modelleren op basis van een
 autorisatie ontologie voor federatieve bevragingen op basis van Linked Data. We hebben dit aan
 kunnen tonen in onze [demonstrators](./autorisatie-als-linkeddata/demonstrators/index.md), waarin we
 een eerste toepassing van een door ons ontwikkelde autorisatie ontologie hebben uitgewerkt.
 
-**Declaratieve autorisatieregels als Linked Data**
+**<a id="declaratieve-autorisatieregels-als-linked-data"
+href="#declaratieve-autorisatieregels-als-linked-data">Declaratieve autorisatieregels als Linked
+Data</a>**
 
 Met _autorisatieregels_ doelen we op toegangsregels die gelden voor een specifieke situatie. Voor
 een bepaalde gebruikersgroep wordt toegang verleend voor een specifiek data-schema, een specifieke
@@ -84,14 +91,17 @@ Dit houdt ook in dat autorisatieregels data is `#data-gedreven`. Dit betekent:
   (engine) waarin de regels worden afgedwongen
 - dat de autorisatieregels als _knowledge graph_ toegankelijk zijn
 
-**Autorisatie ontologie voor standaardisatie**
+**<a id="autorisatie-ontologie-voor-standaardisatie"
+href="#autorisatie-ontologie-voor-standaardisatie">Autorisatie ontologie voor standaardisatie</a>**
 
 De autorisatieregels kunnen worden gestandaardiseerd in een _autorisatie ontologie_. Dat betekent
 dat een software implementatie van deze ontologie als engine gebruikt kan worden om de data van de
 autorisatieregels uit te voeren. Doordat een ontologie programeertaal onafhankelijk is, kunnen er
 meerdere implementaties gemaakt worden voor de autorisatie ontologie.
 
-**Declaratieve autorisatieregels gekoppeld aan bestaande ontologieën**
+**<a id="declaratieve-autorisatieregels-gekoppeld-aan-bestaande-ontologieen"
+href="#declaratieve-autorisatieregels-gekoppeld-aan-bestaande-ontologieen">Declaratieve
+autorisatieregels gekoppeld aan bestaande ontologieën</a>**
 
 Het is mogelijk om in de declaratie van de autorisatieregels volgens de autorisatie ontologie, een
 relatie te maken naar al bestaande ontologieën. Dat wil zeggen dat de toegang (of juist ontzegging
@@ -133,19 +143,22 @@ tot verificatie van de autorisaties (eventueel aan andere partijen, zoals een to
 
 ## Aanbevelingen
 
-**Meer onderzoek naar performance federatieve bevragingen**
+**<a id="meer-onderzoek-naar-performance-federatieve-bevraging"
+href="#meer-onderzoek-naar-performance-federatieve-bevraging">Meer onderzoek naar performance
+federatieve bevragingen</a>**
 
 Verdere R&D prestatie (verbeteringen) federatieve queries zoals technieken zoals FedX en HDT files en verschil in
 verwerking door verschillende triplestores.
 
-**Informatiekundige kern**
+**<a id="informatiekundige-kern" href="#informatiekundige-kern">Informatiekundige kern</a>**
 
 Relaties tussen registers en silo's zijn geen eenvoudig probleem. Daar zijn oplossingen voor nodig.
 Een oplossing die Linked Data kan bieden is een _upper ontology_. Daarmee zouden relaties
 gestandaardiseerd en geformaliseerd kunnen worden. Daarna zouden (gelijke) functionele zaken
 gestandardiseerd kunnen worden. Denk aan "ID"'s en versie beheer en meta-data van registers in Linked Data.
 
-**Linked Data adoptie vergroten**
+**<a id="linked-data-adoptie-vergroten" href="#linked-data-adoptie-vergroten">Linked Data adoptie
+vergroten</a>**
 
 Linked Data biedt veel mogelijkheden voor federatieve bevragingen, expliciete verplichting voor
 semantiek, informatiemodellen en begrippen. En met de autorisatie ontologie komt ook afscherming in
@@ -153,7 +166,8 @@ de mogelijkheden van Linked Data. Het succes en toepassen van deze technieken st
 met de adoptiegraad van Linked Data in het algemeen. Het vergroten van deze adoptie is daarom van
 belang. Hierbij Kun je vragen stellen zoals wat is het minimum noodzakelijke voor een registerhouder om data als Linked data te publiceren. Wat is de minimale infrastructuur hiervoor en hoe kan er snel en robuust Linked Data gecreeerd worden. 
 
-**Autorisatie ontologie verder uitwerken**
+**<a id="autorisatie-ontologie-verder-uitwerken"
+href="#autorisatie-ontologie-verder-uitwerken">Autorisatie ontologie verder uitwerken</a>**
 
 De [Authorisation Ontology](./opleveringen.md#authorisation-ontology) waar in dit project in eerste
 opzet van is gedaan, dient verder te worden uitgewerkt. Het mooiste zou zijn als deze tot een
@@ -167,7 +181,8 @@ aan een 'in depth' vergelijking.
 
 Voor de ontwikkeling zou een W3C Working Group uiteraard een mooi middel zijn!
 
-**Beperking van richting uitwerken**
+**<a id="beperking-van-richting-uitwerken" href="#beperking-van-richting-uitwerken">Beperking van
+richting uitwerken</a>**
 
 In dit project hebben we uitgewerkt en beproefd hoe [verticale en horizontale
 subsets](./afscherming/afschermingspatronen.md#subset) afgeschermd of juist onsloten kunnen worden.
@@ -175,7 +190,9 @@ We hebben geen aandacht kunnen besteden aan het beperken van de
 [richting](./afscherming/afschermingspatronen.md#richting). Hier dient extra (vervolg)onderzoek op
 gedaan te worden.
 
-**Volledigheid en effectiviteit meetbaar maken**
+**<a id="volledigheid-en-effectiviteit-meetbaar-maken"
+href="#volledigheid-en-effectiviteit-meetbaar-maken">Volledigheid en effectiviteit meetbaar
+maken</a>**
 
 In dit onderzoek is aangetoond dat het mogelijk is om mbv een autorisatie ontologie een 'secured
 SPARQL endpoint' te ontwikkelen (twee zelfs! :grin:). We hebben echter niet aangetoond dat dit
@@ -187,18 +204,23 @@ een 'secured SPARQL endpoint' is het noodzakelijk om een betrouwbare en herhaalb
 hebben. Hierin zullen de verschillende [afschermingspatronen](./afscherming/afschermingspatronen.md)
 opgenomen moeten zijn en allerlei variaties en combinaties hierin.
 
-**Opvolging organiseren tbv volledigheid en effectiviteit**
+**<a id="opvolging-organiseren-tbv-volledigheid-en-effectiviteit"
+href="#opvolging-organiseren-tbv-volledigheid-en-effectiviteit">Opvolging organiseren tbv
+volledigheid en effectiviteit</a>**
 
 Verdere R&D bewijsvoering dat de implementatie waterdicht is. Eventueel in samenwerking met
 academici voor wetenschappelijk fundament.
 
-**Meer onderzoek naar performance van de afscherming**
+**<a id="meer-onderzoek-naar-performance-van-de-afscherming"
+href="#meer-onderzoek-naar-performance-van-de-afscherming">Meer onderzoek naar performance van de
+afscherming</a>**
 
 Naast de performance van Linked Data oplossing in het geheel, stelt de afscherming nieuwe en extra
 complexiteit verhogende eisen en karakteristieken. Het verdient meer onderzoek naar de performance
 van specifiek dit onderdeel.
 
-**Implementatie doorontwikkelen**
+**<a id="implementatie-doorontwikkelen" href="#implementatie-doorontwikkelen">Implementatie
+doorontwikkelen</a>**
 
 Een eerste aanzet en prototyping rondom
 [implementaties](./autorisatie-als-linkeddata/implementaties/index.md) is gedaan, maar verdient meer
