@@ -1207,8 +1207,26 @@
 
   <h1>Subgraph</h1>
 
-<p>Sven?</p>
+<p>De subgraph methode werkt door een voorselectie te maken op basis van de regels die van toepassing
+zijn voor de betreffende gebruiker. Daarna wordt de query uitgevoerd op deze voorselectie, waardoor
+het onmogelijk wordt om ongeauthoriseerde gegevens op te vragen. Net als de rewrite methode kan dit
+geïmplementeerd worden als een transparant proxy endpoint.</p>
+<p>In theorie is het mogelijk om één endpoint te maken dat data uit verschillende registers combineert,
+echter vereist dit ook dat er een centraal autorisatiebeleid wordt geschreven voor deze
+gecombineerde data. Om organisatorische en beleidsmatige redenen is het verstandiger om dit niet te
+doen, en een endpoint per (basis)registratie te hanteren. Hierdoor houden registereigenaren de
+mogelijkheid zelf een autorisatiebeleid op te stellen, terwijl de features van SPARQL het mogelijk
+maken deze verschillende endpoints federatief te bevragen,</p>
 <p><img alt="Subgraph" src="../../images/Subgraph.png" /></p>
+<p>Conceptueel werkt de subgraph methode als volgt:</p>
+<ol>
+<li>De gebruiker stuurt een query en zijn autorisatiegegevens in.</li>
+<li>Het endpoint bepaalt welke autorisatieregels van toepassing zijn voor deze gebruiker.</li>
+<li>Voor iedere regel wordt bepaald tot welke gegevens deze toegang verleent.</li>
+<li>De toegankelijke gegevens van alle regels worden samengevoegd tot een subgraaf.</li>
+<li>De ingestuurde query wordt uitgevoerd op deze subgraaf.</li>
+<li>De resultaten van de query worden teruggestuurd naar de gebruiker.</li>
+</ol>
 
 
 
