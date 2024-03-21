@@ -3,17 +3,14 @@ title: Subgraph
 ---
 > TO DO: 
 > 
-> - bij de implementatie pagina of hier iets meer vertellen over de werking en architectuur hiervan.
->   Hoe is de demonstrator technisch opgezet? Wat gebeurt er nu precies wanneer er een query
->   binnenkomt?
 > - gebruikers kunnen dit nu nog niet (volgens mij) testen omdat de demo niet live staat. Is het een
 >   idee om dan ook output te laten zien in de screenshots?
 
-Voor het Lock-Unlock project is ook een simpele demonstrator ontwikkeld voor de Subgraph
-implementatie. Deze toont aan dat een autorisatie-beleid afgedwongen kan worden op een
-SPARQL-endpoint zonder dat queries hier uitzonderlijk traag van worden. De ervaringen die hiermee
-zijn opgedaan zijn deels verder geïntegreerd in de demonstrator. Verdere conclusies en aanbevelingen
-worden besproken in het hoofdstuk [evaluatie](../evaluatie.md).
+Voor het Lock-Unlock project is ook een simpele demonstrator ontwikkeld voor de [Subgraph
+implementatie](../implementaties/subgraph.md). Deze toont aan dat een autorisatie-beleid afgedwongen
+kan worden op een SPARQL-endpoint zonder dat queries hier uitzonderlijk traag van worden. De
+ervaringen die hiermee zijn opgedaan zijn deels verder geïntegreerd in de demonstrator. Verdere
+conclusies en aanbevelingen worden besproken in het hoofdstuk [evaluatie](../evaluatie.md).
 
 Hieronder worden een aantal voorbeelden gegeven van queries die wel/niet zijn toegestaan voor
 specifieke gebruikers. 
