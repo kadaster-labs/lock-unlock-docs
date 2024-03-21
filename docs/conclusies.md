@@ -148,8 +148,10 @@ tot verificatie van de autorisaties (eventueel aan andere partijen, zoals een to
 href="#meer-onderzoek-naar-performance-federatieve-bevraging">Meer onderzoek naar performance
 federatieve bevragingen</a>**
 
-Verdere R&D prestatie (verbeteringen) federatieve queries zoals technieken zoals FedX en HDT files en verschil in
-verwerking door verschillende triplestores.
+De performance van federatieve bevragingen is nog weinig onderzocht en er is waarschijnlijk veel
+ruimte om dit te verbeteren. De voornaamste aspecten hierin zijn de schaalbaarheid en de
+optimalisatie van de queries. Het gebruiken van [HDT-bestanden](https://www.rdfhdt.org/), en
+specifiek de header-sectie, kan interessante mogelijkheden bieden hierin.
 
 **<a id="informatiekundige-kern" href="#informatiekundige-kern">Informatiekundige kern</a>**
 
