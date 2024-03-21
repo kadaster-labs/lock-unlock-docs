@@ -67,7 +67,7 @@ Theoretisch zijn hier al de volgende conclusies te trekken:
 - het is mogelijk om (geavanceerde) autorisatieregels vast te leggen in Linked Data op basis van
   een autorisatie ontologie.
 
-- het is mogelijk om gebruik te maken van een Linked Data schema van de dataset. Authorisatie regels
+- het is mogelijk om gebruik te maken van een Linked Data schema van de dataset. Autorisatie regels
   zijn daarmee direct gekoppeld aan schema-elementen. Hiermee kan o.a. inzicht geboden worden wie
   waar toegang toe heeft en evt waar niet. Ook geeft deze aanpak mogelijkheden tot verificatie van
   de autorisaties.                      

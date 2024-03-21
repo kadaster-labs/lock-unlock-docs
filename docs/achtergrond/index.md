@@ -8,4 +8,3 @@ mogelijk onbekende termen.
 
 - [Glossary](./glossary.md)
 - [Autorisatie ontologie alternatieven](./auth-alternatieven.md)
-- [Verwerkingenlogging](./verwerkingenlogging.md)

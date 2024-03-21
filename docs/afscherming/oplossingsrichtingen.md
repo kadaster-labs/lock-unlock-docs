@@ -17,11 +17,12 @@ Gegeven de wens om vrije bevraging (query) tot onze beschikking te houden én te
 tot [auditing](./autorisatie.md#auditing), is het noodzakelijk om vast te leggen welke queries er
 worden gesteld. Dit is vooral van belang in geval van Linked Data en minder in geval van [REST
 API's](#rest-api) en [GraphQL API's](#graphql-api), aangezien deze minder mogelijkheden bieden voor
-alle [afschermingspatronen](./afschermingspatronen.md).
+vrije bevraging en alle [afschermingspatronen](./afschermingspatronen.md).
 
-Deze technologische oplossing is geen oplossing voor autorisatie. Bij alleen query auditing kan de gebruiker namelijk alle data bevragen en worden slechts de queries met bijbehorende context (denk bijv. aan de gebruiker en meegegeven referentie naar doelbinding) opgeslagen. Vervolgens kan er achteraf handmatig of wellicht automatisch bepaald worden of er onrechtmatige vragen/queries zijn gesteld en of dat er onterecht toegang is verkregen tot gesloten gegevens. 
-
-Deze oplossing raakt ook de [GEMMA verwerkingenlogging](bestaande-implementaties.md#gemma-verwerkingenlogging).
+Deze technologische oplossingsrichting is geen oplossing voor autorisatie, maar draagt wel bij aan
+de inzage en controle van toegestane bevragingen. Dit zou een oplossing of implementatie zijn van de
+[GEMMA verwerkingenlogging](bestaande-implementaties.md#gemma-verwerkingenlogging) in het Linked
+Data domein.
 
 | ![Query Auditing](images/query-auditing.png) |
 | :--: |

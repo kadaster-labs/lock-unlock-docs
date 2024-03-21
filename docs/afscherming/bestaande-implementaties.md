@@ -202,17 +202,12 @@ metagegevens behorend bij vastgelegde (logging) verwerkingen.
 
 De API standaard is ontwikkeld voor gemeenten en gemeentelijke samenwerkingsverbanden. Er zitten
 echter geen gemeente-specifieke zaken in de standaard dus andere organisaties kunnen de standaard
-ook toepassen. Door ontwikkeling vindt dan ook op dit moment (’23/’24) plaats door MinBZK.
+ook toepassen. Doorontwikkeling vindt dan ook op dit moment (’23/’24) plaats door MinBZK.
 
 ### Inzichten voor Lock-Unlock
 
 - Bij de controle voor toegang (autorisatie) is het voor een data-leverende partij niet mogelijk om
-  te controleren of rechtmatigheid en doelbinding valide zijn. Dat komt omdat deze bij het
-  specifieke gebruik ligt, die binnen de organisatiegrenzen van de vragende partij ligt. Daarom is
-  de verantwoording op rechtmatigheid en doelbinding voor beide partijen: de vragende partij dient
-  de specifieke gebruiker en specifieke casus vast te leggen en daarvan de referentie door te geven
-  aan de data-leverende partij, welke verplicht is om deze referentie vast te leggen en globale
-  autorisatiecontrole toe te passen voor de vragende organisatie.
+  te controleren of rechtmatigheid en [doelbinding](./autorisatie.md#doelbinding) valide zijn.
 - Verwerkingenlogging biedt (daarom) controle achteraf en niet vooraf. Autorisatie (aan de
   voortkant) is daarom niet te baseren op de verwerkingenlogging of controle op doelbinding.
 - In het kader van autorisatie is de verwerkingenlogging (dus) niet relevant. Voor de verantwoording

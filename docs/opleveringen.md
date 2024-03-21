@@ -9,7 +9,7 @@ Om het concept te kunnen beproeven hebben we in het Lock-Unlock project een init
 _Autorisatie ontologie_ ontwikkeld. Deze is verre van definitief of geschikt voor een standaard ...
 en tegelijk wél beproeft! Voor verder onderzoek kan deze als uitgangspunt dienen.
 
-De Authorisatie ontologie is te downloaden uit de GitHub repository:
+De Autorisatie ontologie is te downloaden uit de GitHub repository:
 <br>[lock-unlock-docs/ontologies/Authorisation.ttl](https://github.com/kadaster-labs/lock-unlock-docs/blob/main/ontologies/Authorisation.ttl)
 (`.ttl` formaat).
 

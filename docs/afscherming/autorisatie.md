@@ -5,7 +5,7 @@ In beginsel is autorisatie eenvoudig: iemand wil bij iets en de vraag is of dat 
 
 | ![Authorisation Simple Diagram](images/authorisation-simple.png) |
 | :--: |
-| Authorisatie op zijn basis |
+| Autorisatie op zijn basis |
 
 Was het maar zo gemakkelijk.
 
@@ -56,44 +56,49 @@ autorisatie komt. Dit laatste is juist het onderwerp van onderzoek voor Lock-Unl
 
 </div>
 
-## Authorisatie
-
-Autorisatie is de controle en het proces van toegang geven tot een Resource. Een subject krijgt vaak niet zomaar toegang tot een resource. Het doel van
-autorisatie is dat alleen vastgestelde toegang verleend wordt aan Subjecten. Dat is een proces van
-afscherming _vóóraf_. Dit is het onderwerp van onderzoek voor het Lock-Unlock project en komt nog
-uitgebreid aan bod.
+## Doelbinding
 
 Het doel van autorisatie, zeker in de context van de overheid, is te garanderen dat deze toegang
-rechtmatig is. Dat wil zeggen dat er een **juridische grondslag** is voor de toegang en/of
-verwerking. Het blijkt echter onmogelijk om _volledig_ van tevoren te kunnen bepalen of de grondslag
-voldoende is om toegang te kunnen verlenen. Dat heeft met name te maken met de gedeelde
-verantwoordelijkheid van die toegang als dat een koppeling tussen twee organisaties betreft. De
-enige mogelijkheid om de grondslag juist te kunnen controleren, is _achteraf_. In dat geval is
-[auditing](#auditing) nodig op de toegang die gegeven is. Voorkomen is dan helaas niet meer
-mogelijk, maar wel bijsturing en eventueel opvolging.
+rechtmatig is. Daarvoor wordt o.a. gekeken naar interne en externe beleidstukken en wet- en
+regelgeving. Een belangrijk aspect hierbij is de **doelbinding**, zeker als het om persoonsgegevens
+gaat: gegevens mogen alleen worden verwerkt en verzameld voor een specifiek en gerechtvaardigd doel.
+Dat wil zeggen dat er een **juridische grondslag** is voor de toegang en/of verwerking.
 
-Bij het uitdelen van autorisaties wordt o.a. gekeken naar interne en externe beleidstukken en wet- en regelgeving. Een belangrijk aspect hierbij is de doelbinding, zeker als het om persoonsgegevens gaat: gegevens mogen alleen worden verwerkt en verzameld voor een specifiek en gerechtvaardigd doel.
+Het blijkt echter onmogelijk om _volledig_ van tevoren te kunnen bepalen of de grondslag voldoende
+is om toegang te kunnen verlenen. Dat heeft te maken met de gedeelde verantwoordelijkheid van die
+toegang als dat een koppeling tussen twee organisaties betreft. Het punt is dat de doelbinding per
+casus gebonden is. Het is voor de data-leverende organisatie echter niet mogelijk om te beoordelen
+of de specifieke casus waar de betreffende gebruiker van de data-vragende organisatie mee bezig is,
+passend is voor het doel dat beoogd is. Sterker nog, het _weten_ van die specifieke casus gaat juist
+in tegen de regels van doelbinding, juridische grondslag en AVG. Vooraf specifieke doelbinding
+controleren is daarom niet (volledig) mogelijk.
+
+## Autorisatie
+
+Autorisatie is de controle en het proces van toegang geven tot een Resource. Het doel van
+autorisatie is dat alleen vastgestelde toegang verleend wordt aan Subjecten. Dat is een proces van
+afscherming _vóóraf_. Aangezien de [doelbinding](#doelbinding) vooraf niet volledig kan worden
+gecontroleerd, wordt er een afgeleide daarvan gemaakt op een hoger niveau dan specifieke casussen.
+Een hele organisatie krijgt toegang tot de gehele dataset van een andere organisatie. Om deze
+toegang te controleren en bij te sturen zodat de juridische grondslag passend is bij de autorisatie,
+is [auditing](#auditing) noodzakelijk.
+
+Een subject krijgt dus niet zomaar toegang tot een resource. En deze afschermings- of toegangsregels
+kunnen worden beschreven in policies, de autorisatieregels. Welke regels zijn er? Zijn deze te
+standaardiseren? Zijn deze als data te declareren? Nog beter: als Linked Data? Dit is het onderwerp
+van onderzoek voor het Lock-Unlock project.
 
 | ![Authorisation Subject](images/authorisation-doelbinding.png) |
 | :--: |
-| Doelbinding |
-
-Dit is niet gemakkelijk te controleren. Het punt is namelijk dat die doelbinding per casus gebonden zou moeten worden, maar informatie vaak over organisatiegrenzen heen gedeeld en gebruikt wordt. Het is voor de ene organisatie niet mogelijk om te beoordelen of de specifieke casus waar de betreffende gebruiker van de andere organisatie mee bezig is, passend is voor het doel dat beoogd is. Vooraf specifieke doelbinding controleren is daarom niet (volledig) mogelijk. Daar komt bij dat doelbinding op dit moment niet “machine readable” is en de relatie met het datamodel is niet formeel is vastgelegd. Hierdoor is het (ook) niet mogelijk om een koppeling te leggen tussen de doelbinding en de bijbehorende attributen en queries.
-
-In geval van toegang verlenen, oftewel autorisatie, wordt wel vaak een afgeleide gemaakt van de doelbinding op een hoger niveau dan specifieke casussen. Een hele organisatie heeft toegang tot de gehele dataset van een andere organisatie. Door gestandaardiseerd te loggen wat precies wordt opgevraagd door wie, is wel specifieke controle achteraf mogelijk. De [GEMMA Verwerkingenlogging](../achtergrond/verwerkingenlogging.md) is hier de standaard (in ontwikkeling) voor.
+| Autorisatie |
 
 ## Auditing
 
-Zoals hierboven al gesteld, is het onmogelijk om van tevoren of bij de evaluatie om toegang te gaan
-verlenen te bepalen of dat rechtmatig is. Dat is vooral in het geval als het een koppeling tussen
-twee (of meer) organisaties betreft. De medewerker van de bevragende organisatie zal een juridische
-grondslag moeten hebben om de bevraging te kunnen doen. Het is echter niet mogelijk voor de
-leverende organisatie om te bepalen of die grondslag juist is en passend voor de situatie. Sterker
-nog, het is onrechtmatig als de leverende organisatie precies weet voor welke casus de bevraging
-wordt gedaan. Dat betekent dat er van tevoren afspraken gemaakt kunnen worden of de mogelijkheid dat
-(medewerkers van) een organisatie de API van een andere organisatie gaan aanroepen en dát kan
-gecontroleerd worden ten tijde van de bevraging. Dit is wat we autorisatie noemen. Voor de controle
-op juiste grondslag per bevraging zijn we aangewezen op auditing.
+Zoals hierboven al gesteld bij [doelbinding](#doelbinding), is het onmogelijk om van tevoren of bij
+de evaluatie om toegang te gaan verlenen te bepalen of dat rechtmatig is. De enige mogelijkheid om
+de grondslag juist te kunnen controleren, is _achteraf_. In dat geval is **auditing** noodzakelijk
+op de toegang die gegeven is. Voorkomen is dan helaas niet meer mogelijk, maar wel bijsturing en
+eventueel opvolging.
 
 Voor de auditing zijn beide partijen nodig en verantwoordelijk. De partij / organisatie van waaruit
 de bevraging wordt gedaan, is verantwoordelijk voor het vastleggen van de relatie naar de specifieke
@@ -101,11 +106,12 @@ grondslag en specifieke casus waarvoor die grondslag zou moeten gelden en de med
 die organisatie daarbij betrokken is. De partij / organisatie die bevraagd wordt, de leverende
 partij, dient vast te leggen dat zij bevraagd zijn door de vragende partij en voor welke resource
 dat precies was. Om dmv een audit de relatie tussen beide verslaglegging te kunnen doen, wordt er
-vanuit de bevragende partij een `transaction referentie` (of `id`) meegegeven die in beide
+vanuit de bevragende partij een `transactie referentie` (of `id`) meegegeven die in beide
 verslagleggingen dient te worden bewaard. Deze verslaglegging wordt ook wel 'logging' genoemd.
 
-Er bestaat een standaard in wording voor dit patroon en toepassing:
-[Verwerkingenlogging](../achtergrond/verwerkingenlogging.md)
+De grondslag of doelbinding is op dit moment niet “machine readable” en de relatie met het datamodel
+is niet formeel vastgelegd. Er wordt wel aan gewerkt om dat te standaardiseren in de [GEMMA
+Verwerkingenlogging](./bestaande-implementaties.md#gemma-verwerkingenlogging).
 
 ## Resource
 

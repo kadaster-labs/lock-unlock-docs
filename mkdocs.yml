@@ -42,7 +42,6 @@ nav:
     - achtergrond/index.md
     - achtergrond/glossary.md
     - achtergrond/auth-alternatieven.md
-    - achtergrond/verwerkingenlogging.md
 extra_css:
   - css/lock-unlock.css
 theme:
