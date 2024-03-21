@@ -1146,8 +1146,6 @@
       
         
       
-        
-      
     
     
     
@@ -1219,27 +1217,6 @@
   
   <span class="md-ellipsis">
     Autorisatie ontologie alternatieven
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../achtergrond/verwerkingenlogging/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Verwerkingenlogging
   </span>
   
 
@@ -1366,9 +1343,11 @@ Data</a> nog niet echt. Deze kunnen we grofweg verdelen en bundelen in de volgen
 tot <a href="../autorisatie/#auditing">auditing</a>, is het noodzakelijk om vast te leggen welke queries er
 worden gesteld. Dit is vooral van belang in geval van Linked Data en minder in geval van <a href="#rest-api">REST
 API's</a> en <a href="#graphql-api">GraphQL API's</a>, aangezien deze minder mogelijkheden bieden voor
-alle <a href="../afschermingspatronen/">afschermingspatronen</a>.</p>
-<p>Deze technologische oplossing is geen oplossing voor autorisatie. Bij alleen query auditing kan de gebruiker namelijk alle data bevragen en worden slechts de queries met bijbehorende context (denk bijv. aan de gebruiker en meegegeven referentie naar doelbinding) opgeslagen. Vervolgens kan er achteraf handmatig of wellicht automatisch bepaald worden of er onrechtmatige vragen/queries zijn gesteld en of dat er onterecht toegang is verkregen tot gesloten gegevens. </p>
-<p>Deze oplossing raakt ook de <a href="../bestaande-implementaties/#gemma-verwerkingenlogging">GEMMA verwerkingenlogging</a>.</p>
+vrije bevraging en alle <a href="../afschermingspatronen/">afschermingspatronen</a>.</p>
+<p>Deze technologische oplossingsrichting is geen oplossing voor autorisatie, maar draagt wel bij aan
+de inzage en controle van toegestane bevragingen. Dit zou een oplossing of implementatie zijn van de
+<a href="../bestaande-implementaties/#gemma-verwerkingenlogging">GEMMA verwerkingenlogging</a> in het Linked
+Data domein.</p>
 <table>
 <thead>
 <tr>
