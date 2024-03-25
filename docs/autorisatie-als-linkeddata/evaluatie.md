@@ -1,8 +1,6 @@
 ---
 title: Evaluatie
 ---
-## Vergelijking implementaties
-
 Beide besproken methodes hebben natuurlijk sterke en zwakke punten. In dit hoofdstuk proberen we
 hier een overzicht van te geven.
 
