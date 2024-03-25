@@ -90,7 +90,7 @@ toegang heeft. Dit levert een percelen kaart op van Almere.
 Hieronder is een video gemaakt die bovenstaande zaken demonstreert.
 
 <video controls>
-  <source src="https://kadaster-labs.github.io/lock-unlock-docs/autorisatie-als-linkeddata/video/demo.mp4" type="video/mp4">
+  <source src="https://github.com/kadaster-labs/lock-unlock-docs/raw/main/docs/autorisatie-als-linkeddata/video/demo.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
