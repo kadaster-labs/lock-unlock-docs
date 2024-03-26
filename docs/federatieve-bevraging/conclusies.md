@@ -1,5 +1,5 @@
 ---
-title: Conclusies en aanbevelingen
+title: Conclusies en Aanbevelingen
 ---
 ## Conclusies
 

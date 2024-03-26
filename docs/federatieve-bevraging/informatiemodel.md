@@ -105,7 +105,7 @@ Net zoals de BRK linkt naar personen in de BRP kan ook de NHR direct verbonden w
 |*Relatie tussen NHR en BRP registers*|
 
 ## Hét Informatiemodel voor Lock-Unlock
-Door de `owl:sameAs` relatie (en bijbehorende inferentie) en `ik:heeftUBO` relatie ontstaat er een netwerk van samenhangende schema's. Dit kan natuurlijk als één schema gepresenteerd worden. Op basis van de implementatie van dit model als linked data kunnen een aantal conclusies en aanbeveilingen worden getrokken met betrekking tot de mogelijkheden om federatief bevragingen te ondersteunen. Zie [Conclusies en Aanbeveilingen](../conclusies.md).
+Door de `owl:sameAs` relatie (en bijbehorende inferentie) en `ik:heeftUBO` relatie ontstaat er een netwerk van samenhangende schema's. Dit kan natuurlijk als één schema gepresenteerd worden. Op basis van de implementatie van dit model als linked data kunnen een aantal conclusies en aanbeveilingen worden getrokken met betrekking tot de mogelijkheden om federatief bevragingen te ondersteunen. Zie [Conclusies en Aanbeveilingen](./conclusies.md).
 
 Hieronder een screenshot van de visualisatie direct uit de data van de schema's. Deze visualisatie is ook live te bekijken via [deze link](https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema).
 
