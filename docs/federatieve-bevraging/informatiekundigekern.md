@@ -2,9 +2,16 @@
 title: Informatiekundige Kern
 ---
 
-Een kernprincipe bij de ontwikkeling van het federatief datastelsel is het concept van een informatiekundige kern. Deze informatiekundige kern ondersteunt het koppelen van eerder verspreide basisregistraties via een set vooraf gedefinieerde relaties (zie [Stelsel van Basisregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/stelsel-van-basisregistraties-toegankelijke-beschrijving/)). Dit hoofdstuk beschrijft wat ervoor nodig is om verschillende, onafhankelijke registers met elkaar te koppelen en en hoe dat binnen dit project concreet werd geïmplementeerd. Binnen dit project wordt uitgegaan van een federatief datastelsel op basis van Linked Data. 
+Een kernprincipe bij de ontwikkeling van het federatief datastelsel is het concept van een informatiekundige kern. Deze informatiekundige kern ondersteunt het koppelen van eerder verspreide basisregistraties via een set vooraf gedefinieerde relaties (zie [Stelsel van Basisregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/stelsel-van-basisregistraties-toegankelijke-beschrijving/)). Deze geïdentificeerde relaties vertegenwoordigen de relaties die het meest algemeen worden gebruikt bij het combineren van gegevens uit verschillende bronnen voor een bepaald doel. Het idee is dat door deze 'kern' te formaliseren, gebruikers van de data deze informatie gemakkelijker kunnen opvragen.
 
-### Onafhankelijke Registers
+Het concept van een informatiekundige kern heeft affiniteit met linked data technologies vanwege de inherente ondersteuning van laatstgenoemde voor het koppelen van gedistribueerde gegevensbronnen. Omdat het startpunt voor het Lock-Unlock project de doorontwikkeling van het IGO project was, was het gebruik van linked data technologieën een voorwaarde voor dit project. Hoewel het project deze technologieën gebruikt om gegevensbronnen te koppelen, wat een manier aantoont waarop de informatiekundige kern geformaliseerd kan worden, zijn linked data technologies niet de enige manier waarop de informatiekundige kern kan worden geïmplementeerd. Deze andere oplossingen voor formalisering zijn echter niet onderzocht of getest als onderdeel van dit project.
+
+De volgende discussie presenteert twee opties voor het ontwerp van een informatiekundige kern met behulp van linked data technologies. Eén van deze opties wordt vervolgens meegenomen in het ontwerp van het informatiemodel voor dit project. Het is belangrijk op te merken dat hoewel dit informatiemodel en het gebruik ervan binnen dit project de toegevoegde waarde aantonen van geformaliseerde relaties voor het ondersteunen van federatieve bevraging tussen informatiebronnen, het geen definitieve conclusies biedt over wat de inhoud van de informatiekundige kern zou moeten zijn. Dit komt omdat de gegevens die voor dit project werden gebruikt, aanzienlijk zijn vereenvoudigd om te voldoen aan de minimale vereisten van de ontworpen demonstrator. Elk onderzoek naar de uitdagingen en randgevallen die van invloed zijn op de complexiteit van het ontwerp van een informatiekundige kern viel buiten de scope van dit project.
+
+### Federatief Datastelsel als Linked Data
+Er zijn een aantal stappen die moeten worden genomen bij het ontwikkelen van een federatief datastelsel met behulp van linked data. Eén van deze stappen omvat de definitie van de informatiekundige kern. 
+
+#### Stap 1. Onafhankelijke Registers 
  
 De basisregistraties (e.g. BRK, BAG, BRP en NHR) zijn relatief onafhankelijk van elkaar ontwikkeld door verschillende organisaties, techniek en modellen. Zo beheert Kadaster bijvoorbeeld de BRK en de KvK het NHR. Ook de modellering en standardisatie van de gegevens kan verschillen. Zo zijn, bijvoorbeeld, de NEN3610 en Geonovum's IM-modellen de basis voor de datasets van Kadaster terwijl deze standaarden minder van belang zijn bij andere registers. Door de onafhankelijke ontwikkeling van registers ontstaan zogenaamde data silo’s. Abstract wordt deze situatie als volgt gevisualiseerd. 
 
@@ -12,7 +19,7 @@ De basisregistraties (e.g. BRK, BAG, BRP en NHR) zijn relatief onafhankelijk van
 | :--: |
 |*Registraties als losstaande silo's*|
 
-### Registers als Linked Data
+#### Stap 2. Registers als Linked Data
 
 De bron van alle registers is vooralsnog geen Linked Data. Een ontwikkeling naar Linked Data toe zou kunnen door de bestaande situatie uit te breiden met een publicatie van de gegevens in Linked Data. Er zijn steeds meer implementaties en standaarden aanwezig om Linked Data te genereren vanuit een andere type bron zoals bijvoorbeeld een SQL database. Denk hierbij bijvoorbeeld aan [RML](https://rml.io/) of [R2RML](https://www.w3.org/TR/r2rml/). Ook maakt [JSON-LD](https://www.w3.org/TR/json-ld11/) de stap naar Linked Data wat makkelijker voor implementaties die werken met JSON denk bijvoorbeeld aan JSON api's. Het volgende diagram toont de creatie van Linked Data 'silo's voor elk van de oorspronkelijke gegevensbronnen.
 
@@ -24,7 +31,7 @@ De bron van alle registers is vooralsnog geen Linked Data. Een ontwikkeling naar
 
 Door middel van een SPARQL endpoint kan er nu een federatieve query gemaakt worden die gegevens uit meerder endpoints raadpleegt. Om dit te kunnen doen, moet de gebruiker echter begrijpen waar de overlappingen bestaan tussen verschillende datasets, d.w.z. hoe de informatie die zich in deze zich bevindt moet worden verbonden om de informatie over verschillende endpoints te kunnen opvragen.
 
-### Formele Verbinding van Registers
+#### Stap 3. Formele Verbinding van Registers
 
 Om precies te weten wat de data betekent en waar evt een overlap te vinden is die in meerdere registers aanwezig is, kan de data verrijkt worden met een context. Elk data element (of stuk instantie data) kan gekoppeld worden aan een linked data klasse (bv. een `owl:Class`) die o.a beschrijvingen, labels (in meerdere talen), en overige informatie kan bevatten. Door deze extra context is de data beter te begrijpen en makkelijker te bevragen door de gebruikers. 
 
@@ -42,7 +49,7 @@ Idealiter zorg je voor formele koppelelementen die de registers adopteren en ond
 
 > **5 Star Linked Data:** Wanneer één of beide van deze opties tussen basisregistraties worden geïntroduceerd, kunnen deze registers nu worden beoordeeld als 5-sterren linked data.
 
-#### Optie 1: Upperontologie
+##### Optie 1: Upperontologie
 Een upperontologie, of
 wellicht in FDS termen een Linked Data versie van een ['informatiekundige
 kern'](https://realisatieibds.pleio.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/wiki/view/d0d90aeb-c896-4925-9948-35c6615ee873/notitie-informatiekundige-kern), definieert klassen en/of attributen die worden gedeeld tussen verschillende registers. Een upperontologie zou bijvoorbeeld het attribuut BSN-nummer kunnen definiëren als het identificatienummer van een persoon en zowel de BRP als de BRK kunnen dit attribuut gebruiken bij het publiceren van identificatiegegevens gerelateerd aan personen. Deze gedeelde kenmerken kunnen worden aangeduid als sleutelvelden. 
@@ -59,7 +66,7 @@ Een dergelijke upperontologie kan logisch worden gedefinieerd op basis van geïd
 
 Hiermee wordt het makkelijker om data uit één register te combineren met data uit een ander register. Bij het schrijven van een federatieve query kan dit BSN-nummer dus worden gebruikt om informatie over de percelen van een bepaalde persoon op te halen bij de BRK en de persoonsgegevens van deze persoon (bijvoorbeeld volledige naam, geboortedatum en huwelijksstatus) uit de BRP te halen. 
 
-#### Optie 2: Gematerialiseerde Relaties 
+##### Optie 2: Gematerialiseerde Relaties 
 Hoewel deze mogelijkheid er is door het uitvogelen van relaties tussen sleutelvelden uit de upperontologie zou het ook mogelijk zijn om extra relaties te kunnen afleiden en deze 'materialiseren'. Oftewel extra relaties kunnen (evt virtueel) toegevoegd worden. Deze materialisatie van relaties wordt niet gedefinieerd door de upperontologie maar tussen de instancegegevens in de registers zelf.
 
 |![linked data in context](images/registersLD6.png)|
@@ -72,11 +79,9 @@ Een tweede voorbeeld is de materialisatie van relaties tussen instantiegegevens 
 
 De aanwezigheid van directe relaties tussen de registers maakt het nog makkelijker om federatieve bevragingen te doen.  Integrale bevragingen zijn hierbij mogelijk maar ook bevragingen mbt consistentie zijn hierbij zeer makkelijk. Denk bijvoorbeeld aan de vraag welke BAG-Panden zijn onbekend bij Kadaster vanuit de NHR, Of vanuit de BRK, welke BRP personen zijn (on)bekend bij de BRP. Het schrijven van een dergelijke query is zeer eenvoudig. De uitvoering ervan zal natuurlijk qua performance wel het nodige vereisen. Linked data technologieën maken de introductie van deze directe relaties tussen instantiegegevens eenvoudig en illustreren een duidelijk voordeel van het gebruik van deze technologie ter ondersteuning van federatieve bevragingen.
 
-### Ontwerp van de Informatiekundige Kern
-Het ontwerp van de informatiekundige kern zou zowel de introductie van een upperontologie moeten omvatten als de introductie van gematerialiseerde relaties tussen basisregistraties waar logische relaties bestaan. Er moeten afspraken worden gemaakt tussen de beheerders van de basisregistraties bij het ontwerpen van een dergelijke hogere ontologie en bij het onderhouden van eventuele gematerialiseerde relaties tussen de basisregistraties. Door ervoor te zorgen dat deze afspraken worden nageleefd, kan de gebruikerstoegankelijkheid en herbruikbaarheid van de basisregistraties als datastelsel worden gewaarborgd.
+### Ontwerp van de Informatiekundige Kern als Linked Data
+Het ontwerp van de informatiekundige kern in linked data zou zowel de introductie van een upperontologie moeten omvatten als de introductie van gematerialiseerde relaties tussen basisregistraties waar logische relaties bestaan. Er moeten afspraken worden gemaakt tussen de beheerders van de basisregistraties bij het ontwerpen van een dergelijke hogere ontologie en bij het onderhouden van eventuele gematerialiseerde relaties tussen de basisregistraties. Door ervoor te zorgen dat deze afspraken worden nageleefd, kan de gebruikerstoegankelijkheid en herbruikbaarheid van de basisregistraties als datastelsel worden gewaarborgd.
  
-In de volgende secties worden de ingrediënten geïntroduceerd voor de testopstelling die is gedefinieerd binnen het Lock-Unlock project. Hierbij wordt een kleiner, fictief systeem van basisregistraties  gecreëerd, een upperontologie wordt gedefinieerd en federatieve bevragingen worden ondersteund. In de volgende sectie worden de ontwerpkeuzes besproken die zijn gemaakt bij het definiëren van zo een upperontologie.
-
-
+In de volgende secties worden de ingrediënten geïntroduceerd voor de testopstelling die is gedefinieerd binnen het Lock-Unlock project. Hierbij wordt een kleiner, fictief systeem van basisregistraties gecreëerd, relaties tussen informatie bronnen wordt gedefinieerd en federatieve bevragingen worden ondersteund. In de volgende sectie worden de ontwerpkeuzes besproken die zijn gemaakt bij het definiëren van relaties tussen informatiebronnen.
 
 

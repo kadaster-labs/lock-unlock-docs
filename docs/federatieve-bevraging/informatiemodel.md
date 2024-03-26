@@ -2,6 +2,14 @@
 title: Informatiemodel
 ---
 
+
+
+
+
+
+
+
+
 Versimpelde testdata van een federatief datastelsel is ontwikkeld op basis van Linked Data en de Linked Data gedachte. Hiermee is het mogelijk om een realistische situatie na te kunnen bootsen waarin informatie afgeschermd dient te worden. Aangezien het heel handig is om data in een context te plaatsen (denk aan data schema's) is er binnen dit project een set van schema's ontwikkeld die de registers nabootsen (versimpeld en fictief) en natuurlijk een bijbehorende dataset. Deze pagina beschrijft het maken van de schema's die relevant zijn voor dit project en de [volgende sectie](./testopstelling.md) beschrijft het maken van gerelateerde dataset. 
 
 ### Vereenvoudigd Conceptueel Model 

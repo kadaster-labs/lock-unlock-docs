@@ -96,4 +96,4 @@ Dit is precies de kern van het Lock-Unlock onderzoeksproject:
 
 **_Lock de data, unlock het potentieel!_**
 
-In de volgende secties wordt beschrijven hoe Linked Data in dit project werd toegepast en toegepast.
+In de volgende secties wordt beschrijven hoe Linked Data in dit project werd toegepast.
