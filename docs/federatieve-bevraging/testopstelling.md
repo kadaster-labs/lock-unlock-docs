@@ -38,7 +38,7 @@ beschikbaar gesteld. Deze wordt automatisch geladen bij het opstarten van de con
 
 ## Deployment
 
-Als Kadaster hebben wij de BRK data zelf (uiteraard) en IMXGeo in huis. Ook de synthetische
+Als Kadaster hebben wij de BRK data zelf (uiteraard) en IMX-Geo in huis. Ook de synthetische
 [testdata](#testdata) van de BRK hosten we op onze infrastructuur. Hiervoor maken we gebruik van ons
 interne Managed Application Platform, een <a
 href="https://kubernetes.io/"target="_blank">Kubernetes</a> / <a href="https://docs.openshift.com/"

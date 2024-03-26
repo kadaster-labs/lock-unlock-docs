@@ -75,7 +75,7 @@ De aanwezigheid van directe relaties tussen de registers maakt het nog makkelijk
 ### Ontwerp van de Informatiekundige Kern
 Het ontwerp van de informatiekundige kern zou zowel de introductie van een upperontologie moeten omvatten als de introductie van gematerialiseerde relaties tussen basisregistraties waar logische relaties bestaan. Er moeten afspraken worden gemaakt tussen de beheerders van de basisregistraties bij het ontwerpen van een dergelijke hogere ontologie en bij het onderhouden van eventuele gematerialiseerde relaties tussen de basisregistraties. Door ervoor te zorgen dat deze afspraken worden nageleefd, kan de gebruikerstoegankelijkheid en herbruikbaarheid van de basisregistraties als datastelsel worden gewaarborgd.
  
-In de volgende secties worden de ingrediënten geïntroduceerd voor de testopstelling die is gedefinieerd binnen het Lock Unlock-project. Hierbij wordt een kleiner, fictief systeem van basisregistraties  gecreëerd, een upperontologie wordt gedefinieerd en federatieve bevragingen worden ondersteund. In de volgende sectie worden de ontwerpkeuzes besproken die zijn gemaakt bij het definiëren van zo een upperontologie.
+In de volgende secties worden de ingrediënten geïntroduceerd voor de testopstelling die is gedefinieerd binnen het Lock-Unlock project. Hierbij wordt een kleiner, fictief systeem van basisregistraties  gecreëerd, een upperontologie wordt gedefinieerd en federatieve bevragingen worden ondersteund. In de volgende sectie worden de ontwerpkeuzes besproken die zijn gemaakt bij het definiëren van zo een upperontologie.
 
 
 

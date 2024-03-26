@@ -11,7 +11,7 @@ Dit begint met het opnemen van percelen als object binnen een conceptueel model 
 
 |![Vereenvoudigd concetpueel model](images/vereenvoudigd-informatiemodel.png)|
 | :--: |
-|*Informatie Model IMXGeo als Linked Data*|
+|*Informatie Model IMX-Geo als Linked Data*|
 
 Het vereenvoudigd conceptueel model zoals getoond in bovenstaande afbeelding is verder uitgewerkt in Linked Data als een (upper)ontologie voor een Lock-Unlock Informatiemodel gebaseerd op losstaande schema's. Om de schema's en (upper)ontologie te modelleren is er gebruik gemaakt van de RDF/RDFS/OWL en SHACL standaarden. 
 
@@ -20,11 +20,11 @@ Het vereenvoudigd conceptueel model zoals getoond in bovenstaande afbeelding is 
 Voor elke silo is een schema gemaakt. Het betreft hier een (over)versimpeld schema dat grofweg de kern van het register bevat met als doel R&D voor de dit project te ondersteunen en tevens voor demonstratie mogelijkheden. Het schema voor elke silo heeft een eigen namespace en is relatief onafhankelijk gemodelleerd. Zo is voor Kadaster de NEN3610 een belangrijke upperontologie terwijl dit wellicht voor de BRP niet zo hoeft te zijn. Op deze manier onstaat er een situatie dat elk register een eigen ontologie heeft op basis van eigen upperontologieën.
 
 #### IMX-Geo Schema
-Een openbare basis dataset is IMX-Geo. Deze is aanwezig als Linked Data en bevat data van gebouwen en percelen liggende in registratieve ruimtes. Bijna alle gegevens zijn openbaar. De 'laatste koopsom' is wellicht een uitzondering hierop. Het deel van het informatiemodel dat nodig is voor Lock Unlock wordt gevisualiseerd in de volgende afbeelding en is [hier](https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=http%3A%2F%2Fmodellen.geostandaarden.nl%2Fdef%2Fimx-geo%23) te vinden:
+Een openbare basis dataset is IMX-Geo. Deze is aanwezig als Linked Data en bevat data van gebouwen en percelen liggende in registratieve ruimtes. Bijna alle gegevens zijn openbaar. De 'laatste koopsom' is wellicht een uitzondering hierop. Het deel van het informatiemodel dat nodig is voor Lock-Unlock wordt gevisualiseerd in de volgende afbeelding en is [hier](https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=http%3A%2F%2Fmodellen.geostandaarden.nl%2Fdef%2Fimx-geo%23) te vinden:
 
 |![linked registers](images/schema-imx.png)|
 | :--: |
-|*Informatie Model IMXGeo als Linked Data*|
+|*Informatie Model IMX-Geo als Linked Data*|
 
 IMX-Geo is vanuit Kadaster beschikbaargesteld in Linked Data en is grofweg voor het 'Kadaster gedeelte' helemaal compleet aanwezig. Deze dataset is gebruikt in dit project.
 

@@ -1,7 +1,7 @@
 ---
 title: Federatieve Bevraging
 ---
-In een federatief datastelsel wordt data beschikbaar gesteld vanuit diverse en gedistribueerde bronnen. De toegevoegde waarde volgt waneer deze bronnen in samenhang bevraagd kunnen worden. En, sterker nog, wanneer deze geïntegreerde bevraging een eenvoudigere combinatie van gegevens ondersteunt om voorheen moeilijke of ongrijpbare vragen te beantwoorden. Het opvragen van gegevens die zijn opgeslagen in gedistribueerde bronnen noemen we 'federatieve bevraging'. 
+In een federatief datastelsel wordt data beschikbaar gesteld vanuit diverse en gedistribueerde bronnen. De toegevoegde waarde volgt wanneer deze bronnen in samenhang bevraagd kunnen worden. En, sterker nog, wanneer deze geïntegreerde bevraging een eenvoudigere combinatie van gegevens ondersteunt om voorheen moeilijke of ongrijpbare vragen te beantwoorden. Het opvragen van gegevens die zijn opgeslagen in gedistribueerde bronnen noemen we 'federatieve bevraging'. 
 
 'Federatieve bevraging' duidt op twee onderdelen, namelijk de _bevraging_ en het feit dat dat _federatief_ plaatsvindt. We beschouwen dit vanuit een digitaal tijdperk en daarom betekent 'bevraging' een digitale of 'met computer' bevraging. Federatief geeft aan dat de informatie in verschillende bronnen is opgeslagen en dat de bevraging deze informatie individueel benadert. Er is geen centrale opslag van informatie. 
 
