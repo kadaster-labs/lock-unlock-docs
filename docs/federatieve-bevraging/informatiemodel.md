@@ -1,16 +1,9 @@
 ---
 title: Informatiemodel
 ---
-
-
-
-
-
-
-
-
-
 Versimpelde testdata van een federatief datastelsel is ontwikkeld op basis van Linked Data en de Linked Data gedachte. Hiermee is het mogelijk om een realistische situatie na te kunnen bootsen waarin informatie afgeschermd dient te worden. Aangezien het heel handig is om data in een context te plaatsen (denk aan data schema's) is er binnen dit project een set van schema's ontwikkeld die de registers nabootsen (versimpeld en fictief) en natuurlijk een bijbehorende dataset. Deze pagina beschrijft het maken van de schema's die relevant zijn voor dit project en de [volgende sectie](./testopstelling.md) beschrijft het maken van gerelateerde dataset. 
+
+Onderdeel van de ontwikkeling van het informatiemodel en de testdata was het formaliseren van relaties tussen databronnen. Deze formalisering van relaties is een voorbeeld van een implementatie van een informatiekundige kern. Omdat deze relaties worden gedefinieerd tussen fictieve, vereenvoudigde databronnen die voor dit project zijn ontwikkeld, kunnen er geen conclusies worden getrokken over de geschiktheid van dit informatiemodel voor het Federatief Datastelsel en De Informatiekundige Kern in het algemeen. Dit informatiemodel laat alleen zien hoe relaties tussen linked data geformaliseerd kunnen worden en hoe federatieve bevraging mogelijk wordt gemaakt.
 
 ### Vereenvoudigd Conceptueel Model 
 Om een federatieve bevraging te kunnen laten zien, is een testopstelling nodig. De eerste stap hiervoor is het maken van een conceptueel model om de benodigde gegevens voor ons doel te modelleren. Om een logisch begin te maken, hebben we daarvoor gekozen voor een situatie 'dicht bij huis'. Bij het Kadaster: De Basisregistratie Kadaster, afgekort de **BRK**. 
@@ -71,7 +64,7 @@ De schemas en de data van de schemas zijn als silo's opgezet. Elk register publi
 
 > NB: De bovenstaanden schemas worden hier niet gedefinieerd als ontologieën omdat ze geen axioma's of geformaliseerde inferentie regels bevatten. Met de introductie van `owl:sameAs` vanaf nu, kunnen we nu inferentie doen en nu wordt het informatie model een ontologie. Dit komt omdat deze relatie aangeeft dat er enige conceptuele gelijkenis bestaat tussen individuen en dat informatie kan worden afgeleid op basis van de aanwezigheid van deze relaties. 
 
-Om de verschillende schema's met elkaar te verbinden, wordt een upperontologie gedefinieerd die twee relaties omvat tussen klassen die in de schema's zijn gedefinieerd, `owl:sameAs` en een `ik:heeftUBO` relatie. In beide gevallen worden deze relaties gedefinieerd als onderdeel van een hogere ontologie en gematerialiseerd in de data zelf om instanties met elkaar te verbinden. 
+Om de verschillende schema's met elkaar te verbinden, wordt een upperontologie gedefinieerd die twee relaties omvat tussen klassen die in de schema's zijn gedefinieerd, `owl:sameAs` en een `ik:heeftUBO` relatie. In beide gevallen worden deze relaties gedefinieerd als onderdeel van een upper ontologie en gematerialiseerd in de data zelf om instanties met elkaar te verbinden (zie optie 1 en 2 in [informatiekundigekern](informatiekundigekern.md)). 
 
 #### `owl:sameAs`
 Door middel van `owl:sameAs` relaties kunnen individuals in Linked Data gelijk verklaard worden over verschillende silo's heen.
