@@ -20,7 +20,7 @@ een client en de server.
 REST API’s/RESTful-webservices zijn opgezet om geïsoleerd en enkelvoudige informatie beschikbaar te
 stellen. Elke API heeft één specifieke input en output. Relaties tussen objecten zijn in de (output)
 JSON als URL opgenomen welke direct gebruikt kan worden om dan een gerelateerd object op te vragen.
-Dit maakt dat het federatief bevragen van data met behulp van REST API's nog niet zo eenvoudig is.
+Hoewel dit de REST API zeer geschikt maakt voor grote (bulk) en frequente, herhaalde verzoeken, zijn federatieve gegevensverzoeken met behulp van REST API's niet zo eenvoudig.
 Daarvoor dient een client, de software voor uitvoeren van de bevraging, slim en flexibel te zijn.
 Tot slot dienen de REST API's te voldoen aan de Restful standaarden, welke de facto standaarden zijn
 en helaas slechts weinig echt ondersteund worden.
@@ -47,7 +47,7 @@ REST API’s en maakt het mogelijk om integraal informatie beschikbaar te stelle
 
 #### SPARQL
 
-[SPARQL](https://en.wikipedia.org/wiki/SPARQL), uitspraak 'sparkle', is een standaard query taal en
+[SPARQL](https://en.wikipedia.org/wiki/SPARQL) (uitspraak 'sparkle') is een standaard query taal en
 protocol voor Linked (Open) Data op het web en voor RDF triple stores. SPARQL staat voor _'SPARQL
 Protocol and RDF Query Language'_ en biedt gebruikers de mogelijkheid om informatie op te vragen van
 databases of van elke resource die kan worden uitgedrukt in RDF (zie [Linked
@@ -57,7 +57,7 @@ bevragen. SPARQL is volledig gebaseerd op Linked Data en de mogelijkheden daarva
 
 | Pros | Cons | 
 |------|------|
-| <ul><li>Geen silo gedachtes</li><li>Hoge samenhang</li><li>Zeer goede schema definities ontsluiting</li><li>Schemaloze query mogelijkheden</li></ul> | <ul><li>Verfijnde autorisatie mogelijkheden moeten nog ontwikkeld worden</li><li>Minder gangbare oplossing onder developers</li></ul> |
+| <ul><li>Geen silo gedachtes</li><li>Hoge samenhang</li><li>Zeer goede schema definities ontsluiting</li><li>Schemaloze query mogelijkheden</li><li>Linked Data zijn W3C Open Standaarden</li></ul> | <ul><li>Verfijnde autorisatie mogelijkheden moeten nog ontwikkeld worden</li><li>Minder gangbare oplossing onder developers</li><li>Data moet beschikbaar zijn als Linked Data</li></ul> |
 
 Hieronder worden de verschillen tussen de verschillende interfaces gevisualiseerd.
 
@@ -77,3 +77,4 @@ GraphQL slecht één expliciet schema van toepassing is.
 | :--: |
 |_Vergelijking van vraagkracht van APIs voor federatief bevraging_|
 
+In het algemeen zijn er drie belangrijke gebruiksscenario's voor linked data via SPARQL endpoints, namelijk; (zoekmachine)vindbaarheid, data-analyse, de semantiek van de data. De belangrijkste use case voor het gebruik en de implementatie van linked data als aanpak is dataverkenning en/of -analyse, waarbij de eis van een semantisch rijke, ondubbelzinnige betekenis voor data vereist is en waar er enig potentieel is voor herbruikbaarheid in andere contexten. SPARQL endpoints bieden ongefilterde toegang tot alles wat beschikbaar is via dat endpoint – de gebruiker is vervolgens vrij om de gegevens op elke gewenste manier op te vragen en indien nodig groeperingen of filters op de gegevens aan te bieden. Deze flexibiliteit en zelfbediening is niet zo aanwezig in GraphQL omdat filters niet zo flexibel kunnen worden toegepast. Een GraphQL endpoint vereist doorgaans enige voorconfiguratie, omdat er al gedefinieerde queries of vragen zijn die de manier bepalen waarop de gebruiker met het endpoint kan communiceren. Bij SPARQL is deze voorconfiguratie niet nodig. In beide gevallen kunnen de prestaties worden opgelost door de manier waarop een query wordt gedefinieerd, en opnieuw betekent het verschil tussen GraphQL- en SPARQL-query's dat deze prestatieverbetering kan worden gedaan binnen de query zelf in SPARQL, en daarom meer door de gebruiker wordt geleid, terwijl dit anders zou zijn. gedaan worden op de backend van een GraphQL endpoint.
