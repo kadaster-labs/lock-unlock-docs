@@ -1422,11 +1422,34 @@
 
   <h1>Informatiemodel</h1>
 
-<p>Versimpelde testdata van een federatief datastelsel is ontwikkeld op basis van Linked Data en de Linked Data gedachte. Hiermee is het mogelijk om een realistische situatie na te kunnen bootsen waarin informatie afgeschermd dient te worden. Aangezien het heel handig is om data in een context te plaatsen (denk aan data schema's) is er binnen dit project een set van schema's ontwikkeld die de registers nabootsen (versimpeld en fictief) en natuurlijk een bijbehorende dataset. Deze pagina beschrijft het maken van de schema's die relevant zijn voor dit project en de <a href="../testopstelling/">volgende sectie</a> beschrijft het maken van gerelateerde dataset. </p>
-<p>Onderdeel van de ontwikkeling van het informatiemodel en de testdata was het formaliseren van relaties tussen databronnen. Deze formalisering van relaties is een voorbeeld van een implementatie van een informatiekundige kern. Omdat deze relaties worden gedefinieerd tussen fictieve, vereenvoudigde databronnen die voor dit project zijn ontwikkeld, kunnen er geen conclusies worden getrokken over de geschiktheid van dit informatiemodel voor het Federatief Datastelsel en De Informatiekundige Kern in het algemeen. Dit informatiemodel laat alleen zien hoe relaties tussen linked data geformaliseerd kunnen worden en hoe federatieve bevraging mogelijk wordt gemaakt.</p>
+<p>Versimpelde testdata van een federatief datastelsel is ontwikkeld op basis van Linked Data en de
+Linked Data gedachte. Hiermee is het mogelijk om een realistische situatie na te kunnen bootsen
+waarin informatie afgeschermd dient te worden. Aangezien het heel handig is om data in een context
+te plaatsen (denk aan data schema's) is er binnen dit project een set van schema's ontwikkeld die de
+registers nabootsen (versimpeld en fictief) en natuurlijk een bijbehorende dataset. Deze pagina
+beschrijft het maken van de schema's die relevant zijn voor dit project en de <a href="../testopstelling/">volgende
+sectie</a> beschrijft het maken van gerelateerde dataset. </p>
+<p>Onderdeel van de ontwikkeling van het informatiemodel en de testdata was het formaliseren van
+relaties tussen databronnen. Deze formalisering van relaties is een voorbeeld van een implementatie
+van een informatiekundige kern. Omdat deze relaties worden gedefinieerd tussen fictieve,
+vereenvoudigde databronnen die voor dit project zijn ontwikkeld, kunnen er geen conclusies worden
+getrokken over de geschiktheid van dit informatiemodel voor het Federatief Datastelsel en De
+Informatiekundige Kern in het algemeen. Dit informatiemodel laat alleen zien hoe relaties tussen
+linked data geformaliseerd kunnen worden en hoe federatieve bevraging mogelijk wordt gemaakt.</p>
 <h3 id="vereenvoudigd-conceptueel-model">Vereenvoudigd Conceptueel Model</h3>
-<p>Om een federatieve bevraging te kunnen laten zien, is een testopstelling nodig. De eerste stap hiervoor is het maken van een conceptueel model om de benodigde gegevens voor ons doel te modelleren. Om een logisch begin te maken, hebben we daarvoor gekozen voor een situatie 'dicht bij huis'. Bij het Kadaster: De Basisregistratie Kadaster, afgekort de <strong>BRK</strong>. </p>
-<p>Dit begint met het opnemen van percelen als object binnen een conceptueel model en vervolgens is het eigendom vastgesteld via <code>Tenaamstellingen</code> aan objecten personen. Met personen worden <code>Rechtspersonen</code> bedoeld, wat een echt of 'natuurlijk' persoon kan zijn, maar ook een bedrijf. De juridische term is <code>Natuurlijk Persoon</code> voor echte mensen, welke geregistreerd zijn in de Basisregistratie Personen, afgekort met de <strong>BRP</strong>. Bedrijven zijn juridisch <code>Niet Natuurlijke Personen</code> en deze zijn geregistreerd in het Nationaal Handelsregister, afgekort met <strong>NHR</strong>. Om de casus nog wat breder te maken hebben we ook nog het <strong>ANBI</strong> register toegevoegd; het register van de Belastingdienst waarin goede doelen staan die aangemerkt zijn als Algemeen Nut Beogende Instellingen.</p>
+<p>Om een federatieve bevraging te kunnen laten zien, is een testopstelling nodig. De eerste stap
+hiervoor is het maken van een conceptueel model om de benodigde gegevens voor ons doel te
+modelleren. Om een logisch begin te maken, hebben we daarvoor gekozen voor een situatie 'dicht bij
+huis'. Bij het Kadaster: De Basisregistratie Kadaster, afgekort de <strong>BRK</strong>. </p>
+<p>Dit begint met het opnemen van percelen als object binnen een conceptueel model en vervolgens is het
+eigendom vastgesteld via <code>Tenaamstellingen</code> aan objecten personen. Met personen worden
+<code>Rechtspersonen</code> bedoeld, wat een echt of 'natuurlijk' persoon kan zijn, maar ook een bedrijf. De
+juridische term is <code>Natuurlijk Persoon</code> voor echte mensen, welke geregistreerd zijn in de
+Basisregistratie Personen, afgekort met de <strong>BRP</strong>. Bedrijven zijn juridisch <code>Niet Natuurlijke
+Personen</code> en deze zijn geregistreerd in het Nationaal Handelsregister, afgekort met <strong>NHR</strong>. Om de
+casus nog wat breder te maken hebben we ook nog het <strong>ANBI</strong> register toegevoegd; het register van
+de Belastingdienst waarin goede doelen staan die aangemerkt zijn als Algemeen Nut Beogende
+Instellingen.</p>
 <table>
 <thead>
 <tr>
@@ -1439,11 +1462,25 @@
 </tr>
 </tbody>
 </table>
-<p>Het vereenvoudigd conceptueel model zoals getoond in bovenstaande afbeelding is verder uitgewerkt in Linked Data als een (upper)ontologie voor een Lock-Unlock Informatiemodel gebaseerd op losstaande schema's. Om de schema's en (upper)ontologie te modelleren is er gebruik gemaakt van de RDF/RDFS/OWL en SHACL standaarden. </p>
+<p>Het vereenvoudigd conceptueel model zoals getoond in bovenstaande afbeelding is verder uitgewerkt in
+Linked Data als een (upper)ontologie voor een Lock-Unlock Informatiemodel gebaseerd op losstaande
+schema's. Om de schema's en (upper)ontologie te modelleren is er gebruik gemaakt van de RDF/RDFS/OWL
+en SHACL standaarden. </p>
 <h3 id="losstaande-schemas-per-silo">Losstaande schema's per silo</h3>
-<p>Voor elke silo is een schema gemaakt. Het betreft hier een (over)versimpeld schema dat grofweg de kern van het register bevat met als doel R&amp;D voor de dit project te ondersteunen en tevens voor demonstratie mogelijkheden. Het schema voor elke silo heeft een eigen namespace en is relatief onafhankelijk gemodelleerd. Zo is voor Kadaster de NEN3610 een belangrijke upperontologie terwijl dit wellicht voor de BRP niet zo hoeft te zijn. Op deze manier onstaat er een situatie dat elk register een eigen ontologie heeft op basis van eigen upperontologieën.</p>
+<p>Voor elke silo is een schema gemaakt. Het betreft hier een (over)versimpeld schema dat grofweg de
+kern van het register bevat met als doel R&amp;D voor de dit project te ondersteunen en tevens voor
+demonstratie mogelijkheden. Het schema voor elke silo heeft een eigen namespace en is relatief
+onafhankelijk gemodelleerd. Zo is voor Kadaster de NEN3610 een belangrijke upperontologie terwijl
+dit wellicht voor de BRP niet zo hoeft te zijn. Op deze manier onstaat er een situatie dat elk
+register een eigen ontologie heeft op basis van eigen upperontologieën.</p>
 <h4 id="imx-geo-schema">IMX-Geo Schema</h4>
-<p>Een openbare basis dataset is de Kadaster Knowledge Graph (KKG) wat gebruik maakt van de IMX-Geo schema. De KKG is aanwezig als Linked Data en bevat data van gebouwen en percelen liggende in registratieve ruimtes. Bijna alle gegevens zijn openbaar. De 'laatste koopsom' is een uitzondering hierop. Het deel van het informatiemodel dat nodig is voor Lock-Unlock wordt gevisualiseerd in de volgende afbeelding en is <a href="https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=http%3A%2F%2Fmodellen.geostandaarden.nl%2Fdef%2Fimx-geo%23">hier</a> te vinden:</p>
+<p>Een openbare basis dataset is de Kadaster Knowledge Graph (KKG) wat gebruik maakt van de IMX-Geo
+schema. De KKG is aanwezig als Linked Data en bevat data van gebouwen en percelen liggende in
+registratieve ruimtes. Bijna alle gegevens zijn openbaar. De 'laatste koopsom' is een uitzondering
+hierop. Het deel van het informatiemodel dat nodig is voor Lock-Unlock wordt gevisualiseerd in de
+volgende afbeelding en is
+<a href="https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=http%3A%2F%2Fmodellen.geostandaarden.nl%2Fdef%2Fimx-geo%23">hier</a>
+te vinden:</p>
 <table>
 <thead>
 <tr>
@@ -1456,9 +1493,12 @@
 </tr>
 </tbody>
 </table>
-<p>IMX-Geo is vanuit Kadaster beschikbaargesteld in Linked Data en is grofweg voor het 'Kadaster gedeelte' helemaal compleet aanwezig. Deze dataset is gebruikt in dit project.</p>
+<p>IMX-Geo is vanuit Kadaster beschikbaargesteld in Linked Data en is grofweg voor het 'Kadaster
+gedeelte' helemaal compleet aanwezig. Deze dataset is gebruikt in dit project.</p>
 <h4 id="brk-gesloten-deel-schema">BRK (Gesloten Deel) Schema</h4>
-<p>Een versimpeld model van de BRK is ontwikkeld in Linked data voor dit project. Hieronder is een screenshot van het model zichtbaar en het schema is ook <a href="https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=https%3A%2F%2Fdata.labs.kadaster.nl%2Flock-unlock%2Fbrk%2Fdef%2F">hier te vinden</a>.</p>
+<p>Een versimpeld model van de BRK is ontwikkeld in Linked data voor dit project. Hieronder is een
+screenshot van het model zichtbaar en het schema is ook <a href="https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=https%3A%2F%2Fdata.labs.kadaster.nl%2Flock-unlock%2Fbrk%2Fdef%2F">hier te
+vinden</a>.</p>
 <table>
 <thead>
 <tr>
@@ -1472,7 +1512,10 @@
 </tbody>
 </table>
 <h4 id="nhr-schema">NHR Schema</h4>
-<p>Een versimpeld model van de NHR is gemaakt. Inschrijvingen bevatten wat basis gegevens en zijn gekoppeld aan de openbare Registratieve Ruimtes. Hieronder is een diagram van het NHR schema te zien en deze is <a href="https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=https%3A%2F%2Fdata.federatief.datastelsel.nl%2Flock-unlock%2Fnhr%2Fdef%2F">hier live te vinden</a>.</p>
+<p>Een versimpeld model van de NHR is gemaakt. Inschrijvingen bevatten wat basis gegevens en zijn
+gekoppeld aan de openbare Registratieve Ruimtes. Hieronder is een diagram van het NHR schema te zien
+en deze is <a href="https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=https%3A%2F%2Fdata.federatief.datastelsel.nl%2Flock-unlock%2Fnhr%2Fdef%2F">hier live te
+vinden</a>.</p>
 <table>
 <thead>
 <tr>
@@ -1486,7 +1529,9 @@
 </tbody>
 </table>
 <h4 id="brp-schema">BRP Schema</h4>
-<p>Een versimpelde versie van het BRP register is gemodelleerd. Hieronder is een diagram van het BRP schema te zien en deze is <a href="https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=https%3A%2F%2Fdata.federatief.datastelsel.nl%2Flock-unlock%2Fbrp%2Fdef%2F">hier live te vinden</a>. </p>
+<p>Een versimpelde versie van het BRP register is gemodelleerd. Hieronder is een diagram van het BRP
+schema te zien en deze is <a href="https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=https%3A%2F%2Fdata.federatief.datastelsel.nl%2Flock-unlock%2Fbrp%2Fdef%2F">hier live te
+vinden</a>. </p>
 <table>
 <thead>
 <tr>
@@ -1500,7 +1545,10 @@
 </tbody>
 </table>
 <h4 id="anbi-schema">ANBI Schema</h4>
-<p>Hieronder is een diagram van het ANBI schema te zien. Deze sluit niet precies op het ANBI informatie model zelf aan en is alleen voor dit project gemodelleerd. Een live versie van de schema is ook <a href="https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=https%3A%2F%2Fdata.federatief.datastelsel.nl%2Flock-unlock%2Fanbi%2Fdef%2F">hier te vinden</a>.</p>
+<p>Hieronder is een diagram van het ANBI schema te zien. Deze sluit niet precies op het ANBI informatie
+model zelf aan en is alleen voor dit project gemodelleerd. Een live versie van de schema is ook
+<a href="https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=https%3A%2F%2Fdata.federatief.datastelsel.nl%2Flock-unlock%2Fanbi%2Fdef%2F">hier te
+vinden</a>.</p>
 <table>
 <thead>
 <tr>
@@ -1514,14 +1562,25 @@
 </tbody>
 </table>
 <h3 id="samenhang-creeren">Samenhang creëren</h3>
-<p>De schemas en de data van de schemas zijn als silo's opgezet. Elk register publiceert zijn data en de bijbehorende context (schemas) op een eigen triplestore. </p>
+<p>De schemas en de data van de schemas zijn als silo's opgezet. Elk register publiceert zijn data en
+de bijbehorende context (schemas) op een eigen triplestore. </p>
 <blockquote>
-<p>NB: De bovenstaanden schemas worden hier niet gedefinieerd als ontologieën omdat ze geen axioma's of geformaliseerde inferentie regels bevatten. Met de introductie van <code>owl:sameAs</code> vanaf nu, kunnen we nu inferentie doen en nu wordt het informatie model een ontologie. Dit komt omdat deze relatie aangeeft dat er enige conceptuele gelijkenis bestaat tussen individuen en dat informatie kan worden afgeleid op basis van de aanwezigheid van deze relaties. </p>
+<p>NB: De bovenstaanden schemas worden hier niet gedefinieerd als ontologieën omdat ze geen axioma's
+of geformaliseerde inferentie regels bevatten. Met de introductie van <code>owl:sameAs</code> vanaf nu,
+kunnen we nu inferentie doen en nu wordt het informatie model een ontologie. Dit komt omdat deze
+relatie aangeeft dat er enige conceptuele gelijkenis bestaat tussen individuen en dat informatie
+kan worden afgeleid op basis van de aanwezigheid van deze relaties. </p>
 </blockquote>
-<p>Om de verschillende schema's met elkaar te verbinden, wordt een upperontologie gedefinieerd die twee relaties omvat tussen klassen die in de schema's zijn gedefinieerd, <code>owl:sameAs</code> en een <code>ik:heeftUBO</code> relatie. In beide gevallen worden deze relaties gedefinieerd als onderdeel van een upper ontologie en gematerialiseerd in de data zelf om instanties met elkaar te verbinden (zie optie 1 en 2 in <a href="../informatiekundigekern/">informatiekundigekern</a>). </p>
+<p>Om de verschillende schema's met elkaar te verbinden, wordt een upperontologie gedefinieerd die twee
+relaties omvat tussen klassen die in de schema's zijn gedefinieerd, <code>owl:sameAs</code> en een
+<code>ik:heeftUBO</code> relatie. In beide gevallen worden deze relaties gedefinieerd als onderdeel van een
+upper ontologie en gematerialiseerd in de data zelf om instanties met elkaar te verbinden (zie optie
+1 en 2 in <a href="../informatiekundigekern/">informatiekundigekern</a>). </p>
 <h4 id="owlsameas"><code>owl:sameAs</code></h4>
-<p>Door middel van <code>owl:sameAs</code> relaties kunnen individuals in Linked Data gelijk verklaard worden over verschillende silo's heen.
-Oftewel een linked data resource (element) dat leeft in één register wordt gelijk verklaard aan een andere resource dat zich bevindt in een ander register (zie hieronder).</p>
+<p>Door middel van <code>owl:sameAs</code> relaties kunnen individuals in Linked Data gelijk verklaard worden over
+verschillende silo's heen. Oftewel een linked data resource (element) dat leeft in één register
+wordt gelijk verklaard aan een andere resource dat zich bevindt in een ander register (zie
+hieronder).</p>
 <table>
 <thead>
 <tr>
@@ -1534,9 +1593,18 @@ Oftewel een linked data resource (element) dat leeft in één register wordt gel
 </tr>
 </tbody>
 </table>
-<p>De bijbehorende inference is dat alle gegevens van de 2 gelijk gestelde resources gekopieerd mag worden. Stel individual 'A' is gelijk (owl:sameAs) aan individual 'B' dan kunnen alle relaties en kenmerken gekopieerd worden van 'A' naar 'B' en andersom. Hierdoor ontstaan netwerken van linked data over de registers heen en kan er daadwerkelijk "doorgebrowsed" worden van het ene register naar het andere. Ook SPARQL queries kunnen hier makkelijk gebruik van maken om zoekopdrachten over meerdere registers te uit te voeren. Ook in onze testopstelling maken we gebruik van <code>owl:sameAs</code> om relaties te leggen naar andere registers zonder volledig afhankelijk te worden van deze registers. Dit is natuurlijk een manier om de relaties te leggen. Er zijn meerdere manieren om registerdata te koppelen via Linked Data.</p>
+<p>De bijbehorende inference is dat alle gegevens van de 2 gelijk gestelde resources gekopieerd mag
+worden. Stel individual 'A' is gelijk (owl:sameAs) aan individual 'B' dan kunnen alle relaties en
+kenmerken gekopieerd worden van 'A' naar 'B' en andersom. Hierdoor ontstaan netwerken van linked
+data over de registers heen en kan er daadwerkelijk "doorgebrowsed" worden van het ene register naar
+het andere. Ook SPARQL queries kunnen hier makkelijk gebruik van maken om zoekopdrachten over
+meerdere registers te uit te voeren. Ook in onze testopstelling maken we gebruik van <code>owl:sameAs</code> om
+relaties te leggen naar andere registers zonder volledig afhankelijk te worden van deze registers.
+Dit is natuurlijk een manier om de relaties te leggen. Er zijn meerdere manieren om registerdata te
+koppelen via Linked Data.</p>
 <p><strong>Voorbeeld: BRK naar BRP en NHR</strong></p>
-<p>'Personen' uit de BRK kunnen gelijk verklaard worden met 'geregistreerde personen' uit de BRK of 'Inschrijvingen' uit de NHR (Zie diagram hieronder).</p>
+<p>'Personen' uit de BRK kunnen gelijk verklaard worden met 'geregistreerde personen' uit de BRK of
+'Inschrijvingen' uit de NHR (Zie diagram hieronder).</p>
 <table>
 <thead>
 <tr>
@@ -1549,9 +1617,15 @@ Oftewel een linked data resource (element) dat leeft in één register wordt gel
 </tr>
 </tbody>
 </table>
-<p>Een <code>owl:sameAs</code> relatie kan gelegd worden wanneer je weet dat deze 2 individuals ook daadwerkelijk gelijk zijn (refereert naar dezelfde persoon in de werkelijkheid). Vanuit Kadaster zal er waarschijnlijk akte informatie gebruikt worden zoals voornamen, achternaam, geboortedatum, geboortestad, etc om de juiste persoon in de BRP te vinden. De eigen adminstratie (BRK:Persoon) wordt dan gelijk verklaard met de gevonden (BRP:GeregistreerdPersoon). Ook voor relaties met de NHR werkt dit ongeveer hetzelfde. Akte informatie zal gebruikt worden om de juiste Inschrijving te vinden in de NHR om vervolgens weer de owl:sameAs relatie te leggen.</p>
-<p><strong>Voorbeeld: ANBI naar NHR</strong>
-De ANBI dataset kan direct gekoppeld worden aan NHR Inschrijvingen (zie diagram hieronder).</p>
+<p>Een <code>owl:sameAs</code> relatie kan gelegd worden wanneer je weet dat deze 2 individuals ook daadwerkelijk
+gelijk zijn (refereert naar dezelfde persoon in de werkelijkheid). Vanuit Kadaster zal er
+waarschijnlijk akte informatie gebruikt worden zoals voornamen, achternaam, geboortedatum,
+geboortestad, etc om de juiste persoon in de BRP te vinden. De eigen adminstratie (BRK:Persoon)
+wordt dan gelijk verklaard met de gevonden (BRP:GeregistreerdPersoon). Ook voor relaties met de NHR
+werkt dit ongeveer hetzelfde. Akte informatie zal gebruikt worden om de juiste Inschrijving te
+vinden in de NHR om vervolgens weer de owl:sameAs relatie te leggen.</p>
+<p><strong>Voorbeeld: ANBI naar NHR</strong></p>
+<p>De ANBI dataset kan direct gekoppeld worden aan NHR Inschrijvingen (zie diagram hieronder).</p>
 <table>
 <thead>
 <tr>
@@ -1565,9 +1639,16 @@ De ANBI dataset kan direct gekoppeld worden aan NHR Inschrijvingen (zie diagram 
 </tbody>
 </table>
 <h4 id="ikheeftubo"><code>ik:heeftUBO</code></h4>
-<p>De <code>ik:heeftUBO</code> relatie is specifiek gedefinieerd om de relatie tussen individuen in de NHR en de BRP te ondersteunen. In dit geval was het niet voldoende om een <code>owl:sameAs</code> relatie in te voeren, omdat er geen gedeelde identifier (zoals een BSN-nummer) aanwezig was en er dus op basis van deze nieuwe relatie twee verschillende identificerende attributen aan elkaar gerelateerd moesten worden. In de context van dit project werden geen axioma's gedefinieerd, dus er is geen gevolgtrekking mogelijk op basis van de aanwezigheid van deze relatie, maar dit zou indien nodig in toekomstige iteraties van het model kunnen worden geïntroduceerd.</p>
+<p>De <code>ik:heeftUBO</code> relatie is specifiek gedefinieerd om de relatie tussen individuen in de NHR en de
+BRP te ondersteunen. In dit geval was het niet voldoende om een <code>owl:sameAs</code> relatie in te voeren,
+omdat er geen gedeelde identifier (zoals een BSN-nummer) aanwezig was en er dus op basis van deze
+nieuwe relatie twee verschillende identificerende attributen aan elkaar gerelateerd moesten worden.
+In de context van dit project werden geen axioma's gedefinieerd, dus er is geen gevolgtrekking
+mogelijk op basis van de aanwezigheid van deze relatie, maar dit zou indien nodig in toekomstige
+iteraties van het model kunnen worden geïntroduceerd.</p>
 <p><strong>Voorbeeld: NHR naar BRP</strong></p>
-<p>Net zoals de BRK linkt naar personen in de BRP kan ook de NHR direct verbonden worden met BRP (Geregistreerde)Personen (zie diagram hieronder).</p>
+<p>Net zoals de BRK linkt naar personen in de BRP kan ook de NHR direct verbonden worden met BRP
+(Geregistreerde)Personen (zie diagram hieronder).</p>
 <table>
 <thead>
 <tr>
@@ -1581,8 +1662,14 @@ De ANBI dataset kan direct gekoppeld worden aan NHR Inschrijvingen (zie diagram 
 </tbody>
 </table>
 <h2 id="het-informatiemodel-voor-lock-unlock">Hét Informatiemodel voor Lock-Unlock</h2>
-<p>Door de <code>owl:sameAs</code> relatie (en bijbehorende inferentie) en <code>ik:heeftUBO</code> relatie ontstaat er een netwerk van samenhangende schema's. Dit kan natuurlijk als één schema gepresenteerd worden. Op basis van de implementatie van dit model als linked data kunnen een aantal conclusies en aanbeveilingen worden getrokken met betrekking tot de mogelijkheden om federatief bevragingen te ondersteunen. Zie <a href="./conclusies.md">Conclusies en Aanbeveilingen</a>.</p>
-<p>Hieronder een screenshot van de visualisatie direct uit de data van de schema's. Deze visualisatie is ook live te bekijken via <a href="https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema">deze link</a>.</p>
+<p>Door de <code>owl:sameAs</code> relatie (en bijbehorende inferentie) en <code>ik:heeftUBO</code> relatie ontstaat er een
+netwerk van samenhangende schema's. Dit kan natuurlijk als één schema gepresenteerd worden. Op basis
+van de implementatie van dit model als linked data kunnen een aantal conclusies en aanbeveilingen
+worden getrokken met betrekking tot de mogelijkheden om federatief bevragingen te ondersteunen. Zie
+<a href="../../conclusies/">Conclusies en Aanbeveilingen</a>.</p>
+<p>Hieronder een screenshot van de visualisatie direct uit de data van de schema's. Deze visualisatie
+is ook live te bekijken via <a href="https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema">deze
+link</a>.</p>
 <table>
 <thead>
 <tr>
@@ -1595,7 +1682,8 @@ De ANBI dataset kan direct gekoppeld worden aan NHR Inschrijvingen (zie diagram 
 </tr>
 </tbody>
 </table>
-<p>In dit samengesteld model zijn verschillende kleuren gebruikt om de individuele silo's (weer) te onderscheiden.</p>
+<p>In dit samengesteld model zijn verschillende kleuren gebruikt om de individuele silo's (weer) te
+onderscheiden.</p>
 
 
 
