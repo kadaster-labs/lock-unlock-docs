@@ -291,8 +291,6 @@
       
         
       
-        
-      
     
     
     
@@ -448,27 +446,6 @@
   
   <span class="md-ellipsis">
     Demonstrator
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="conclusies/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Conclusies en Aanbevelingen
   </span>
   
 
@@ -1214,19 +1191,41 @@
 
   <h1>Federatieve Bevraging</h1>
 
-<p>In een federatief datastelsel wordt data beschikbaar gesteld vanuit diverse en gedistribueerde bronnen. De toegevoegde waarde volgt wanneer deze bronnen in samenhang bevraagd kunnen worden. En, sterker nog, wanneer deze geïntegreerde bevraging een eenvoudigere combinatie van gegevens ondersteunt om voorheen moeilijke of ongrijpbare vragen te beantwoorden. Het opvragen van gegevens die zijn opgeslagen in gedistribueerde bronnen noemen we 'federatieve bevraging'. </p>
-<p>'Federatieve bevraging' duidt op twee onderdelen, namelijk de <em>bevraging</em> en het feit dat dat <em>federatief</em> plaatsvindt. We beschouwen dit vanuit een digitaal tijdperk en daarom betekent 'bevraging' een digitale of 'met computer' bevraging. Federatief geeft aan dat de informatie in verschillende bronnen is opgeslagen en dat de bevraging deze informatie individueel benadert. Er is geen centrale opslag van informatie. </p>
+<p>In een federatief datastelsel wordt data beschikbaar gesteld vanuit diverse en gedistribueerde
+bronnen. De toegevoegde waarde volgt wanneer deze bronnen in samenhang bevraagd kunnen worden. En,
+sterker nog, wanneer deze geïntegreerde bevraging een eenvoudigere combinatie van gegevens
+ondersteunt om voorheen moeilijke of ongrijpbare vragen te beantwoorden. Het opvragen van gegevens
+die zijn opgeslagen in gedistribueerde bronnen noemen we 'federatieve bevraging'. </p>
+<p>'Federatieve bevraging' duidt op twee onderdelen, namelijk de <em>bevraging</em> en het feit dat dat
+<em>federatief</em> plaatsvindt. We beschouwen dit vanuit een digitaal tijdperk en daarom betekent
+'bevraging' een digitale of 'met computer' bevraging. Federatief geeft aan dat de informatie in
+verschillende bronnen is opgeslagen en dat de bevraging deze informatie individueel benadert. Er is
+geen centrale opslag van informatie. </p>
 <h3 id="application-programming-interface">Application Programming Interface</h3>
-<p>Door de evolutie van de technologie heen wordt het bevragen van een computer systeem aangeduid met een 'Application Programming Interface', afgekort een <strong>API</strong> (uitspraak 'ee-pie-ai' of 'aapie').</p>
+<p>Door de evolutie van de technologie heen wordt het bevragen van een computer systeem aangeduid met
+een 'Application Programming Interface', afgekort een <strong>API</strong> (uitspraak 'ee-pie-ai' of 'aapie').</p>
 <ul>
-<li>In de huidige stand van de techniek wordt met API meestal een <strong>REST API</strong> bedoeld, hoewel er vele varianten van API's bestaan. </li>
-<li>Er zijn echter ook andere API standaarden die gebaseerd zijn op deze internet protocollen en in opkomst zijn, zoals <strong>GraphQL</strong> en <strong>SPARQL</strong>. </li>
+<li>In de huidige stand van de techniek wordt met API meestal een <strong>REST API</strong> bedoeld, hoewel er vele
+  varianten van API's bestaan. </li>
+<li>Er zijn echter ook andere API standaarden die gebaseerd zijn op deze internet protocollen en in
+  opkomst zijn, zoals <strong>GraphQL</strong> en <strong>SPARQL</strong>. </li>
 </ul>
-<p>Het bestaan en de verschillen zijn relevant voor dit onderzoek en worden daarom beschreven op <a href="apis/">API's | REST vs GraphQL vs SPARQL</a>.</p>
+<p>Het bestaan en de verschillen zijn relevant voor dit onderzoek en worden daarom beschreven op <a href="apis/">API's
+| REST vs GraphQL vs SPARQL</a>.</p>
 <h3 id="linked-data">Linked Data</h3>
-<p>Hoewel in de huidige perceptie van 'een API' een REST API wordt bedoeld, is het <em>federatief</em> bevragen met behulp van REST API's nog niet zo eenvoudig. Daarom is in (de opdracht voor) het Lock-Unlock project gekozen om uit te gaan van <strong><a href="linkeddata/">Linked Data</a></strong>. Dit is een technologie die het koppelen van gegevens tussen gedistribueerde bronnen ondersteunt om een betere navigatie door de gegevens heen, tussen de nodes in de gegevens, te ondersteunen. De bijbehorende query taal is <strong>SPARQL</strong>. Daarmee is federatief bevragen inherent mogelijk!</p>
+<p>Hoewel in de huidige perceptie van 'een API' een REST API wordt bedoeld, is het <em>federatief</em>
+bevragen met behulp van REST API's nog niet zo eenvoudig. Daarom is in (de opdracht voor) het
+Lock-Unlock project gekozen om uit te gaan van <strong><a href="linkeddata/">Linked Data</a></strong>. Dit is een
+technologie die het koppelen van gegevens tussen gedistribueerde bronnen ondersteunt om een betere
+navigatie door de gegevens heen, tussen de nodes in de gegevens, te ondersteunen. De bijbehorende
+query taal is <strong>SPARQL</strong>. Daarmee is federatief bevragen inherent mogelijk!</p>
 <h3 id="leeswijzer">Leeswijzer</h3>
-<p>In dit hoofdstuk wordt eerst beschreven hoe de verschillende API's zich tot elkaar verhouden en waarom we ons beperkt hebben tot de scope van Linked Data. Vervolgens beschrijven we hoe het informatiemodel in elkaar zit en wat de relatie is tot de informatiekundige kern. Ook wordt toegelicht hoe de testdata is gegenereerd. Zowel het informatiemodel als de testdata is randvoorwaardelijk voor een goede testcasus en testopstelling. We sluiten af met conclusies rondom federatieve bevraging.</p>
+<p>In dit hoofdstuk wordt eerst beschreven hoe de verschillende API's zich tot elkaar verhouden en
+waarom we ons beperkt hebben tot de scope van Linked Data. Vervolgens beschrijven we hoe het
+informatiemodel in elkaar zit en wat de relatie is tot de informatiekundige kern. Ook wordt
+toegelicht hoe de testdata is gegenereerd. Zowel het informatiemodel als de testdata is
+randvoorwaardelijk voor een goede testcasus en testopstelling. We sluiten af met conclusies rondom
+federatieve bevraging.</p>
 <ul>
 <li><a href="apis/">REST vs GraphQL vs SPARQL</a></li>
 <li><a href="linkeddata/">Waarom Linked Data?</a></li>
@@ -1234,7 +1233,6 @@
 <li><a href="informatiemodel/">Informatiemodel</a></li>
 <li><a href="testopstelling/">Testopstelling</a></li>
 <li><a href="demonstrator/">Demonstrator</a></li>
-<li><a href="conclusies/">Conclusies</a></li>
 </ul>
 
 
